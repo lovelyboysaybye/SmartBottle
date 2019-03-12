@@ -1,0 +1,6 @@
+C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\Capasitor.cyprj|027a6fc0-34f7-4ffb-9b9b-8de3e8005d31
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9866a42f-dd93-4a87-b9b1-4801836b5b59
+C:\Users\Coal\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|15f0a15e-abed-4f88-9039-8863ea45686f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b36cc592-1628-498c-9852-fe98bb30b961
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|8d737194-968e-4313-850f-e002aa24100f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|16c8977e-796a-4cc4-9dde-72a63502550b
