@@ -1,6 +1,6 @@
-C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj|b559470f-82a4-4190-a4aa-3c9276decb0b
-D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|66136533-8ff4-485b-bdb5-475364112bc2
-C:\Users\User\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|b458ba54-1ddc-45bf-97fd-61d55c9231c8
-D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9eca98b4-5573-4848-adf5-92223638e8b6
-D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b4db2a96-cb35-425f-9988-0bf8caaa4161
-D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|04c996ff-60aa-467a-bbce-f5a53e07bace
+C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj|cf814504-8a80-4966-a020-39d1968bfc1a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2eeabb20-ddee-48f1-a581-938d625c52b7
+C:\Users\Coal\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|e7431a8f-fa30-4bb1-bf1f-8f685134ac75
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7bc63ab8-6abd-4324-9ace-1e9a69e50c1e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b2a92882-15ff-4b35-b8f0-0c9f295b8c4b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ccd7db05-090a-4d35-871f-2054f3f69306

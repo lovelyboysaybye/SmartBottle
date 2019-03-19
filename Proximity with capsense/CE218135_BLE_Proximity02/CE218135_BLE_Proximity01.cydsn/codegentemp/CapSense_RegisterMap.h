@@ -671,11 +671,6 @@
 #define CapSense_BUTTON0_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON0_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x4D0000BAu)
 
-#define CapSense_BUTTON0_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button0[0u].idacComp[0u])
-#define CapSense_BUTTON0_SNS0_IDAC_COMP0_OFFSET             (187u)
-#define CapSense_BUTTON0_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON0_SNS0_IDAC_COMP0_PARAM_ID           (0x600000BBu)
-
 #define CapSense_BUTTON1_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button1[0u].raw[0u])
 #define CapSense_BUTTON1_SNS0_RAW0_OFFSET                   (188u)
 #define CapSense_BUTTON1_SNS0_RAW0_SIZE                     (2u)
@@ -700,11 +695,6 @@
 #define CapSense_BUTTON1_SNS0_NEG_BSLN_RST_CNT0_OFFSET      (196u)
 #define CapSense_BUTTON1_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON1_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x400000C4u)
-
-#define CapSense_BUTTON1_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button1[0u].idacComp[0u])
-#define CapSense_BUTTON1_SNS0_IDAC_COMP0_OFFSET             (197u)
-#define CapSense_BUTTON1_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON1_SNS0_IDAC_COMP0_PARAM_ID           (0x6D0000C5u)
 
 #define CapSense_BUTTON2_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button2[0u].raw[0u])
 #define CapSense_BUTTON2_SNS0_RAW0_OFFSET                   (198u)
@@ -731,11 +721,6 @@
 #define CapSense_BUTTON2_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON2_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x4E0000CEu)
 
-#define CapSense_BUTTON2_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button2[0u].idacComp[0u])
-#define CapSense_BUTTON2_SNS0_IDAC_COMP0_OFFSET             (207u)
-#define CapSense_BUTTON2_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON2_SNS0_IDAC_COMP0_PARAM_ID           (0x630000CFu)
-
 #define CapSense_BUTTON3_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button3[0u].raw[0u])
 #define CapSense_BUTTON3_SNS0_RAW0_OFFSET                   (208u)
 #define CapSense_BUTTON3_SNS0_RAW0_SIZE                     (2u)
@@ -760,11 +745,6 @@
 #define CapSense_BUTTON3_SNS0_NEG_BSLN_RST_CNT0_OFFSET      (216u)
 #define CapSense_BUTTON3_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON3_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x460000D8u)
-
-#define CapSense_BUTTON3_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button3[0u].idacComp[0u])
-#define CapSense_BUTTON3_SNS0_IDAC_COMP0_OFFSET             (217u)
-#define CapSense_BUTTON3_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON3_SNS0_IDAC_COMP0_PARAM_ID           (0x6B0000D9u)
 
 #define CapSense_BUTTON4_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button4[0u].raw[0u])
 #define CapSense_BUTTON4_SNS0_RAW0_OFFSET                   (218u)
@@ -791,11 +771,6 @@
 #define CapSense_BUTTON4_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON4_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x470000E2u)
 
-#define CapSense_BUTTON4_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button4[0u].idacComp[0u])
-#define CapSense_BUTTON4_SNS0_IDAC_COMP0_OFFSET             (227u)
-#define CapSense_BUTTON4_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON4_SNS0_IDAC_COMP0_PARAM_ID           (0x6A0000E3u)
-
 #define CapSense_BUTTON5_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button5[0u].raw[0u])
 #define CapSense_BUTTON5_SNS0_RAW0_OFFSET                   (228u)
 #define CapSense_BUTTON5_SNS0_RAW0_SIZE                     (2u)
@@ -820,11 +795,6 @@
 #define CapSense_BUTTON5_SNS0_NEG_BSLN_RST_CNT0_OFFSET      (236u)
 #define CapSense_BUTTON5_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON5_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x480000ECu)
-
-#define CapSense_BUTTON5_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button5[0u].idacComp[0u])
-#define CapSense_BUTTON5_SNS0_IDAC_COMP0_OFFSET             (237u)
-#define CapSense_BUTTON5_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON5_SNS0_IDAC_COMP0_PARAM_ID           (0x650000EDu)
 
 #define CapSense_BUTTON6_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button6[0u].raw[0u])
 #define CapSense_BUTTON6_SNS0_RAW0_OFFSET                   (238u)
@@ -851,11 +821,6 @@
 #define CapSense_BUTTON6_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON6_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x430000F6u)
 
-#define CapSense_BUTTON6_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button6[0u].idacComp[0u])
-#define CapSense_BUTTON6_SNS0_IDAC_COMP0_OFFSET             (247u)
-#define CapSense_BUTTON6_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON6_SNS0_IDAC_COMP0_PARAM_ID           (0x6E0000F7u)
-
 #define CapSense_BUTTON7_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button7[0u].raw[0u])
 #define CapSense_BUTTON7_SNS0_RAW0_OFFSET                   (248u)
 #define CapSense_BUTTON7_SNS0_RAW0_SIZE                     (2u)
@@ -880,11 +845,6 @@
 #define CapSense_BUTTON7_SNS0_NEG_BSLN_RST_CNT0_OFFSET      (256u)
 #define CapSense_BUTTON7_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON7_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x44000100u)
-
-#define CapSense_BUTTON7_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button7[0u].idacComp[0u])
-#define CapSense_BUTTON7_SNS0_IDAC_COMP0_OFFSET             (257u)
-#define CapSense_BUTTON7_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON7_SNS0_IDAC_COMP0_PARAM_ID           (0x69000101u)
 
 #define CapSense_BUTTON8_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button8[0u].raw[0u])
 #define CapSense_BUTTON8_SNS0_RAW0_OFFSET                   (258u)
@@ -911,11 +871,6 @@
 #define CapSense_BUTTON8_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON8_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x4A00010Au)
 
-#define CapSense_BUTTON8_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button8[0u].idacComp[0u])
-#define CapSense_BUTTON8_SNS0_IDAC_COMP0_OFFSET             (267u)
-#define CapSense_BUTTON8_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON8_SNS0_IDAC_COMP0_PARAM_ID           (0x6700010Bu)
-
 #define CapSense_BUTTON9_SNS0_RAW0_VALUE                    (CapSense_dsRam.snsList.button9[0u].raw[0u])
 #define CapSense_BUTTON9_SNS0_RAW0_OFFSET                   (268u)
 #define CapSense_BUTTON9_SNS0_RAW0_SIZE                     (2u)
@@ -940,11 +895,6 @@
 #define CapSense_BUTTON9_SNS0_NEG_BSLN_RST_CNT0_OFFSET      (276u)
 #define CapSense_BUTTON9_SNS0_NEG_BSLN_RST_CNT0_SIZE        (1u)
 #define CapSense_BUTTON9_SNS0_NEG_BSLN_RST_CNT0_PARAM_ID    (0x40000114u)
-
-#define CapSense_BUTTON9_SNS0_IDAC_COMP0_VALUE              (CapSense_dsRam.snsList.button9[0u].idacComp[0u])
-#define CapSense_BUTTON9_SNS0_IDAC_COMP0_OFFSET             (277u)
-#define CapSense_BUTTON9_SNS0_IDAC_COMP0_SIZE               (1u)
-#define CapSense_BUTTON9_SNS0_IDAC_COMP0_PARAM_ID           (0x6D000115u)
 
 #define CapSense_SNR_TEST_WIDGET_ID_VALUE                   (CapSense_dsRam.snrTestWidgetId)
 #define CapSense_SNR_TEST_WIDGET_ID_OFFSET                  (278u)

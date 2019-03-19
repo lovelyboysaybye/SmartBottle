@@ -47,8 +47,6 @@
 #define CapSense_CSD__HW CSD0
 #define CapSense_CSD__IDX 0
 #define CapSense_CSD__VREF_EXT_PAD 8u
-#define CapSense_IDACComp__HW CSD0
-#define CapSense_IDACComp__IDX 1
 #define CapSense_IDACMod__HW CSD0
 #define CapSense_IDACMod__IDX 0
 #define CapSense_ModClk__DIV_IDX 0

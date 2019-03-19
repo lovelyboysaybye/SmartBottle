@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
   28:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** * This parameter is a handle that represents the base address of the registers
   29:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** * of the IPC channel.
   30:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** * The parameter is generally returned from a call to the \ref
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 2
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 2
 
 
   31:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** * Cy_IPC_Drv_GetIpcBaseAddress.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
   21:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \{
   22:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * The inter-processor communication (IPC) driver provides a safe and reliable
   23:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * method to transfer data between CPUs. Hardware locking ensures that only one
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 3
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 3
 
 
   24:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * device can acquire and transfer data at a time so no data is lost or
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
   78:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
   79:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * This design enables any number of processes on the sending core to put
   80:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * arbitrary data into a single pipe. The first element of that data is the
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 4
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 4
 
 
   81:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * client ID of the client that should handle the data.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  135:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * When a message is sent, the receiving endpoint's interrupt handler is called.
  136:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * The ISR can perform any task required by the design. However, as part of its
  137:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * function it calls \ref Cy_IPC_Pipe_ExecCallback. This function retrieves the
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 5
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 5
 
 
  138:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * client ID from the data and calls the associated callback function.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  192:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * flags based on the size defined for this symbol. Use increments of 32. You
  193:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * must have at least 32 semaphores. Semaphores 0-15 are reserved for
  194:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * system use. Your application can use semaphores greater than 15.
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 6
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 6
 
 
  195:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  249:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *     </td>
  250:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *     <td>Interface improvement, documentation update</td>
  251:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *   </tr>
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 7
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 7
 
 
  252:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *   <tr>
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  306:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \{
  307:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** */
  308:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 8
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 8
 
 
  309:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** /** Driver major version */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  363:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** __STATIC_INLINE void     Cy_IPC_Drv_WriteDataValue (IPC_STRUCT_Type* base, uint32_t dataValue);
  364:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_ReadDataValue (IPC_STRUCT_Type const * base);
  365:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 9
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 9
 
 
  366:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_ExtractAcquireMask (uint32_t intMask);
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  420:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \snippet IPC_sut_01.cydsn/main_cm4.c snippet_Cy_IPC_Drv_SendMsgWord
  421:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
  422:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *******************************************************************************/
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 10
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 10
 
 
  423:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** __STATIC_INLINE IPC_STRUCT_Type* Cy_IPC_Drv_GetIpcBaseAddress (uint32_t ipcIndex)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  477:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
  478:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *******************************************************************************/
  479:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** __STATIC_INLINE void  Cy_IPC_Drv_SetInterruptMask (IPC_INTR_STRUCT_Type* base,
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 11
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 11
 
 
  480:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h ****                                               uint32_t ipcReleaseMask, uint32_t ipcAcquireMask)
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  534:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *   </table>
  535:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
  536:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \funcusage
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 12
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 12
 
 
  537:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \snippet IPC_sut_01.cydsn/main_cm4.c snippet_Cy_IPC_Drv_GetInterruptStatusMasked
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  591:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \param ipcAcquireMask
  592:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * An encoded list of all IPC channels that can trigger the interrupt on a
  593:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * notify event.
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 13
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 13
 
 
  594:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  648:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
  649:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \param base
  650:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * This parameter is a handle that represents the base address of the registers
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 14
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 14
 
 
  651:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * of the IPC channel.
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  705:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * This parameter is a handle that represents the base address of the registers
  706:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * of the IPC channel.
  707:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * The parameter is generally returned from a call to the \ref
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 15
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 15
 
 
  708:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * Cy_IPC_Drv_GetIpcBaseAddress.
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  762:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \snippet IPC_sut_01.cydsn/main_cm4.c snippet_Cy_IPC_Drv_LockAcquire
  763:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
  764:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *******************************************************************************/
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 16
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 16
 
 
  765:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** __STATIC_INLINE bool Cy_IPC_Drv_IsLockAcquired (IPC_STRUCT_Type const * base)
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
   81              	.LVL10:
   82              	.L2:
   61:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c ****     }
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 17
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 17
 
 
   62:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
   95:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** *
   96:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** *******************************************************************************/
   97:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** cy_en_ipcdrv_status_t  Cy_IPC_Drv_SendMsgWord (IPC_STRUCT_Type* base, uint32_t notifyEventIntr, uin
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 18
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 18
 
 
   98:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  805:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
  806:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \return
  807:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * Acquire mask value.
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 19
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 19
 
 
  808:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  862:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *
  863:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * \return   Status of the operation:
  864:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *   \retval CY_IPC_DRV_SUCCESS: The send operation was successful.
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 20
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 20
 
 
  865:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** *   \retval CY_IPC_DRV_ERROR:   The IPC channel is unavailable because
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  919:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * This parameter is a handle that represents the base address of the registers
  920:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * of the IPC channel.
  921:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * The parameter is generally returned from a call to the \ref
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 21
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 21
 
 
  922:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** * Cy_IPC_Drv_GetIpcBaseAddress
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  667:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** }
  155              		.loc 2 667 0
  156 0024 2404     		lsls	r4, r4, #16
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 22
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 22
 
 
  157              	.LVL20:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  120:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** * Function Name: Cy_IPC_Drv_ReadMsgWord
  121:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** ****************************************************************************//**
  122:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** *
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 23
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 23
 
 
  123:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.c **** * This function is used to read a 32-bit word message through an IPC channel.
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  216              	.LBB26:
  217              	.LBB27:
  767:Generated_Source\PSoC6\pdl\drivers\peripheral\ipc/cy_ipc_drv.h **** }
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 24
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 24
 
 
  218              		.loc 2 767 0 is_stmt 1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  256              		.cfi_endproc
  257              	.LFE57:
  258              		.size	Cy_IPC_Drv_ReadMsgWord, .-Cy_IPC_Drv_ReadMsgWord
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 25
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 25
 
 
  259              		.section	.rodata.str1.4,"aMS",%progbits,1
@@ -1468,8 +1468,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  267      00
  268              		.text
  269              	.Letext0:
- 270              		.file 3 "d:\\cypress creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
- 271              		.file 4 "d:\\cypress creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
+ 270              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 271              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  272              		.file 5 "Generated_Source\\PSoC6\\pdl\\devices/psoc6/ip/cyip_ipc.h"
  273              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syslib/cy_syslib.h"
  274              		.section	.debug_info,"",%progbits
@@ -1479,10 +1479,10 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  278 0006 00000000 		.4byte	.Ldebug_abbrev0
  279 000a 04       		.byte	0x4
  280 000b 01       		.uleb128 0x1
- 281 000c BD020000 		.4byte	.LASF43
+ 281 000c E4020000 		.4byte	.LASF43
  282 0010 0C       		.byte	0xc
- 283 0011 26020000 		.4byte	.LASF44
- 284 0015 79010000 		.4byte	.LASF45
+ 283 0011 E8010000 		.4byte	.LASF44
+ 284 0015 27020000 		.4byte	.LASF45
  285 0019 00000000 		.4byte	.Ldebug_ranges0+0
  286 001d 00000000 		.4byte	0
  287 0021 00000000 		.4byte	.Ldebug_line0
@@ -1497,8 +1497,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  296 0033 02       		.uleb128 0x2
  297 0034 02       		.byte	0x2
  298 0035 05       		.byte	0x5
- 299 0036 7E020000 		.4byte	.LASF2
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 26
+ 299 0036 A5020000 		.4byte	.LASF2
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 26
 
 
  300 003a 02       		.uleb128 0x2
@@ -1508,7 +1508,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  304 0041 02       		.uleb128 0x2
  305 0042 04       		.byte	0x4
  306 0043 05       		.byte	0x5
- 307 0044 A8020000 		.4byte	.LASF4
+ 307 0044 CF020000 		.4byte	.LASF4
  308 0048 03       		.uleb128 0x3
  309 0049 13010000 		.4byte	.LASF9
  310 004d 03       		.byte	0x3
@@ -1521,7 +1521,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  317 005a 02       		.uleb128 0x2
  318 005b 08       		.byte	0x8
  319 005c 05       		.byte	0x5
- 320 005d 13020000 		.4byte	.LASF6
+ 320 005d D5010000 		.4byte	.LASF6
  321 0061 02       		.uleb128 0x2
  322 0062 08       		.byte	0x8
  323 0063 07       		.byte	0x7
@@ -1535,14 +1535,14 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  331 0071 07       		.byte	0x7
  332 0072 2D010000 		.4byte	.LASF8
  333 0076 03       		.uleb128 0x3
- 334 0077 9F020000 		.4byte	.LASF10
+ 334 0077 C6020000 		.4byte	.LASF10
  335 007b 04       		.byte	0x4
  336 007c 30       		.byte	0x30
  337 007d 48000000 		.4byte	0x48
  338 0081 02       		.uleb128 0x2
  339 0082 04       		.byte	0x4
  340 0083 07       		.byte	0x7
- 341 0084 0A020000 		.4byte	.LASF11
+ 341 0084 CC010000 		.4byte	.LASF11
  342 0088 05       		.uleb128 0x5
  343 0089 76000000 		.4byte	0x76
  344 008d 06       		.uleb128 0x6
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  354 00a3 20       		.byte	0x20
  355 00a4 05       		.byte	0x5
  356 00a5 23       		.byte	0x23
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 27
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 27
 
 
  357 00a6 F3000000 		.4byte	0xf3
@@ -1575,7 +1575,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  368 00bd 88000000 		.4byte	0x88
  369 00c1 04       		.byte	0x4
  370 00c2 0A       		.uleb128 0xa
- 371 00c3 4F030000 		.4byte	.LASF14
+ 371 00c3 76030000 		.4byte	.LASF14
  372 00c7 05       		.byte	0x5
  373 00c8 26       		.byte	0x26
  374 00c9 88000000 		.4byte	0x88
@@ -1604,21 +1604,21 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  397 00f8 06       		.uleb128 0x6
  398 00f9 F3000000 		.4byte	0xf3
  399 00fd 03       		.uleb128 0x3
- 400 00fe 7A030000 		.4byte	.LASF18
+ 400 00fe A1030000 		.4byte	.LASF18
  401 0102 05       		.byte	0x5
  402 0103 2A       		.byte	0x2a
  403 0104 A2000000 		.4byte	0xa2
  404 0108 0B       		.uleb128 0xb
- 405 0109 6D030000 		.4byte	.LASF19
+ 405 0109 94030000 		.4byte	.LASF19
  406 010d 06       		.byte	0x6
  407 010e C401     		.2byte	0x1c4
  408 0110 14010000 		.4byte	0x114
  409 0114 02       		.uleb128 0x2
  410 0115 01       		.byte	0x1
  411 0116 08       		.byte	0x8
- 412 0117 21020000 		.4byte	.LASF20
+ 412 0117 E3010000 		.4byte	.LASF20
  413 011b 02       		.uleb128 0x2
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 28
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 28
 
 
  414 011c 04       		.byte	0x4
@@ -1631,7 +1631,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  421 0129 02       		.uleb128 0x2
  422 012a 08       		.byte	0x8
  423 012b 04       		.byte	0x4
- 424 012c B1020000 		.4byte	.LASF23
+ 424 012c D8020000 		.4byte	.LASF23
  425 0130 0C       		.uleb128 0xc
  426 0131 04       		.byte	0x4
  427 0132 6F000000 		.4byte	0x6f
@@ -1639,19 +1639,19 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  429 0137 5901     		.2byte	0x159
  430 0139 4D010000 		.4byte	0x14d
  431 013d 0D       		.uleb128 0xd
- 432 013e E1010000 		.4byte	.LASF24
+ 432 013e A3010000 		.4byte	.LASF24
  433 0142 00       		.byte	0
  434 0143 0E       		.uleb128 0xe
  435 0144 51010000 		.4byte	.LASF25
  436 0148 01008A00 		.4byte	0x8a0001
  437 014c 00       		.byte	0
  438 014d 0B       		.uleb128 0xb
- 439 014e F4010000 		.4byte	.LASF26
+ 439 014e B6010000 		.4byte	.LASF26
  440 0152 02       		.byte	0x2
  441 0153 6001     		.2byte	0x160
  442 0155 30010000 		.4byte	0x130
  443 0159 0F       		.uleb128 0xf
- 444 015a C7010000 		.4byte	.LASF30
+ 444 015a 89010000 		.4byte	.LASF30
  445 015e 02       		.byte	0x2
  446 015f FD02     		.2byte	0x2fd
  447 0161 77010000 		.4byte	0x177
@@ -1666,7 +1666,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  456 0177 02       		.uleb128 0x2
  457 0178 01       		.byte	0x1
  458 0179 02       		.byte	0x2
- 459 017a 74030000 		.4byte	.LASF27
+ 459 017a 9B030000 		.4byte	.LASF27
  460 017e 11       		.uleb128 0x11
  461 017f 04       		.byte	0x4
  462 0180 84010000 		.4byte	0x184
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  468 018f B102     		.2byte	0x2b1
  469 0191 03       		.byte	0x3
  470 0192 AF010000 		.4byte	0x1af
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 29
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 29
 
 
  471 0196 10       		.uleb128 0x10
@@ -1687,7 +1687,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  474 019c B102     		.2byte	0x2b1
  475 019e AF010000 		.4byte	0x1af
  476 01a2 10       		.uleb128 0x10
- 477 01a3 8A030000 		.4byte	.LASF29
+ 477 01a3 79010000 		.4byte	.LASF29
  478 01a7 02       		.byte	0x2
  479 01a8 B102     		.2byte	0x2b1
  480 01aa 76000000 		.4byte	0x76
@@ -1720,7 +1720,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  507 01e6 9802     		.2byte	0x298
  508 01e8 AF010000 		.4byte	0x1af
  509 01ec 10       		.uleb128 0x10
- 510 01ed 8A030000 		.4byte	.LASF29
+ 510 01ed 79010000 		.4byte	.LASF29
  511 01f1 02       		.byte	0x2
  512 01f2 9802     		.2byte	0x298
  513 01f4 76000000 		.4byte	0x76
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  525 020e AF010000 		.4byte	0x1af
  526 0212 10       		.uleb128 0x10
  527 0213 1E010000 		.4byte	.LASF35
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 30
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 30
 
 
  528 0217 02       		.byte	0x2
@@ -1746,7 +1746,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  530 021a 76000000 		.4byte	0x76
  531 021e 00       		.byte	0
  532 021f 0F       		.uleb128 0xf
- 533 0220 65020000 		.4byte	.LASF36
+ 533 0220 8C020000 		.4byte	.LASF36
  534 0224 02       		.byte	0x2
  535 0225 E202     		.2byte	0x2e2
  536 0227 76000000 		.4byte	0x76
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  582 029b A6000000 		.4byte	.LLST3
  583 029f 00       		.byte	0
  584 02a0 18       		.uleb128 0x18
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 31
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 31
 
 
  585 02a1 89010000 		.4byte	0x189
@@ -1847,7 +1847,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  628 02fd AF010000 		.4byte	0x1af
  629 0301 03010000 		.4byte	.LLST6
  630 0305 14       		.uleb128 0x14
- 631 0306 8A030000 		.4byte	.LASF29
+ 631 0306 79010000 		.4byte	.LASF29
  632 030a 01       		.byte	0x1
  633 030b 61       		.byte	0x61
  634 030c 76000000 		.4byte	0x76
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  639 031a 61       		.byte	0x61
  640 031b 76000000 		.4byte	0x76
  641 031f 8A010000 		.4byte	.LLST8
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 32
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 32
 
 
  642 0323 15       		.uleb128 0x15
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  696 03aa 51       		.byte	0x51
  697 03ab 03       		.uleb128 0x3
  698 03ac 0A       		.byte	0xa
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 33
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 33
 
 
  699 03ad 9A02     		.2byte	0x29a
@@ -1926,7 +1926,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  701 03b0 00       		.byte	0
  702 03b1 00       		.byte	0
  703 03b2 13       		.uleb128 0x13
- 704 03b3 88020000 		.4byte	.LASF42
+ 704 03b3 AF020000 		.4byte	.LASF42
  705 03b7 01       		.byte	0x1
  706 03b8 95       		.byte	0x95
  707 03b9 4D010000 		.4byte	0x14d
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  753 0432 19       		.uleb128 0x19
  754 0433 10000000 		.4byte	.LVL28
  755 0437 52040000 		.4byte	0x452
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 34
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 34
 
 
  756 043b 1A       		.uleb128 0x1a
@@ -1999,8 +1999,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  771 044d 04       		.byte	0x4
  772 044e 76000000 		.4byte	0x76
  773 0452 1B       		.uleb128 0x1b
- 774 0453 56030000 		.4byte	.LASF46
- 775 0457 56030000 		.4byte	.LASF46
+ 774 0453 7D030000 		.4byte	.LASF46
+ 775 0457 7D030000 		.4byte	.LASF46
  776 045b 06       		.byte	0x6
  777 045c 2A03     		.2byte	0x32a
  778 045e 00       		.byte	0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  810 001d 00       		.byte	0
  811 001e 03       		.uleb128 0x3
  812 001f 16       		.uleb128 0x16
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 35
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 35
 
 
  813 0020 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  867 0056 09       		.uleb128 0x9
  868 0057 13       		.uleb128 0x13
  869 0058 01       		.byte	0x1
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 36
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 36
 
 
  870 0059 0B       		.uleb128 0xb
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  924 008f 28       		.uleb128 0x28
  925 0090 00       		.byte	0
  926 0091 03       		.uleb128 0x3
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 37
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 37
 
 
  927 0092 0E       		.uleb128 0xe
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  981 00c8 00       		.byte	0
  982 00c9 12       		.uleb128 0x12
  983 00ca 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 38
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 38
 
 
  984 00cb 01       		.byte	0x1
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1038 0102 17       		.uleb128 0x17
  1039 0103 00       		.byte	0
  1040 0104 00       		.byte	0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 39
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 39
 
 
  1041 0105 15       		.uleb128 0x15
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1095 013b 00       		.byte	0
  1096 013c 00       		.byte	0
  1097 013d 19       		.uleb128 0x19
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 40
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 40
 
 
  1098 013e 898201   		.uleb128 0x4109
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1152 002c 24000000 		.4byte	.LVL11
  1153 0030 34000000 		.4byte	.LFE55
  1154 0034 0400     		.2byte	0x4
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 41
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 41
 
 
  1155 0036 F3       		.byte	0xf3
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1209              	.LLST4:
  1210 00b9 0C000000 		.4byte	.LVL3
  1211 00bd 12000000 		.4byte	.LVL4
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 42
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 42
 
 
  1212 00c1 0100     		.2byte	0x1
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1266 0149 1E000000 		.4byte	.LVL17
  1267 014d 0100     		.2byte	0x1
  1268 014f 51       		.byte	0x51
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 43
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 43
 
 
  1269 0150 1E000000 		.4byte	.LVL17
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1323 01cf 9F       		.byte	0x9f
  1324 01d0 30000000 		.4byte	.LVL23
  1325 01d4 40000000 		.4byte	.LFE56
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 44
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 44
 
 
  1326 01d8 0100     		.2byte	0x1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1380              	.LLST15:
  1381 0266 00000000 		.4byte	.LVL25
  1382 026a 0C000000 		.4byte	.LVL27
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 45
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 45
 
 
  1383 026e 0100     		.2byte	0x1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1437 02f4 18000000 		.4byte	.LVL31
  1438 02f8 0100     		.2byte	0x1
  1439 02fa 55       		.byte	0x55
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 46
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 46
 
 
  1440 02fb 00000000 		.4byte	0
@@ -2731,8 +2731,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1467 001c 00000000 		.4byte	0
  1468              		.section	.debug_line,"",%progbits
  1469              	.Ldebug_line0:
- 1470 0000 59020000 		.section	.debug_str,"MS",%progbits,1
- 1470      0200C801 
+ 1470 0000 71020000 		.section	.debug_str,"MS",%progbits,1
+ 1470      0200E001 
  1470      00000201 
  1470      FB0E0D00 
  1470      01010101 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1478      72765F41 
  1478      63717569 
  1478      72654E6F 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 47
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 47
 
 
  1479              	.LASF12:
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1504      50435F44 
  1504      72765F4C 
  1504      6F636B41 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 48
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 48
 
 
  1504      63717569 
@@ -2863,131 +2863,133 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 1
  1522      6720756E 
  1522      7369676E 
  1522      65642069 
- 1523              	.LASF45:
- 1524 0179 433A5C55 		.ascii	"C:\\Users\\User\\Desktop\\CE218135_BLE_Proximity02\\"
- 1524      73657273 
- 1524      5C557365 
- 1524      725C4465 
- 1524      736B746F 
- 1525 01a8 43453231 		.ascii	"CE218135_BLE_Proximity01.cydsn\000"
- 1525      38313335 
- 1525      5F424C45 
- 1525      5F50726F 
- 1525      78696D69 
- 1526              	.LASF30:
- 1527 01c7 43795F49 		.ascii	"Cy_IPC_Drv_IsLockAcquired\000"
- 1527      50435F44 
- 1527      72765F49 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 49
+ 1523              	.LASF29:
+ 1524 0179 6E6F7469 		.ascii	"notifyEventIntr\000"
+ 1524      66794576 
+ 1524      656E7449 
+ 1524      6E747200 
+ 1525              	.LASF30:
+ 1526 0189 43795F49 		.ascii	"Cy_IPC_Drv_IsLockAcquired\000"
+ 1526      50435F44 
+ 1526      72765F49 
+ 1526      734C6F63 
+ 1526      6B416371 
+ 1527              	.LASF24:
+ 1528 01a3 43595F49 		.ascii	"CY_IPC_DRV_SUCCESS\000"
+ 1528      50435F44 
+ 1528      52565F53 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 49
 
 
- 1527      734C6F63 
- 1527      6B416371 
- 1528              	.LASF24:
- 1529 01e1 43595F49 		.ascii	"CY_IPC_DRV_SUCCESS\000"
- 1529      50435F44 
- 1529      52565F53 
- 1529      55434345 
- 1529      535300
- 1530              	.LASF26:
- 1531 01f4 63795F65 		.ascii	"cy_en_ipcdrv_status_t\000"
- 1531      6E5F6970 
- 1531      63647276 
- 1531      5F737461 
- 1531      7475735F 
- 1532              	.LASF11:
- 1533 020a 73697A65 		.ascii	"sizetype\000"
- 1533      74797065 
- 1533      00
- 1534              	.LASF6:
- 1535 0213 6C6F6E67 		.ascii	"long long int\000"
- 1535      206C6F6E 
- 1535      6720696E 
- 1535      7400
- 1536              	.LASF20:
- 1537 0221 63686172 		.ascii	"char\000"
- 1537      00
- 1538              	.LASF44:
- 1539 0226 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\drivers\\peripheral\\"
- 1539      72617465 
- 1539      645F536F 
- 1539      75726365 
- 1539      5C50536F 
- 1540 0254 6970635C 		.ascii	"ipc\\cy_ipc_drv.c\000"
- 1540      63795F69 
- 1540      70635F64 
- 1540      72762E63 
- 1540      00
- 1541              	.LASF36:
- 1542 0265 43795F49 		.ascii	"Cy_IPC_Drv_ReadDataValue\000"
- 1542      50435F44 
- 1542      72765F52 
- 1542      65616444 
- 1542      61746156 
- 1543              	.LASF2:
- 1544 027e 73686F72 		.ascii	"short int\000"
- 1544      7420696E 
- 1544      7400
- 1545              	.LASF42:
- 1546 0288 43795F49 		.ascii	"Cy_IPC_Drv_ReadMsgWord\000"
- 1546      50435F44 
- 1546      72765F52 
- 1546      6561644D 
- 1546      7367576F 
- 1547              	.LASF10:
- 1548 029f 75696E74 		.ascii	"uint32_t\000"
- 1548      33325F74 
- 1548      00
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccV1psjX.s 			page 50
+ 1528      55434345 
+ 1528      535300
+ 1529              	.LASF26:
+ 1530 01b6 63795F65 		.ascii	"cy_en_ipcdrv_status_t\000"
+ 1530      6E5F6970 
+ 1530      63647276 
+ 1530      5F737461 
+ 1530      7475735F 
+ 1531              	.LASF11:
+ 1532 01cc 73697A65 		.ascii	"sizetype\000"
+ 1532      74797065 
+ 1532      00
+ 1533              	.LASF6:
+ 1534 01d5 6C6F6E67 		.ascii	"long long int\000"
+ 1534      206C6F6E 
+ 1534      6720696E 
+ 1534      7400
+ 1535              	.LASF20:
+ 1536 01e3 63686172 		.ascii	"char\000"
+ 1536      00
+ 1537              	.LASF44:
+ 1538 01e8 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\drivers\\peripheral\\"
+ 1538      72617465 
+ 1538      645F536F 
+ 1538      75726365 
+ 1538      5C50536F 
+ 1539 0216 6970635C 		.ascii	"ipc\\cy_ipc_drv.c\000"
+ 1539      63795F69 
+ 1539      70635F64 
+ 1539      72762E63 
+ 1539      00
+ 1540              	.LASF45:
+ 1541 0227 433A5C55 		.ascii	"C:\\Users\\Coal\\Downloads\\Telegram Desktop\\CAP\\"
+ 1541      73657273 
+ 1541      5C436F61 
+ 1541      6C5C446F 
+ 1541      776E6C6F 
+ 1542 0254 43453231 		.ascii	"CE218135_BLE_Proximity02\\CE218135_BLE_Proximity01."
+ 1542      38313335 
+ 1542      5F424C45 
+ 1542      5F50726F 
+ 1542      78696D69 
+ 1543 0286 63796473 		.ascii	"cydsn\000"
+ 1543      6E00
+ 1544              	.LASF36:
+ 1545 028c 43795F49 		.ascii	"Cy_IPC_Drv_ReadDataValue\000"
+ 1545      50435F44 
+ 1545      72765F52 
+ 1545      65616444 
+ 1545      61746156 
+ 1546              	.LASF2:
+ 1547 02a5 73686F72 		.ascii	"short int\000"
+ 1547      7420696E 
+ 1547      7400
+ 1548              	.LASF42:
+ 1549 02af 43795F49 		.ascii	"Cy_IPC_Drv_ReadMsgWord\000"
+ 1549      50435F44 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccfhg04v.s 			page 50
 
 
- 1549              	.LASF4:
- 1550 02a8 6C6F6E67 		.ascii	"long int\000"
- 1550      20696E74 
- 1550      00
- 1551              	.LASF23:
- 1552 02b1 6C6F6E67 		.ascii	"long double\000"
- 1552      20646F75 
- 1552      626C6500 
- 1553              	.LASF43:
- 1554 02bd 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1554      43313120 
- 1554      352E342E 
- 1554      31203230 
- 1554      31363036 
- 1555 02f0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
- 1555      20726576 
- 1555      6973696F 
- 1555      6E203233 
- 1555      37373135 
- 1556 0323 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
- 1556      67202D66 
- 1556      66756E63 
- 1556      74696F6E 
- 1556      2D736563 
- 1557              	.LASF14:
- 1558 034f 4E4F5449 		.ascii	"NOTIFY\000"
- 1558      465900
- 1559              	.LASF46:
- 1560 0356 43795F53 		.ascii	"Cy_SysLib_AssertFailed\000"
- 1560      79734C69 
- 1560      625F4173 
- 1560      73657274 
- 1560      4661696C 
- 1561              	.LASF19:
- 1562 036d 63686172 		.ascii	"char_t\000"
- 1562      5F7400
- 1563              	.LASF27:
- 1564 0374 5F426F6F 		.ascii	"_Bool\000"
- 1564      6C00
- 1565              	.LASF18:
- 1566 037a 4950435F 		.ascii	"IPC_STRUCT_Type\000"
- 1566      53545255 
- 1566      43545F54 
- 1566      79706500 
- 1567              	.LASF29:
- 1568 038a 6E6F7469 		.ascii	"notifyEventIntr\000"
- 1568      66794576 
- 1568      656E7449 
- 1568      6E747200 
- 1569              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1549      72765F52 
+ 1549      6561644D 
+ 1549      7367576F 
+ 1550              	.LASF10:
+ 1551 02c6 75696E74 		.ascii	"uint32_t\000"
+ 1551      33325F74 
+ 1551      00
+ 1552              	.LASF4:
+ 1553 02cf 6C6F6E67 		.ascii	"long int\000"
+ 1553      20696E74 
+ 1553      00
+ 1554              	.LASF23:
+ 1555 02d8 6C6F6E67 		.ascii	"long double\000"
+ 1555      20646F75 
+ 1555      626C6500 
+ 1556              	.LASF43:
+ 1557 02e4 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1557      43313120 
+ 1557      352E342E 
+ 1557      31203230 
+ 1557      31363036 
+ 1558 0317 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 1558      20726576 
+ 1558      6973696F 
+ 1558      6E203233 
+ 1558      37373135 
+ 1559 034a 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 1559      67202D66 
+ 1559      66756E63 
+ 1559      74696F6E 
+ 1559      2D736563 
+ 1560              	.LASF14:
+ 1561 0376 4E4F5449 		.ascii	"NOTIFY\000"
+ 1561      465900
+ 1562              	.LASF46:
+ 1563 037d 43795F53 		.ascii	"Cy_SysLib_AssertFailed\000"
+ 1563      79734C69 
+ 1563      625F4173 
+ 1563      73657274 
+ 1563      4661696C 
+ 1564              	.LASF19:
+ 1565 0394 63686172 		.ascii	"char_t\000"
+ 1565      5F7400
+ 1566              	.LASF27:
+ 1567 039b 5F426F6F 		.ascii	"_Bool\000"
+ 1567      6C00
+ 1568              	.LASF18:
+ 1569 03a1 4950435F 		.ascii	"IPC_STRUCT_Type\000"
+ 1569      53545255 
+ 1569      43545F54 
+ 1569      79706500 
+ 1570              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

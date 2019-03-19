@@ -1,16 +1,16 @@
-Loading plugins phase: Elapsed time ==> 0s.181ms
+Loading plugins phase: Elapsed time ==> 0s.229ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -d CY8C6347BZI-BLD53 -s C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\Generated_Source\PSoC6 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -d CY8C6347BZI-BLD53 -s C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\Generated_Source\PSoC6 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 ADD: fit.M0067: information: Clock Information: (The WCO is enabled. Chip startup will be slower because clock configuration cannot continue until the WCO is ready. See the device datasheet for WCO startup timing. If WCO is not required during startup, consider starting it in main() for faster chip startup.).
- * C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cydwr (WCO)
+ * C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cydwr (WCO)
 
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 3s.601ms
+Elaboration phase: Elapsed time ==> 5s.080ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.073ms
+HDL generation phase: Elapsed time ==> 0s.122ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -27,24 +27,24 @@ HDL generation phase: Elapsed time ==> 0s.073ms
 
 ======================================================================
 Compiling:  CE218135_BLE_Proximity01.v
-Program  :   D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 CE218135_BLE_Proximity01.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 CE218135_BLE_Proximity01.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  CE218135_BLE_Proximity01.v
-Program  :   D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 CE218135_BLE_Proximity01.v -verilog
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 CE218135_BLE_Proximity01.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  CE218135_BLE_Proximity01.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 -verilog CE218135_BLE_Proximity01.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 -verilog CE218135_BLE_Proximity01.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Mar 19 19:51:43 2019
+Tue Mar 19 22:19:59 2019
 
 
 ======================================================================
@@ -54,27 +54,27 @@ Options  :    -yv2 -q10 CE218135_BLE_Proximity01.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Mar 19 19:51:43 2019
+Tue Mar 19 22:19:59 2019
 
-Flattening file 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
-Flattening file 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
-Flattening file 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
-Flattening file 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
 
 vpp:  No errors.
 
 Library 'work' => directory 'lcpsoc3'
 General_symbol_table
 General_symbol_table
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Using control file 'CE218135_BLE_Proximity01.ctl'.
 
 vlogfe:  No errors.
@@ -83,27 +83,27 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  CE218135_BLE_Proximity01.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 -verilog CE218135_BLE_Proximity01.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 -verilog CE218135_BLE_Proximity01.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Mar 19 19:51:44 2019
+Tue Mar 19 22:20:00 2019
 
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.ctl'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
-Linking 'C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.v'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
 
 tovif:  No errors.
 
@@ -111,28 +111,28 @@ tovif:  No errors.
 ======================================================================
 Compiling:  CE218135_BLE_Proximity01.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 -verilog CE218135_BLE_Proximity01.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 -verilog CE218135_BLE_Proximity01.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Mar 19 19:51:45 2019
+Tue Mar 19 22:20:01 2019
 
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.ctl'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
-Linking 'C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.v'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
-Linking 'D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\codegentemp\CE218135_BLE_Proximity01.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
 
 ----------------------------------------------------------
 Detecting unused logic.
@@ -148,13 +148,17 @@ Detecting unused logic.
 	Net_274
 	Net_275
 	Net_276
+	\CapSense:Net_636\
+	\CapSense:Net_637\
+	\CapSense:Net_638\
+	\CapSense:Net_639\
 	\CapSense:Net_608\
 	\CapSense:Net_610\
 	\EZI2C:Net_224\
 	\EZI2C:Net_223\
 
 
-Deleted 14 User equations/components.
+Deleted 18 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -173,10 +177,6 @@ Aliasing \CapSense:Net_45\ to zero
 Aliasing \CapSense:Net_46\ to zero
 Aliasing \CapSense:Net_47\ to zero
 Aliasing \CapSense:Net_48\ to zero
-Aliasing \CapSense:Net_636\ to zero
-Aliasing \CapSense:Net_637\ to zero
-Aliasing \CapSense:Net_638\ to zero
-Aliasing \CapSense:Net_639\ to zero
 Aliasing \CapSense:Net_1423\ to zero
 Aliasing \CapSense:Net_44\ to zero
 Aliasing \CapSense:Net_851\ to zero
@@ -201,23 +201,19 @@ Removing Lhs of wire \CapSense:Net_45\[123] = zero[8]
 Removing Lhs of wire \CapSense:Net_46\[124] = zero[8]
 Removing Lhs of wire \CapSense:Net_47\[125] = zero[8]
 Removing Lhs of wire \CapSense:Net_48\[126] = zero[8]
-Removing Lhs of wire \CapSense:Net_636\[129] = zero[8]
-Removing Lhs of wire \CapSense:Net_637\[130] = zero[8]
-Removing Lhs of wire \CapSense:Net_638\[131] = zero[8]
-Removing Lhs of wire \CapSense:Net_639\[132] = zero[8]
-Removing Lhs of wire \CapSense:Net_1423\[133] = zero[8]
-Removing Lhs of wire \CapSense:Net_44\[136] = zero[8]
-Removing Lhs of wire \CapSense:Net_851\[186] = zero[8]
-Removing Rhs of wire \EZI2C:clock_wire\[217] = \EZI2C:Net_847\[242]
-Removing Lhs of wire \EZI2C:Net_283\[218] = zero[8]
-Removing Lhs of wire \EZI2C:Net_282\[221] = zero[8]
-Removing Lhs of wire \EZI2C:Net_281\[226] = zero[8]
-Removing Lhs of wire \EZI2C:Net_280\[231] = zero[8]
-Removing Lhs of wire \EZI2C:Net_279\[233] = zero[8]
-Removing Lhs of wire \EZI2C:Net_278\[234] = zero[8]
+Removing Lhs of wire \CapSense:Net_1423\[131] = zero[8]
+Removing Lhs of wire \CapSense:Net_44\[134] = zero[8]
+Removing Lhs of wire \CapSense:Net_851\[184] = zero[8]
+Removing Rhs of wire \EZI2C:clock_wire\[216] = \EZI2C:Net_847\[241]
+Removing Lhs of wire \EZI2C:Net_283\[217] = zero[8]
+Removing Lhs of wire \EZI2C:Net_282\[220] = zero[8]
+Removing Lhs of wire \EZI2C:Net_281\[225] = zero[8]
+Removing Lhs of wire \EZI2C:Net_280\[230] = zero[8]
+Removing Lhs of wire \EZI2C:Net_279\[232] = zero[8]
+Removing Lhs of wire \EZI2C:Net_278\[233] = zero[8]
 
 ------------------------------------------------------
-Aliased 0 equations, 29 wires.
+Aliased 0 equations, 25 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -237,18 +233,18 @@ Circuit simplification results:
 
 topld:  No errors.
 
-CYPRESS_DIR    : D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp
-Warp Program   : D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -dcpsoc3 CE218135_BLE_Proximity01.v -verilog
+CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp
+Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj" -dcpsoc3 CE218135_BLE_Proximity01.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 2s.044ms
+Warp synthesis phase: Elapsed time ==> 2s.885ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Tuesday, 19 March 2019 19:51:45
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\User\Desktop\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -d CY8C6347BZI-BLD53 CE218135_BLE_Proximity01.v -verilog
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Tuesday, 19 March 2019 22:20:02
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj -d CY8C6347BZI-BLD53 CE218135_BLE_Proximity01.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.978ms
+Design parsing phase: Elapsed time ==> 1s.299ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1610,7 +1606,7 @@ UDB                           :      :      :      :
   Datapath Cells              :    0 :   12 :   12 :  0.00 %
   Status Cells                :    0 :   12 :   12 :  0.00 %
   Control Cells               :    0 :   12 :   12 :  0.00 %
-7-Bit IDAC                    :    2 :    0 :    2 : 100.00 %
+7-Bit IDAC                    :    1 :    1 :    2 : 50.00 %
 Continuous Time DAC           :    0 :    1 :    1 :  0.00 %
 LP Comparator                 :    0 :    2 :    2 :  0.00 %
 Opamp                         :    0 :    2 :    2 :  0.00 %
@@ -1618,8 +1614,8 @@ Sample and Hold               :    0 :    1 :    1 :  0.00 %
 SAR ADC                       :    0 :    1 :    1 :  0.00 %
 DieTemp Sensor                :    0 :    1 :    1 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.199ms
-Tech Mapping phase: Elapsed time ==> 0s.273ms
+Technology Mapping: Elapsed time ==> 0s.240ms
+Tech Mapping phase: Elapsed time ==> 0s.335ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -1664,7 +1660,6 @@ CPUSS                               : CPUSS_[FFB(CPUSS,0)]
 \CapSense:CSD\                      : CSD_[FFB(CSD,0)]                   
 IOSS                                : IOSS_[FFB(IOSS,0)]                 
 \CapSense:IDACMod\                  : CSIDAC7_[FFB(CSIDAC7,0)]           
-\CapSense:IDACComp\                 : CSIDAC7_[FFB(CSIDAC7,1)]           
 \MCWDT:MCWDT\                       : MCWDT_[FFB(MCWDT,0)]               
 \EZI2C:SCB\                         : SCB_[FFB(SCB,8)]                   
 \CapSense:Cmod(0)\                  : [IOP=(7)][IoId=(1)]                
@@ -1673,15 +1668,15 @@ IOSS                                : IOSS_[FFB(IOSS,0)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.2964052s
+Elapsed time ==> 0.3722768s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 2s.343ms
+Analog Placement phase: Elapsed time ==> 3s.236ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0068981 secs
+Route success=True, Iterations=1 Elapsed=0.0134481 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.006ms
+Analog Routing phase: Elapsed time ==> 0s.013ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1729,8 +1724,6 @@ Map of net to items {
     p10_2
     P10_P41
     p10_1
-    CSD0_idac1_out
-    CSD0_IAIB
     CSD0_idac0_out
     CSD0_source_idac_v
     AMUXSPLIT4_SWITCH_AA_SL
@@ -1779,8 +1772,6 @@ Map of item to net {
   p10_2                                            -> \CapSense:Net_847_0\
   P10_P41                                          -> \CapSense:Net_847_0\
   p10_1                                            -> \CapSense:Net_847_0\
-  CSD0_idac1_out                                   -> \CapSense:Net_847_0\
-  CSD0_IAIB                                        -> \CapSense:Net_847_0\
   CSD0_idac0_out                                   -> \CapSense:Net_847_0\
   CSD0_source_idac_v                               -> \CapSense:Net_847_0\
   AMUXSPLIT4_SWITCH_AA_SL                          -> \CapSense:Net_847_0\
@@ -1792,12 +1783,12 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.019ms
+Analog Code Generation phase: Elapsed time ==> 0s.037ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.4 sec.
+I2076: Total run-time: 0.8 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1811,7 +1802,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.038ms
+Partitioning: Elapsed time ==> 0s.070ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -3301,15 +3292,6 @@ CSIDAC7 group 0:
             cy_registers = ""
             leg3_needed = 0
         }
-    7-Bit IDAC @ F(CSIDAC7,1): 
-    CSIDAC7: Name =\CapSense:IDACComp\
-        PORT MAP (
-            iout => \CapSense:Net_847_0\ );
-        Properties:
-        {
-            cy_registers = ""
-            leg3_needed = 1
-        }
 TCPWM group 0: 
     TCPWM @ F(TCPWM,0): 
     TCPWM: Name =\CY_EINK_Timer:TCPWM\
@@ -3455,33 +3437,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |                       Name |
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.045ms
-Digital Placement phase: Elapsed time ==> 6s.024ms
+Digital component placer commit/Report: Elapsed time ==> 0s.098ms
+Digital Placement phase: Elapsed time ==> 9s.315ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
-"D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "D:\CyPRess Creator\PSoC Creator\4.2\PSoC Creator\dev\psoc6/0/route_arch-rrg.cydata" --vh2-path "CE218135_BLE_Proximity01_r.vh2" --pcf-path "CE218135_BLE_Proximity01.pco" --des-name "CE218135_BLE_Proximity01" --dsf-path "CE218135_BLE_Proximity01.dsf" --sdc-path "CE218135_BLE_Proximity01.sdc" --lib-path "CE218135_BLE_Proximity01_r.lib"
+"C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc6/0/route_arch-rrg.cydata" --vh2-path "CE218135_BLE_Proximity01_r.vh2" --pcf-path "CE218135_BLE_Proximity01.pco" --des-name "CE218135_BLE_Proximity01" --dsf-path "CE218135_BLE_Proximity01.dsf" --sdc-path "CE218135_BLE_Proximity01.sdc" --lib-path "CE218135_BLE_Proximity01_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.992ms
+Digital Routing phase: Elapsed time ==> 1s.711ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.489ms
+Bitstream Generation phase: Elapsed time ==> 1s.333ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.000ms
+Bitstream Verification phase: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in CE218135_BLE_Proximity01_timing.html.
-Static timing analysis phase: Elapsed time ==> 8s.704ms
+Static timing analysis phase: Elapsed time ==> 13s.628ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.000ms
+Data reporting phase: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.165ms
+Design database save phase: Elapsed time ==> 0s.222ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 20s.033ms
+cydsfit: Elapsed time ==> 31s.187ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 20s.034ms
-API generation phase: Elapsed time ==> 2s.255ms
-Dependency generation phase: Elapsed time ==> 0s.013ms
+Fitter phase: Elapsed time ==> 31s.188ms
+API generation phase: Elapsed time ==> 4s.147ms
+Dependency generation phase: Elapsed time ==> 0s.033ms
 Cleanup phase: Elapsed time ==> 0s.000ms

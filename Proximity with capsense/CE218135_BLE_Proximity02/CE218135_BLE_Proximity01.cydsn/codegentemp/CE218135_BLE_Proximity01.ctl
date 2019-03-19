@@ -1,6 +1,6 @@
 -- ======================================================================
 -- CE218135_BLE_Proximity01.ctl generated from CE218135_BLE_Proximity01
--- 03/19/2019 at 19:51
+-- 03/19/2019 at 22:19
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

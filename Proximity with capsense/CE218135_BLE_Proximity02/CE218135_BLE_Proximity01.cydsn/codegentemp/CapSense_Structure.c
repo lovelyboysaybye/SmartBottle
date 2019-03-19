@@ -422,41 +422,6 @@ const CapSense_RAM_WD_LIST_STRUCT CapSense_ramWidgetInit =
 };
 
 
-/* IDAC Initialization Data */
-const uint8 CapSense_ramIdacInit[CapSense_TOTAL_SENSORS] =
-{
-    /* Button0 */
-    CapSense_BUTTON0_SNS0_IDAC_COMP0,
-
-    /* Button1 */
-    CapSense_BUTTON1_SNS0_IDAC_COMP0,
-
-    /* Button2 */
-    CapSense_BUTTON2_SNS0_IDAC_COMP0,
-
-    /* Button3 */
-    CapSense_BUTTON3_SNS0_IDAC_COMP0,
-
-    /* Button4 */
-    CapSense_BUTTON4_SNS0_IDAC_COMP0,
-
-    /* Button5 */
-    CapSense_BUTTON5_SNS0_IDAC_COMP0,
-
-    /* Button6 */
-    CapSense_BUTTON6_SNS0_IDAC_COMP0,
-
-    /* Button7 */
-    CapSense_BUTTON7_SNS0_IDAC_COMP0,
-
-    /* Button8 */
-    CapSense_BUTTON8_SNS0_IDAC_COMP0,
-
-    /* Button9 */
-    CapSense_BUTTON9_SNS0_IDAC_COMP0,
-};
-
-
 
 /*******************************************************************************
 * Defines internal data types and statements

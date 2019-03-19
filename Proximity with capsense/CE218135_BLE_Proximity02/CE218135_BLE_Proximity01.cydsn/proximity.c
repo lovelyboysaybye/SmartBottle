@@ -163,11 +163,34 @@ proximity_data_t* GetProximityData(void)
        
         for (int i = 0; i <=9; i++)
         {
+         if (i == 9 && mass[i] == 1)
+          proximity = (uint8_t)PROX_MAX_VALUE; 
          if (mass[i] == 1)
         continue;
         else
         {
-         proximity = i * 25u; break;   
+           if (i == 0)
+           proximity = 0u; 
+           if ( i == 1)
+           proximity = 26u; 
+           if (i== 2)
+           proximity = 51u; 
+           if (i == 3)
+           proximity = 77u; 
+           if ( i == 4)
+           proximity = 102u; 
+           if (i == 5)
+           proximity = 128u; 
+           if ( i == 6)
+           proximity = 153u; 
+           if (i == 7)
+           proximity = 179u;
+           if ( i == 8)
+           proximity = 204u; 
+           if ( i == 9)
+           proximity = 230u; 
+        break;
+            //proximity = i*25u; break;
         }
         }
         

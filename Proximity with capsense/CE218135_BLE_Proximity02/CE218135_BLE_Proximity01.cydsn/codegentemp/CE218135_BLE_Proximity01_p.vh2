@@ -1,5 +1,5 @@
 -- Project:   CE218135_BLE_Proximity01
--- Generated: 03/19/2019 19:51:54
+-- Generated: 03/19/2019 22:20:14
 -- PSoC Creator  4.2
 
 ENTITY CE218135_BLE_Proximity01 IS
@@ -220,7 +220,6 @@ ARCHITECTURE __DEFAULT__ OF CE218135_BLE_Proximity01 IS
     ATTRIBUTE lib_model OF \EZI2C:sda(0)\ : LABEL IS "iocell30";
     ATTRIBUTE Location OF \EZI2C:sda(0)\ : LABEL IS "P6[1]";
     ATTRIBUTE Location OF \CapSense:IDACMod\ : LABEL IS "F(CSIDAC7,0)";
-    ATTRIBUTE Location OF \CapSense:IDACComp\ : LABEL IS "F(CSIDAC7,1)";
     ATTRIBUTE Location OF \CapSense:CSD\ : LABEL IS "F(CSD,0)";
     COMPONENT BLE
         PORT (
@@ -2111,16 +2110,6 @@ BEGIN
         GENERIC MAP(
             cy_registers => "",
             leg3_needed => 0)
-        PORT MAP(
-            dsi_idac_leg1_en => open,
-            dsi_idac_leg2_en => open,
-            dsi_idac_leg3_en => open,
-            dsi_idac_pol => open);
-
-    \CapSense:IDACComp\:CSIDAC7
-        GENERIC MAP(
-            cy_registers => "",
-            leg3_needed => 1)
         PORT MAP(
             dsi_idac_leg1_en => open,
             dsi_idac_leg2_en => open,

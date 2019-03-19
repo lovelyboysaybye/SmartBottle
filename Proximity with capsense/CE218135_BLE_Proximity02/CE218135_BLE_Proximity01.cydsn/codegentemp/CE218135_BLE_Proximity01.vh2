@@ -2,7 +2,7 @@
 --	Conversion of CE218135_BLE_Proximity01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Mar 19 19:51:45 2019
+--	Tue Mar 19 22:20:02 2019
 --
 
 USE cypress.cypress.all;
@@ -113,7 +113,6 @@ SIGNAL \CapSense:Net_45\ : bit;
 SIGNAL \CapSense:Net_46\ : bit;
 SIGNAL \CapSense:Net_47\ : bit;
 SIGNAL \CapSense:Net_48\ : bit;
-TERMINAL \CapSense:Net_866\ : bit;
 SIGNAL \CapSense:Net_636\ : bit;
 SIGNAL \CapSense:Net_637\ : bit;
 SIGNAL \CapSense:Net_638\ : bit;
@@ -193,6 +192,7 @@ SIGNAL \CapSense:tmpIO_9__Sns_net_2\ : bit;
 SIGNAL \CapSense:tmpIO_9__Sns_net_1\ : bit;
 SIGNAL \CapSense:tmpIO_9__Sns_net_0\ : bit;
 TERMINAL \CapSense:tmpSIOVREF__Sns_net_0\ : bit;
+TERMINAL \CapSense:Net_866\ : bit;
 SIGNAL \EZI2C:clock_wire\ : bit;
 SIGNAL \EZI2C:Net_283\ : bit;
 SIGNAL \EZI2C:Net_1062\ : bit;
@@ -775,14 +775,6 @@ EINK_Clock:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		leg3_needed=>'0')
 	PORT MAP(iout=>\CapSense:Net_606\,
-		dsi_idac_leg1_en=>zero,
-		dsi_idac_leg2_en=>zero,
-		dsi_idac_leg3_en=>zero,
-		dsi_idac_pol=>zero);
-\CapSense:IDACComp\:cy_mxs40_csidac_v1_0
-	GENERIC MAP(cy_registers=>"",
-		leg3_needed=>'1')
-	PORT MAP(iout=>\CapSense:Net_866\,
 		dsi_idac_leg1_en=>zero,
 		dsi_idac_leg2_en=>zero,
 		dsi_idac_leg3_en=>zero,

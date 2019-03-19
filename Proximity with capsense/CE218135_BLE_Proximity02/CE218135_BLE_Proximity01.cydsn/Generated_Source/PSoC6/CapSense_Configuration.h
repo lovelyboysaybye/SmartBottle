@@ -488,7 +488,7 @@ typedef uint16 CapSense_THRESHOLD_TYPE;
 #define CapSense_CSD_SNS_CLK_SOURCE           (CapSense_CLK_SOURCE_DIRECT)
 #define CapSense_CSD_SNS_CLK_DIVIDER          (4u)
 #define CapSense_CSD_INACTIVE_SNS_CONNECTION  (CapSense_SNS_CONNECTION_GROUND)
-#define CapSense_CSD_IDAC_COMP_EN             (1u)
+#define CapSense_CSD_IDAC_COMP_EN             (0u)
 #define CapSense_CSD_IDAC_CONFIG              (CapSense_IDAC_SOURCING)
 #define CapSense_CSD_RAWCOUNT_CAL_LEVEL       (85u)
 #define CapSense_CSD_DUALIDAC_LEVEL           (50u)
@@ -570,7 +570,7 @@ typedef uint16 CapSense_THRESHOLD_TYPE;
 *******************************************************************************/
 
 /* RAM Global Parameters Definitions */
-#define CapSense_CONFIG_ID                      (0xF42Eu)
+#define CapSense_CONFIG_ID                      (0xFE0Eu)
 #define CapSense_DEVICE_ID                      (0x0900u)
 #define CapSense_HW_CLOCK                       (0x0C35u)
 #define CapSense_CSD0_CONFIG                    (0x0008u)
@@ -776,17 +776,6 @@ typedef uint16 CapSense_THRESHOLD_TYPE;
 #define CapSense_BUTTON9_SNS_CLK_SOURCE         (0u)
 
 /* RAM Sensor Parameters Definitions */
-#define CapSense_BUTTON0_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON1_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON2_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON3_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON4_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON5_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON6_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON7_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON8_SNS0_IDAC_COMP0        (32u)
-#define CapSense_BUTTON9_SNS0_IDAC_COMP0        (32u)
-
 
 
 /*******************************************************************************

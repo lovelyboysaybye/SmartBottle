@@ -1,5 +1,5 @@
 # CE218135_BLE_Proximity01
-# 2019-03-19 17:51:55Z
+# 2019-03-19 20:20:16Z
 
 dont_use_location p4usbcell -1 -1 0
 dont_use_location USB -1 -1 0
@@ -47,7 +47,6 @@ set_location "\CY_EINK_SPIM:SCB\" SCB -1 -1 6
 set_location "\CY_EINK_SPIM:SCB_IRQ\" interrupt -1 -1 47
 set_location "\CY_EINK_Timer:TCPWM\" TCPWM -1 -1 0
 set_location "\CapSense:IDACMod\" CSIDAC7 -1 -1 0
-set_location "\CapSense:IDACComp\" CSIDAC7 -1 -1 1
 set_location "\CapSense:CSD\" CSD -1 -1 0
 set_location "\CapSense:ISR\" interrupt -1 -1 49
 set_location "\EZI2C:SCB\" SCB -1 -1 3

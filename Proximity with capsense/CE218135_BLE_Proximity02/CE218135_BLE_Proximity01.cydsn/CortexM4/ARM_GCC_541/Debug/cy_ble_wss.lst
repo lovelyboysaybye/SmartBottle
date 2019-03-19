@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 1
 
 
    1              		.syntax unified
@@ -21,8 +21,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
   18              	.Ltext0:
   19              		.cfi_sections	.debug_frame
   20              	.Letext0:
-  21              		.file 1 "d:\\cypress creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
-  22              		.file 2 "d:\\cypress creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
+  21              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  22              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
   23              		.file 3 "Generated_Source\\PSoC6\\pdl\\middleware\\ble\\cy_ble_stack_host_main.h"
   24              		.file 4 "Generated_Source\\PSoC6\\pdl\\middleware\\ble\\cy_ble_gap.h"
   25              		.file 5 "Generated_Source\\PSoC6\\pdl\\cmsis/include/core_cm4.h"
@@ -33,10 +33,10 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
   30 0006 00000000 		.4byte	.Ldebug_abbrev0
   31 000a 04       		.byte	0x4
   32 000b 01       		.uleb128 0x1
-  33 000c 7C020000 		.4byte	.LASF40
+  33 000c 2E020000 		.4byte	.LASF40
   34 0010 0C       		.byte	0xc
-  35 0011 F1030000 		.4byte	.LASF41
-  36 0015 2E020000 		.4byte	.LASF42
+  35 0011 08040000 		.4byte	.LASF41
+  36 0015 0B030000 		.4byte	.LASF42
   37 0019 00000000 		.4byte	.Ldebug_line0
   38 001d 02       		.uleb128 0x2
   39 001e 04       		.byte	0x4
@@ -49,16 +49,16 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
   46 002b 03       		.uleb128 0x3
   47 002c 08       		.byte	0x8
   48 002d 05       		.byte	0x5
-  49 002e 46030000 		.4byte	.LASF1
+  49 002e F8020000 		.4byte	.LASF1
   50 0032 03       		.uleb128 0x3
   51 0033 08       		.byte	0x8
   52 0034 04       		.byte	0x4
-  53 0035 D9030000 		.4byte	.LASF2
+  53 0035 F0030000 		.4byte	.LASF2
   54 0039 03       		.uleb128 0x3
   55 003a 01       		.byte	0x1
   56 003b 06       		.byte	0x6
-  57 003c E5030000 		.4byte	.LASF3
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 2
+  57 003c FC030000 		.4byte	.LASF3
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 2
 
 
   58 0040 04       		.uleb128 0x4
@@ -73,7 +73,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
   67 0052 03       		.uleb128 0x3
   68 0053 02       		.byte	0x2
   69 0054 05       		.byte	0x5
-  70 0055 78030000 		.4byte	.LASF5
+  70 0055 8F030000 		.4byte	.LASF5
   71 0059 03       		.uleb128 0x3
   72 005a 02       		.byte	0x2
   73 005b 07       		.byte	0x7
@@ -86,7 +86,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
   80 006b 03       		.uleb128 0x3
   81 006c 04       		.byte	0x4
   82 006d 05       		.byte	0x5
-  83 006e D0030000 		.4byte	.LASF9
+  83 006e E7030000 		.4byte	.LASF9
   84 0072 03       		.uleb128 0x3
   85 0073 04       		.byte	0x4
   86 0074 07       		.byte	0x7
@@ -98,18 +98,18 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
   92 0080 03       		.uleb128 0x3
   93 0081 04       		.byte	0x4
   94 0082 07       		.byte	0x7
-  95 0083 3D030000 		.4byte	.LASF12
+  95 0083 EF020000 		.4byte	.LASF12
   96 0087 03       		.uleb128 0x3
   97 0088 01       		.byte	0x1
   98 0089 08       		.byte	0x8
-  99 008a 54030000 		.4byte	.LASF13
+  99 008a 06030000 		.4byte	.LASF13
  100 008e 04       		.uleb128 0x4
  101 008f 89000000 		.4byte	.LASF14
  102 0093 02       		.byte	0x2
  103 0094 18       		.byte	0x18
  104 0095 40000000 		.4byte	0x40
  105 0099 04       		.uleb128 0x4
- 106 009a 2F030000 		.4byte	.LASF15
+ 106 009a E1020000 		.4byte	.LASF15
  107 009e 02       		.byte	0x2
  108 009f 2C       		.byte	0x2c
  109 00a0 60000000 		.4byte	0x60
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  112 00a6 04       		.byte	0x4
  113 00a7 D1000000 		.4byte	.LASF16
  114 00ab 03       		.uleb128 0x3
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 3
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 3
 
 
  115 00ac 08       		.byte	0x8
@@ -136,7 +136,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  127 00c3 8E000000 		.4byte	0x8e
  128 00c7 00       		.byte	0
  129 00c8 06       		.uleb128 0x6
- 130 00c9 37030000 		.4byte	.LASF19
+ 130 00c9 E9020000 		.4byte	.LASF19
  131 00cd 03       		.byte	0x3
  132 00ce 6901     		.2byte	0x169
  133 00d0 8E000000 		.4byte	0x8e
@@ -160,7 +160,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  151 00f5 0F020000 		.4byte	.LASF22
  152 00f9 01       		.byte	0x1
  153 00fa 09       		.uleb128 0x9
- 154 00fb 82030000 		.4byte	.LASF23
+ 154 00fb 99030000 		.4byte	.LASF23
  155 00ff 02       		.byte	0x2
  156 0100 09       		.uleb128 0x9
  157 0101 7D010000 		.4byte	.LASF24
@@ -178,13 +178,13 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  169 0119 87       		.byte	0x87
  170 011a 4F010000 		.4byte	0x14f
  171 011e 09       		.uleb128 0x9
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 4
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 4
 
 
- 172 011f 59030000 		.4byte	.LASF26
+ 172 011f 70030000 		.4byte	.LASF26
  173 0123 00       		.byte	0
  174 0124 09       		.uleb128 0x9
- 175 0125 9F030000 		.4byte	.LASF27
+ 175 0125 B6030000 		.4byte	.LASF27
  176 0129 01       		.byte	0x1
  177 012a 09       		.uleb128 0x9
  178 012b 5A010000 		.4byte	.LASF28
@@ -206,7 +206,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  194 014d 07       		.byte	0x7
  195 014e 00       		.byte	0
  196 014f 04       		.uleb128 0x4
- 197 0150 39040000 		.4byte	.LASF34
+ 197 0150 50040000 		.4byte	.LASF34
  198 0154 04       		.byte	0x4
  199 0155 90       		.byte	0x90
  200 0156 12010000 		.4byte	0x112
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  226 0193 04       		.byte	0x4
  227 0194 2C02     		.2byte	0x22c
  228 0196 7E010000 		.4byte	0x17e
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 5
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 5
 
 
  229 019a 0C       		.uleb128 0xc
@@ -249,7 +249,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  234 01a8 00       		.byte	0
  235 01a9 00       		.byte	0
  236 01aa 0A       		.uleb128 0xa
- 237 01ab 28040000 		.4byte	.LASF39
+ 237 01ab 3F040000 		.4byte	.LASF39
  238 01af 04       		.byte	0x4
  239 01b0 2D02     		.2byte	0x22d
  240 01b2 9A010000 		.4byte	0x19a
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  283 0027 00       		.byte	0
  284 0028 03       		.uleb128 0x3
  285 0029 0E       		.uleb128 0xe
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 6
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 6
 
 
  286 002a 3A       		.uleb128 0x3a
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  340 0060 49       		.uleb128 0x49
  341 0061 13       		.uleb128 0x13
  342 0062 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 7
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 7
 
 
  343 0063 0B       		.uleb128 0xb
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  397 0099 2F       		.uleb128 0x2f
  398 009a 0B       		.uleb128 0xb
  399 009b 00       		.byte	0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 8
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 8
 
 
  400 009c 00       		.byte	0
@@ -435,8 +435,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  411 0014 00000000 		.4byte	0
  412              		.section	.debug_line,"",%progbits
  413              	.Ldebug_line0:
- 414 0000 8B010000 		.section	.debug_str,"MS",%progbits,1
- 414      02008501 
+ 414 0000 A3010000 		.section	.debug_str,"MS",%progbits,1
+ 414      02009D01 
  414      00000201 
  414      FB0E0D00 
  414      01010101 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  429              	.LASF14:
  430 0089 75696E74 		.ascii	"uint8_t\000"
  430      385F7400 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 9
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 9
 
 
  431              	.LASF29:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  452      4C455F43 
  452      4F4E4E5F 
  452      53544154 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 10
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 10
 
 
  452      455F434F 
@@ -580,115 +580,117 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 1
  466      44565F53 
  466      54415445 
  466      5F414456 
- 467              	.LASF42:
- 468 022e 433A5C55 		.ascii	"C:\\Users\\User\\Desktop\\CE218135_BLE_Proximity02\\"
- 468      73657273 
- 468      5C557365 
- 468      725C4465 
- 468      736B746F 
- 469 025d 43453231 		.ascii	"CE218135_BLE_Proximity01.cydsn\000"
- 469      38313335 
- 469      5F424C45 
- 469      5F50726F 
- 469      78696D69 
- 470              	.LASF40:
- 471 027c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 471      43313120 
- 471      352E342E 
- 471      31203230 
- 471      31363036 
- 472 02af 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 11
+ 467              	.LASF40:
+ 468 022e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 468      43313120 
+ 468      352E342E 
+ 468      31203230 
+ 468      31363036 
+ 469 0261 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 469      20726576 
+ 469      6973696F 
+ 469      6E203233 
+ 469      37373135 
+ 470 0294 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 470      70202D6D 
+ 470      6670753D 
+ 470      66707634 
+ 470      2D73702D 
+ 471 02c7 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 471      6F6E7320 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 11
 
 
- 472      20726576 
- 472      6973696F 
- 472      6E203233 
- 472      37373135 
- 473 02e2 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
- 473      70202D6D 
- 473      6670753D 
- 473      66707634 
- 473      2D73702D 
- 474 0315 65637469 		.ascii	"ections -ffat-lto-objects\000"
- 474      6F6E7320 
- 474      2D666661 
- 474      742D6C74 
- 474      6F2D6F62 
- 475              	.LASF15:
- 476 032f 696E7433 		.ascii	"int32_t\000"
- 476      325F7400 
- 477              	.LASF19:
- 478 0337 61747449 		.ascii	"attId\000"
- 478      6400
- 479              	.LASF12:
- 480 033d 73697A65 		.ascii	"sizetype\000"
- 480      74797065 
- 480      00
- 481              	.LASF1:
- 482 0346 6C6F6E67 		.ascii	"long long int\000"
- 482      206C6F6E 
- 482      6720696E 
- 482      7400
- 483              	.LASF13:
- 484 0354 63686172 		.ascii	"char\000"
- 484      00
- 485              	.LASF26:
- 486 0359 43595F42 		.ascii	"CY_BLE_CONN_STATE_DISCONNECTED\000"
- 486      4C455F43 
- 486      4F4E4E5F 
- 486      53544154 
- 486      455F4449 
- 487              	.LASF5:
- 488 0378 73686F72 		.ascii	"short int\000"
- 488      7420696E 
- 488      7400
- 489              	.LASF23:
- 490 0382 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADVERTISING\000"
- 490      4C455F41 
- 490      44565F53 
- 490      54415445 
- 490      5F414456 
- 491              	.LASF27:
- 492 039f 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCONNECTED_DISCOVERED\000"
- 492      4C455F43 
- 492      4F4E4E5F 
- 492      53544154 
- 492      455F434C 
- 493              	.LASF9:
- 494 03d0 6C6F6E67 		.ascii	"long int\000"
- 494      20696E74 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccR1NKbg.s 			page 12
+ 471      2D666661 
+ 471      742D6C74 
+ 471      6F2D6F62 
+ 472              	.LASF15:
+ 473 02e1 696E7433 		.ascii	"int32_t\000"
+ 473      325F7400 
+ 474              	.LASF19:
+ 475 02e9 61747449 		.ascii	"attId\000"
+ 475      6400
+ 476              	.LASF12:
+ 477 02ef 73697A65 		.ascii	"sizetype\000"
+ 477      74797065 
+ 477      00
+ 478              	.LASF1:
+ 479 02f8 6C6F6E67 		.ascii	"long long int\000"
+ 479      206C6F6E 
+ 479      6720696E 
+ 479      7400
+ 480              	.LASF13:
+ 481 0306 63686172 		.ascii	"char\000"
+ 481      00
+ 482              	.LASF42:
+ 483 030b 433A5C55 		.ascii	"C:\\Users\\Coal\\Downloads\\Telegram Desktop\\CAP\\"
+ 483      73657273 
+ 483      5C436F61 
+ 483      6C5C446F 
+ 483      776E6C6F 
+ 484 0338 43453231 		.ascii	"CE218135_BLE_Proximity02\\CE218135_BLE_Proximity01."
+ 484      38313335 
+ 484      5F424C45 
+ 484      5F50726F 
+ 484      78696D69 
+ 485 036a 63796473 		.ascii	"cydsn\000"
+ 485      6E00
+ 486              	.LASF26:
+ 487 0370 43595F42 		.ascii	"CY_BLE_CONN_STATE_DISCONNECTED\000"
+ 487      4C455F43 
+ 487      4F4E4E5F 
+ 487      53544154 
+ 487      455F4449 
+ 488              	.LASF5:
+ 489 038f 73686F72 		.ascii	"short int\000"
+ 489      7420696E 
+ 489      7400
+ 490              	.LASF23:
+ 491 0399 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADVERTISING\000"
+ 491      4C455F41 
+ 491      44565F53 
+ 491      54415445 
+ 491      5F414456 
+ 492              	.LASF27:
+ 493 03b6 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCONNECTED_DISCOVERED\000"
+ 493      4C455F43 
+ 493      4F4E4E5F 
+ 493      53544154 
+ 493      455F434C 
+ 494              	.LASF9:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cciP835o.s 			page 12
 
 
- 494      00
- 495              	.LASF2:
- 496 03d9 6C6F6E67 		.ascii	"long double\000"
- 496      20646F75 
- 496      626C6500 
- 497              	.LASF3:
- 498 03e5 7369676E 		.ascii	"signed char\000"
- 498      65642063 
- 498      68617200 
- 499              	.LASF41:
- 500 03f1 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\middleware\\ble\\cy_b"
- 500      72617465 
- 500      645F536F 
- 500      75726365 
- 500      5C50536F 
- 501 041f 6C655F77 		.ascii	"le_wss.c\000"
- 501      73732E63 
- 501      00
- 502              	.LASF39:
- 503 0428 63795F62 		.ascii	"cy_ble_connState\000"
- 503      6C655F63 
- 503      6F6E6E53 
- 503      74617465 
- 503      00
- 504              	.LASF34:
- 505 0439 63795F65 		.ascii	"cy_en_ble_conn_state_t\000"
- 505      6E5F626C 
- 505      655F636F 
- 505      6E6E5F73 
- 505      74617465 
- 506              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 495 03e7 6C6F6E67 		.ascii	"long int\000"
+ 495      20696E74 
+ 495      00
+ 496              	.LASF2:
+ 497 03f0 6C6F6E67 		.ascii	"long double\000"
+ 497      20646F75 
+ 497      626C6500 
+ 498              	.LASF3:
+ 499 03fc 7369676E 		.ascii	"signed char\000"
+ 499      65642063 
+ 499      68617200 
+ 500              	.LASF41:
+ 501 0408 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\middleware\\ble\\cy_b"
+ 501      72617465 
+ 501      645F536F 
+ 501      75726365 
+ 501      5C50536F 
+ 502 0436 6C655F77 		.ascii	"le_wss.c\000"
+ 502      73732E63 
+ 502      00
+ 503              	.LASF39:
+ 504 043f 63795F62 		.ascii	"cy_ble_connState\000"
+ 504      6C655F63 
+ 504      6F6E6E53 
+ 504      74617465 
+ 504      00
+ 505              	.LASF34:
+ 506 0450 63795F65 		.ascii	"cy_en_ble_conn_state_t\000"
+ 506      6E5F626C 
+ 506      655F636F 
+ 506      6E6E5F73 
+ 506      74617465 
+ 507              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

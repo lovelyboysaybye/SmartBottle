@@ -354,12 +354,6 @@ typedef struct
      *  The baseline reset counter for the low baseline reset function.
      */
     CapSense_LOW_BSLN_RST_TYPE negBslnRstCnt [CapSense_NUM_SCAN_FREQS];
-
-    /**
-     *  CSD Widgets: The compensation IDAC value.
-     *  CSX Widgets: The balancing IDAC value.
-     */
-    uint8  idacComp [CapSense_NUM_SCAN_FREQS];
 } CapSense_RAM_SNS_STRUCT;
 
 
@@ -1069,7 +1063,6 @@ extern CapSense_RAM_STRUCT            CapSense_dsRam;
 extern const CapSense_FLASH_STRUCT    CapSense_dsFlash;
 extern const CapSense_FLASH_IO_STRUCT CapSense_ioList[CapSense_TOTAL_ELECTRODES];
 extern const CapSense_RAM_WD_LIST_STRUCT CapSense_ramWidgetInit;
-extern const uint8 CapSense_ramIdacInit[CapSense_TOTAL_SENSORS];
 
 
 

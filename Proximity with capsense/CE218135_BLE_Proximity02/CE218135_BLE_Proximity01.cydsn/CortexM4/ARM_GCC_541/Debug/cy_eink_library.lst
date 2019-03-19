@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
   27:cy_eink_library.c **** * or representation of this Software except as specified above is prohibited
   28:cy_eink_library.c **** * without the express written permission of Cypress.
   29:cy_eink_library.c **** *
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 2
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 2
 
 
   30:cy_eink_library.c **** * Disclaimer: THIS SOFTWARE IS PROVIDED AS-IS, WITH NO WARRANTY OF ANY KIND,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 3
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 3
 
 
   33              	.LVL0:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
   59              		.cfi_startproc
   60              		@ args = 0, pretend = 0, frame = 0
   61              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 4
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 4
 
 
   62              	.LVL3:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  136:cy_eink_library.c ****     return (pwrStatus);
  137:cy_eink_library.c **** }
   91              		.loc 1 137 0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 5
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 5
 
 
   92 0016 08BD     		pop	{r3, pc}
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  168:cy_eink_library.c ****     if (powerCycle)
  116              		.loc 1 168 0
  117 0004 0D46     		mov	r5, r1
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 6
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 6
 
 
  118 0006 11B1     		cbz	r1, .L10
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  188:cy_eink_library.c ****     }
  189:cy_eink_library.c ****     
  190:cy_eink_library.c ****     /* If power cycle operation requested, turn off E-INK power */
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 7
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 7
 
 
  191:cy_eink_library.c ****     if (powerCycle)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  222:cy_eink_library.c **** *  This is a blocking function that can take as many as 2 seconds 
  223:cy_eink_library.c **** *
  224:cy_eink_library.c **** ********************************************************************************/
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 8
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 8
 
 
  225:cy_eink_library.c **** void Cy_EINK_ShowFrame(cy_eink_frame_t* prevFrame, cy_eink_frame_t* newFrame,
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  214 0024 11D8     		bhi	.L20
  241:cy_eink_library.c ****              (updateType == CY_EINK_FULL_2STAGE))
  242:cy_eink_library.c ****     {
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 9
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 9
 
 
  243:cy_eink_library.c ****         /* Stage 1: update the display with the inverted version of the previous 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  244 004e FFF7FEFF 		bl	Cy_EINK_Power
  245              	.LVL27:
  246              	.L17:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 10
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 10
 
 
  247 0052 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  264 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
  265              		.cfi_def_cfa_offset 24
  266              		.cfi_offset 3, -24
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 11
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 11
 
 
  267              		.cfi_offset 4, -20
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  296 0020 FFF7FEFF 		bl	memcpy
  297              	.LVL34:
  317:cy_eink_library.c ****     {
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 12
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 12
 
 
  298              		.loc 1 317 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  358:cy_eink_library.c **** * Return:
  359:cy_eink_library.c **** *  None
  360:cy_eink_library.c **** *
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 13
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 13
 
 
  361:cy_eink_library.c **** * Side Effects:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  343              		.loc 1 393 0
  344 0008 1D78     		ldrb	r5, [r3]	@ zero_extendqisi2
  345 000a 167A     		ldrb	r6, [r2, #8]	@ zero_extendqisi2
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 14
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 14
 
 
  346 000c B542     		cmp	r5, r6
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  414:cy_eink_library.c ****                 for (verticalCounter = 0; verticalCounter < (fontInfo->ySize); 
  378              		.loc 1 414 0
  379 004e 4FF0000E 		mov	lr, #0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 15
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 15
 
 
  380 0052 23E0     		b	.L32
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  439:cy_eink_library.c ****                         /* Copy the inverted pixel data for white font on black
  440:cy_eink_library.c ****                            background */
  441:cy_eink_library.c ****                         else if ((fontInfo->color) == CY_EINK_BLACK_BACKGROUND)
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 16
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 16
 
 
  409              		.loc 1 441 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  452:cy_eink_library.c ****             /* For space and non-printable ASCII characters */
  453:cy_eink_library.c ****             else
  454:cy_eink_library.c ****             {
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 17
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 17
 
 
  455:cy_eink_library.c ****                 /* Vertical copying loop */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  474 00d0 0025     		movs	r5, #0
  475              	.L40:
  476              	.LVL59:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 18
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 18
 
 
  462:cy_eink_library.c ****                          horizontalCounter++)
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  495:cy_eink_library.c ****             fontCor[CY_EINK_FONT_Y]++;
  512              		.loc 1 495 0
  513 00f8 5C78     		ldrb	r4, [r3, #1]	@ zero_extendqisi2
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 19
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 19
 
 
  514 00fa 0134     		adds	r4, r4, #1
@@ -1109,8 +1109,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  534              		.size	Cy_EINK_TextToFrameBuffer, .-Cy_EINK_TextToFrameBuffer
  535              		.text
  536              	.Letext0:
- 537              		.file 2 "d:\\cypress creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
- 538              		.file 3 "d:\\cypress creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
+ 537              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 538              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  539              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
  540              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_ezi2c.h"
  541              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
@@ -1130,75 +1130,75 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  555 0006 00000000 		.4byte	.Ldebug_abbrev0
  556 000a 04       		.byte	0x4
  557 000b 01       		.uleb128 0x1
- 558 000c 04060000 		.4byte	.LASF170
+ 558 000c 25060000 		.4byte	.LASF170
  559 0010 0C       		.byte	0xc
- 560 0011 62080000 		.4byte	.LASF171
- 561 0015 10000000 		.4byte	.LASF172
+ 560 0011 83080000 		.4byte	.LASF171
+ 561 0015 C2040000 		.4byte	.LASF172
  562 0019 00000000 		.4byte	.Ldebug_ranges0+0
  563 001d 00000000 		.4byte	0
  564 0021 00000000 		.4byte	.Ldebug_line0
  565 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 20
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 20
 
 
- 566 0026 9A010000 		.4byte	.LASF0
+ 566 0026 56010000 		.4byte	.LASF0
  567 002a 02       		.byte	0x2
  568 002b 1B       		.byte	0x1b
  569 002c 30000000 		.4byte	0x30
  570 0030 03       		.uleb128 0x3
  571 0031 01       		.byte	0x1
  572 0032 06       		.byte	0x6
- 573 0033 550B0000 		.4byte	.LASF2
+ 573 0033 6C0B0000 		.4byte	.LASF2
  574 0037 02       		.uleb128 0x2
- 575 0038 CF000000 		.4byte	.LASF1
+ 575 0038 8B000000 		.4byte	.LASF1
  576 003c 02       		.byte	0x2
  577 003d 1D       		.byte	0x1d
  578 003e 42000000 		.4byte	0x42
  579 0042 03       		.uleb128 0x3
  580 0043 01       		.byte	0x1
  581 0044 08       		.byte	0x8
- 582 0045 8F070000 		.4byte	.LASF3
+ 582 0045 B0070000 		.4byte	.LASF3
  583 0049 03       		.uleb128 0x3
  584 004a 02       		.byte	0x2
  585 004b 05       		.byte	0x5
- 586 004c AC020000 		.4byte	.LASF4
+ 586 004c 68020000 		.4byte	.LASF4
  587 0050 02       		.uleb128 0x2
- 588 0051 F8080000 		.4byte	.LASF5
+ 588 0051 19090000 		.4byte	.LASF5
  589 0055 02       		.byte	0x2
  590 0056 2B       		.byte	0x2b
  591 0057 5B000000 		.4byte	0x5b
  592 005b 03       		.uleb128 0x3
  593 005c 02       		.byte	0x2
  594 005d 07       		.byte	0x7
- 595 005e 1C040000 		.4byte	.LASF6
+ 595 005e D8030000 		.4byte	.LASF6
  596 0062 02       		.uleb128 0x2
- 597 0063 DC040000 		.4byte	.LASF7
+ 597 0063 98040000 		.4byte	.LASF7
  598 0067 02       		.byte	0x2
  599 0068 3F       		.byte	0x3f
  600 0069 6D000000 		.4byte	0x6d
  601 006d 03       		.uleb128 0x3
  602 006e 04       		.byte	0x4
  603 006f 05       		.byte	0x5
- 604 0070 0F010000 		.4byte	.LASF8
+ 604 0070 CB000000 		.4byte	.LASF8
  605 0074 02       		.uleb128 0x2
- 606 0075 51030000 		.4byte	.LASF9
+ 606 0075 0D030000 		.4byte	.LASF9
  607 0079 02       		.byte	0x2
  608 007a 41       		.byte	0x41
  609 007b 7F000000 		.4byte	0x7f
  610 007f 03       		.uleb128 0x3
  611 0080 04       		.byte	0x4
  612 0081 07       		.byte	0x7
- 613 0082 0B020000 		.4byte	.LASF10
+ 613 0082 C7010000 		.4byte	.LASF10
  614 0086 03       		.uleb128 0x3
  615 0087 08       		.byte	0x8
  616 0088 05       		.byte	0x5
- 617 0089 C8010000 		.4byte	.LASF11
+ 617 0089 84010000 		.4byte	.LASF11
  618 008d 03       		.uleb128 0x3
  619 008e 08       		.byte	0x8
  620 008f 07       		.byte	0x7
- 621 0090 46010000 		.4byte	.LASF12
+ 621 0090 02010000 		.4byte	.LASF12
  622 0094 04       		.uleb128 0x4
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 21
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 21
 
 
  623 0095 04       		.byte	0x4
@@ -1207,46 +1207,46 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  626 009b 03       		.uleb128 0x3
  627 009c 04       		.byte	0x4
  628 009d 07       		.byte	0x7
- 629 009e BB030000 		.4byte	.LASF13
+ 629 009e 77030000 		.4byte	.LASF13
  630 00a2 03       		.uleb128 0x3
  631 00a3 08       		.byte	0x8
  632 00a4 04       		.byte	0x4
- 633 00a5 4A050000 		.4byte	.LASF14
+ 633 00a5 6B050000 		.4byte	.LASF14
  634 00a9 05       		.uleb128 0x5
  635 00aa 04       		.byte	0x4
  636 00ab 03       		.uleb128 0x3
  637 00ac 04       		.byte	0x4
  638 00ad 07       		.byte	0x7
- 639 00ae 41050000 		.4byte	.LASF15
+ 639 00ae 62050000 		.4byte	.LASF15
  640 00b2 06       		.uleb128 0x6
  641 00b3 04       		.byte	0x4
  642 00b4 B8000000 		.4byte	0xb8
  643 00b8 03       		.uleb128 0x3
  644 00b9 01       		.byte	0x1
  645 00ba 08       		.byte	0x8
- 646 00bb C5080000 		.4byte	.LASF16
+ 646 00bb E6080000 		.4byte	.LASF16
  647 00bf 02       		.uleb128 0x2
- 648 00c0 B8090000 		.4byte	.LASF17
+ 648 00c0 CF090000 		.4byte	.LASF17
  649 00c4 03       		.byte	0x3
  650 00c5 14       		.byte	0x14
  651 00c6 25000000 		.4byte	0x25
  652 00ca 02       		.uleb128 0x2
- 653 00cb 9F0A0000 		.4byte	.LASF18
+ 653 00cb B60A0000 		.4byte	.LASF18
  654 00cf 03       		.byte	0x3
  655 00d0 18       		.byte	0x18
  656 00d1 37000000 		.4byte	0x37
  657 00d5 02       		.uleb128 0x2
- 658 00d6 B6020000 		.4byte	.LASF19
+ 658 00d6 72020000 		.4byte	.LASF19
  659 00da 03       		.byte	0x3
  660 00db 24       		.byte	0x24
  661 00dc 50000000 		.4byte	0x50
  662 00e0 02       		.uleb128 0x2
- 663 00e1 87070000 		.4byte	.LASF20
+ 663 00e1 A8070000 		.4byte	.LASF20
  664 00e5 03       		.byte	0x3
  665 00e6 2C       		.byte	0x2c
  666 00e7 62000000 		.4byte	0x62
  667 00eb 02       		.uleb128 0x2
- 668 00ec 59080000 		.4byte	.LASF21
+ 668 00ec 7A080000 		.4byte	.LASF21
  669 00f0 03       		.byte	0x3
  670 00f1 30       		.byte	0x30
  671 00f2 74000000 		.4byte	0x74
@@ -1255,32 +1255,32 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  674 00fb 03       		.uleb128 0x3
  675 00fc 04       		.byte	0x4
  676 00fd 04       		.byte	0x4
- 677 00fe E9060000 		.4byte	.LASF22
+ 677 00fe 0A070000 		.4byte	.LASF22
  678 0102 03       		.uleb128 0x3
  679 0103 08       		.byte	0x8
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 22
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 22
 
 
  680 0104 04       		.byte	0x4
- 681 0105 BF020000 		.4byte	.LASF23
+ 681 0105 7B020000 		.4byte	.LASF23
  682 0109 03       		.uleb128 0x3
  683 010a 01       		.byte	0x1
  684 010b 02       		.byte	0x2
- 685 010c E9090000 		.4byte	.LASF24
+ 685 010c 000A0000 		.4byte	.LASF24
  686 0110 08       		.uleb128 0x8
- 687 0111 0C050000 		.4byte	.LASF56
+ 687 0111 2D050000 		.4byte	.LASF56
  688 0115 4C       		.byte	0x4c
  689 0116 04       		.byte	0x4
  690 0117 2B       		.byte	0x2b
  691 0118 01020000 		.4byte	0x201
  692 011c 09       		.uleb128 0x9
- 693 011d 18010000 		.4byte	.LASF25
+ 693 011d D4000000 		.4byte	.LASF25
  694 0121 04       		.byte	0x4
  695 0122 2D       		.byte	0x2d
  696 0123 EB000000 		.4byte	0xeb
  697 0127 00       		.byte	0
  698 0128 09       		.uleb128 0x9
- 699 0129 76010000 		.4byte	.LASF26
+ 699 0129 32010000 		.4byte	.LASF26
  700 012d 04       		.byte	0x4
  701 012e 2F       		.byte	0x2f
  702 012f EB000000 		.4byte	0xeb
@@ -1292,110 +1292,110 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  708 013b EB000000 		.4byte	0xeb
  709 013f 08       		.byte	0x8
  710 0140 09       		.uleb128 0x9
- 711 0141 F2000000 		.4byte	.LASF28
+ 711 0141 AE000000 		.4byte	.LASF28
  712 0145 04       		.byte	0x4
  713 0146 31       		.byte	0x31
  714 0147 EB000000 		.4byte	0xeb
  715 014b 0C       		.byte	0xc
  716 014c 09       		.uleb128 0x9
- 717 014d 0B080000 		.4byte	.LASF29
+ 717 014d 2C080000 		.4byte	.LASF29
  718 0151 04       		.byte	0x4
  719 0152 33       		.byte	0x33
  720 0153 EB000000 		.4byte	0xeb
  721 0157 10       		.byte	0x10
  722 0158 09       		.uleb128 0x9
- 723 0159 AB080000 		.4byte	.LASF30
+ 723 0159 CC080000 		.4byte	.LASF30
  724 015d 04       		.byte	0x4
  725 015e 34       		.byte	0x34
  726 015f EB000000 		.4byte	0xeb
  727 0163 14       		.byte	0x14
  728 0164 09       		.uleb128 0x9
- 729 0165 B4080000 		.4byte	.LASF31
+ 729 0165 D5080000 		.4byte	.LASF31
  730 0169 04       		.byte	0x4
  731 016a 35       		.byte	0x35
  732 016b EB000000 		.4byte	0xeb
  733 016f 18       		.byte	0x18
  734 0170 09       		.uleb128 0x9
- 735 0171 C4070000 		.4byte	.LASF32
+ 735 0171 E5070000 		.4byte	.LASF32
  736 0175 04       		.byte	0x4
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 23
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 23
 
 
  737 0176 36       		.byte	0x36
  738 0177 09010000 		.4byte	0x109
  739 017b 1C       		.byte	0x1c
  740 017c 09       		.uleb128 0x9
- 741 017d 42090000 		.4byte	.LASF33
+ 741 017d 59090000 		.4byte	.LASF33
  742 0181 04       		.byte	0x4
  743 0182 38       		.byte	0x38
  744 0183 EB000000 		.4byte	0xeb
  745 0187 20       		.byte	0x20
  746 0188 09       		.uleb128 0x9
- 747 0189 E2020000 		.4byte	.LASF34
+ 747 0189 9E020000 		.4byte	.LASF34
  748 018d 04       		.byte	0x4
  749 018e 39       		.byte	0x39
  750 018f EB000000 		.4byte	0xeb
  751 0193 24       		.byte	0x24
  752 0194 09       		.uleb128 0x9
- 753 0195 2B010000 		.4byte	.LASF35
+ 753 0195 E7000000 		.4byte	.LASF35
  754 0199 04       		.byte	0x4
  755 019a 3B       		.byte	0x3b
  756 019b EB000000 		.4byte	0xeb
  757 019f 28       		.byte	0x28
  758 01a0 09       		.uleb128 0x9
- 759 01a1 F80A0000 		.4byte	.LASF36
+ 759 01a1 0F0B0000 		.4byte	.LASF36
  760 01a5 04       		.byte	0x4
  761 01a6 3C       		.byte	0x3c
  762 01a7 EB000000 		.4byte	0xeb
  763 01ab 2C       		.byte	0x2c
  764 01ac 09       		.uleb128 0x9
- 765 01ad 53090000 		.4byte	.LASF37
+ 765 01ad 6A090000 		.4byte	.LASF37
  766 01b1 04       		.byte	0x4
  767 01b2 3E       		.byte	0x3e
  768 01b3 EB000000 		.4byte	0xeb
  769 01b7 30       		.byte	0x30
  770 01b8 09       		.uleb128 0x9
- 771 01b9 78070000 		.4byte	.LASF38
+ 771 01b9 99070000 		.4byte	.LASF38
  772 01bd 04       		.byte	0x4
  773 01be 3F       		.byte	0x3f
  774 01bf EB000000 		.4byte	0xeb
  775 01c3 34       		.byte	0x34
  776 01c4 09       		.uleb128 0x9
- 777 01c5 FB040000 		.4byte	.LASF39
+ 777 01c5 B7040000 		.4byte	.LASF39
  778 01c9 04       		.byte	0x4
  779 01ca 41       		.byte	0x41
  780 01cb EB000000 		.4byte	0xeb
  781 01cf 38       		.byte	0x38
  782 01d0 09       		.uleb128 0x9
- 783 01d1 01010000 		.4byte	.LASF40
+ 783 01d1 BD000000 		.4byte	.LASF40
  784 01d5 04       		.byte	0x4
  785 01d6 42       		.byte	0x42
  786 01d7 EB000000 		.4byte	0xeb
  787 01db 3C       		.byte	0x3c
  788 01dc 09       		.uleb128 0x9
- 789 01dd A6090000 		.4byte	.LASF41
+ 789 01dd BD090000 		.4byte	.LASF41
  790 01e1 04       		.byte	0x4
  791 01e2 44       		.byte	0x44
  792 01e3 EB000000 		.4byte	0xeb
  793 01e7 40       		.byte	0x40
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 24
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 24
 
 
  794 01e8 09       		.uleb128 0x9
- 795 01e9 EC040000 		.4byte	.LASF42
+ 795 01e9 A8040000 		.4byte	.LASF42
  796 01ed 04       		.byte	0x4
  797 01ee 45       		.byte	0x45
  798 01ef EB000000 		.4byte	0xeb
  799 01f3 44       		.byte	0x44
  800 01f4 09       		.uleb128 0x9
- 801 01f5 84020000 		.4byte	.LASF43
+ 801 01f5 40020000 		.4byte	.LASF43
  802 01f9 04       		.byte	0x4
  803 01fa 47       		.byte	0x47
  804 01fb EB000000 		.4byte	0xeb
  805 01ff 48       		.byte	0x48
  806 0200 00       		.byte	0
  807 0201 02       		.uleb128 0x2
- 808 0202 D6010000 		.4byte	.LASF44
+ 808 0202 92010000 		.4byte	.LASF44
  809 0206 04       		.byte	0x4
  810 0207 48       		.byte	0x48
  811 0208 10010000 		.4byte	0x110
@@ -1417,14 +1417,14 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  827 022a 2A01     		.2byte	0x12a
  828 022c 3D020000 		.4byte	0x23d
  829 0230 0D       		.uleb128 0xd
- 830 0231 CD090000 		.4byte	.LASF45
+ 830 0231 E4090000 		.4byte	.LASF45
  831 0235 00       		.byte	0
  832 0236 0D       		.uleb128 0xd
- 833 0237 89090000 		.4byte	.LASF46
+ 833 0237 A0090000 		.4byte	.LASF46
  834 023b 01       		.byte	0x1
  835 023c 00       		.byte	0
  836 023d 0E       		.uleb128 0xe
- 837 023e 6C000000 		.4byte	.LASF47
+ 837 023e 28000000 		.4byte	.LASF47
  838 0242 05       		.byte	0x5
  839 0243 2D01     		.2byte	0x12d
  840 0245 23020000 		.4byte	0x223
@@ -1435,70 +1435,70 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  845 0250 3201     		.2byte	0x132
  846 0252 81020000 		.4byte	0x281
  847 0256 0D       		.uleb128 0xd
- 848 0257 75050000 		.4byte	.LASF48
+ 848 0257 96050000 		.4byte	.LASF48
  849 025b 00       		.byte	0
  850 025c 0D       		.uleb128 0xd
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 25
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 25
 
 
- 851 025d 2F040000 		.4byte	.LASF49
+ 851 025d EB030000 		.4byte	.LASF49
  852 0261 01       		.byte	0x1
  853 0262 0D       		.uleb128 0xd
- 854 0263 1D030000 		.4byte	.LASF50
+ 854 0263 D9020000 		.4byte	.LASF50
  855 0267 02       		.byte	0x2
  856 0268 0D       		.uleb128 0xd
- 857 0269 A70A0000 		.4byte	.LASF51
+ 857 0269 BE0A0000 		.4byte	.LASF51
  858 026d 03       		.byte	0x3
  859 026e 0D       		.uleb128 0xd
- 860 026f CC050000 		.4byte	.LASF52
+ 860 026f ED050000 		.4byte	.LASF52
  861 0273 04       		.byte	0x4
  862 0274 0D       		.uleb128 0xd
- 863 0275 E8050000 		.4byte	.LASF53
+ 863 0275 09060000 		.4byte	.LASF53
  864 0279 05       		.byte	0x5
  865 027a 0D       		.uleb128 0xd
- 866 027b D7080000 		.4byte	.LASF54
+ 866 027b F8080000 		.4byte	.LASF54
  867 027f 06       		.byte	0x6
  868 0280 00       		.byte	0
  869 0281 0E       		.uleb128 0xe
- 870 0282 FE060000 		.4byte	.LASF55
+ 870 0282 1F070000 		.4byte	.LASF55
  871 0286 05       		.byte	0x5
  872 0287 3A01     		.2byte	0x13a
  873 0289 49020000 		.4byte	0x249
  874 028d 0F       		.uleb128 0xf
- 875 028e 89030000 		.4byte	.LASF57
+ 875 028e 45030000 		.4byte	.LASF57
  876 0292 3C       		.byte	0x3c
  877 0293 05       		.byte	0x5
  878 0294 6601     		.2byte	0x166
  879 0296 78030000 		.4byte	0x378
  880 029a 10       		.uleb128 0x10
- 881 029b 7E020000 		.4byte	.LASF58
+ 881 029b 3A020000 		.4byte	.LASF58
  882 029f 05       		.byte	0x5
  883 02a0 6901     		.2byte	0x169
  884 02a2 78030000 		.4byte	0x378
  885 02a6 00       		.byte	0
  886 02a7 10       		.uleb128 0x10
- 887 02a8 FB070000 		.4byte	.LASF59
+ 887 02a8 1C080000 		.4byte	.LASF59
  888 02ac 05       		.byte	0x5
  889 02ad 6A01     		.2byte	0x16a
  890 02af F6000000 		.4byte	0xf6
  891 02b3 04       		.byte	0x4
  892 02b4 10       		.uleb128 0x10
- 893 02b5 5B020000 		.4byte	.LASF60
+ 893 02b5 17020000 		.4byte	.LASF60
  894 02b9 05       		.byte	0x5
  895 02ba 6C01     		.2byte	0x16c
  896 02bc CA000000 		.4byte	0xca
  897 02c0 08       		.byte	0x8
  898 02c1 10       		.uleb128 0x10
- 899 02c2 64020000 		.4byte	.LASF61
+ 899 02c2 20020000 		.4byte	.LASF61
  900 02c6 05       		.byte	0x5
  901 02c7 6D01     		.2byte	0x16d
  902 02c9 CA000000 		.4byte	0xca
  903 02cd 09       		.byte	0x9
  904 02ce 10       		.uleb128 0x10
- 905 02cf B2010000 		.4byte	.LASF62
+ 905 02cf 6E010000 		.4byte	.LASF62
  906 02d3 05       		.byte	0x5
  907 02d4 6E01     		.2byte	0x16e
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 26
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 26
 
 
  908 02d6 3D020000 		.4byte	0x23d
@@ -1510,70 +1510,70 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  914 02e3 EB000000 		.4byte	0xeb
  915 02e7 0C       		.byte	0xc
  916 02e8 10       		.uleb128 0x10
- 917 02e9 610B0000 		.4byte	.LASF63
+ 917 02e9 780B0000 		.4byte	.LASF63
  918 02ed 05       		.byte	0x5
  919 02ee 7101     		.2byte	0x171
  920 02f0 EB000000 		.4byte	0xeb
  921 02f4 10       		.byte	0x10
  922 02f5 10       		.uleb128 0x10
- 923 02f6 6B0B0000 		.4byte	.LASF64
+ 923 02f6 820B0000 		.4byte	.LASF64
  924 02fa 05       		.byte	0x5
  925 02fb 7201     		.2byte	0x172
  926 02fd EB000000 		.4byte	0xeb
  927 0301 14       		.byte	0x14
  928 0302 10       		.uleb128 0x10
- 929 0303 74080000 		.4byte	.LASF65
+ 929 0303 95080000 		.4byte	.LASF65
  930 0307 05       		.byte	0x5
  931 0308 7401     		.2byte	0x174
  932 030a 09010000 		.4byte	0x109
  933 030e 18       		.byte	0x18
  934 030f 10       		.uleb128 0x10
- 935 0310 77020000 		.4byte	.LASF66
+ 935 0310 33020000 		.4byte	.LASF66
  936 0314 05       		.byte	0x5
  937 0315 7501     		.2byte	0x175
  938 0317 1D020000 		.4byte	0x21d
  939 031b 1C       		.byte	0x1c
  940 031c 10       		.uleb128 0x10
- 941 031d BD080000 		.4byte	.LASF67
+ 941 031d DE080000 		.4byte	.LASF67
  942 0321 05       		.byte	0x5
  943 0322 7601     		.2byte	0x176
  944 0324 EB000000 		.4byte	0xeb
  945 0328 20       		.byte	0x20
  946 0329 10       		.uleb128 0x10
- 947 032a CA000000 		.4byte	.LASF68
+ 947 032a 86000000 		.4byte	.LASF68
  948 032e 05       		.byte	0x5
  949 032f 7801     		.2byte	0x178
  950 0331 1D020000 		.4byte	0x21d
  951 0335 24       		.byte	0x24
  952 0336 10       		.uleb128 0x10
- 953 0337 D6070000 		.4byte	.LASF69
+ 953 0337 F7070000 		.4byte	.LASF69
  954 033b 05       		.byte	0x5
  955 033c 7901     		.2byte	0x179
  956 033e EB000000 		.4byte	0xeb
  957 0342 28       		.byte	0x28
  958 0343 10       		.uleb128 0x10
- 959 0344 210B0000 		.4byte	.LASF70
+ 959 0344 380B0000 		.4byte	.LASF70
  960 0348 05       		.byte	0x5
  961 0349 7A01     		.2byte	0x17a
  962 034b EB000000 		.4byte	0xeb
  963 034f 2C       		.byte	0x2c
  964 0350 10       		.uleb128 0x10
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 27
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 27
 
 
- 965 0351 400A0000 		.4byte	.LASF71
+ 965 0351 570A0000 		.4byte	.LASF71
  966 0355 05       		.byte	0x5
  967 0356 7C01     		.2byte	0x17c
  968 0358 1D020000 		.4byte	0x21d
  969 035c 30       		.byte	0x30
  970 035d 10       		.uleb128 0x10
- 971 035e B2030000 		.4byte	.LASF72
+ 971 035e 6E030000 		.4byte	.LASF72
  972 0362 05       		.byte	0x5
  973 0363 7D01     		.2byte	0x17d
  974 0365 EB000000 		.4byte	0xeb
  975 0369 34       		.byte	0x34
  976 036a 10       		.uleb128 0x10
- 977 036b E4030000 		.4byte	.LASF73
+ 977 036b A0030000 		.4byte	.LASF73
  978 036f 05       		.byte	0x5
  979 0370 7E01     		.2byte	0x17e
  980 0372 EB000000 		.4byte	0xeb
@@ -1582,81 +1582,81 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  983 0378 07       		.uleb128 0x7
  984 0379 81020000 		.4byte	0x281
  985 037d 0E       		.uleb128 0xe
- 986 037e DD0A0000 		.4byte	.LASF74
+ 986 037e F40A0000 		.4byte	.LASF74
  987 0382 05       		.byte	0x5
  988 0383 8001     		.2byte	0x180
  989 0385 8D020000 		.4byte	0x28d
  990 0389 0E       		.uleb128 0xe
- 991 038a 3D020000 		.4byte	.LASF75
+ 991 038a F9010000 		.4byte	.LASF75
  992 038e 06       		.byte	0x6
  993 038f BF01     		.2byte	0x1bf
  994 0391 0C020000 		.4byte	0x20c
  995 0395 0F       		.uleb128 0xf
- 996 0396 F4010000 		.4byte	.LASF76
+ 996 0396 B0010000 		.4byte	.LASF76
  997 039a 24       		.byte	0x24
  998 039b 06       		.byte	0x6
  999 039c 4102     		.2byte	0x241
  1000 039e 18040000 		.4byte	0x418
  1001 03a2 10       		.uleb128 0x10
- 1002 03a3 FB070000 		.4byte	.LASF59
+ 1002 03a3 1C080000 		.4byte	.LASF59
  1003 03a7 06       		.byte	0x6
  1004 03a8 4402     		.2byte	0x244
  1005 03aa F6000000 		.4byte	0xf6
  1006 03ae 00       		.byte	0
  1007 03af 10       		.uleb128 0x10
- 1008 03b0 C7090000 		.4byte	.LASF77
+ 1008 03b0 DE090000 		.4byte	.LASF77
  1009 03b4 06       		.byte	0x6
  1010 03b5 4602     		.2byte	0x246
  1011 03b7 A9000000 		.4byte	0xa9
  1012 03bb 04       		.byte	0x4
  1013 03bc 10       		.uleb128 0x10
- 1014 03bd 03090000 		.4byte	.LASF78
+ 1014 03bd 10000000 		.4byte	.LASF78
  1015 03c1 06       		.byte	0x6
  1016 03c2 4702     		.2byte	0x247
  1017 03c4 EB000000 		.4byte	0xeb
  1018 03c8 08       		.byte	0x8
  1019 03c9 10       		.uleb128 0x10
- 1020 03ca 70030000 		.4byte	.LASF79
+ 1020 03ca 2C030000 		.4byte	.LASF79
  1021 03ce 06       		.byte	0x6
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 28
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 28
 
 
  1022 03cf 4802     		.2byte	0x248
  1023 03d1 F6000000 		.4byte	0xf6
  1024 03d5 0C       		.byte	0xc
  1025 03d6 10       		.uleb128 0x10
- 1026 03d7 A3010000 		.4byte	.LASF80
+ 1026 03d7 5F010000 		.4byte	.LASF80
  1027 03db 06       		.byte	0x6
  1028 03dc 4A02     		.2byte	0x24a
  1029 03de A9000000 		.4byte	0xa9
  1030 03e2 10       		.byte	0x10
  1031 03e3 10       		.uleb128 0x10
- 1032 03e4 A8030000 		.4byte	.LASF81
+ 1032 03e4 64030000 		.4byte	.LASF81
  1033 03e8 06       		.byte	0x6
  1034 03e9 4B02     		.2byte	0x24b
  1035 03eb EB000000 		.4byte	0xeb
  1036 03ef 14       		.byte	0x14
  1037 03f0 10       		.uleb128 0x10
- 1038 03f1 02080000 		.4byte	.LASF82
+ 1038 03f1 23080000 		.4byte	.LASF82
  1039 03f5 06       		.byte	0x6
  1040 03f6 4C02     		.2byte	0x24c
  1041 03f8 F6000000 		.4byte	0xf6
  1042 03fc 18       		.byte	0x18
  1043 03fd 10       		.uleb128 0x10
- 1044 03fe 73040000 		.4byte	.LASF83
+ 1044 03fe 2F040000 		.4byte	.LASF83
  1045 0402 06       		.byte	0x6
  1046 0403 5202     		.2byte	0x252
  1047 0405 89030000 		.4byte	0x389
  1048 0409 1C       		.byte	0x1c
  1049 040a 10       		.uleb128 0x10
- 1050 040b BF090000 		.4byte	.LASF84
+ 1050 040b D6090000 		.4byte	.LASF84
  1051 040f 06       		.byte	0x6
  1052 0410 5502     		.2byte	0x255
  1053 0412 EB000000 		.4byte	0xeb
  1054 0416 20       		.byte	0x20
  1055 0417 00       		.byte	0
  1056 0418 0E       		.uleb128 0xe
- 1057 0419 92080000 		.4byte	.LASF85
+ 1057 0419 B3080000 		.4byte	.LASF85
  1058 041d 06       		.byte	0x6
  1059 041e 5802     		.2byte	0x258
  1060 0420 95030000 		.4byte	0x395
@@ -1666,23 +1666,23 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1064 0427 5B01     		.2byte	0x15b
  1065 0429 48040000 		.4byte	0x448
  1066 042d 10       		.uleb128 0x10
- 1067 042e 4C0B0000 		.4byte	.LASF86
+ 1067 042e 630B0000 		.4byte	.LASF86
  1068 0432 07       		.byte	0x7
  1069 0433 6501     		.2byte	0x165
  1070 0435 CA000000 		.4byte	0xca
  1071 0439 00       		.byte	0
  1072 043a 10       		.uleb128 0x10
- 1073 043b 06050000 		.4byte	.LASF87
+ 1073 043b 27050000 		.4byte	.LASF87
  1074 043f 07       		.byte	0x7
  1075 0440 6901     		.2byte	0x169
  1076 0442 CA000000 		.4byte	0xca
  1077 0446 01       		.byte	0x1
  1078 0447 00       		.byte	0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 29
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 29
 
 
  1079 0448 0E       		.uleb128 0xe
- 1080 0449 D9000000 		.4byte	.LASF88
+ 1080 0449 95000000 		.4byte	.LASF88
  1081 044d 07       		.byte	0x7
  1082 044e 6B01     		.2byte	0x16b
  1083 0450 24040000 		.4byte	0x424
@@ -1693,20 +1693,20 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1088 045b 7E       		.byte	0x7e
  1089 045c 79040000 		.4byte	0x479
  1090 0460 0D       		.uleb128 0xd
- 1091 0461 860A0000 		.4byte	.LASF89
+ 1091 0461 9D0A0000 		.4byte	.LASF89
  1092 0465 00       		.byte	0
  1093 0466 0D       		.uleb128 0xd
- 1094 0467 56050000 		.4byte	.LASF90
+ 1094 0467 77050000 		.4byte	.LASF90
  1095 046b 01       		.byte	0x1
  1096 046c 0D       		.uleb128 0xd
- 1097 046d 690A0000 		.4byte	.LASF91
+ 1097 046d 800A0000 		.4byte	.LASF91
  1098 0471 02       		.byte	0x2
  1099 0472 0D       		.uleb128 0xd
- 1100 0473 1D020000 		.4byte	.LASF92
+ 1100 0473 D9010000 		.4byte	.LASF92
  1101 0477 03       		.byte	0x3
  1102 0478 00       		.byte	0
  1103 0479 02       		.uleb128 0x2
- 1104 047a 8F020000 		.4byte	.LASF93
+ 1104 047a 4B020000 		.4byte	.LASF93
  1105 047e 08       		.byte	0x8
  1106 047f 83       		.byte	0x83
  1107 0480 54040000 		.4byte	0x454
@@ -1717,35 +1717,35 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1112 048b 87       		.byte	0x87
  1113 048c C1040000 		.4byte	0x4c1
  1114 0490 0D       		.uleb128 0xd
- 1115 0491 EF090000 		.4byte	.LASF94
+ 1115 0491 060A0000 		.4byte	.LASF94
  1116 0495 00       		.byte	0
  1117 0496 0D       		.uleb128 0xd
- 1118 0497 940B0000 		.4byte	.LASF95
+ 1118 0497 AB0B0000 		.4byte	.LASF95
  1119 049b 01       		.byte	0x1
  1120 049c 0D       		.uleb128 0xd
- 1121 049d C8030000 		.4byte	.LASF96
+ 1121 049d 84030000 		.4byte	.LASF96
  1122 04a1 02       		.byte	0x2
  1123 04a2 0D       		.uleb128 0xd
- 1124 04a3 5F090000 		.4byte	.LASF97
+ 1124 04a3 76090000 		.4byte	.LASF97
  1125 04a7 03       		.byte	0x3
  1126 04a8 0D       		.uleb128 0xd
- 1127 04a9 F3020000 		.4byte	.LASF98
+ 1127 04a9 AF020000 		.4byte	.LASF98
  1128 04ad 04       		.byte	0x4
  1129 04ae 0D       		.uleb128 0xd
- 1130 04af 4E070000 		.4byte	.LASF99
+ 1130 04af 6F070000 		.4byte	.LASF99
  1131 04b3 05       		.byte	0x5
  1132 04b4 0D       		.uleb128 0xd
- 1133 04b5 1C080000 		.4byte	.LASF100
+ 1133 04b5 3D080000 		.4byte	.LASF100
  1134 04b9 06       		.byte	0x6
  1135 04ba 0D       		.uleb128 0xd
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 30
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 30
 
 
- 1136 04bb C5060000 		.4byte	.LASF101
+ 1136 04bb E6060000 		.4byte	.LASF101
  1137 04bf 07       		.byte	0x7
  1138 04c0 00       		.byte	0
  1139 04c1 02       		.uleb128 0x2
- 1140 04c2 B5050000 		.4byte	.LASF102
+ 1140 04c2 D6050000 		.4byte	.LASF102
  1141 04c6 08       		.byte	0x8
  1142 04c7 90       		.byte	0x90
  1143 04c8 84040000 		.4byte	0x484
@@ -1755,13 +1755,13 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1147 04cf 3D       		.byte	0x3d
  1148 04d0 35050000 		.4byte	0x535
  1149 04d4 09       		.uleb128 0x9
- 1150 04d5 A9010000 		.4byte	.LASF103
+ 1150 04d5 65010000 		.4byte	.LASF103
  1151 04d9 09       		.byte	0x9
  1152 04da 40       		.byte	0x40
  1153 04db 1D020000 		.4byte	0x21d
  1154 04df 00       		.byte	0
  1155 04e0 09       		.uleb128 0x9
- 1156 04e1 28050000 		.4byte	.LASF104
+ 1156 04e1 49050000 		.4byte	.LASF104
  1157 04e5 09       		.byte	0x9
  1158 04e6 42       		.byte	0x42
  1159 04e7 CA000000 		.4byte	0xca
@@ -1773,32 +1773,32 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1165 04f3 CA000000 		.4byte	0xca
  1166 04f7 05       		.byte	0x5
  1167 04f8 09       		.uleb128 0x9
- 1168 04f9 A2030000 		.4byte	.LASF106
+ 1168 04f9 5E030000 		.4byte	.LASF106
  1169 04fd 09       		.byte	0x9
  1170 04fe 46       		.byte	0x46
  1171 04ff CA000000 		.4byte	0xca
  1172 0503 06       		.byte	0x6
  1173 0504 09       		.uleb128 0x9
- 1174 0505 2F0B0000 		.4byte	.LASF107
+ 1174 0505 460B0000 		.4byte	.LASF107
  1175 0509 09       		.byte	0x9
  1176 050a 48       		.byte	0x48
  1177 050b CA000000 		.4byte	0xca
  1178 050f 07       		.byte	0x7
  1179 0510 09       		.uleb128 0x9
- 1180 0511 F2080000 		.4byte	.LASF108
+ 1180 0511 13090000 		.4byte	.LASF108
  1181 0515 09       		.byte	0x9
  1182 0516 4A       		.byte	0x4a
  1183 0517 CA000000 		.4byte	0xca
  1184 051b 08       		.byte	0x8
  1185 051c 09       		.uleb128 0x9
- 1186 051d 47040000 		.4byte	.LASF109
+ 1186 051d 03040000 		.4byte	.LASF109
  1187 0521 09       		.byte	0x9
  1188 0522 4C       		.byte	0x4c
  1189 0523 CA000000 		.4byte	0xca
  1190 0527 09       		.byte	0x9
  1191 0528 09       		.uleb128 0x9
- 1192 0529 E6040000 		.4byte	.LASF110
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 31
+ 1192 0529 A2040000 		.4byte	.LASF110
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 31
 
 
  1193 052d 09       		.byte	0x9
@@ -1807,12 +1807,12 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1196 0533 0A       		.byte	0xa
  1197 0534 00       		.byte	0
  1198 0535 02       		.uleb128 0x2
- 1199 0536 0D040000 		.4byte	.LASF111
+ 1199 0536 C9030000 		.4byte	.LASF111
  1200 053a 09       		.byte	0x9
  1201 053b 50       		.byte	0x50
  1202 053c CC040000 		.4byte	0x4cc
  1203 0540 02       		.uleb128 0x2
- 1204 0541 85010000 		.4byte	.LASF112
+ 1204 0541 41010000 		.4byte	.LASF112
  1205 0545 0A       		.byte	0xa
  1206 0546 35       		.byte	0x35
  1207 0547 42000000 		.4byte	0x42
@@ -1823,22 +1823,22 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1212 0552 39       		.byte	0x39
  1213 0553 7C050000 		.4byte	0x57c
  1214 0557 0D       		.uleb128 0xd
- 1215 0558 3F070000 		.4byte	.LASF113
+ 1215 0558 60070000 		.4byte	.LASF113
  1216 055c 00       		.byte	0
  1217 055d 0D       		.uleb128 0xd
- 1218 055e 3E030000 		.4byte	.LASF114
+ 1218 055e FA020000 		.4byte	.LASF114
  1219 0562 01       		.byte	0x1
  1220 0563 0D       		.uleb128 0xd
- 1221 0564 16070000 		.4byte	.LASF115
+ 1221 0564 37070000 		.4byte	.LASF115
  1222 0568 02       		.byte	0x2
  1223 0569 0D       		.uleb128 0xd
- 1224 056a 350B0000 		.4byte	.LASF116
+ 1224 056a 4C0B0000 		.4byte	.LASF116
  1225 056e 03       		.byte	0x3
  1226 056f 0D       		.uleb128 0xd
- 1227 0570 750B0000 		.4byte	.LASF117
+ 1227 0570 8C0B0000 		.4byte	.LASF117
  1228 0574 04       		.byte	0x4
  1229 0575 0D       		.uleb128 0xd
- 1230 0576 8C000000 		.4byte	.LASF118
+ 1230 0576 48000000 		.4byte	.LASF118
  1231 057a 05       		.byte	0x5
  1232 057b 00       		.byte	0
  1233 057c 13       		.uleb128 0x13
@@ -1848,23 +1848,23 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1237 0583 44       		.byte	0x44
  1238 0584 A1050000 		.4byte	0x5a1
  1239 0588 0D       		.uleb128 0xd
- 1240 0589 A0040000 		.4byte	.LASF119
+ 1240 0589 5C040000 		.4byte	.LASF119
  1241 058d 00       		.byte	0
  1242 058e 0D       		.uleb128 0xd
- 1243 058f AF040000 		.4byte	.LASF120
+ 1243 058f 6B040000 		.4byte	.LASF120
  1244 0593 01       		.byte	0x1
  1245 0594 0D       		.uleb128 0xd
- 1246 0595 BE040000 		.4byte	.LASF121
+ 1246 0595 7A040000 		.4byte	.LASF121
  1247 0599 02       		.byte	0x2
  1248 059a 0D       		.uleb128 0xd
- 1249 059b CD040000 		.4byte	.LASF122
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 32
+ 1249 059b 89040000 		.4byte	.LASF122
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 32
 
 
  1250 059f 03       		.byte	0x3
  1251 05a0 00       		.byte	0
  1252 05a1 02       		.uleb128 0x2
- 1253 05a2 90040000 		.4byte	.LASF123
+ 1253 05a2 4C040000 		.4byte	.LASF123
  1254 05a6 0B       		.byte	0xb
  1255 05a7 6B       		.byte	0x6b
  1256 05a8 40050000 		.4byte	0x540
@@ -1875,22 +1875,22 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1261 05b3 70       		.byte	0x70
  1262 05b4 CB050000 		.4byte	0x5cb
  1263 05b8 0D       		.uleb128 0xd
- 1264 05b9 79030000 		.4byte	.LASF124
+ 1264 05b9 35030000 		.4byte	.LASF124
  1265 05bd 00       		.byte	0
  1266 05be 0D       		.uleb128 0xd
- 1267 05bf 5C030000 		.4byte	.LASF125
+ 1267 05bf 18030000 		.4byte	.LASF125
  1268 05c3 01       		.byte	0x1
  1269 05c4 0D       		.uleb128 0xd
- 1270 05c5 7C040000 		.4byte	.LASF126
+ 1270 05c5 38040000 		.4byte	.LASF126
  1271 05c9 02       		.byte	0x2
  1272 05ca 00       		.byte	0
  1273 05cb 02       		.uleb128 0x2
- 1274 05cc 9D070000 		.4byte	.LASF127
+ 1274 05cc BE070000 		.4byte	.LASF127
  1275 05d0 0B       		.byte	0xb
  1276 05d1 74       		.byte	0x74
  1277 05d2 AC050000 		.4byte	0x5ac
  1278 05d6 15       		.uleb128 0x15
- 1279 05d7 5E000000 		.4byte	.LASF130
+ 1279 05d7 1A000000 		.4byte	.LASF130
  1280 05db 01       		.byte	0x1
  1281 05dc 51       		.byte	0x51
  1282 05dd 00000000 		.4byte	.LFB620
@@ -1899,7 +1899,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1285 05e6 9C       		.byte	0x9c
  1286 05e7 14060000 		.4byte	0x614
  1287 05eb 16       		.uleb128 0x16
- 1288 05ec D0020000 		.4byte	.LASF128
+ 1288 05ec 8C020000 		.4byte	.LASF128
  1289 05f0 01       		.byte	0x1
  1290 05f1 51       		.byte	0x51
  1291 05f2 BF000000 		.4byte	0xbf
@@ -1918,11 +1918,11 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1304 0611 00       		.sleb128 0
  1305 0612 00       		.byte	0
  1306 0613 00       		.byte	0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 33
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 33
 
 
  1307 0614 1A       		.uleb128 0x1a
- 1308 0615 C50B0000 		.4byte	.LASF173
+ 1308 0615 DC0B0000 		.4byte	.LASF173
  1309 0619 01       		.byte	0x1
  1310 061a 6D       		.byte	0x6d
  1311 061b 09010000 		.4byte	0x109
@@ -1932,13 +1932,13 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1315 0628 9C       		.byte	0x9c
  1316 0629 5E060000 		.4byte	0x65e
  1317 062d 16       		.uleb128 0x16
- 1318 062e BE010000 		.4byte	.LASF129
+ 1318 062e 7A010000 		.4byte	.LASF129
  1319 0632 01       		.byte	0x1
  1320 0633 6D       		.byte	0x6d
  1321 0634 09010000 		.4byte	0x109
  1322 0638 21000000 		.4byte	.LLST1
  1323 063c 1B       		.uleb128 0x1b
- 1324 063d 38090000 		.4byte	.LASF142
+ 1324 063d 4F090000 		.4byte	.LASF142
  1325 0641 01       		.byte	0x1
  1326 0642 70       		.byte	0x70
  1327 0643 CA000000 		.4byte	0xca
@@ -1951,7 +1951,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1334 0659 F1090000 		.4byte	0x9f1
  1335 065d 00       		.byte	0
  1336 065e 15       		.uleb128 0x15
- 1337 065f 860B0000 		.4byte	.LASF131
+ 1337 065f 9D0B0000 		.4byte	.LASF131
  1338 0663 01       		.byte	0x1
  1339 0664 A5       		.byte	0xa5
  1340 0665 00000000 		.4byte	.LFB622
@@ -1960,13 +1960,13 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1343 066e 9C       		.byte	0x9c
  1344 066f 16070000 		.4byte	0x716
  1345 0673 16       		.uleb128 0x16
- 1346 0674 47080000 		.4byte	.LASF132
+ 1346 0674 68080000 		.4byte	.LASF132
  1347 0678 01       		.byte	0x1
  1348 0679 A5       		.byte	0xa5
  1349 067a 09010000 		.4byte	0x109
  1350 067e 9C000000 		.4byte	.LLST3
  1351 0682 16       		.uleb128 0x16
- 1352 0683 200A0000 		.4byte	.LASF133
+ 1352 0683 370A0000 		.4byte	.LASF133
  1353 0687 01       		.byte	0x1
  1354 0688 A5       		.byte	0xa5
  1355 0689 09010000 		.4byte	0x109
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1361 069e 19       		.uleb128 0x19
  1362 069f 01       		.uleb128 0x1
  1363 06a0 50       		.byte	0x50
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 34
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 34
 
 
  1364 06a1 01       		.uleb128 0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1418 06fb 01       		.uleb128 0x1
  1419 06fc 50       		.byte	0x50
  1420 06fd 02       		.uleb128 0x2
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 35
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 35
 
 
  1421 06fe 74       		.byte	0x74
@@ -2060,7 +2060,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1437 0714 00       		.byte	0
  1438 0715 00       		.byte	0
  1439 0716 15       		.uleb128 0x15
- 1440 0717 16090000 		.4byte	.LASF134
+ 1440 0717 2D090000 		.4byte	.LASF134
  1441 071b 01       		.byte	0x1
  1442 071c E1       		.byte	0xe1
  1443 071d 00000000 		.4byte	.LFB623
@@ -2069,25 +2069,25 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1446 0726 9C       		.byte	0x9c
  1447 0727 08080000 		.4byte	0x808
  1448 072b 16       		.uleb128 0x16
- 1449 072c 6D020000 		.4byte	.LASF135
+ 1449 072c 29020000 		.4byte	.LASF135
  1450 0730 01       		.byte	0x1
  1451 0731 E1       		.byte	0xe1
  1452 0732 08080000 		.4byte	0x808
  1453 0736 DE000000 		.4byte	.LLST5
  1454 073a 16       		.uleb128 0x16
- 1455 073b BB070000 		.4byte	.LASF136
+ 1455 073b DC070000 		.4byte	.LASF136
  1456 073f 01       		.byte	0x1
  1457 0740 E1       		.byte	0xe1
  1458 0741 08080000 		.4byte	0x808
  1459 0745 FC000000 		.4byte	.LLST6
  1460 0749 16       		.uleb128 0x16
- 1461 074a 02040000 		.4byte	.LASF137
+ 1461 074a BE030000 		.4byte	.LASF137
  1462 074e 01       		.byte	0x1
  1463 074f E2       		.byte	0xe2
  1464 0750 CB050000 		.4byte	0x5cb
  1465 0754 1A010000 		.4byte	.LLST7
  1466 0758 16       		.uleb128 0x16
- 1467 0759 200A0000 		.4byte	.LASF133
+ 1467 0759 370A0000 		.4byte	.LASF133
  1468 075d 01       		.byte	0x1
  1469 075e E2       		.byte	0xe2
  1470 075f 09010000 		.4byte	0x109
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1475 0770 7A070000 		.4byte	0x77a
  1476 0774 19       		.uleb128 0x19
  1477 0775 01       		.uleb128 0x1
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 36
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 36
 
 
  1478 0776 50       		.byte	0x50
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1532 07c7 42000000 		.4byte	.LVL25
  1533 07cb FC090000 		.4byte	0x9fc
  1534 07cf DF070000 		.4byte	0x7df
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 37
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 37
 
 
  1535 07d3 19       		.uleb128 0x19
@@ -2203,7 +2203,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1574 0809 04       		.byte	0x4
  1575 080a A1050000 		.4byte	0x5a1
  1576 080e 1D       		.uleb128 0x1d
- 1577 080f 9A050000 		.4byte	.LASF138
+ 1577 080f BB050000 		.4byte	.LASF138
  1578 0813 01       		.byte	0x1
  1579 0814 2E01     		.2byte	0x12e
  1580 0816 00000000 		.4byte	.LFB624
@@ -2212,40 +2212,40 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1583 081f 9C       		.byte	0x9c
  1584 0820 8E080000 		.4byte	0x88e
  1585 0824 1E       		.uleb128 0x1e
- 1586 0825 1F010000 		.4byte	.LASF139
+ 1586 0825 DB000000 		.4byte	.LASF139
  1587 0829 01       		.byte	0x1
  1588 082a 2E01     		.2byte	0x12e
  1589 082c 08080000 		.4byte	0x808
  1590 0830 5C010000 		.4byte	.LLST9
  1591 0834 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 38
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 38
 
 
- 1592 0835 DC020000 		.4byte	.LASF140
+ 1592 0835 98020000 		.4byte	.LASF140
  1593 0839 01       		.byte	0x1
  1594 083a 2E01     		.2byte	0x12e
  1595 083c 08080000 		.4byte	0x808
  1596 0840 7A010000 		.4byte	.LLST10
  1597 0844 1E       		.uleb128 0x1e
- 1598 0845 EF060000 		.4byte	.LASF141
+ 1598 0845 10070000 		.4byte	.LASF141
  1599 0849 01       		.byte	0x1
  1600 084a 2F01     		.2byte	0x12f
  1601 084c 1D020000 		.4byte	0x21d
  1602 0850 98010000 		.4byte	.LLST11
  1603 0854 1F       		.uleb128 0x1f
- 1604 0855 30050000 		.4byte	.LASF143
+ 1604 0855 51050000 		.4byte	.LASF143
  1605 0859 01       		.byte	0x1
  1606 085a 3201     		.2byte	0x132
  1607 085c D5000000 		.4byte	0xd5
  1608 0860 B6010000 		.4byte	.LLST12
  1609 0864 1F       		.uleb128 0x1f
- 1610 0865 450A0000 		.4byte	.LASF144
+ 1610 0865 5C0A0000 		.4byte	.LASF144
  1611 0869 01       		.byte	0x1
  1612 086a 3501     		.2byte	0x135
  1613 086c D5000000 		.4byte	0xd5
  1614 0870 D4010000 		.4byte	.LLST13
  1615 0874 1F       		.uleb128 0x1f
- 1616 0875 BF000000 		.4byte	.LASF145
+ 1616 0875 7B000000 		.4byte	.LASF145
  1617 0879 01       		.byte	0x1
  1618 087a 3801     		.2byte	0x138
  1619 087c D5000000 		.4byte	0xd5
@@ -2255,7 +2255,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1623 0889 120A0000 		.4byte	0xa12
  1624 088d 00       		.byte	0
  1625 088e 1D       		.uleb128 0x1d
- 1626 088f A5000000 		.4byte	.LASF146
+ 1626 088f 61000000 		.4byte	.LASF146
  1627 0893 01       		.byte	0x1
  1628 0894 6E01     		.2byte	0x16e
  1629 0896 00000000 		.4byte	.LFB625
@@ -2264,21 +2264,21 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1632 089f 9C       		.byte	0x9c
  1633 08a0 4F090000 		.4byte	0x94f
  1634 08a4 20       		.uleb128 0x20
- 1635 08a5 1F010000 		.4byte	.LASF139
+ 1635 08a5 DB000000 		.4byte	.LASF139
  1636 08a9 01       		.byte	0x1
  1637 08aa 6E01     		.2byte	0x16e
  1638 08ac 08080000 		.4byte	0x808
  1639 08b0 01       		.uleb128 0x1
  1640 08b1 50       		.byte	0x50
  1641 08b2 1E       		.uleb128 0x1e
- 1642 08b3 52080000 		.4byte	.LASF147
+ 1642 08b3 73080000 		.4byte	.LASF147
  1643 08b7 01       		.byte	0x1
  1644 08b8 6E01     		.2byte	0x16e
  1645 08ba B2000000 		.4byte	0xb2
  1646 08be 14020000 		.4byte	.LLST15
  1647 08c2 20       		.uleb128 0x20
- 1648 08c3 59040000 		.4byte	.LASF148
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 39
+ 1648 08c3 15040000 		.4byte	.LASF148
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 39
 
 
  1649 08c7 01       		.byte	0x1
@@ -2287,50 +2287,50 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1652 08ce 01       		.uleb128 0x1
  1653 08cf 52       		.byte	0x52
  1654 08d0 20       		.uleb128 0x20
- 1655 08d1 B0090000 		.4byte	.LASF149
+ 1655 08d1 C7090000 		.4byte	.LASF149
  1656 08d5 01       		.byte	0x1
  1657 08d6 6F01     		.2byte	0x16f
  1658 08d8 1D020000 		.4byte	0x21d
  1659 08dc 01       		.uleb128 0x1
  1660 08dd 53       		.byte	0x53
  1661 08de 1F       		.uleb128 0x1f
- 1662 08df 4D040000 		.4byte	.LASF150
+ 1662 08df 09040000 		.4byte	.LASF150
  1663 08e3 01       		.byte	0x1
  1664 08e4 7201     		.2byte	0x172
  1665 08e6 B2000000 		.4byte	0xb2
  1666 08ea 35020000 		.4byte	.LLST16
  1667 08ee 1F       		.uleb128 0x1f
- 1668 08ef B7060000 		.4byte	.LASF151
+ 1668 08ef D8060000 		.4byte	.LASF151
  1669 08f3 01       		.byte	0x1
  1670 08f4 7601     		.2byte	0x176
  1671 08f6 D5000000 		.4byte	0xd5
  1672 08fa 53020000 		.4byte	.LLST17
  1673 08fe 1F       		.uleb128 0x1f
- 1674 08ff CA080000 		.4byte	.LASF152
+ 1674 08ff EB080000 		.4byte	.LASF152
  1675 0903 01       		.byte	0x1
  1676 0904 7801     		.2byte	0x178
  1677 0906 D5000000 		.4byte	0xd5
  1678 090a 66020000 		.4byte	.LLST18
  1679 090e 1F       		.uleb128 0x1f
- 1680 090f C6020000 		.4byte	.LASF153
+ 1680 090f 82020000 		.4byte	.LASF153
  1681 0913 01       		.byte	0x1
  1682 0914 7C01     		.2byte	0x17c
  1683 0916 D5000000 		.4byte	0xd5
  1684 091a 79020000 		.4byte	.LLST19
  1685 091e 1F       		.uleb128 0x1f
- 1686 091f 0D090000 		.4byte	.LASF154
+ 1686 091f 24090000 		.4byte	.LASF154
  1687 0923 01       		.byte	0x1
  1688 0924 7E01     		.2byte	0x17e
  1689 0926 D5000000 		.4byte	0xd5
  1690 092a 97020000 		.4byte	.LLST20
  1691 092e 1F       		.uleb128 0x1f
- 1692 092f F2030000 		.4byte	.LASF155
+ 1692 092f AE030000 		.4byte	.LASF155
  1693 0933 01       		.byte	0x1
  1694 0934 8101     		.2byte	0x181
  1695 0936 CA000000 		.4byte	0xca
  1696 093a E9020000 		.4byte	.LLST21
  1697 093e 1F       		.uleb128 0x1f
- 1698 093f 80080000 		.4byte	.LASF156
+ 1698 093f A1080000 		.4byte	.LASF156
  1699 0943 01       		.byte	0x1
  1700 0944 8301     		.2byte	0x183
  1701 0946 CA000000 		.4byte	0xca
@@ -2338,19 +2338,19 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1703 094e 00       		.byte	0
  1704 094f 06       		.uleb128 0x6
  1705 0950 04       		.byte	0x4
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 40
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 40
 
 
  1706 0951 35050000 		.4byte	0x535
  1707 0955 21       		.uleb128 0x21
- 1708 0956 AE070000 		.4byte	.LASF157
+ 1708 0956 CF070000 		.4byte	.LASF157
  1709 095a 0C       		.byte	0xc
  1710 095b EA07     		.2byte	0x7ea
  1711 095d 61090000 		.4byte	0x961
  1712 0961 07       		.uleb128 0x7
  1713 0962 E0000000 		.4byte	0xe0
  1714 0966 21       		.uleb128 0x21
- 1715 0967 28090000 		.4byte	.LASF158
+ 1715 0967 3F090000 		.4byte	.LASF158
  1716 096b 08       		.byte	0x8
  1717 096c 2202     		.2byte	0x222
  1718 096e 79040000 		.4byte	0x479
@@ -2362,7 +2362,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1724 0980 00       		.byte	0
  1725 0981 00       		.byte	0
  1726 0982 21       		.uleb128 0x21
- 1727 0983 0E0A0000 		.4byte	.LASF159
+ 1727 0983 250A0000 		.4byte	.LASF159
  1728 0987 08       		.byte	0x8
  1729 0988 2C02     		.2byte	0x22c
  1730 098a 72090000 		.4byte	0x972
@@ -2374,63 +2374,63 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1736 099c 00       		.byte	0
  1737 099d 00       		.byte	0
  1738 099e 21       		.uleb128 0x21
- 1739 099f 62040000 		.4byte	.LASF160
+ 1739 099f 1E040000 		.4byte	.LASF160
  1740 09a3 08       		.byte	0x8
  1741 09a4 2D02     		.2byte	0x22d
  1742 09a6 8E090000 		.4byte	0x98e
  1743 09aa 24       		.uleb128 0x24
- 1744 09ab 2B0A0000 		.4byte	.LASF161
+ 1744 09ab 420A0000 		.4byte	.LASF161
  1745 09af 0D       		.byte	0xd
  1746 09b0 5E       		.byte	0x5e
  1747 09b1 18040000 		.4byte	0x418
  1748 09b5 24       		.uleb128 0x24
- 1749 09b6 C80A0000 		.4byte	.LASF162
+ 1749 09b6 DF0A0000 		.4byte	.LASF162
  1750 09ba 0E       		.byte	0xe
  1751 09bb 1F       		.byte	0x1f
  1752 09bc C0090000 		.4byte	0x9c0
  1753 09c0 25       		.uleb128 0x25
  1754 09c1 01020000 		.4byte	0x201
  1755 09c5 24       		.uleb128 0x24
- 1756 09c6 38010000 		.4byte	.LASF163
+ 1756 09c6 F4000000 		.4byte	.LASF163
  1757 09ca 0F       		.byte	0xf
  1758 09cb 4B       		.byte	0x4b
  1759 09cc 7D030000 		.4byte	0x37d
  1760 09d0 26       		.uleb128 0x26
- 1761 09d1 8D050000 		.4byte	.LASF164
- 1762 09d5 8D050000 		.4byte	.LASF164
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 41
+ 1761 09d1 AE050000 		.4byte	.LASF164
+ 1762 09d5 AE050000 		.4byte	.LASF164
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 41
 
 
  1763 09d9 0A       		.byte	0xa
  1764 09da 4D       		.byte	0x4d
  1765 09db 26       		.uleb128 0x26
- 1766 09dc 530A0000 		.4byte	.LASF165
- 1767 09e0 530A0000 		.4byte	.LASF165
+ 1766 09dc 6A0A0000 		.4byte	.LASF165
+ 1767 09e0 6A0A0000 		.4byte	.LASF165
  1768 09e4 0A       		.byte	0xa
  1769 09e5 52       		.byte	0x52
  1770 09e6 26       		.uleb128 0x26
- 1771 09e7 27070000 		.4byte	.LASF166
- 1772 09eb 27070000 		.4byte	.LASF166
+ 1771 09e7 48070000 		.4byte	.LASF166
+ 1772 09eb 48070000 		.4byte	.LASF166
  1773 09ef 0A       		.byte	0xa
  1774 09f0 4E       		.byte	0x4e
  1775 09f1 26       		.uleb128 0x26
- 1776 09f2 080B0000 		.4byte	.LASF167
- 1777 09f6 080B0000 		.4byte	.LASF167
+ 1776 09f2 1F0B0000 		.4byte	.LASF167
+ 1777 09f6 1F0B0000 		.4byte	.LASF167
  1778 09fa 0A       		.byte	0xa
  1779 09fb 4F       		.byte	0x4f
  1780 09fc 26       		.uleb128 0x26
- 1781 09fd 5D010000 		.4byte	.LASF168
- 1782 0a01 5D010000 		.4byte	.LASF168
+ 1781 09fd 19010000 		.4byte	.LASF168
+ 1782 0a01 19010000 		.4byte	.LASF168
  1783 0a05 0A       		.byte	0xa
  1784 0a06 55       		.byte	0x55
  1785 0a07 26       		.uleb128 0x26
- 1786 0a08 DF070000 		.4byte	.LASF169
- 1787 0a0c DF070000 		.4byte	.LASF169
+ 1786 0a08 00080000 		.4byte	.LASF169
+ 1787 0a0c 00080000 		.4byte	.LASF169
  1788 0a10 0A       		.byte	0xa
  1789 0a11 56       		.byte	0x56
  1790 0a12 27       		.uleb128 0x27
- 1791 0a13 A5020000 		.4byte	.LASF174
- 1792 0a17 A5020000 		.4byte	.LASF174
+ 1791 0a13 61020000 		.4byte	.LASF174
+ 1792 0a17 61020000 		.4byte	.LASF174
  1793 0a1b 00       		.byte	0
  1794              		.section	.debug_abbrev,"",%progbits
  1795              	.Ldebug_abbrev0:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1817 0015 00       		.byte	0
  1818 0016 03       		.uleb128 0x3
  1819 0017 0E       		.uleb128 0xe
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 42
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 42
 
 
  1820 0018 3A       		.uleb128 0x3a
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1874 004e 13       		.uleb128 0x13
  1875 004f 01       		.byte	0x1
  1876 0050 03       		.uleb128 0x3
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 43
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 43
 
 
  1877 0051 0E       		.uleb128 0xe
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1931 0087 13       		.uleb128 0x13
  1932 0088 00       		.byte	0
  1933 0089 00       		.byte	0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 44
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 44
 
 
  1934 008a 0D       		.uleb128 0xd
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  1988 00c0 00       		.byte	0
  1989 00c1 03       		.uleb128 0x3
  1990 00c2 08       		.uleb128 0x8
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 45
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 45
 
 
  1991 00c3 3A       		.uleb128 0x3a
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2045 00f9 3F       		.uleb128 0x3f
  2046 00fa 19       		.uleb128 0x19
  2047 00fb 03       		.uleb128 0x3
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 46
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 46
 
 
  2048 00fc 0E       		.uleb128 0xe
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2102 0139 00       		.byte	0
  2103 013a 02       		.uleb128 0x2
  2104 013b 18       		.uleb128 0x18
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 47
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 47
 
 
  2105 013c 9142     		.uleb128 0x2111
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2159 0176 13       		.uleb128 0x13
  2160 0177 00       		.byte	0
  2161 0178 00       		.byte	0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 48
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 48
 
 
  2162 0179 1D       		.uleb128 0x1d
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2216 01b0 00       		.byte	0
  2217 01b1 20       		.uleb128 0x20
  2218 01b2 05       		.uleb128 0x5
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 49
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 49
 
 
  2219 01b3 00       		.byte	0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2273 01e9 0B       		.uleb128 0xb
  2274 01ea 3B       		.uleb128 0x3b
  2275 01eb 0B       		.uleb128 0xb
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 50
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 50
 
 
  2276 01ec 49       		.uleb128 0x49
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2330 000f 10000000 		.4byte	.LFE620
  2331 0013 0400     		.2byte	0x4
  2332 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 51
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 51
 
 
  2333 0016 01       		.uleb128 0x1
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2387 0098 00000000 		.4byte	0
  2388              	.LLST3:
  2389 009c 00000000 		.4byte	.LVL11
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 52
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 52
 
 
  2390 00a0 0A000000 		.4byte	.LVL12
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2444 0129 54000000 		.4byte	.LFE623
  2445 012d 0400     		.2byte	0x4
  2446 012f F3       		.byte	0xf3
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 53
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 53
 
 
  2447 0130 01       		.uleb128 0x1
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2501 01ba 26000000 		.4byte	.LVL35
  2502 01be 0100     		.2byte	0x1
  2503 01c0 54       		.byte	0x54
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 54
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 54
 
 
  2504 01c1 28000000 		.4byte	.LVL36
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2558 0235 06000000 		.4byte	.LVL38
  2559 0239 08000000 		.4byte	.LVL39
  2560 023d 0100     		.2byte	0x1
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 55
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 55
 
 
  2561 023f 51       		.byte	0x51
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2615 02bb 9F       		.byte	0x9f
  2616 02bc 7C000000 		.4byte	.LVL46
  2617 02c0 82000000 		.4byte	.LVL47
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 56
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 56
 
 
  2618 02c4 0100     		.2byte	0x1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2672 033e 56       		.byte	0x56
  2673 033f 88000000 		.4byte	.LVL49
  2674 0343 8A000000 		.4byte	.LVL50
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 57
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 57
 
 
  2675 0347 0100     		.2byte	0x1
@@ -3418,14 +3418,14 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2729 0028 00000000 		.4byte	.LFB625
  2730 002c 18010000 		.4byte	.LFE625
  2731 0030 00000000 		.4byte	0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 58
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 58
 
 
  2732 0034 00000000 		.4byte	0
  2733              		.section	.debug_line,"",%progbits
  2734              	.Ldebug_line0:
- 2735 0000 CA030000 		.section	.debug_str,"MS",%progbits,1
- 2735      0200CB02 
+ 2735 0000 E2030000 		.section	.debug_str,"MS",%progbits,1
+ 2735      0200E302 
  2735      00000201 
  2735      FB0E0D00 
  2735      01010101 
@@ -3435,897 +3435,899 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 1
  2738              	.LASF105:
  2739 0008 794F6666 		.ascii	"yOffset\000"
  2739      73657400 
- 2740              	.LASF172:
- 2741 0010 433A5C55 		.ascii	"C:\\Users\\User\\Desktop\\CE218135_BLE_Proximity02\\"
- 2741      73657273 
- 2741      5C557365 
- 2741      725C4465 
- 2741      736B746F 
- 2742 003f 43453231 		.ascii	"CE218135_BLE_Proximity01.cydsn\000"
- 2742      38313335 
- 2742      5F424C45 
- 2742      5F50726F 
- 2742      78696D69 
- 2743              	.LASF130:
- 2744 005e 43795F45 		.ascii	"Cy_EINK_Start\000"
- 2744      494E4B5F 
- 2744      53746172 
- 2744      7400
- 2745              	.LASF47:
- 2746 006c 63795F65 		.ascii	"cy_en_scb_ezi2c_sub_addr_size_t\000"
- 2746      6E5F7363 
- 2746      625F657A 
- 2746      6932635F 
- 2746      7375625F 
- 2747              	.LASF118:
- 2748 008c 50565F45 		.ascii	"PV_EINK_ERROR_CHARGEPUMP\000"
- 2748      494E4B5F 
- 2748      4552524F 
- 2748      525F4348 
- 2748      41524745 
- 2749              	.LASF146:
- 2750 00a5 43795F45 		.ascii	"Cy_EINK_TextToFrameBuffer\000"
- 2750      494E4B5F 
- 2750      54657874 
- 2750      546F4672 
- 2750      616D6542 
- 2751              	.LASF145:
- 2752 00bf 6C696E65 		.ascii	"lineLength\000"
- 2752      4C656E67 
- 2752      746800
- 2753              	.LASF68:
- 2754 00ca 62756631 		.ascii	"buf1\000"
- 2754      00
- 2755              	.LASF1:
- 2756 00cf 5F5F7569 		.ascii	"__uint8_t\000"
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 59
+ 2740              	.LASF78:
+ 2741 0010 72784275 		.ascii	"rxBufSize\000"
+ 2741      6653697A 
+ 2741      6500
+ 2742              	.LASF130:
+ 2743 001a 43795F45 		.ascii	"Cy_EINK_Start\000"
+ 2743      494E4B5F 
+ 2743      53746172 
+ 2743      7400
+ 2744              	.LASF47:
+ 2745 0028 63795F65 		.ascii	"cy_en_scb_ezi2c_sub_addr_size_t\000"
+ 2745      6E5F7363 
+ 2745      625F657A 
+ 2745      6932635F 
+ 2745      7375625F 
+ 2746              	.LASF118:
+ 2747 0048 50565F45 		.ascii	"PV_EINK_ERROR_CHARGEPUMP\000"
+ 2747      494E4B5F 
+ 2747      4552524F 
+ 2747      525F4348 
+ 2747      41524745 
+ 2748              	.LASF146:
+ 2749 0061 43795F45 		.ascii	"Cy_EINK_TextToFrameBuffer\000"
+ 2749      494E4B5F 
+ 2749      54657874 
+ 2749      546F4672 
+ 2749      616D6542 
+ 2750              	.LASF145:
+ 2751 007b 6C696E65 		.ascii	"lineLength\000"
+ 2751      4C656E67 
+ 2751      746800
+ 2752              	.LASF68:
+ 2753 0086 62756631 		.ascii	"buf1\000"
+ 2753      00
+ 2754              	.LASF1:
+ 2755 008b 5F5F7569 		.ascii	"__uint8_t\000"
+ 2755      6E74385F 
+ 2755      7400
+ 2756              	.LASF88:
+ 2757 0095 63795F73 		.ascii	"cy_stc_ble_conn_handle_t\000"
+ 2757      74635F62 
+ 2757      6C655F63 
+ 2757      6F6E6E5F 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 59
 
 
- 2756      6E74385F 
- 2756      7400
- 2757              	.LASF88:
- 2758 00d9 63795F73 		.ascii	"cy_stc_ble_conn_handle_t\000"
- 2758      74635F62 
- 2758      6C655F63 
- 2758      6F6E6E5F 
- 2758      68616E64 
- 2759              	.LASF28:
- 2760 00f2 636F756E 		.ascii	"countDirection\000"
- 2760      74446972 
- 2760      65637469 
- 2760      6F6E00
- 2761              	.LASF40:
- 2762 0101 73746F70 		.ascii	"stopInputMode\000"
- 2762      496E7075 
- 2762      744D6F64 
- 2762      6500
- 2763              	.LASF8:
- 2764 010f 6C6F6E67 		.ascii	"long int\000"
- 2764      20696E74 
- 2764      00
- 2765              	.LASF25:
- 2766 0118 70657269 		.ascii	"period\000"
- 2766      6F6400
- 2767              	.LASF139:
- 2768 011f 6672616D 		.ascii	"frameBuffer\000"
- 2768      65427566 
- 2768      66657200 
- 2769              	.LASF35:
- 2770 012b 63617074 		.ascii	"captureInput\000"
- 2770      75726549 
- 2770      6E707574 
- 2770      00
- 2771              	.LASF163:
- 2772 0138 455A4932 		.ascii	"EZI2C_context\000"
- 2772      435F636F 
- 2772      6E746578 
- 2772      7400
- 2773              	.LASF12:
- 2774 0146 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2774      206C6F6E 
- 2774      6720756E 
- 2774      7369676E 
- 2774      65642069 
- 2775              	.LASF168:
- 2776 015d 50765F45 		.ascii	"Pv_EINK_FullStageHandler\000"
- 2776      494E4B5F 
- 2776      46756C6C 
- 2776      53746167 
- 2776      6548616E 
- 2777              	.LASF26:
- 2778 0176 636C6F63 		.ascii	"clockPrescaler\000"
- 2778      6B507265 
- 2778      7363616C 
- 2778      657200
- 2779              	.LASF112:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 60
+ 2757      68616E64 
+ 2758              	.LASF28:
+ 2759 00ae 636F756E 		.ascii	"countDirection\000"
+ 2759      74446972 
+ 2759      65637469 
+ 2759      6F6E00
+ 2760              	.LASF40:
+ 2761 00bd 73746F70 		.ascii	"stopInputMode\000"
+ 2761      496E7075 
+ 2761      744D6F64 
+ 2761      6500
+ 2762              	.LASF8:
+ 2763 00cb 6C6F6E67 		.ascii	"long int\000"
+ 2763      20696E74 
+ 2763      00
+ 2764              	.LASF25:
+ 2765 00d4 70657269 		.ascii	"period\000"
+ 2765      6F6400
+ 2766              	.LASF139:
+ 2767 00db 6672616D 		.ascii	"frameBuffer\000"
+ 2767      65427566 
+ 2767      66657200 
+ 2768              	.LASF35:
+ 2769 00e7 63617074 		.ascii	"captureInput\000"
+ 2769      75726549 
+ 2769      6E707574 
+ 2769      00
+ 2770              	.LASF163:
+ 2771 00f4 455A4932 		.ascii	"EZI2C_context\000"
+ 2771      435F636F 
+ 2771      6E746578 
+ 2771      7400
+ 2772              	.LASF12:
+ 2773 0102 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2773      206C6F6E 
+ 2773      6720756E 
+ 2773      7369676E 
+ 2773      65642069 
+ 2774              	.LASF168:
+ 2775 0119 50765F45 		.ascii	"Pv_EINK_FullStageHandler\000"
+ 2775      494E4B5F 
+ 2775      46756C6C 
+ 2775      53746167 
+ 2775      6548616E 
+ 2776              	.LASF26:
+ 2777 0132 636C6F63 		.ascii	"clockPrescaler\000"
+ 2777      6B507265 
+ 2777      7363616C 
+ 2777      657200
+ 2778              	.LASF112:
+ 2779 0141 70765F65 		.ascii	"pv_eink_frame_data_t\000"
+ 2779      696E6B5F 
+ 2779      6672616D 
+ 2779      655F6461 
+ 2779      74615F74 
+ 2780              	.LASF0:
+ 2781 0156 5F5F696E 		.ascii	"__int8_t\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 60
 
 
- 2780 0185 70765F65 		.ascii	"pv_eink_frame_data_t\000"
- 2780      696E6B5F 
- 2780      6672616D 
- 2780      655F6461 
- 2780      74615F74 
- 2781              	.LASF0:
- 2782 019a 5F5F696E 		.ascii	"__int8_t\000"
- 2782      74385F74 
- 2782      00
- 2783              	.LASF80:
- 2784 01a3 74784275 		.ascii	"txBuf\000"
- 2784      6600
- 2785              	.LASF103:
- 2786 01a9 666F6E74 		.ascii	"fontData\000"
- 2786      44617461 
- 2786      00
- 2787              	.LASF62:
- 2788 01b2 73756241 		.ascii	"subAddrSize\000"
- 2788      64647253 
- 2788      697A6500 
- 2789              	.LASF129:
- 2790 01be 706F7765 		.ascii	"powerCtrl\000"
- 2790      72437472 
- 2790      6C00
- 2791              	.LASF11:
- 2792 01c8 6C6F6E67 		.ascii	"long long int\000"
- 2792      206C6F6E 
- 2792      6720696E 
- 2792      7400
- 2793              	.LASF44:
- 2794 01d6 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
- 2794      74635F74 
- 2794      6370776D 
- 2794      5F636F75 
- 2794      6E746572 
- 2795              	.LASF76:
- 2796 01f4 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
- 2796      74635F73 
- 2796      63625F73 
- 2796      70695F63 
- 2796      6F6E7465 
- 2797              	.LASF10:
- 2798 020b 6C6F6E67 		.ascii	"long unsigned int\000"
- 2798      20756E73 
- 2798      69676E65 
- 2798      6420696E 
- 2798      7400
- 2799              	.LASF92:
- 2800 021d 43595F42 		.ascii	"CY_BLE_ADV_STATE_STOP_INITIATED\000"
- 2800      4C455F41 
- 2800      44565F53 
- 2800      54415445 
- 2800      5F53544F 
- 2801              	.LASF75:
- 2802 023d 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
- 2802      625F7363 
- 2802      625F7370 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 61
+ 2781      74385F74 
+ 2781      00
+ 2782              	.LASF80:
+ 2783 015f 74784275 		.ascii	"txBuf\000"
+ 2783      6600
+ 2784              	.LASF103:
+ 2785 0165 666F6E74 		.ascii	"fontData\000"
+ 2785      44617461 
+ 2785      00
+ 2786              	.LASF62:
+ 2787 016e 73756241 		.ascii	"subAddrSize\000"
+ 2787      64647253 
+ 2787      697A6500 
+ 2788              	.LASF129:
+ 2789 017a 706F7765 		.ascii	"powerCtrl\000"
+ 2789      72437472 
+ 2789      6C00
+ 2790              	.LASF11:
+ 2791 0184 6C6F6E67 		.ascii	"long long int\000"
+ 2791      206C6F6E 
+ 2791      6720696E 
+ 2791      7400
+ 2792              	.LASF44:
+ 2793 0192 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
+ 2793      74635F74 
+ 2793      6370776D 
+ 2793      5F636F75 
+ 2793      6E746572 
+ 2794              	.LASF76:
+ 2795 01b0 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
+ 2795      74635F73 
+ 2795      63625F73 
+ 2795      70695F63 
+ 2795      6F6E7465 
+ 2796              	.LASF10:
+ 2797 01c7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2797      20756E73 
+ 2797      69676E65 
+ 2797      6420696E 
+ 2797      7400
+ 2798              	.LASF92:
+ 2799 01d9 43595F42 		.ascii	"CY_BLE_ADV_STATE_STOP_INITIATED\000"
+ 2799      4C455F41 
+ 2799      44565F53 
+ 2799      54415445 
+ 2799      5F53544F 
+ 2800              	.LASF75:
+ 2801 01f9 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
+ 2801      625F7363 
+ 2801      625F7370 
+ 2801      695F6861 
+ 2801      6E646C65 
+ 2802              	.LASF60:
+ 2803 0217 61646472 		.ascii	"address1\000"
+ 2803      65737331 
+ 2803      00
+ 2804              	.LASF61:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 61
 
 
- 2802      695F6861 
- 2802      6E646C65 
- 2803              	.LASF60:
- 2804 025b 61646472 		.ascii	"address1\000"
- 2804      65737331 
- 2804      00
- 2805              	.LASF61:
- 2806 0264 61646472 		.ascii	"address2\000"
- 2806      65737332 
- 2806      00
- 2807              	.LASF135:
- 2808 026d 70726576 		.ascii	"prevFrame\000"
- 2808      4672616D 
- 2808      6500
- 2809              	.LASF66:
- 2810 0277 63757242 		.ascii	"curBuf\000"
- 2810      756600
- 2811              	.LASF58:
- 2812 027e 73746174 		.ascii	"state\000"
- 2812      6500
- 2813              	.LASF43:
- 2814 0284 636F756E 		.ascii	"countInput\000"
- 2814      74496E70 
- 2814      757400
- 2815              	.LASF93:
- 2816 028f 63795F65 		.ascii	"cy_en_ble_adv_state_t\000"
- 2816      6E5F626C 
- 2816      655F6164 
- 2816      765F7374 
- 2816      6174655F 
- 2817              	.LASF174:
- 2818 02a5 6D656D63 		.ascii	"memcpy\000"
- 2818      707900
- 2819              	.LASF4:
- 2820 02ac 73686F72 		.ascii	"short int\000"
- 2820      7420696E 
- 2820      7400
- 2821              	.LASF19:
- 2822 02b6 75696E74 		.ascii	"uint16_t\000"
- 2822      31365F74 
- 2822      00
- 2823              	.LASF23:
- 2824 02bf 646F7562 		.ascii	"double\000"
- 2824      6C6500
- 2825              	.LASF153:
- 2826 02c6 6672616D 		.ascii	"frameByte\000"
- 2826      65427974 
- 2826      6500
- 2827              	.LASF128:
- 2828 02d0 74656D70 		.ascii	"temperature\000"
- 2828      65726174 
- 2828      75726500 
- 2829              	.LASF140:
- 2830 02dc 696D6167 		.ascii	"image\000"
- 2830      6500
- 2831              	.LASF34:
- 2832 02e2 63617074 		.ascii	"captureInputMode\000"
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 62
+ 2805 0220 61646472 		.ascii	"address2\000"
+ 2805      65737332 
+ 2805      00
+ 2806              	.LASF135:
+ 2807 0229 70726576 		.ascii	"prevFrame\000"
+ 2807      4672616D 
+ 2807      6500
+ 2808              	.LASF66:
+ 2809 0233 63757242 		.ascii	"curBuf\000"
+ 2809      756600
+ 2810              	.LASF58:
+ 2811 023a 73746174 		.ascii	"state\000"
+ 2811      6500
+ 2812              	.LASF43:
+ 2813 0240 636F756E 		.ascii	"countInput\000"
+ 2813      74496E70 
+ 2813      757400
+ 2814              	.LASF93:
+ 2815 024b 63795F65 		.ascii	"cy_en_ble_adv_state_t\000"
+ 2815      6E5F626C 
+ 2815      655F6164 
+ 2815      765F7374 
+ 2815      6174655F 
+ 2816              	.LASF174:
+ 2817 0261 6D656D63 		.ascii	"memcpy\000"
+ 2817      707900
+ 2818              	.LASF4:
+ 2819 0268 73686F72 		.ascii	"short int\000"
+ 2819      7420696E 
+ 2819      7400
+ 2820              	.LASF19:
+ 2821 0272 75696E74 		.ascii	"uint16_t\000"
+ 2821      31365F74 
+ 2821      00
+ 2822              	.LASF23:
+ 2823 027b 646F7562 		.ascii	"double\000"
+ 2823      6C6500
+ 2824              	.LASF153:
+ 2825 0282 6672616D 		.ascii	"frameByte\000"
+ 2825      65427974 
+ 2825      6500
+ 2826              	.LASF128:
+ 2827 028c 74656D70 		.ascii	"temperature\000"
+ 2827      65726174 
+ 2827      75726500 
+ 2828              	.LASF140:
+ 2829 0298 696D6167 		.ascii	"image\000"
+ 2829      6500
+ 2830              	.LASF34:
+ 2831 029e 63617074 		.ascii	"captureInputMode\000"
+ 2831      75726549 
+ 2831      6E707574 
+ 2831      4D6F6465 
+ 2831      00
+ 2832              	.LASF98:
+ 2833 02af 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_INCL_DISCOVERING\000"
+ 2833      4C455F43 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 62
 
 
- 2832      75726549 
- 2832      6E707574 
- 2832      4D6F6465 
- 2832      00
- 2833              	.LASF98:
- 2834 02f3 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_INCL_DISCOVERING\000"
- 2834      4C455F43 
- 2834      4F4E4E5F 
- 2834      53544154 
- 2834      455F434C 
- 2835              	.LASF50:
- 2836 031d 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_OFFSET_MSB\000"
- 2836      43425F45 
- 2836      5A493243 
- 2836      5F535441 
- 2836      54455F52 
- 2837              	.LASF114:
- 2838 033e 50565F45 		.ascii	"PV_EINK_ERROR_BUSY\000"
- 2838      494E4B5F 
- 2838      4552524F 
- 2838      525F4255 
- 2838      535900
- 2839              	.LASF9:
- 2840 0351 5F5F7569 		.ascii	"__uint32_t\000"
- 2840      6E743332 
- 2840      5F7400
- 2841              	.LASF125:
- 2842 035c 43595F45 		.ascii	"CY_EINK_FULL_4STAGE\000"
- 2842      494E4B5F 
- 2842      46554C4C 
- 2842      5F345354 
- 2842      41474500 
- 2843              	.LASF79:
- 2844 0370 72784275 		.ascii	"rxBufIdx\000"
- 2844      66496478 
- 2844      00
- 2845              	.LASF124:
- 2846 0379 43595F45 		.ascii	"CY_EINK_PARTIAL\000"
- 2846      494E4B5F 
- 2846      50415254 
- 2846      49414C00 
- 2847              	.LASF57:
- 2848 0389 63795F73 		.ascii	"cy_stc_scb_ezi2c_context\000"
- 2848      74635F73 
- 2848      63625F65 
- 2848      7A693263 
- 2848      5F636F6E 
- 2849              	.LASF106:
- 2850 03a2 7853697A 		.ascii	"xSize\000"
- 2850      6500
- 2851              	.LASF81:
- 2852 03a8 74784275 		.ascii	"txBufSize\000"
- 2852      6653697A 
- 2852      6500
- 2853              	.LASF72:
- 2854 03b2 62756632 		.ascii	"buf2Size\000"
- 2854      53697A65 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 63
+ 2833      4F4E4E5F 
+ 2833      53544154 
+ 2833      455F434C 
+ 2834              	.LASF50:
+ 2835 02d9 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_OFFSET_MSB\000"
+ 2835      43425F45 
+ 2835      5A493243 
+ 2835      5F535441 
+ 2835      54455F52 
+ 2836              	.LASF114:
+ 2837 02fa 50565F45 		.ascii	"PV_EINK_ERROR_BUSY\000"
+ 2837      494E4B5F 
+ 2837      4552524F 
+ 2837      525F4255 
+ 2837      535900
+ 2838              	.LASF9:
+ 2839 030d 5F5F7569 		.ascii	"__uint32_t\000"
+ 2839      6E743332 
+ 2839      5F7400
+ 2840              	.LASF125:
+ 2841 0318 43595F45 		.ascii	"CY_EINK_FULL_4STAGE\000"
+ 2841      494E4B5F 
+ 2841      46554C4C 
+ 2841      5F345354 
+ 2841      41474500 
+ 2842              	.LASF79:
+ 2843 032c 72784275 		.ascii	"rxBufIdx\000"
+ 2843      66496478 
+ 2843      00
+ 2844              	.LASF124:
+ 2845 0335 43595F45 		.ascii	"CY_EINK_PARTIAL\000"
+ 2845      494E4B5F 
+ 2845      50415254 
+ 2845      49414C00 
+ 2846              	.LASF57:
+ 2847 0345 63795F73 		.ascii	"cy_stc_scb_ezi2c_context\000"
+ 2847      74635F73 
+ 2847      63625F65 
+ 2847      7A693263 
+ 2847      5F636F6E 
+ 2848              	.LASF106:
+ 2849 035e 7853697A 		.ascii	"xSize\000"
+ 2849      6500
+ 2850              	.LASF81:
+ 2851 0364 74784275 		.ascii	"txBufSize\000"
+ 2851      6653697A 
+ 2851      6500
+ 2852              	.LASF72:
+ 2853 036e 62756632 		.ascii	"buf2Size\000"
+ 2853      53697A65 
+ 2853      00
+ 2854              	.LASF13:
+ 2855 0377 756E7369 		.ascii	"unsigned int\000"
+ 2855      676E6564 
+ 2855      20696E74 
+ 2855      00
+ 2856              	.LASF96:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 63
 
 
- 2854      00
- 2855              	.LASF13:
- 2856 03bb 756E7369 		.ascii	"unsigned int\000"
- 2856      676E6564 
- 2856      20696E74 
- 2856      00
- 2857              	.LASF96:
- 2858 03c8 43595F42 		.ascii	"CY_BLE_CONN_STATE_CONNECTED\000"
- 2858      4C455F43 
- 2858      4F4E4E5F 
- 2858      53544154 
- 2858      455F434F 
- 2859              	.LASF73:
- 2860 03e4 62756632 		.ascii	"buf2rwBondary\000"
- 2860      7277426F 
- 2860      6E646172 
- 2860      7900
- 2861              	.LASF155:
- 2862 03f2 76657274 		.ascii	"verticalCounter\000"
- 2862      6963616C 
- 2862      436F756E 
- 2862      74657200 
- 2863              	.LASF137:
- 2864 0402 75706461 		.ascii	"updateType\000"
- 2864      74655479 
- 2864      706500
- 2865              	.LASF111:
- 2866 040d 63795F65 		.ascii	"cy_eink_font_t\000"
- 2866      696E6B5F 
- 2866      666F6E74 
- 2866      5F7400
- 2867              	.LASF6:
- 2868 041c 73686F72 		.ascii	"short unsigned int\000"
- 2868      7420756E 
- 2868      7369676E 
- 2868      65642069 
- 2868      6E7400
- 2869              	.LASF49:
- 2870 042f 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_ADDR\000"
- 2870      43425F45 
- 2870      5A493243 
- 2870      5F535441 
- 2870      54455F41 
- 2871              	.LASF109:
- 2872 0447 79537061 		.ascii	"ySpan\000"
- 2872      6E00
- 2873              	.LASF150:
- 2874 044d 63757272 		.ascii	"currentChar\000"
- 2874      656E7443 
- 2874      68617200 
- 2875              	.LASF148:
- 2876 0459 666F6E74 		.ascii	"fontInfo\000"
- 2876      496E666F 
- 2876      00
- 2877              	.LASF160:
- 2878 0462 63795F62 		.ascii	"cy_ble_connState\000"
- 2878      6C655F63 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 64
+ 2857 0384 43595F42 		.ascii	"CY_BLE_CONN_STATE_CONNECTED\000"
+ 2857      4C455F43 
+ 2857      4F4E4E5F 
+ 2857      53544154 
+ 2857      455F434F 
+ 2858              	.LASF73:
+ 2859 03a0 62756632 		.ascii	"buf2rwBondary\000"
+ 2859      7277426F 
+ 2859      6E646172 
+ 2859      7900
+ 2860              	.LASF155:
+ 2861 03ae 76657274 		.ascii	"verticalCounter\000"
+ 2861      6963616C 
+ 2861      436F756E 
+ 2861      74657200 
+ 2862              	.LASF137:
+ 2863 03be 75706461 		.ascii	"updateType\000"
+ 2863      74655479 
+ 2863      706500
+ 2864              	.LASF111:
+ 2865 03c9 63795F65 		.ascii	"cy_eink_font_t\000"
+ 2865      696E6B5F 
+ 2865      666F6E74 
+ 2865      5F7400
+ 2866              	.LASF6:
+ 2867 03d8 73686F72 		.ascii	"short unsigned int\000"
+ 2867      7420756E 
+ 2867      7369676E 
+ 2867      65642069 
+ 2867      6E7400
+ 2868              	.LASF49:
+ 2869 03eb 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_ADDR\000"
+ 2869      43425F45 
+ 2869      5A493243 
+ 2869      5F535441 
+ 2869      54455F41 
+ 2870              	.LASF109:
+ 2871 0403 79537061 		.ascii	"ySpan\000"
+ 2871      6E00
+ 2872              	.LASF150:
+ 2873 0409 63757272 		.ascii	"currentChar\000"
+ 2873      656E7443 
+ 2873      68617200 
+ 2874              	.LASF148:
+ 2875 0415 666F6E74 		.ascii	"fontInfo\000"
+ 2875      496E666F 
+ 2875      00
+ 2876              	.LASF160:
+ 2877 041e 63795F62 		.ascii	"cy_ble_connState\000"
+ 2877      6C655F63 
+ 2877      6F6E6E53 
+ 2877      74617465 
+ 2877      00
+ 2878              	.LASF83:
+ 2879 042f 63624576 		.ascii	"cbEvents\000"
+ 2879      656E7473 
+ 2879      00
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 64
 
 
- 2878      6F6E6E53 
- 2878      74617465 
- 2878      00
- 2879              	.LASF83:
- 2880 0473 63624576 		.ascii	"cbEvents\000"
- 2880      656E7473 
- 2880      00
- 2881              	.LASF126:
- 2882 047c 43595F45 		.ascii	"CY_EINK_FULL_2STAGE\000"
- 2882      494E4B5F 
- 2882      46554C4C 
- 2882      5F325354 
- 2882      41474500 
- 2883              	.LASF123:
- 2884 0490 63795F65 		.ascii	"cy_eink_frame_t\000"
- 2884      696E6B5F 
- 2884      6672616D 
- 2884      655F7400 
- 2885              	.LASF119:
- 2886 04a0 50565F45 		.ascii	"PV_EINK_STAGE1\000"
- 2886      494E4B5F 
- 2886      53544147 
- 2886      453100
- 2887              	.LASF120:
- 2888 04af 50565F45 		.ascii	"PV_EINK_STAGE2\000"
- 2888      494E4B5F 
- 2888      53544147 
- 2888      453200
- 2889              	.LASF121:
- 2890 04be 50565F45 		.ascii	"PV_EINK_STAGE3\000"
- 2890      494E4B5F 
- 2890      53544147 
- 2890      453300
- 2891              	.LASF122:
- 2892 04cd 50565F45 		.ascii	"PV_EINK_STAGE4\000"
- 2892      494E4B5F 
- 2892      53544147 
- 2892      453400
- 2893              	.LASF7:
- 2894 04dc 5F5F696E 		.ascii	"__int32_t\000"
- 2894      7433325F 
- 2894      7400
- 2895              	.LASF110:
- 2896 04e6 636F6C6F 		.ascii	"color\000"
- 2896      7200
- 2897              	.LASF42:
- 2898 04ec 636F756E 		.ascii	"countInputMode\000"
- 2898      74496E70 
- 2898      75744D6F 
- 2898      646500
- 2899              	.LASF39:
- 2900 04fb 73746172 		.ascii	"startInput\000"
- 2900      74496E70 
- 2900      757400
- 2901              	.LASF87:
- 2902 0506 61747449 		.ascii	"attId\000"
- 2902      6400
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 65
+ 2880              	.LASF126:
+ 2881 0438 43595F45 		.ascii	"CY_EINK_FULL_2STAGE\000"
+ 2881      494E4B5F 
+ 2881      46554C4C 
+ 2881      5F325354 
+ 2881      41474500 
+ 2882              	.LASF123:
+ 2883 044c 63795F65 		.ascii	"cy_eink_frame_t\000"
+ 2883      696E6B5F 
+ 2883      6672616D 
+ 2883      655F7400 
+ 2884              	.LASF119:
+ 2885 045c 50565F45 		.ascii	"PV_EINK_STAGE1\000"
+ 2885      494E4B5F 
+ 2885      53544147 
+ 2885      453100
+ 2886              	.LASF120:
+ 2887 046b 50565F45 		.ascii	"PV_EINK_STAGE2\000"
+ 2887      494E4B5F 
+ 2887      53544147 
+ 2887      453200
+ 2888              	.LASF121:
+ 2889 047a 50565F45 		.ascii	"PV_EINK_STAGE3\000"
+ 2889      494E4B5F 
+ 2889      53544147 
+ 2889      453300
+ 2890              	.LASF122:
+ 2891 0489 50565F45 		.ascii	"PV_EINK_STAGE4\000"
+ 2891      494E4B5F 
+ 2891      53544147 
+ 2891      453400
+ 2892              	.LASF7:
+ 2893 0498 5F5F696E 		.ascii	"__int32_t\000"
+ 2893      7433325F 
+ 2893      7400
+ 2894              	.LASF110:
+ 2895 04a2 636F6C6F 		.ascii	"color\000"
+ 2895      7200
+ 2896              	.LASF42:
+ 2897 04a8 636F756E 		.ascii	"countInputMode\000"
+ 2897      74496E70 
+ 2897      75744D6F 
+ 2897      646500
+ 2898              	.LASF39:
+ 2899 04b7 73746172 		.ascii	"startInput\000"
+ 2899      74496E70 
+ 2899      757400
+ 2900              	.LASF172:
+ 2901 04c2 433A5C55 		.ascii	"C:\\Users\\Coal\\Downloads\\Telegram Desktop\\CAP\\"
+ 2901      73657273 
+ 2901      5C436F61 
+ 2901      6C5C446F 
+ 2901      776E6C6F 
+ 2902 04ef 43453231 		.ascii	"CE218135_BLE_Proximity02\\CE218135_BLE_Proximity01."
+ 2902      38313335 
+ 2902      5F424C45 
+ 2902      5F50726F 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 65
 
 
- 2903              	.LASF56:
- 2904 050c 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
- 2904      74635F74 
- 2904      6370776D 
- 2904      5F636F75 
- 2904      6E746572 
- 2905              	.LASF104:
- 2906 0528 784F6666 		.ascii	"xOffset\000"
- 2906      73657400 
- 2907              	.LASF143:
- 2908 0530 70697865 		.ascii	"pixelLineCounter\000"
- 2908      6C4C696E 
- 2908      65436F75 
- 2908      6E746572 
- 2908      00
- 2909              	.LASF15:
- 2910 0541 73697A65 		.ascii	"sizetype\000"
- 2910      74797065 
- 2910      00
- 2911              	.LASF14:
- 2912 054a 6C6F6E67 		.ascii	"long double\000"
- 2912      20646F75 
- 2912      626C6500 
- 2913              	.LASF90:
- 2914 0556 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADV_INITIATED\000"
- 2914      4C455F41 
- 2914      44565F53 
- 2914      54415445 
- 2914      5F414456 
- 2915              	.LASF48:
- 2916 0575 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_IDLE\000"
- 2916      43425F45 
- 2916      5A493243 
- 2916      5F535441 
- 2916      54455F49 
- 2917              	.LASF164:
- 2918 058d 50765F45 		.ascii	"Pv_EINK_Init\000"
- 2918      494E4B5F 
- 2918      496E6974 
- 2918      00
- 2919              	.LASF138:
- 2920 059a 43795F45 		.ascii	"Cy_EINK_ImageToFrameBuffer\000"
- 2920      494E4B5F 
- 2920      496D6167 
- 2920      65546F46 
- 2920      72616D65 
- 2921              	.LASF102:
- 2922 05b5 63795F65 		.ascii	"cy_en_ble_conn_state_t\000"
- 2922      6E5F626C 
- 2922      655F636F 
- 2922      6E6E5F73 
- 2922      74617465 
- 2923              	.LASF52:
- 2924 05cc 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_DATA0\000"
- 2924      43425F45 
- 2924      5A493243 
- 2924      5F535441 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 66
+ 2902      78696D69 
+ 2903 0521 63796473 		.ascii	"cydsn\000"
+ 2903      6E00
+ 2904              	.LASF87:
+ 2905 0527 61747449 		.ascii	"attId\000"
+ 2905      6400
+ 2906              	.LASF56:
+ 2907 052d 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
+ 2907      74635F74 
+ 2907      6370776D 
+ 2907      5F636F75 
+ 2907      6E746572 
+ 2908              	.LASF104:
+ 2909 0549 784F6666 		.ascii	"xOffset\000"
+ 2909      73657400 
+ 2910              	.LASF143:
+ 2911 0551 70697865 		.ascii	"pixelLineCounter\000"
+ 2911      6C4C696E 
+ 2911      65436F75 
+ 2911      6E746572 
+ 2911      00
+ 2912              	.LASF15:
+ 2913 0562 73697A65 		.ascii	"sizetype\000"
+ 2913      74797065 
+ 2913      00
+ 2914              	.LASF14:
+ 2915 056b 6C6F6E67 		.ascii	"long double\000"
+ 2915      20646F75 
+ 2915      626C6500 
+ 2916              	.LASF90:
+ 2917 0577 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADV_INITIATED\000"
+ 2917      4C455F41 
+ 2917      44565F53 
+ 2917      54415445 
+ 2917      5F414456 
+ 2918              	.LASF48:
+ 2919 0596 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_IDLE\000"
+ 2919      43425F45 
+ 2919      5A493243 
+ 2919      5F535441 
+ 2919      54455F49 
+ 2920              	.LASF164:
+ 2921 05ae 50765F45 		.ascii	"Pv_EINK_Init\000"
+ 2921      494E4B5F 
+ 2921      496E6974 
+ 2921      00
+ 2922              	.LASF138:
+ 2923 05bb 43795F45 		.ascii	"Cy_EINK_ImageToFrameBuffer\000"
+ 2923      494E4B5F 
+ 2923      496D6167 
+ 2923      65546F46 
+ 2923      72616D65 
+ 2924              	.LASF102:
+ 2925 05d6 63795F65 		.ascii	"cy_en_ble_conn_state_t\000"
+ 2925      6E5F626C 
+ 2925      655F636F 
+ 2925      6E6E5F73 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 66
 
 
- 2924      54455F52 
- 2925              	.LASF53:
- 2926 05e8 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_DATA1\000"
- 2926      43425F45 
- 2926      5A493243 
- 2926      5F535441 
- 2926      54455F52 
- 2927              	.LASF170:
- 2928 0604 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2928      43313120 
- 2928      352E342E 
- 2928      31203230 
- 2928      31363036 
- 2929 0637 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
- 2929      20726576 
- 2929      6973696F 
- 2929      6E203233 
- 2929      37373135 
- 2930 066a 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
- 2930      70202D6D 
- 2930      6670753D 
- 2930      66707634 
- 2930      2D73702D 
- 2931 069d 65637469 		.ascii	"ections -ffat-lto-objects\000"
- 2931      6F6E7320 
- 2931      2D666661 
- 2931      742D6C74 
- 2931      6F2D6F62 
- 2932              	.LASF151:
- 2933 06b7 7072696E 		.ascii	"printLocation\000"
- 2933      744C6F63 
- 2933      6174696F 
- 2933      6E00
- 2934              	.LASF101:
- 2935 06c5 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCOVERED\000"
- 2935      4C455F43 
- 2935      4F4E4E5F 
- 2935      53544154 
- 2935      455F434C 
- 2936              	.LASF22:
- 2937 06e9 666C6F61 		.ascii	"float\000"
- 2937      7400
- 2938              	.LASF141:
- 2939 06ef 696D6743 		.ascii	"imgCoordinates\000"
- 2939      6F6F7264 
- 2939      696E6174 
- 2939      657300
- 2940              	.LASF55:
- 2941 06fe 63795F65 		.ascii	"cy_en_scb_ezi2c_state_t\000"
- 2941      6E5F7363 
- 2941      625F657A 
- 2941      6932635F 
- 2941      73746174 
- 2942              	.LASF115:
- 2943 0716 50565F45 		.ascii	"PV_EINK_ERROR_ID\000"
- 2943      494E4B5F 
- 2943      4552524F 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 67
+ 2925      74617465 
+ 2926              	.LASF52:
+ 2927 05ed 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_DATA0\000"
+ 2927      43425F45 
+ 2927      5A493243 
+ 2927      5F535441 
+ 2927      54455F52 
+ 2928              	.LASF53:
+ 2929 0609 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_DATA1\000"
+ 2929      43425F45 
+ 2929      5A493243 
+ 2929      5F535441 
+ 2929      54455F52 
+ 2930              	.LASF170:
+ 2931 0625 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2931      43313120 
+ 2931      352E342E 
+ 2931      31203230 
+ 2931      31363036 
+ 2932 0658 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 2932      20726576 
+ 2932      6973696F 
+ 2932      6E203233 
+ 2932      37373135 
+ 2933 068b 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 2933      70202D6D 
+ 2933      6670753D 
+ 2933      66707634 
+ 2933      2D73702D 
+ 2934 06be 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 2934      6F6E7320 
+ 2934      2D666661 
+ 2934      742D6C74 
+ 2934      6F2D6F62 
+ 2935              	.LASF151:
+ 2936 06d8 7072696E 		.ascii	"printLocation\000"
+ 2936      744C6F63 
+ 2936      6174696F 
+ 2936      6E00
+ 2937              	.LASF101:
+ 2938 06e6 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCOVERED\000"
+ 2938      4C455F43 
+ 2938      4F4E4E5F 
+ 2938      53544154 
+ 2938      455F434C 
+ 2939              	.LASF22:
+ 2940 070a 666C6F61 		.ascii	"float\000"
+ 2940      7400
+ 2941              	.LASF141:
+ 2942 0710 696D6743 		.ascii	"imgCoordinates\000"
+ 2942      6F6F7264 
+ 2942      696E6174 
+ 2942      657300
+ 2943              	.LASF55:
+ 2944 071f 63795F65 		.ascii	"cy_en_scb_ezi2c_state_t\000"
+ 2944      6E5F7363 
+ 2944      625F657A 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 67
 
 
- 2943      525F4944 
- 2943      00
- 2944              	.LASF166:
- 2945 0727 50765F45 		.ascii	"Pv_EINK_HardwarePowerOn\000"
- 2945      494E4B5F 
- 2945      48617264 
- 2945      77617265 
- 2945      506F7765 
- 2946              	.LASF113:
- 2947 073f 50565F45 		.ascii	"PV_EINK_RES_OK\000"
- 2947      494E4B5F 
- 2947      5245535F 
- 2947      4F4B00
- 2948              	.LASF99:
- 2949 074e 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_CHAR_DISCOVERING\000"
- 2949      4C455F43 
- 2949      4F4E4E5F 
- 2949      53544154 
- 2949      455F434C 
- 2950              	.LASF38:
- 2951 0778 73746172 		.ascii	"startInputMode\000"
- 2951      74496E70 
- 2951      75744D6F 
- 2951      646500
- 2952              	.LASF20:
- 2953 0787 696E7433 		.ascii	"int32_t\000"
- 2953      325F7400 
- 2954              	.LASF3:
- 2955 078f 756E7369 		.ascii	"unsigned char\000"
- 2955      676E6564 
- 2955      20636861 
- 2955      7200
- 2956              	.LASF127:
- 2957 079d 63795F65 		.ascii	"cy_eink_update_t\000"
- 2957      696E6B5F 
- 2957      75706461 
- 2957      74655F74 
- 2957      00
- 2958              	.LASF157:
- 2959 07ae 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2959      52784275 
- 2959      66666572 
- 2959      00
- 2960              	.LASF136:
- 2961 07bb 6E657746 		.ascii	"newFrame\000"
- 2961      72616D65 
- 2961      00
- 2962              	.LASF32:
- 2963 07c4 656E6162 		.ascii	"enableCompareSwap\000"
- 2963      6C65436F 
- 2963      6D706172 
- 2963      65537761 
- 2963      7000
- 2964              	.LASF69:
- 2965 07d6 62756631 		.ascii	"buf1Size\000"
- 2965      53697A65 
- 2965      00
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 68
+ 2944      6932635F 
+ 2944      73746174 
+ 2945              	.LASF115:
+ 2946 0737 50565F45 		.ascii	"PV_EINK_ERROR_ID\000"
+ 2946      494E4B5F 
+ 2946      4552524F 
+ 2946      525F4944 
+ 2946      00
+ 2947              	.LASF166:
+ 2948 0748 50765F45 		.ascii	"Pv_EINK_HardwarePowerOn\000"
+ 2948      494E4B5F 
+ 2948      48617264 
+ 2948      77617265 
+ 2948      506F7765 
+ 2949              	.LASF113:
+ 2950 0760 50565F45 		.ascii	"PV_EINK_RES_OK\000"
+ 2950      494E4B5F 
+ 2950      5245535F 
+ 2950      4F4B00
+ 2951              	.LASF99:
+ 2952 076f 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_CHAR_DISCOVERING\000"
+ 2952      4C455F43 
+ 2952      4F4E4E5F 
+ 2952      53544154 
+ 2952      455F434C 
+ 2953              	.LASF38:
+ 2954 0799 73746172 		.ascii	"startInputMode\000"
+ 2954      74496E70 
+ 2954      75744D6F 
+ 2954      646500
+ 2955              	.LASF20:
+ 2956 07a8 696E7433 		.ascii	"int32_t\000"
+ 2956      325F7400 
+ 2957              	.LASF3:
+ 2958 07b0 756E7369 		.ascii	"unsigned char\000"
+ 2958      676E6564 
+ 2958      20636861 
+ 2958      7200
+ 2959              	.LASF127:
+ 2960 07be 63795F65 		.ascii	"cy_eink_update_t\000"
+ 2960      696E6B5F 
+ 2960      75706461 
+ 2960      74655F74 
+ 2960      00
+ 2961              	.LASF157:
+ 2962 07cf 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2962      52784275 
+ 2962      66666572 
+ 2962      00
+ 2963              	.LASF136:
+ 2964 07dc 6E657746 		.ascii	"newFrame\000"
+ 2964      72616D65 
+ 2964      00
+ 2965              	.LASF32:
+ 2966 07e5 656E6162 		.ascii	"enableCompareSwap\000"
+ 2966      6C65436F 
+ 2966      6D706172 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 68
 
 
- 2966              	.LASF169:
- 2967 07df 50765F45 		.ascii	"Pv_EINK_PartialStageHandler\000"
- 2967      494E4B5F 
- 2967      50617274 
- 2967      69616C53 
- 2967      74616765 
- 2968              	.LASF59:
- 2969 07fb 73746174 		.ascii	"status\000"
- 2969      757300
- 2970              	.LASF82:
- 2971 0802 74784275 		.ascii	"txBufIdx\000"
- 2971      66496478 
- 2971      00
- 2972              	.LASF29:
- 2973 080b 636F6D70 		.ascii	"compareOrCapture\000"
- 2973      6172654F 
- 2973      72436170 
- 2973      74757265 
- 2973      00
- 2974              	.LASF100:
- 2975 081c 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DESCR_DISCOVERING\000"
- 2975      4C455F43 
- 2975      4F4E4E5F 
- 2975      53544154 
- 2975      455F434C 
- 2976              	.LASF132:
- 2977 0847 6261636B 		.ascii	"background\000"
- 2977      67726F75 
- 2977      6E6400
- 2978              	.LASF147:
- 2979 0852 73747269 		.ascii	"string\000"
- 2979      6E6700
- 2980              	.LASF21:
- 2981 0859 75696E74 		.ascii	"uint32_t\000"
- 2981      33325F74 
- 2981      00
- 2982              	.LASF171:
- 2983 0862 63795F65 		.ascii	"cy_eink_library.c\000"
- 2983      696E6B5F 
- 2983      6C696272 
- 2983      6172792E 
- 2983      6300
- 2984              	.LASF65:
- 2985 0874 61646472 		.ascii	"addr1Active\000"
- 2985      31416374 
- 2985      69766500 
- 2986              	.LASF156:
- 2987 0880 686F7269 		.ascii	"horizontalCounter\000"
- 2987      7A6F6E74 
- 2987      616C436F 
- 2987      756E7465 
- 2987      7200
- 2988              	.LASF85:
- 2989 0892 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
- 2989      74635F73 
- 2989      63625F73 
- 2989      70695F63 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 69
+ 2966      65537761 
+ 2966      7000
+ 2967              	.LASF69:
+ 2968 07f7 62756631 		.ascii	"buf1Size\000"
+ 2968      53697A65 
+ 2968      00
+ 2969              	.LASF169:
+ 2970 0800 50765F45 		.ascii	"Pv_EINK_PartialStageHandler\000"
+ 2970      494E4B5F 
+ 2970      50617274 
+ 2970      69616C53 
+ 2970      74616765 
+ 2971              	.LASF59:
+ 2972 081c 73746174 		.ascii	"status\000"
+ 2972      757300
+ 2973              	.LASF82:
+ 2974 0823 74784275 		.ascii	"txBufIdx\000"
+ 2974      66496478 
+ 2974      00
+ 2975              	.LASF29:
+ 2976 082c 636F6D70 		.ascii	"compareOrCapture\000"
+ 2976      6172654F 
+ 2976      72436170 
+ 2976      74757265 
+ 2976      00
+ 2977              	.LASF100:
+ 2978 083d 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DESCR_DISCOVERING\000"
+ 2978      4C455F43 
+ 2978      4F4E4E5F 
+ 2978      53544154 
+ 2978      455F434C 
+ 2979              	.LASF132:
+ 2980 0868 6261636B 		.ascii	"background\000"
+ 2980      67726F75 
+ 2980      6E6400
+ 2981              	.LASF147:
+ 2982 0873 73747269 		.ascii	"string\000"
+ 2982      6E6700
+ 2983              	.LASF21:
+ 2984 087a 75696E74 		.ascii	"uint32_t\000"
+ 2984      33325F74 
+ 2984      00
+ 2985              	.LASF171:
+ 2986 0883 63795F65 		.ascii	"cy_eink_library.c\000"
+ 2986      696E6B5F 
+ 2986      6C696272 
+ 2986      6172792E 
+ 2986      6300
+ 2987              	.LASF65:
+ 2988 0895 61646472 		.ascii	"addr1Active\000"
+ 2988      31416374 
+ 2988      69766500 
+ 2989              	.LASF156:
+ 2990 08a1 686F7269 		.ascii	"horizontalCounter\000"
+ 2990      7A6F6E74 
+ 2990      616C436F 
+ 2990      756E7465 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 69
 
 
- 2989      6F6E7465 
- 2990              	.LASF30:
- 2991 08ab 636F6D70 		.ascii	"compare0\000"
- 2991      61726530 
- 2991      00
- 2992              	.LASF31:
- 2993 08b4 636F6D70 		.ascii	"compare1\000"
- 2993      61726531 
- 2993      00
- 2994              	.LASF67:
- 2995 08bd 62756653 		.ascii	"bufSize\000"
- 2995      697A6500 
- 2996              	.LASF16:
- 2997 08c5 63686172 		.ascii	"char\000"
- 2997      00
- 2998              	.LASF152:
- 2999 08ca 63686172 		.ascii	"charLocation\000"
- 2999      4C6F6361 
- 2999      74696F6E 
- 2999      00
- 3000              	.LASF54:
- 3001 08d7 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_TX_DATA\000"
- 3001      43425F45 
- 3001      5A493243 
- 3001      5F535441 
- 3001      54455F54 
- 3002              	.LASF108:
- 3003 08f2 78537061 		.ascii	"xSpan\000"
- 3003      6E00
- 3004              	.LASF5:
- 3005 08f8 5F5F7569 		.ascii	"__uint16_t\000"
- 3005      6E743136 
- 3005      5F7400
- 3006              	.LASF78:
- 3007 0903 72784275 		.ascii	"rxBufSize\000"
- 3007      6653697A 
- 3007      6500
- 3008              	.LASF154:
- 3009 090d 666F6E74 		.ascii	"fontByte\000"
- 3009      42797465 
- 3009      00
- 3010              	.LASF134:
- 3011 0916 43795F45 		.ascii	"Cy_EINK_ShowFrame\000"
- 3011      494E4B5F 
- 3011      53686F77 
- 3011      4672616D 
- 3011      6500
- 3012              	.LASF158:
- 3013 0928 63795F62 		.ascii	"cy_ble_advState\000"
- 3013      6C655F61 
- 3013      64765374 
- 3013      61746500 
- 3014              	.LASF142:
- 3015 0938 70777253 		.ascii	"pwrStatus\000"
- 3015      74617475 
- 3015      7300
- 3016              	.LASF33:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 70
+ 2990      7200
+ 2991              	.LASF85:
+ 2992 08b3 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
+ 2992      74635F73 
+ 2992      63625F73 
+ 2992      70695F63 
+ 2992      6F6E7465 
+ 2993              	.LASF30:
+ 2994 08cc 636F6D70 		.ascii	"compare0\000"
+ 2994      61726530 
+ 2994      00
+ 2995              	.LASF31:
+ 2996 08d5 636F6D70 		.ascii	"compare1\000"
+ 2996      61726531 
+ 2996      00
+ 2997              	.LASF67:
+ 2998 08de 62756653 		.ascii	"bufSize\000"
+ 2998      697A6500 
+ 2999              	.LASF16:
+ 3000 08e6 63686172 		.ascii	"char\000"
+ 3000      00
+ 3001              	.LASF152:
+ 3002 08eb 63686172 		.ascii	"charLocation\000"
+ 3002      4C6F6361 
+ 3002      74696F6E 
+ 3002      00
+ 3003              	.LASF54:
+ 3004 08f8 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_TX_DATA\000"
+ 3004      43425F45 
+ 3004      5A493243 
+ 3004      5F535441 
+ 3004      54455F54 
+ 3005              	.LASF108:
+ 3006 0913 78537061 		.ascii	"xSpan\000"
+ 3006      6E00
+ 3007              	.LASF5:
+ 3008 0919 5F5F7569 		.ascii	"__uint16_t\000"
+ 3008      6E743136 
+ 3008      5F7400
+ 3009              	.LASF154:
+ 3010 0924 666F6E74 		.ascii	"fontByte\000"
+ 3010      42797465 
+ 3010      00
+ 3011              	.LASF134:
+ 3012 092d 43795F45 		.ascii	"Cy_EINK_ShowFrame\000"
+ 3012      494E4B5F 
+ 3012      53686F77 
+ 3012      4672616D 
+ 3012      6500
+ 3013              	.LASF158:
+ 3014 093f 63795F62 		.ascii	"cy_ble_advState\000"
+ 3014      6C655F61 
+ 3014      64765374 
+ 3014      61746500 
+ 3015              	.LASF142:
+ 3016 094f 70777253 		.ascii	"pwrStatus\000"
+ 3016      74617475 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 70
 
 
- 3017 0942 696E7465 		.ascii	"interruptSources\000"
- 3017      72727570 
- 3017      74536F75 
- 3017      72636573 
- 3017      00
- 3018              	.LASF37:
- 3019 0953 72656C6F 		.ascii	"reloadInput\000"
- 3019      6164496E 
- 3019      70757400 
- 3020              	.LASF97:
- 3021 095f 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_SRVC_DISCOVERING\000"
- 3021      4C455F43 
- 3021      4F4E4E5F 
- 3021      53544154 
- 3021      455F434C 
- 3022              	.LASF46:
- 3023 0989 43595F53 		.ascii	"CY_SCB_EZI2C_SUB_ADDR16_BITS\000"
- 3023      43425F45 
- 3023      5A493243 
- 3023      5F535542 
- 3023      5F414444 
- 3024              	.LASF41:
- 3025 09a6 73746F70 		.ascii	"stopInput\000"
- 3025      496E7075 
- 3025      7400
- 3026              	.LASF149:
- 3027 09b0 666F6E74 		.ascii	"fontCor\000"
- 3027      436F7200 
- 3028              	.LASF17:
- 3029 09b8 696E7438 		.ascii	"int8_t\000"
- 3029      5F7400
- 3030              	.LASF84:
- 3031 09bf 696E6974 		.ascii	"initKey\000"
- 3031      4B657900 
- 3032              	.LASF77:
- 3033 09c7 72784275 		.ascii	"rxBuf\000"
- 3033      6600
- 3034              	.LASF45:
- 3035 09cd 43595F53 		.ascii	"CY_SCB_EZI2C_SUB_ADDR8_BITS\000"
- 3035      43425F45 
- 3035      5A493243 
- 3035      5F535542 
- 3035      5F414444 
- 3036              	.LASF24:
- 3037 09e9 5F426F6F 		.ascii	"_Bool\000"
- 3037      6C00
- 3038              	.LASF94:
- 3039 09ef 43595F42 		.ascii	"CY_BLE_CONN_STATE_DISCONNECTED\000"
- 3039      4C455F43 
- 3039      4F4E4E5F 
- 3039      53544154 
- 3039      455F4449 
- 3040              	.LASF159:
- 3041 0a0e 63795F62 		.ascii	"cy_ble_connHandle\000"
- 3041      6C655F63 
- 3041      6F6E6E48 
- 3041      616E646C 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 71
+ 3016      7300
+ 3017              	.LASF33:
+ 3018 0959 696E7465 		.ascii	"interruptSources\000"
+ 3018      72727570 
+ 3018      74536F75 
+ 3018      72636573 
+ 3018      00
+ 3019              	.LASF37:
+ 3020 096a 72656C6F 		.ascii	"reloadInput\000"
+ 3020      6164496E 
+ 3020      70757400 
+ 3021              	.LASF97:
+ 3022 0976 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_SRVC_DISCOVERING\000"
+ 3022      4C455F43 
+ 3022      4F4E4E5F 
+ 3022      53544154 
+ 3022      455F434C 
+ 3023              	.LASF46:
+ 3024 09a0 43595F53 		.ascii	"CY_SCB_EZI2C_SUB_ADDR16_BITS\000"
+ 3024      43425F45 
+ 3024      5A493243 
+ 3024      5F535542 
+ 3024      5F414444 
+ 3025              	.LASF41:
+ 3026 09bd 73746F70 		.ascii	"stopInput\000"
+ 3026      496E7075 
+ 3026      7400
+ 3027              	.LASF149:
+ 3028 09c7 666F6E74 		.ascii	"fontCor\000"
+ 3028      436F7200 
+ 3029              	.LASF17:
+ 3030 09cf 696E7438 		.ascii	"int8_t\000"
+ 3030      5F7400
+ 3031              	.LASF84:
+ 3032 09d6 696E6974 		.ascii	"initKey\000"
+ 3032      4B657900 
+ 3033              	.LASF77:
+ 3034 09de 72784275 		.ascii	"rxBuf\000"
+ 3034      6600
+ 3035              	.LASF45:
+ 3036 09e4 43595F53 		.ascii	"CY_SCB_EZI2C_SUB_ADDR8_BITS\000"
+ 3036      43425F45 
+ 3036      5A493243 
+ 3036      5F535542 
+ 3036      5F414444 
+ 3037              	.LASF24:
+ 3038 0a00 5F426F6F 		.ascii	"_Bool\000"
+ 3038      6C00
+ 3039              	.LASF94:
+ 3040 0a06 43595F42 		.ascii	"CY_BLE_CONN_STATE_DISCONNECTED\000"
+ 3040      4C455F43 
+ 3040      4F4E4E5F 
+ 3040      53544154 
+ 3040      455F4449 
+ 3041              	.LASF159:
+ 3042 0a25 63795F62 		.ascii	"cy_ble_connHandle\000"
+ 3042      6C655F63 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 71
 
 
- 3041      6500
- 3042              	.LASF133:
- 3043 0a20 706F7765 		.ascii	"powerCycle\000"
- 3043      72437963 
- 3043      6C6500
- 3044              	.LASF161:
- 3045 0a2b 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
- 3045      494E4B5F 
- 3045      5350494D 
- 3045      5F636F6E 
- 3045      74657874 
- 3046              	.LASF71:
- 3047 0a40 62756632 		.ascii	"buf2\000"
- 3047      00
- 3048              	.LASF144:
- 3049 0a45 73746172 		.ascii	"startLocation\000"
- 3049      744C6F63 
- 3049      6174696F 
- 3049      6E00
- 3050              	.LASF165:
- 3051 0a53 50765F45 		.ascii	"Pv_EINK_SetTempFactor\000"
- 3051      494E4B5F 
- 3051      53657454 
- 3051      656D7046 
- 3051      6163746F 
- 3052              	.LASF91:
- 3053 0a69 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADVERTISING\000"
- 3053      4C455F41 
- 3053      44565F53 
- 3053      54415445 
- 3053      5F414456 
- 3054              	.LASF89:
- 3055 0a86 43595F42 		.ascii	"CY_BLE_ADV_STATE_STOPPED\000"
- 3055      4C455F41 
- 3055      44565F53 
- 3055      54415445 
- 3055      5F53544F 
- 3056              	.LASF18:
- 3057 0a9f 75696E74 		.ascii	"uint8_t\000"
- 3057      385F7400 
- 3058              	.LASF51:
- 3059 0aa7 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_OFFSET_LSB\000"
- 3059      43425F45 
- 3059      5A493243 
- 3059      5F535441 
- 3059      54455F52 
- 3060              	.LASF162:
- 3061 0ac8 43595F45 		.ascii	"CY_EINK_Timer_config\000"
- 3061      494E4B5F 
- 3061      54696D65 
- 3061      725F636F 
- 3061      6E666967 
- 3062              	.LASF74:
- 3063 0add 63795F73 		.ascii	"cy_stc_scb_ezi2c_context_t\000"
- 3063      74635F73 
- 3063      63625F65 
- 3063      7A693263 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 72
+ 3042      6F6E6E48 
+ 3042      616E646C 
+ 3042      6500
+ 3043              	.LASF133:
+ 3044 0a37 706F7765 		.ascii	"powerCycle\000"
+ 3044      72437963 
+ 3044      6C6500
+ 3045              	.LASF161:
+ 3046 0a42 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
+ 3046      494E4B5F 
+ 3046      5350494D 
+ 3046      5F636F6E 
+ 3046      74657874 
+ 3047              	.LASF71:
+ 3048 0a57 62756632 		.ascii	"buf2\000"
+ 3048      00
+ 3049              	.LASF144:
+ 3050 0a5c 73746172 		.ascii	"startLocation\000"
+ 3050      744C6F63 
+ 3050      6174696F 
+ 3050      6E00
+ 3051              	.LASF165:
+ 3052 0a6a 50765F45 		.ascii	"Pv_EINK_SetTempFactor\000"
+ 3052      494E4B5F 
+ 3052      53657454 
+ 3052      656D7046 
+ 3052      6163746F 
+ 3053              	.LASF91:
+ 3054 0a80 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADVERTISING\000"
+ 3054      4C455F41 
+ 3054      44565F53 
+ 3054      54415445 
+ 3054      5F414456 
+ 3055              	.LASF89:
+ 3056 0a9d 43595F42 		.ascii	"CY_BLE_ADV_STATE_STOPPED\000"
+ 3056      4C455F41 
+ 3056      44565F53 
+ 3056      54415445 
+ 3056      5F53544F 
+ 3057              	.LASF18:
+ 3058 0ab6 75696E74 		.ascii	"uint8_t\000"
+ 3058      385F7400 
+ 3059              	.LASF51:
+ 3060 0abe 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_OFFSET_LSB\000"
+ 3060      43425F45 
+ 3060      5A493243 
+ 3060      5F535441 
+ 3060      54455F52 
+ 3061              	.LASF162:
+ 3062 0adf 43595F45 		.ascii	"CY_EINK_Timer_config\000"
+ 3062      494E4B5F 
+ 3062      54696D65 
+ 3062      725F636F 
+ 3062      6E666967 
+ 3063              	.LASF74:
+ 3064 0af4 63795F73 		.ascii	"cy_stc_scb_ezi2c_context_t\000"
+ 3064      74635F73 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 72
 
 
- 3063      5F636F6E 
- 3064              	.LASF36:
- 3065 0af8 72656C6F 		.ascii	"reloadInputMode\000"
- 3065      6164496E 
- 3065      7075744D 
- 3065      6F646500 
- 3066              	.LASF167:
- 3067 0b08 50765F45 		.ascii	"Pv_EINK_HardwarePowerOff\000"
- 3067      494E4B5F 
- 3067      48617264 
- 3067      77617265 
- 3067      506F7765 
- 3068              	.LASF70:
- 3069 0b21 62756631 		.ascii	"buf1rwBondary\000"
- 3069      7277426F 
- 3069      6E646172 
- 3069      7900
- 3070              	.LASF107:
- 3071 0b2f 7953697A 		.ascii	"ySize\000"
- 3071      6500
- 3072              	.LASF116:
- 3073 0b35 50565F45 		.ascii	"PV_EINK_ERROR_BREAKAGE\000"
- 3073      494E4B5F 
- 3073      4552524F 
- 3073      525F4252 
- 3073      45414B41 
- 3074              	.LASF86:
- 3075 0b4c 62644861 		.ascii	"bdHandle\000"
- 3075      6E646C65 
- 3075      00
- 3076              	.LASF2:
- 3077 0b55 7369676E 		.ascii	"signed char\000"
- 3077      65642063 
- 3077      68617200 
- 3078              	.LASF63:
- 3079 0b61 62617365 		.ascii	"baseAddr1\000"
- 3079      41646472 
- 3079      3100
- 3080              	.LASF64:
- 3081 0b6b 62617365 		.ascii	"baseAddr2\000"
- 3081      41646472 
- 3081      3200
- 3082              	.LASF117:
- 3083 0b75 50565F45 		.ascii	"PV_EINK_ERROR_DC\000"
- 3083      494E4B5F 
- 3083      4552524F 
- 3083      525F4443 
- 3083      00
- 3084              	.LASF131:
- 3085 0b86 43795F45 		.ascii	"Cy_EINK_Clear\000"
- 3085      494E4B5F 
- 3085      436C6561 
- 3085      7200
- 3086              	.LASF95:
- 3087 0b94 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCONNECTED_DISCOVERED\000"
- 3087      4C455F43 
- 3087      4F4E4E5F 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccVHs75j.s 			page 73
+ 3064      63625F65 
+ 3064      7A693263 
+ 3064      5F636F6E 
+ 3065              	.LASF36:
+ 3066 0b0f 72656C6F 		.ascii	"reloadInputMode\000"
+ 3066      6164496E 
+ 3066      7075744D 
+ 3066      6F646500 
+ 3067              	.LASF167:
+ 3068 0b1f 50765F45 		.ascii	"Pv_EINK_HardwarePowerOff\000"
+ 3068      494E4B5F 
+ 3068      48617264 
+ 3068      77617265 
+ 3068      506F7765 
+ 3069              	.LASF70:
+ 3070 0b38 62756631 		.ascii	"buf1rwBondary\000"
+ 3070      7277426F 
+ 3070      6E646172 
+ 3070      7900
+ 3071              	.LASF107:
+ 3072 0b46 7953697A 		.ascii	"ySize\000"
+ 3072      6500
+ 3073              	.LASF116:
+ 3074 0b4c 50565F45 		.ascii	"PV_EINK_ERROR_BREAKAGE\000"
+ 3074      494E4B5F 
+ 3074      4552524F 
+ 3074      525F4252 
+ 3074      45414B41 
+ 3075              	.LASF86:
+ 3076 0b63 62644861 		.ascii	"bdHandle\000"
+ 3076      6E646C65 
+ 3076      00
+ 3077              	.LASF2:
+ 3078 0b6c 7369676E 		.ascii	"signed char\000"
+ 3078      65642063 
+ 3078      68617200 
+ 3079              	.LASF63:
+ 3080 0b78 62617365 		.ascii	"baseAddr1\000"
+ 3080      41646472 
+ 3080      3100
+ 3081              	.LASF64:
+ 3082 0b82 62617365 		.ascii	"baseAddr2\000"
+ 3082      41646472 
+ 3082      3200
+ 3083              	.LASF117:
+ 3084 0b8c 50565F45 		.ascii	"PV_EINK_ERROR_DC\000"
+ 3084      494E4B5F 
+ 3084      4552524F 
+ 3084      525F4443 
+ 3084      00
+ 3085              	.LASF131:
+ 3086 0b9d 43795F45 		.ascii	"Cy_EINK_Clear\000"
+ 3086      494E4B5F 
+ 3086      436C6561 
+ 3086      7200
+ 3087              	.LASF95:
+ 3088 0bab 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCONNECTED_DISCOVERED\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccXjDKRi.s 			page 73
 
 
- 3087      53544154 
- 3087      455F434C 
- 3088              	.LASF173:
- 3089 0bc5 43795F45 		.ascii	"Cy_EINK_Power\000"
- 3089      494E4B5F 
- 3089      506F7765 
- 3089      7200
- 3090              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 3088      4C455F43 
+ 3088      4F4E4E5F 
+ 3088      53544154 
+ 3088      455F434C 
+ 3089              	.LASF173:
+ 3090 0bdc 43795F45 		.ascii	"Cy_EINK_Power\000"
+ 3090      494E4B5F 
+ 3090      506F7765 
+ 3090      7200
+ 3091              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
