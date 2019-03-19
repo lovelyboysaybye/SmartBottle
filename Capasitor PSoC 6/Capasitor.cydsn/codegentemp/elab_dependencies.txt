@@ -1,4 +1,4 @@
-C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\TopDesign\TopDesign.cysch
+C:\Users\Coal\Documents\Github\Capasitor PSoC 6\Capasitor.cydsn\TopDesign\TopDesign.cysch
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\CapSense_v2_0\CapSense_v2_0.cysym
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\CapSense_v2_0\tuner.dll
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\CapSense_v2_0\CapSense_v2_0.dll
@@ -190,4 +190,4 @@ C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrim
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\version.cypatch
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\Custom\custom.cs
-C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\Capasitor.cydwr
+C:\Users\Coal\Documents\Github\Capasitor PSoC 6\Capasitor.cydsn\Capasitor.cydwr

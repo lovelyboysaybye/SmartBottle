@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Capasitor\Capasitor\Capasitor.cydwr">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Capasitor\Capasitor\Capasitor.cydwr\Pins">
 <ExpandedNodeIds>
 <v>Capasitor</v>
 <v>Capasitor\Capasitor</v>
@@ -370,8 +370,6 @@
 <OpenDocs>
 <name v=".\Capasitor.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Capasitor.cydsn\Capasitor.cydwr" />
-<name v=".\Capasitor.cydsn\main_cm0p.c" />
-<name v=".\Capasitor.cydsn\main_cm4.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -379,7 +377,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1139, 580" SelectedTabbedMdiWindow="3fabd691-61c4-44b2-b2d7-4088863cfae5"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="73ac7b70-2b45-4ba2-8184-e6111d174636" /><DocumentWindow Key="C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\TopDesign\TopDesign.cysch" Guid="1414d331-eb57-4160-bfe3-10a6a6807dd0" /><DocumentWindow Key="C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\Capasitor.cydwr" Guid="3fabd691-61c4-44b2-b2d7-4088863cfae5" /><DocumentWindow Key="C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\main_cm0p.c" Guid="873581e6-b3a5-41da-9754-da28cd43c3c8" /><DocumentWindow Key="C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\main_cm4.c" Guid="cd54a793-47e6-49fd-af0c-64260ad5e646" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1139, 580" SelectedTabbedMdiWindow="34c2c3b0-df08-4e79-b170-6edfee22379f"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="73ac7b70-2b45-4ba2-8184-e6111d174636" /><DocumentWindow Key="C:\Users\Coal\Documents\Github\Capasitor PSoC 6\Capasitor.cydsn\TopDesign\TopDesign.cysch" Guid="ccb2931f-04b9-454d-972d-6c5ff974d977" /><DocumentWindow Key="C:\Users\Coal\Documents\Github\Capasitor PSoC 6\Capasitor.cydsn\Capasitor.cydwr" Guid="34c2c3b0-df08-4e79-b170-6edfee22379f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

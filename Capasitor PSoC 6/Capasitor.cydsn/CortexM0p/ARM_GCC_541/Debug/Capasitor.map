@@ -472,7 +472,7 @@ Discarded input sections
                 0x00000000       0x88 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o
  .debug_ranges  0x00000000       0x78 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o
  .debug_line    0x00000000      0x3d1 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o
- .debug_str     0x00000000      0xaab .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o
+ .debug_str     0x00000000      0xaac .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o
  .debug_frame   0x00000000      0x18c .\CortexM0p\ARM_GCC_541\Debug\CapSense_Control.o
  .ARM.attributes
@@ -501,7 +501,7 @@ Discarded input sections
                 0x00000000       0x48 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o
  .debug_ranges  0x00000000       0x38 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o
  .debug_line    0x00000000      0x404 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o
- .debug_str     0x00000000      0x838 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o
+ .debug_str     0x00000000      0x839 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o
  .debug_frame   0x00000000       0xe0 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Processing.o
  .ARM.attributes
@@ -533,7 +533,7 @@ Discarded input sections
                 0x00000000       0x50 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o
  .debug_ranges  0x00000000       0x40 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o
  .debug_line    0x00000000      0x2fd .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o
- .debug_str     0x00000000      0x93a .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o
+ .debug_str     0x00000000      0x93b .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o
  .debug_frame   0x00000000       0xbc .\CortexM0p\ARM_GCC_541\Debug\CapSense_Structure.o
  .ARM.attributes
@@ -554,7 +554,7 @@ Discarded input sections
                 0x00000000       0x28 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o
  .debug_ranges  0x00000000       0x18 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o
  .debug_line    0x00000000      0x245 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o
- .debug_str     0x00000000      0x69a .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o
+ .debug_str     0x00000000      0x69b .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o
  .debug_frame   0x00000000       0x40 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Tuner.o
  .ARM.attributes
@@ -591,7 +591,7 @@ Discarded input sections
                 0x00000000       0x70 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o
  .debug_ranges  0x00000000       0x60 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o
  .debug_line    0x00000000      0x2f3 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o
- .debug_str     0x00000000      0x64c .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o
+ .debug_str     0x00000000      0x64d .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o
  .debug_frame   0x00000000      0x148 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Filter.o
  .ARM.attributes
@@ -645,7 +645,7 @@ Discarded input sections
                 0x00000000       0xa8 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o
  .debug_ranges  0x00000000       0x98 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o
  .debug_line    0x00000000      0x5c7 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o
- .debug_str     0x00000000     0x6652 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o
+ .debug_str     0x00000000     0x6653 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o
  .debug_frame   0x00000000      0x1d4 .\CortexM0p\ARM_GCC_541\Debug\CapSense_Sensing.o
  .ARM.attributes
@@ -669,7 +669,7 @@ Discarded input sections
                 0x00000000       0x38 .\CortexM0p\ARM_GCC_541\Debug\CapSense_INT.o
  .debug_ranges  0x00000000       0x28 .\CortexM0p\ARM_GCC_541\Debug\CapSense_INT.o
  .debug_line    0x00000000      0x2b3 .\CortexM0p\ARM_GCC_541\Debug\CapSense_INT.o
- .debug_str     0x00000000      0x96a .\CortexM0p\ARM_GCC_541\Debug\CapSense_INT.o
+ .debug_str     0x00000000      0x96b .\CortexM0p\ARM_GCC_541\Debug\CapSense_INT.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_INT.o
  .debug_frame   0x00000000       0x74 .\CortexM0p\ARM_GCC_541\Debug\CapSense_INT.o
  .ARM.attributes
@@ -726,7 +726,7 @@ Discarded input sections
                 0x00000000       0xb8 .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSD_LL.o
  .debug_ranges  0x00000000       0xa8 .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSD_LL.o
  .debug_line    0x00000000      0x5d8 .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSD_LL.o
- .debug_str     0x00000000     0x658a .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSD_LL.o
+ .debug_str     0x00000000     0x658b .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSD_LL.o
  .comment       0x00000000       0x6f .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSD_LL.o
  .debug_frame   0x00000000      0x238 .\CortexM0p\ARM_GCC_541\Debug\CapSense_SensingCSD_LL.o
  .ARM.attributes
@@ -10227,7 +10227,7 @@ END GROUP
                 0x90700000                __cy_memory_4_start = 0x90700000
                 0x00100000                __cy_memory_4_length = 0x100000
                 0x00000001                __cy_memory_4_row_size = 0x1
-OUTPUT(C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\CortexM0p\ARM_GCC_541\Debug\Capasitor_link.elf elf32-littlearm)
+OUTPUT(C:\Users\Coal\Documents\Github\Capasitor PSoC 6\Capasitor.cydsn\CortexM0p\ARM_GCC_541\Debug\Capasitor_link.elf elf32-littlearm)
 
 .rel.dyn        0x08002f74        0x0 load address 0x98501ac4
  .rel.iplt      0x08002f74        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
@@ -10429,40 +10429,40 @@ OUTPUT(C:\Users\Coal\Documents\PSoC Creator\Capasitor\Capasitor.cydsn\CortexM0p\
  .debug_ranges  0x000004f0       0x48 .\CortexM0p\ARM_GCC_541\Debug\cy_systick.o
  .debug_ranges  0x00000538       0x48 .\CortexM0p\ARM_GCC_541\Debug\cy_ble.o
 
-.debug_str      0x00000000     0xffd8
- .debug_str     0x00000000      0x5cc .\CortexM0p\ARM_GCC_541\Debug\main_cm0p.o
-                                0x62f (size before relaxing)
- .debug_str     0x000005cc      0xe2a .\CortexM0p\ARM_GCC_541\Debug\system_psoc63_cm0plus.o
+.debug_str      0x00000000    0x10018
+ .debug_str     0x00000000      0x5cd .\CortexM0p\ARM_GCC_541\Debug\main_cm0p.o
+                                0x630 (size before relaxing)
+ .debug_str     0x000005cd      0xe69 .\CortexM0p\ARM_GCC_541\Debug\system_psoc63_cm0plus.o
                                0x11f3 (size before relaxing)
- .debug_str     0x000013f6      0x527 .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_config.o
+ .debug_str     0x00001436      0x527 .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_config.o
                                 0x75d (size before relaxing)
- .debug_str     0x0000191d     0x153e .\CortexM0p\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x0000195d     0x153e .\CortexM0p\ARM_GCC_541\Debug\cyfitter_cfg.o
                                0x1e06 (size before relaxing)
- .debug_str     0x00002e5b       0x30 .\CortexM0p\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x00002e9b       0x30 .\CortexM0p\ARM_GCC_541\Debug\cymetadata.o
                                 0x1a0 (size before relaxing)
- .debug_str     0x00002e8b     0x2cca .\CortexM0p\ARM_GCC_541\Debug\BLE_config.o
+ .debug_str     0x00002ecb     0x2cca .\CortexM0p\ARM_GCC_541\Debug\BLE_config.o
                                0x3387 (size before relaxing)
- .debug_str     0x00005b55      0x1d9 .\CortexM0p\ARM_GCC_541\Debug\cy_sysint.o
+ .debug_str     0x00005b95      0x1d9 .\CortexM0p\ARM_GCC_541\Debug\cy_sysint.o
                                0x1865 (size before relaxing)
- .debug_str     0x00005d2e      0x196 .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_drv.o
+ .debug_str     0x00005d6e      0x196 .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_drv.o
                                 0x38b (size before relaxing)
- .debug_str     0x00005ec4      0x24c .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_sema.o
+ .debug_str     0x00005f04      0x24c .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_sema.o
                                 0x5b1 (size before relaxing)
- .debug_str     0x00006110      0x460 .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_pipe.o
+ .debug_str     0x00006150      0x460 .\CortexM0p\ARM_GCC_541\Debug\cy_ipc_pipe.o
                                0x1c0e (size before relaxing)
- .debug_str     0x00006570      0xb5b .\CortexM0p\ARM_GCC_541\Debug\cy_sysclk.o
+ .debug_str     0x000065b0      0xb5b .\CortexM0p\ARM_GCC_541\Debug\cy_sysclk.o
                                0x1b90 (size before relaxing)
- .debug_str     0x000070cb      0x767 .\CortexM0p\ARM_GCC_541\Debug\cy_flash.o
+ .debug_str     0x0000710b      0x767 .\CortexM0p\ARM_GCC_541\Debug\cy_flash.o
                                0x1936 (size before relaxing)
- .debug_str     0x00007832     0x5856 .\CortexM0p\ARM_GCC_541\Debug\cy_gpio.o
+ .debug_str     0x00007872     0x5856 .\CortexM0p\ARM_GCC_541\Debug\cy_gpio.o
                                0x5b18 (size before relaxing)
- .debug_str     0x0000d088      0xc9e .\CortexM0p\ARM_GCC_541\Debug\cy_syspm.o
+ .debug_str     0x0000d0c8      0xc9e .\CortexM0p\ARM_GCC_541\Debug\cy_syspm.o
                                0x22ba (size before relaxing)
- .debug_str     0x0000dd26      0x23c .\CortexM0p\ARM_GCC_541\Debug\cy_syslib.o
+ .debug_str     0x0000dd66      0x23c .\CortexM0p\ARM_GCC_541\Debug\cy_syslib.o
                                0x16c4 (size before relaxing)
- .debug_str     0x0000df62      0x1e0 .\CortexM0p\ARM_GCC_541\Debug\cy_systick.o
+ .debug_str     0x0000dfa2      0x1e0 .\CortexM0p\ARM_GCC_541\Debug\cy_systick.o
                                 0x76e (size before relaxing)
- .debug_str     0x0000e142     0x1e96 .\CortexM0p\ARM_GCC_541\Debug\cy_ble.o
+ .debug_str     0x0000e182     0x1e96 .\CortexM0p\ARM_GCC_541\Debug\cy_ble.o
                                0x55d8 (size before relaxing)
 
 .debug_frame    0x00000000     0x1014

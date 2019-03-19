@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
   27:Generated_Source\PSoC6/CapSense_Tuner.c **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
   28:Generated_Source\PSoC6/CapSense_Tuner.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
   29:Generated_Source\PSoC6/CapSense_Tuner.c **** * Cypress reserves the right to make changes without further notice to the
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 2
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 2
 
 
   30:Generated_Source\PSoC6/CapSense_Tuner.c **** * materials described herein. Cypress does not assume any liability arising out
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
   39              		.loc 1 73 0
   40 0006 024A     		ldr	r2, .L2+4
   41 0008 1360     		str	r3, [r2]
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 3
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 3
 
 
   42 000a 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  111:Generated_Source\PSoC6/CapSense_Tuner.c **** *    -  CapSense_STATUS_RESTART_NONE - No restart was executed by this
  112:Generated_Source\PSoC6/CapSense_Tuner.c **** *      function.
  113:Generated_Source\PSoC6/CapSense_Tuner.c **** *
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 4
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 4
 
 
  114:Generated_Source\PSoC6/CapSense_Tuner.c **** *******************************************************************************/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
   87 0016 DA80     		strh	r2, [r3, #6]	@ movhi
  139:Generated_Source\PSoC6/CapSense_Tuner.c ****             Cy_SysLib_ExitCriticalSection(interruptState);
   88              		.loc 1 139 0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 5
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 5
 
 
   89 0018 FFF7FEFF 		bl	Cy_SysLib_ExitCriticalSection
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  128              		.loc 1 154 0
  129 0042 15E0     		b	.L6
  130              	.LVL10:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 6
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 6
 
 
  131              	.L10:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  167 0066 03E0     		b	.L6
  168              	.LVL17:
  169              	.L13:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 7
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 7
 
 
  172:Generated_Source\PSoC6/CapSense_Tuner.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  201              		.loc 1 194 0
  202 0094 0025     		movs	r5, #0
  203              	.LVL22:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 8
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 8
 
 
  204              	.L14:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  241 00d0 8842     		cmp	r0, r1
  242 00d2 15D0     		beq	.L17
  210:Generated_Source\PSoC6/CapSense_Tuner.c ****         {
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 9
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 9
 
 
  211:Generated_Source\PSoC6/CapSense_Tuner.c ****             /* Get access to the Sensor Object */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  278              	.L19:
  279 0104 00000000 		.word	.LANCHOR0
  280 0108 00000000 		.word	CapSense_dsRam
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 10
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 10
 
 
  281 010c 00000000 		.word	CapSense_dsFlash
@@ -571,24 +571,24 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  308 000b 01       		.uleb128 0x1
  309 000c 47010000 		.4byte	.LASF108
  310 0010 0C       		.byte	0xc
- 311 0011 49050000 		.4byte	.LASF109
- 312 0015 49060000 		.4byte	.LASF110
+ 311 0011 89050000 		.4byte	.LASF109
+ 312 0015 3F020000 		.4byte	.LASF110
  313 0019 00000000 		.4byte	.Ldebug_ranges0+0
  314 001d 00000000 		.4byte	0
  315 0021 00000000 		.4byte	.Ldebug_line0
  316 0025 02       		.uleb128 0x2
  317 0026 01       		.byte	0x1
  318 0027 06       		.byte	0x6
- 319 0028 AE030000 		.4byte	.LASF0
+ 319 0028 EE030000 		.4byte	.LASF0
  320 002c 03       		.uleb128 0x3
- 321 002d 12030000 		.4byte	.LASF3
+ 321 002d 52030000 		.4byte	.LASF3
  322 0031 02       		.byte	0x2
  323 0032 1D       		.byte	0x1d
  324 0033 37000000 		.4byte	0x37
  325 0037 02       		.uleb128 0x2
  326 0038 01       		.byte	0x1
  327 0039 08       		.byte	0x8
- 328 003a 8F030000 		.4byte	.LASF1
+ 328 003a CF030000 		.4byte	.LASF1
  329 003e 02       		.uleb128 0x2
  330 003f 02       		.byte	0x2
  331 0040 05       		.byte	0x5
@@ -598,22 +598,22 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  335 004a 02       		.byte	0x2
  336 004b 2B       		.byte	0x2b
  337 004c 50000000 		.4byte	0x50
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 11
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 11
 
 
  338 0050 02       		.uleb128 0x2
  339 0051 02       		.byte	0x2
  340 0052 07       		.byte	0x7
- 341 0053 5E040000 		.4byte	.LASF5
+ 341 0053 9E040000 		.4byte	.LASF5
  342 0057 03       		.uleb128 0x3
- 343 0058 BC050000 		.4byte	.LASF6
+ 343 0058 FC050000 		.4byte	.LASF6
  344 005c 02       		.byte	0x2
  345 005d 3F       		.byte	0x3f
  346 005e 62000000 		.4byte	0x62
  347 0062 02       		.uleb128 0x2
  348 0063 04       		.byte	0x4
  349 0064 05       		.byte	0x5
- 350 0065 DA020000 		.4byte	.LASF7
+ 350 0065 1A030000 		.4byte	.LASF7
  351 0069 03       		.uleb128 0x3
  352 006a 05020000 		.4byte	.LASF8
  353 006e 02       		.byte	0x2
@@ -622,15 +622,15 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  356 0074 02       		.uleb128 0x2
  357 0075 04       		.byte	0x4
  358 0076 07       		.byte	0x7
- 359 0077 1D050000 		.4byte	.LASF9
+ 359 0077 5D050000 		.4byte	.LASF9
  360 007b 02       		.uleb128 0x2
  361 007c 08       		.byte	0x8
  362 007d 05       		.byte	0x5
- 363 007e B0020000 		.4byte	.LASF10
+ 363 007e F0020000 		.4byte	.LASF10
  364 0082 02       		.uleb128 0x2
  365 0083 08       		.byte	0x8
  366 0084 07       		.byte	0x7
- 367 0085 D7030000 		.4byte	.LASF11
+ 367 0085 17040000 		.4byte	.LASF11
  368 0089 04       		.uleb128 0x4
  369 008a 04       		.byte	0x4
  370 008b 05       		.byte	0x5
@@ -638,27 +638,27 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  372 0090 02       		.uleb128 0x2
  373 0091 04       		.byte	0x4
  374 0092 07       		.byte	0x7
- 375 0093 2B040000 		.4byte	.LASF12
+ 375 0093 6B040000 		.4byte	.LASF12
  376 0097 03       		.uleb128 0x3
- 377 0098 79020000 		.4byte	.LASF13
+ 377 0098 B9020000 		.4byte	.LASF13
  378 009c 03       		.byte	0x3
  379 009d 18       		.byte	0x18
  380 009e 2C000000 		.4byte	0x2c
  381 00a2 03       		.uleb128 0x3
- 382 00a3 38040000 		.4byte	.LASF14
+ 382 00a3 78040000 		.4byte	.LASF14
  383 00a7 03       		.byte	0x3
  384 00a8 24       		.byte	0x24
  385 00a9 45000000 		.4byte	0x45
  386 00ad 03       		.uleb128 0x3
- 387 00ae A6040000 		.4byte	.LASF15
+ 387 00ae E6040000 		.4byte	.LASF15
  388 00b2 03       		.byte	0x3
  389 00b3 2C       		.byte	0x2c
  390 00b4 57000000 		.4byte	0x57
  391 00b8 03       		.uleb128 0x3
- 392 00b9 06040000 		.4byte	.LASF16
+ 392 00b9 46040000 		.4byte	.LASF16
  393 00bd 03       		.byte	0x3
  394 00be 30       		.byte	0x30
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 12
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 12
 
 
  395 00bf 69000000 		.4byte	0x69
@@ -669,37 +669,37 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  400 00ca 02       		.uleb128 0x2
  401 00cb 01       		.byte	0x1
  402 00cc 08       		.byte	0x8
- 403 00cd D5020000 		.4byte	.LASF18
+ 403 00cd 15030000 		.4byte	.LASF18
  404 00d1 02       		.uleb128 0x2
  405 00d2 04       		.byte	0x4
  406 00d3 04       		.byte	0x4
- 407 00d4 8E020000 		.4byte	.LASF19
+ 407 00d4 CE020000 		.4byte	.LASF19
  408 00d8 02       		.uleb128 0x2
  409 00d9 08       		.byte	0x8
  410 00da 04       		.byte	0x4
- 411 00db 2F050000 		.4byte	.LASF20
+ 411 00db 6F050000 		.4byte	.LASF20
  412 00df 05       		.uleb128 0x5
- 413 00e0 81020000 		.4byte	.LASF21
+ 413 00e0 C1020000 		.4byte	.LASF21
  414 00e4 04       		.byte	0x4
  415 00e5 8503     		.2byte	0x385
  416 00e7 97000000 		.4byte	0x97
  417 00eb 05       		.uleb128 0x5
- 418 00ec 50020000 		.4byte	.LASF22
+ 418 00ec 90020000 		.4byte	.LASF22
  419 00f0 04       		.byte	0x4
  420 00f1 8603     		.2byte	0x386
  421 00f3 A2000000 		.4byte	0xa2
  422 00f7 05       		.uleb128 0x5
- 423 00f8 16050000 		.4byte	.LASF23
+ 423 00f8 56050000 		.4byte	.LASF23
  424 00fc 04       		.byte	0x4
  425 00fd 8703     		.2byte	0x387
  426 00ff B8000000 		.4byte	0xb8
  427 0103 03       		.uleb128 0x3
- 428 0104 EC020000 		.4byte	.LASF24
+ 428 0104 2C030000 		.4byte	.LASF24
  429 0108 05       		.byte	0x5
  430 0109 FC       		.byte	0xfc
  431 010a EB000000 		.4byte	0xeb
  432 010e 05       		.uleb128 0x5
- 433 010f 99050000 		.4byte	.LASF25
+ 433 010f D9050000 		.4byte	.LASF25
  434 0113 05       		.byte	0x5
  435 0114 0001     		.2byte	0x100
  436 0116 DF000000 		.4byte	0xdf
@@ -716,22 +716,22 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  447 012d CE       		.byte	0xce
  448 012e AD010000 		.4byte	0x1ad
  449 0132 09       		.uleb128 0x9
- 450 0133 AE040000 		.4byte	.LASF26
+ 450 0133 EE040000 		.4byte	.LASF26
  451 0137 06       		.byte	0x6
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 13
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 13
 
 
  452 0138 D4       		.byte	0xd4
  453 0139 EB000000 		.4byte	0xeb
  454 013d 00       		.byte	0
  455 013e 09       		.uleb128 0x9
- 456 013f 2B030000 		.4byte	.LASF27
+ 456 013f 6B030000 		.4byte	.LASF27
  457 0143 06       		.byte	0x6
  458 0144 D9       		.byte	0xd9
  459 0145 03010000 		.4byte	0x103
  460 0149 02       		.byte	0x2
  461 014a 09       		.uleb128 0x9
- 462 014b 3F020000 		.4byte	.LASF28
+ 462 014b 7F020000 		.4byte	.LASF28
  463 014f 06       		.byte	0x6
  464 0150 DE       		.byte	0xde
  465 0151 DF000000 		.4byte	0xdf
@@ -743,7 +743,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  471 015d DF000000 		.4byte	0xdf
  472 0161 05       		.byte	0x5
  473 0162 09       		.uleb128 0x9
- 474 0163 3C030000 		.4byte	.LASF30
+ 474 0163 7C030000 		.4byte	.LASF30
  475 0167 06       		.byte	0x6
  476 0168 E8       		.byte	0xe8
  477 0169 DF000000 		.4byte	0xdf
@@ -767,7 +767,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  495 018d 1A010000 		.4byte	0x11a
  496 0191 09       		.byte	0x9
  497 0192 0A       		.uleb128 0xa
- 498 0193 87020000 		.4byte	.LASF34
+ 498 0193 C7020000 		.4byte	.LASF34
  499 0197 06       		.byte	0x6
  500 0198 0501     		.2byte	0x105
  501 019a EB000000 		.4byte	0xeb
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  506 01a5 0A01     		.2byte	0x10a
  507 01a7 DF000000 		.4byte	0xdf
  508 01ab 0C       		.byte	0xc
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 14
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 14
 
 
  509 01ac 00       		.byte	0
@@ -793,71 +793,71 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  518 01bc 1101     		.2byte	0x111
  519 01be 45020000 		.4byte	0x245
  520 01c2 0A       		.uleb128 0xa
- 521 01c3 DF050000 		.4byte	.LASF37
+ 521 01c3 1F060000 		.4byte	.LASF37
  522 01c7 06       		.byte	0x6
  523 01c8 1601     		.2byte	0x116
  524 01ca AD010000 		.4byte	0x1ad
  525 01ce 00       		.byte	0
  526 01cf 0A       		.uleb128 0xa
- 527 01d0 E7050000 		.4byte	.LASF38
+ 527 01d0 27060000 		.4byte	.LASF38
  528 01d4 06       		.byte	0x6
  529 01d5 1B01     		.2byte	0x11b
  530 01d7 AD010000 		.4byte	0x1ad
  531 01db 0E       		.byte	0xe
  532 01dc 0A       		.uleb128 0xa
- 533 01dd EF050000 		.4byte	.LASF39
+ 533 01dd 2F060000 		.4byte	.LASF39
  534 01e1 06       		.byte	0x6
  535 01e2 2001     		.2byte	0x120
  536 01e4 AD010000 		.4byte	0x1ad
  537 01e8 1C       		.byte	0x1c
  538 01e9 0A       		.uleb128 0xa
- 539 01ea F7050000 		.4byte	.LASF40
+ 539 01ea 37060000 		.4byte	.LASF40
  540 01ee 06       		.byte	0x6
  541 01ef 2501     		.2byte	0x125
  542 01f1 AD010000 		.4byte	0x1ad
  543 01f5 2A       		.byte	0x2a
  544 01f6 0A       		.uleb128 0xa
- 545 01f7 FF050000 		.4byte	.LASF41
+ 545 01f7 3F060000 		.4byte	.LASF41
  546 01fb 06       		.byte	0x6
  547 01fc 2A01     		.2byte	0x12a
  548 01fe AD010000 		.4byte	0x1ad
  549 0202 38       		.byte	0x38
  550 0203 0A       		.uleb128 0xa
- 551 0204 07060000 		.4byte	.LASF42
+ 551 0204 47060000 		.4byte	.LASF42
  552 0208 06       		.byte	0x6
  553 0209 2F01     		.2byte	0x12f
  554 020b AD010000 		.4byte	0x1ad
  555 020f 46       		.byte	0x46
  556 0210 0A       		.uleb128 0xa
- 557 0211 0F060000 		.4byte	.LASF43
+ 557 0211 4F060000 		.4byte	.LASF43
  558 0215 06       		.byte	0x6
  559 0216 3401     		.2byte	0x134
  560 0218 AD010000 		.4byte	0x1ad
  561 021c 54       		.byte	0x54
  562 021d 0A       		.uleb128 0xa
- 563 021e 17060000 		.4byte	.LASF44
+ 563 021e 57060000 		.4byte	.LASF44
  564 0222 06       		.byte	0x6
  565 0223 3901     		.2byte	0x139
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 15
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 15
 
 
  566 0225 AD010000 		.4byte	0x1ad
  567 0229 62       		.byte	0x62
  568 022a 0A       		.uleb128 0xa
- 569 022b 1F060000 		.4byte	.LASF45
+ 569 022b 5F060000 		.4byte	.LASF45
  570 022f 06       		.byte	0x6
  571 0230 3E01     		.2byte	0x13e
  572 0232 AD010000 		.4byte	0x1ad
  573 0236 70       		.byte	0x70
  574 0237 0A       		.uleb128 0xa
- 575 0238 27060000 		.4byte	.LASF46
+ 575 0238 67060000 		.4byte	.LASF46
  576 023c 06       		.byte	0x6
  577 023d 4301     		.2byte	0x143
  578 023f AD010000 		.4byte	0x1ad
  579 0243 7E       		.byte	0x7e
  580 0244 00       		.byte	0
  581 0245 05       		.uleb128 0x5
- 582 0246 94020000 		.4byte	.LASF47
+ 582 0246 D4020000 		.4byte	.LASF47
  583 024a 06       		.byte	0x6
  584 024b 4401     		.2byte	0x144
  585 024d B9010000 		.4byte	0x1b9
@@ -879,7 +879,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  601 026f 9C020000 		.4byte	0x29c
  602 0273 02       		.byte	0x2
  603 0274 0A       		.uleb128 0xa
- 604 0275 41050000 		.4byte	.LASF49
+ 604 0275 81050000 		.4byte	.LASF49
  605 0279 06       		.byte	0x6
  606 027a 5A01     		.2byte	0x15a
  607 027c 1A010000 		.4byte	0x11a
@@ -891,14 +891,14 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  613 0289 03010000 		.4byte	0x103
  614 028d 06       		.byte	0x6
  615 028e 0A       		.uleb128 0xa
- 616 028f 04030000 		.4byte	.LASF51
+ 616 028f 44030000 		.4byte	.LASF51
  617 0293 06       		.byte	0x6
  618 0294 6401     		.2byte	0x164
  619 0296 AC020000 		.4byte	0x2ac
  620 029a 08       		.byte	0x8
  621 029b 00       		.byte	0
  622 029c 06       		.uleb128 0x6
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 16
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 16
 
 
  623 029d EB000000 		.4byte	0xeb
@@ -915,7 +915,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  634 02ba 00       		.byte	0
  635 02bb 00       		.byte	0
  636 02bc 05       		.uleb128 0x5
- 637 02bd EE030000 		.4byte	.LASF52
+ 637 02bd 2E040000 		.4byte	.LASF52
  638 02c1 06       		.byte	0x6
  639 02c2 6501     		.2byte	0x165
  640 02c4 51020000 		.4byte	0x251
@@ -925,64 +925,64 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  644 02cb 6B01     		.2byte	0x16b
  645 02cd 54030000 		.4byte	0x354
  646 02d1 0A       		.uleb128 0xa
- 647 02d2 DF050000 		.4byte	.LASF37
+ 647 02d2 1F060000 		.4byte	.LASF37
  648 02d6 06       		.byte	0x6
  649 02d7 7001     		.2byte	0x170
  650 02d9 54030000 		.4byte	0x354
  651 02dd 00       		.byte	0
  652 02de 0A       		.uleb128 0xa
- 653 02df E7050000 		.4byte	.LASF38
+ 653 02df 27060000 		.4byte	.LASF38
  654 02e3 06       		.byte	0x6
  655 02e4 7501     		.2byte	0x175
  656 02e6 54030000 		.4byte	0x354
  657 02ea 0A       		.byte	0xa
  658 02eb 0A       		.uleb128 0xa
- 659 02ec EF050000 		.4byte	.LASF39
+ 659 02ec 2F060000 		.4byte	.LASF39
  660 02f0 06       		.byte	0x6
  661 02f1 7A01     		.2byte	0x17a
  662 02f3 54030000 		.4byte	0x354
  663 02f7 14       		.byte	0x14
  664 02f8 0A       		.uleb128 0xa
- 665 02f9 F7050000 		.4byte	.LASF40
+ 665 02f9 37060000 		.4byte	.LASF40
  666 02fd 06       		.byte	0x6
  667 02fe 7F01     		.2byte	0x17f
  668 0300 54030000 		.4byte	0x354
  669 0304 1E       		.byte	0x1e
  670 0305 0A       		.uleb128 0xa
- 671 0306 FF050000 		.4byte	.LASF41
+ 671 0306 3F060000 		.4byte	.LASF41
  672 030a 06       		.byte	0x6
  673 030b 8401     		.2byte	0x184
  674 030d 54030000 		.4byte	0x354
  675 0311 28       		.byte	0x28
  676 0312 0A       		.uleb128 0xa
- 677 0313 07060000 		.4byte	.LASF42
+ 677 0313 47060000 		.4byte	.LASF42
  678 0317 06       		.byte	0x6
  679 0318 8901     		.2byte	0x189
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 17
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 17
 
 
  680 031a 54030000 		.4byte	0x354
  681 031e 32       		.byte	0x32
  682 031f 0A       		.uleb128 0xa
- 683 0320 0F060000 		.4byte	.LASF43
+ 683 0320 4F060000 		.4byte	.LASF43
  684 0324 06       		.byte	0x6
  685 0325 8E01     		.2byte	0x18e
  686 0327 54030000 		.4byte	0x354
  687 032b 3C       		.byte	0x3c
  688 032c 0A       		.uleb128 0xa
- 689 032d 17060000 		.4byte	.LASF44
+ 689 032d 57060000 		.4byte	.LASF44
  690 0331 06       		.byte	0x6
  691 0332 9301     		.2byte	0x193
  692 0334 54030000 		.4byte	0x354
  693 0338 46       		.byte	0x46
  694 0339 0A       		.uleb128 0xa
- 695 033a 1F060000 		.4byte	.LASF45
+ 695 033a 5F060000 		.4byte	.LASF45
  696 033e 06       		.byte	0x6
  697 033f 9801     		.2byte	0x198
  698 0341 54030000 		.4byte	0x354
  699 0345 50       		.byte	0x50
  700 0346 0A       		.uleb128 0xa
- 701 0347 27060000 		.4byte	.LASF46
+ 701 0347 67060000 		.4byte	.LASF46
  702 034b 06       		.byte	0x6
  703 034c 9D01     		.2byte	0x19d
  704 034e 54030000 		.4byte	0x354
@@ -996,7 +996,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  712 0362 00       		.byte	0
  713 0363 00       		.byte	0
  714 0364 05       		.uleb128 0x5
- 715 0365 BA030000 		.4byte	.LASF53
+ 715 0365 FA030000 		.4byte	.LASF53
  716 0369 06       		.byte	0x6
  717 036a 9E01     		.2byte	0x19e
  718 036c C8020000 		.4byte	0x2c8
@@ -1006,58 +1006,58 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  722 0374 A401     		.2byte	0x1a4
  723 0376 5C040000 		.4byte	0x45c
  724 037a 0A       		.uleb128 0xa
- 725 037b 71040000 		.4byte	.LASF54
+ 725 037b B1040000 		.4byte	.LASF54
  726 037f 06       		.byte	0x6
  727 0380 AC01     		.2byte	0x1ac
  728 0382 EB000000 		.4byte	0xeb
  729 0386 00       		.byte	0
  730 0387 0A       		.uleb128 0xa
- 731 0388 47020000 		.4byte	.LASF55
+ 731 0388 87020000 		.4byte	.LASF55
  732 038c 06       		.byte	0x6
  733 038d B101     		.2byte	0x1b1
  734 038f EB000000 		.4byte	0xeb
  735 0393 02       		.byte	0x2
  736 0394 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 18
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 18
 
 
- 737 0395 B4050000 		.4byte	.LASF56
+ 737 0395 F4050000 		.4byte	.LASF56
  738 0399 06       		.byte	0x6
  739 039a B601     		.2byte	0x1b6
  740 039c EB000000 		.4byte	0xeb
  741 03a0 04       		.byte	0x4
  742 03a1 0A       		.uleb128 0xa
- 743 03a2 65030000 		.4byte	.LASF57
+ 743 03a2 A5030000 		.4byte	.LASF57
  744 03a6 06       		.byte	0x6
  745 03a7 BC01     		.2byte	0x1bc
  746 03a9 EB000000 		.4byte	0xeb
  747 03ad 06       		.byte	0x6
  748 03ae 0A       		.uleb128 0xa
- 749 03af DB040000 		.4byte	.LASF58
+ 749 03af 1B050000 		.4byte	.LASF58
  750 03b3 06       		.byte	0x6
  751 03b4 C101     		.2byte	0x1c1
  752 03b6 EB000000 		.4byte	0xeb
  753 03ba 08       		.byte	0x8
  754 03bb 0A       		.uleb128 0xa
- 755 03bc 57040000 		.4byte	.LASF59
+ 755 03bc 97040000 		.4byte	.LASF59
  756 03c0 06       		.byte	0x6
  757 03c1 C601     		.2byte	0x1c6
  758 03c3 5C040000 		.4byte	0x45c
  759 03c7 0C       		.byte	0xc
  760 03c8 0A       		.uleb128 0xa
- 761 03c9 4C040000 		.4byte	.LASF60
+ 761 03c9 8C040000 		.4byte	.LASF60
  762 03cd 06       		.byte	0x6
  763 03ce CC01     		.2byte	0x1cc
  764 03d0 61040000 		.4byte	0x461
  765 03d4 10       		.byte	0x10
  766 03d5 0A       		.uleb128 0xa
- 767 03d6 7A030000 		.4byte	.LASF61
+ 767 03d6 BA030000 		.4byte	.LASF61
  768 03da 06       		.byte	0x6
  769 03db D201     		.2byte	0x1d2
  770 03dd 61040000 		.4byte	0x461
  771 03e1 14       		.byte	0x14
  772 03e2 0A       		.uleb128 0xa
- 773 03e3 C8060000 		.4byte	.LASF62
+ 773 03e3 C9060000 		.4byte	.LASF62
  774 03e7 06       		.byte	0x6
  775 03e8 E401     		.2byte	0x1e4
  776 03ea 71040000 		.4byte	0x471
@@ -1069,7 +1069,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  782 03f7 EB000000 		.4byte	0xeb
  783 03fb 22       		.byte	0x22
  784 03fc 0A       		.uleb128 0xa
- 785 03fd D1040000 		.4byte	.LASF64
+ 785 03fd 11050000 		.4byte	.LASF64
  786 0401 06       		.byte	0x6
  787 0402 EE01     		.2byte	0x1ee
  788 0404 DF000000 		.4byte	0xdf
@@ -1078,31 +1078,31 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  791 040a 35000000 		.4byte	.LASF65
  792 040e 06       		.byte	0x6
  793 040f F301     		.2byte	0x1f3
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 19
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 19
 
 
  794 0411 45020000 		.4byte	0x245
  795 0415 26       		.byte	0x26
  796 0416 0A       		.uleb128 0xa
- 797 0417 C9040000 		.4byte	.LASF66
+ 797 0417 09050000 		.4byte	.LASF66
  798 041b 06       		.byte	0x6
  799 041c F801     		.2byte	0x1f8
  800 041e 64030000 		.4byte	0x364
  801 0422 B2       		.byte	0xb2
  802 0423 0E       		.uleb128 0xe
- 803 0424 88060000 		.4byte	.LASF67
+ 803 0424 89060000 		.4byte	.LASF67
  804 0428 06       		.byte	0x6
  805 0429 FD01     		.2byte	0x1fd
  806 042b DF000000 		.4byte	0xdf
  807 042f 1601     		.2byte	0x116
  808 0431 0E       		.uleb128 0xe
- 809 0432 83040000 		.4byte	.LASF68
+ 809 0432 C3040000 		.4byte	.LASF68
  810 0436 06       		.byte	0x6
  811 0437 0202     		.2byte	0x202
  812 0439 DF000000 		.4byte	0xdf
  813 043d 1701     		.2byte	0x117
  814 043f 0E       		.uleb128 0xe
- 815 0440 93040000 		.4byte	.LASF69
+ 815 0440 D3040000 		.4byte	.LASF69
  816 0444 06       		.byte	0x6
  817 0445 0702     		.2byte	0x207
  818 0447 EB000000 		.4byte	0xeb
@@ -1131,50 +1131,50 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  841 047f 09       		.byte	0x9
  842 0480 00       		.byte	0
  843 0481 05       		.uleb128 0x5
- 844 0482 02050000 		.4byte	.LASF71
+ 844 0482 42050000 		.4byte	.LASF71
  845 0486 06       		.byte	0x6
  846 0487 0D02     		.2byte	0x20d
  847 0489 70030000 		.4byte	0x370
  848 048d 0B       		.uleb128 0xb
  849 048e 1C       		.byte	0x1c
  850 048f 06       		.byte	0x6
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 20
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 20
 
 
  851 0490 4B02     		.2byte	0x24b
  852 0492 0C050000 		.4byte	0x50c
  853 0496 0A       		.uleb128 0xa
- 854 0497 BB060000 		.4byte	.LASF72
+ 854 0497 BC060000 		.4byte	.LASF72
  855 049b 06       		.byte	0x6
  856 049c 5402     		.2byte	0x254
  857 049e 0C050000 		.4byte	0x50c
  858 04a2 00       		.byte	0
  859 04a3 0A       		.uleb128 0xa
- 860 04a4 E7040000 		.4byte	.LASF73
+ 860 04a4 27050000 		.4byte	.LASF73
  861 04a8 06       		.byte	0x6
  862 04a9 5B02     		.2byte	0x25b
  863 04ab 13050000 		.4byte	0x513
  864 04af 04       		.byte	0x4
  865 04b0 0A       		.uleb128 0xa
- 866 04b1 36050000 		.4byte	.LASF74
+ 866 04b1 76050000 		.4byte	.LASF74
  867 04b5 06       		.byte	0x6
  868 04b6 6102     		.2byte	0x261
  869 04b8 15050000 		.4byte	0x515
  870 04bc 08       		.byte	0x8
  871 04bd 0A       		.uleb128 0xa
- 872 04be B9040000 		.4byte	.LASF75
+ 872 04be F9040000 		.4byte	.LASF75
  873 04c2 06       		.byte	0x6
  874 04c3 6602     		.2byte	0x266
  875 04c5 13050000 		.4byte	0x513
  876 04c9 0C       		.byte	0xc
  877 04ca 0A       		.uleb128 0xa
- 878 04cb 69020000 		.4byte	.LASF76
+ 878 04cb A9020000 		.4byte	.LASF76
  879 04cf 06       		.byte	0x6
  880 04d0 6D02     		.2byte	0x26d
  881 04d2 1B050000 		.4byte	0x51b
  882 04d6 10       		.byte	0x10
  883 04d7 0A       		.uleb128 0xa
- 884 04d8 0F040000 		.4byte	.LASF77
+ 884 04d8 4F040000 		.4byte	.LASF77
  885 04dc 06       		.byte	0x6
  886 04dd 7202     		.2byte	0x272
  887 04df F7000000 		.4byte	0xf7
@@ -1186,19 +1186,19 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  893 04ec EB000000 		.4byte	0xeb
  894 04f0 18       		.byte	0x18
  895 04f1 0A       		.uleb128 0xa
- 896 04f2 E3020000 		.4byte	.LASF79
+ 896 04f2 23030000 		.4byte	.LASF79
  897 04f6 06       		.byte	0x6
  898 04f7 8402     		.2byte	0x284
  899 04f9 DF000000 		.4byte	0xdf
  900 04fd 1A       		.byte	0x1a
  901 04fe 0A       		.uleb128 0xa
- 902 04ff 34030000 		.4byte	.LASF80
+ 902 04ff 74030000 		.4byte	.LASF80
  903 0503 06       		.byte	0x6
  904 0504 8C02     		.2byte	0x28c
  905 0506 DF000000 		.4byte	0xdf
  906 050a 1B       		.byte	0x1b
  907 050b 00       		.byte	0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 21
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 21
 
 
  908 050c 10       		.uleb128 0x10
@@ -1224,7 +1224,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  928 0531 9302     		.2byte	0x293
  929 0533 45050000 		.4byte	0x545
  930 0537 0A       		.uleb128 0xa
- 931 0538 A5060000 		.4byte	.LASF82
+ 931 0538 A6060000 		.4byte	.LASF82
  932 053c 06       		.byte	0x6
  933 053d 9802     		.2byte	0x298
  934 053f 45050000 		.4byte	0x545
@@ -1252,22 +1252,22 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  956 056e 28020000 		.4byte	.LASF84
  957 0572 00       		.byte	0
  958 0573 14       		.uleb128 0x14
- 959 0574 2F060000 		.4byte	.LASF85
+ 959 0574 6F060000 		.4byte	.LASF85
  960 0578 01       		.byte	0x1
  961 0579 14       		.uleb128 0x14
- 962 057a C6050000 		.4byte	.LASF86
+ 962 057a 06060000 		.4byte	.LASF86
  963 057e 02       		.byte	0x2
  964 057f 14       		.uleb128 0x14
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 22
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 22
 
 
  965 0580 0B010000 		.4byte	.LASF87
  966 0584 03       		.byte	0x3
  967 0585 14       		.uleb128 0x14
- 968 0586 71050000 		.4byte	.LASF88
+ 968 0586 B1050000 		.4byte	.LASF88
  969 058a 04       		.byte	0x4
  970 058b 14       		.uleb128 0x14
- 971 058c BE020000 		.4byte	.LASF89
+ 971 058c FE020000 		.4byte	.LASF89
  972 0590 05       		.byte	0x5
  973 0591 14       		.uleb128 0x14
  974 0592 A3000000 		.4byte	.LASF90
@@ -1281,7 +1281,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  982 05a3 02       		.uleb128 0x2
  983 05a4 08       		.byte	0x8
  984 05a5 04       		.byte	0x4
- 985 05a6 6E030000 		.4byte	.LASF92
+ 985 05a6 AE030000 		.4byte	.LASF92
  986 05aa 15       		.uleb128 0x15
  987 05ab 4E000000 		.4byte	.LASF111
  988 05af 01       		.byte	0x1
@@ -1292,7 +1292,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  993 05ba 9C       		.byte	0x9c
  994 05bb CB050000 		.4byte	0x5cb
  995 05bf 16       		.uleb128 0x16
- 996 05c0 90050000 		.4byte	.LASF99
+ 996 05c0 D0050000 		.4byte	.LASF99
  997 05c4 01       		.byte	0x1
  998 05c5 46       		.byte	0x46
  999 05c6 CB050000 		.4byte	0x5cb
@@ -1303,7 +1303,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1004 05d1 0F       		.uleb128 0xf
  1005 05d2 81040000 		.4byte	0x481
  1006 05d6 17       		.uleb128 0x17
- 1007 05d7 57020000 		.4byte	.LASF112
+ 1007 05d7 97020000 		.4byte	.LASF112
  1008 05db 01       		.byte	0x1
  1009 05dc 73       		.byte	0x73
  1010 05dd F7000000 		.4byte	0xf7
@@ -1313,16 +1313,16 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1014 05ea 9C       		.byte	0x9c
  1015 05eb A3060000 		.4byte	0x6a3
  1016 05ef 18       		.uleb128 0x18
- 1017 05f0 F3040000 		.4byte	.LASF93
+ 1017 05f0 33050000 		.4byte	.LASF93
  1018 05f4 01       		.byte	0x1
  1019 05f5 75       		.byte	0x75
  1020 05f6 F7000000 		.4byte	0xf7
  1021 05fa 00000000 		.4byte	.LLST0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 23
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 23
 
 
  1022 05fe 18       		.uleb128 0x18
- 1023 05ff 7A040000 		.4byte	.LASF94
+ 1023 05ff BA040000 		.4byte	.LASF94
  1024 0603 01       		.byte	0x1
  1025 0604 76       		.byte	0x76
  1026 0605 F7000000 		.4byte	0xf7
@@ -1334,30 +1334,30 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1032 0614 F7000000 		.4byte	0xf7
  1033 0618 3C000000 		.4byte	.LLST2
  1034 061c 18       		.uleb128 0x18
- 1035 061d 41040000 		.4byte	.LASF96
+ 1035 061d 81040000 		.4byte	.LASF96
  1036 0621 01       		.byte	0x1
  1037 0622 78       		.byte	0x78
  1038 0623 F7000000 		.4byte	0xf7
  1039 0627 4F000000 		.4byte	.LLST3
  1040 062b 18       		.uleb128 0x18
- 1041 062c D2060000 		.4byte	.LASF97
+ 1041 062c D3060000 		.4byte	.LASF97
  1042 0630 01       		.byte	0x1
  1043 0631 79       		.byte	0x79
  1044 0632 98050000 		.4byte	0x598
  1045 0636 0F010000 		.4byte	.LLST4
  1046 063a 18       		.uleb128 0x18
- 1047 063b AF060000 		.4byte	.LASF98
+ 1047 063b B0060000 		.4byte	.LASF98
  1048 063f 01       		.byte	0x1
  1049 0640 7A       		.byte	0x7a
  1050 0641 F7000000 		.4byte	0xf7
  1051 0645 22010000 		.4byte	.LLST5
  1052 0649 16       		.uleb128 0x16
- 1053 064a 90050000 		.4byte	.LASF99
+ 1053 064a D0050000 		.4byte	.LASF99
  1054 064e 01       		.byte	0x1
  1055 064f 7C       		.byte	0x7c
  1056 0650 CB050000 		.4byte	0x5cb
  1057 0654 18       		.uleb128 0x18
- 1058 0655 85030000 		.4byte	.LASF100
+ 1058 0655 C5030000 		.4byte	.LASF100
  1059 0659 01       		.byte	0x1
  1060 065a 7D       		.byte	0x7d
  1061 065b A3060000 		.4byte	0x6a3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1076 0688 94000000 		.4byte	.LVL21
  1077 068c F9060000 		.4byte	0x6f9
  1078 0690 19       		.uleb128 0x19
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 24
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 24
 
 
  1079 0691 EA000000 		.4byte	.LVL29
@@ -1401,19 +1401,19 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1096 06ba 03       		.byte	0x3
  1097 06bb 00000000 		.4byte	tunerFsm
  1098 06bf 1B       		.uleb128 0x1b
- 1099 06c0 98060000 		.4byte	.LASF102
+ 1099 06c0 99060000 		.4byte	.LASF102
  1100 06c4 08       		.byte	0x8
  1101 06c5 EA07     		.2byte	0x7ea
  1102 06c7 CB060000 		.4byte	0x6cb
  1103 06cb 0F       		.uleb128 0xf
  1104 06cc AD000000 		.4byte	0xad
  1105 06d0 1B       		.uleb128 0x1b
- 1106 06d1 1C030000 		.4byte	.LASF103
+ 1106 06d1 5C030000 		.4byte	.LASF103
  1107 06d5 06       		.byte	0x6
  1108 06d6 2604     		.2byte	0x426
  1109 06d8 81040000 		.4byte	0x481
  1110 06dc 1B       		.uleb128 0x1b
- 1111 06dd 9D030000 		.4byte	.LASF104
+ 1111 06dd DD030000 		.4byte	.LASF104
  1112 06e1 06       		.byte	0x6
  1113 06e2 2704     		.2byte	0x427
  1114 06e4 E8060000 		.4byte	0x6e8
@@ -1425,20 +1425,20 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1120 06f6 04       		.byte	0x4
  1121 06f7 4D03     		.2byte	0x34d
  1122 06f9 1D       		.uleb128 0x1d
- 1123 06fa 47030000 		.4byte	.LASF106
- 1124 06fe 47030000 		.4byte	.LASF106
+ 1123 06fa 87030000 		.4byte	.LASF106
+ 1124 06fe 87030000 		.4byte	.LASF106
  1125 0702 04       		.byte	0x4
  1126 0703 5C03     		.2byte	0x35c
  1127 0705 1E       		.uleb128 0x1e
- 1128 0706 1C040000 		.4byte	.LASF107
- 1129 070a 1C040000 		.4byte	.LASF107
+ 1128 0706 5C040000 		.4byte	.LASF107
+ 1129 070a 5C040000 		.4byte	.LASF107
  1130 070e 09       		.byte	0x9
  1131 070f 3A       		.byte	0x3a
  1132 0710 00       		.byte	0
  1133              		.section	.debug_abbrev,"",%progbits
  1134              	.Ldebug_abbrev0:
  1135 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 25
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 25
 
 
  1136 0001 11       		.uleb128 0x11
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1190 0037 16       		.uleb128 0x16
  1191 0038 00       		.byte	0
  1192 0039 03       		.uleb128 0x3
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 26
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 26
 
 
  1193 003a 0E       		.uleb128 0xe
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1247 0070 00       		.byte	0
  1248 0071 0A       		.uleb128 0xa
  1249 0072 0D       		.uleb128 0xd
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 27
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 27
 
 
  1250 0073 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1304 00a9 0E       		.uleb128 0xe
  1305 00aa 0D       		.uleb128 0xd
  1306 00ab 00       		.byte	0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 28
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 28
 
 
  1307 00ac 03       		.uleb128 0x3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1361 00e2 00       		.byte	0
  1362 00e3 14       		.uleb128 0x14
  1363 00e4 28       		.uleb128 0x28
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 29
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 29
 
 
  1364 00e5 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1418 011c 3B       		.uleb128 0x3b
  1419 011d 0B       		.uleb128 0xb
  1420 011e 27       		.uleb128 0x27
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 30
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 30
 
 
  1421 011f 19       		.uleb128 0x19
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1475 0158 1B       		.uleb128 0x1b
  1476 0159 34       		.uleb128 0x34
  1477 015a 00       		.byte	0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 31
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 31
 
 
  1478 015b 03       		.uleb128 0x3
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1532 0191 00       		.byte	0
  1533 0192 00       		.byte	0
  1534              		.section	.debug_loc,"",%progbits
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 32
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 32
 
 
  1535              	.Ldebug_loc0:
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1589 0089 44000000 		.4byte	.LVL10
  1590 008d 4E000000 		.4byte	.LVL12
  1591 0091 0100     		.2byte	0x1
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 33
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 33
 
 
  1592 0093 55       		.byte	0x55
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1646 011e 00000000 		.4byte	0
  1647              	.LLST5:
  1648 0122 02000000 		.4byte	.LVL1
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 34
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 34
 
 
  1649 0126 06000000 		.4byte	.LVL2
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1703              	.Ldebug_ranges0:
  1704 0000 00000000 		.4byte	.LFB158
  1705 0004 14000000 		.4byte	.LFE158
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 35
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 35
 
 
  1706 0008 00000000 		.4byte	.LFB159
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1730      737400
  1731              	.LASF50:
  1732 0092 64696666 		.ascii	"diff\000"
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 36
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 36
 
 
  1732      00
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1756      43313120 
  1756      352E342E 
  1756      31203230 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 37
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 37
 
 
  1756      31363036 
@@ -2200,400 +2200,400 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 1
  1769      5F54555F 
  1769      434D445F 
  1769      4E4F4E45 
- 1770              	.LASF28:
- 1771 023f 6E6F6973 		.ascii	"noiseTh\000"
- 1771      65546800 
- 1772              	.LASF55:
- 1773 0247 64657669 		.ascii	"deviceId\000"
- 1773      63654964 
- 1773      00
- 1774              	.LASF22:
- 1775 0250 75696E74 		.ascii	"uint16\000"
- 1775      313600
- 1776              	.LASF112:
- 1777 0257 43617053 		.ascii	"CapSense_RunTuner\000"
- 1777      656E7365 
- 1777      5F52756E 
- 1777      54756E65 
- 1777      7200
- 1778              	.LASF76:
- 1779 0269 70747232 		.ascii	"ptr2DebounceArr\000"
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 38
+ 1770              	.LASF110:
+ 1771 023f 433A5C55 		.ascii	"C:\\Users\\Coal\\Documents\\Github\\Capasitor PSoC "
+ 1771      73657273 
+ 1771      5C436F61 
+ 1771      6C5C446F 
+ 1771      63756D65 
+ 1772 026d 365C4361 		.ascii	"6\\Capasitor.cydsn\000"
+ 1772      70617369 
+ 1772      746F722E 
+ 1772      63796473 
+ 1772      6E00
+ 1773              	.LASF28:
+ 1774 027f 6E6F6973 		.ascii	"noiseTh\000"
+ 1774      65546800 
+ 1775              	.LASF55:
+ 1776 0287 64657669 		.ascii	"deviceId\000"
+ 1776      63654964 
+ 1776      00
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 38
 
 
- 1779      4465626F 
- 1779      756E6365 
- 1779      41727200 
- 1780              	.LASF13:
- 1781 0279 75696E74 		.ascii	"uint8_t\000"
- 1781      385F7400 
- 1782              	.LASF21:
- 1783 0281 75696E74 		.ascii	"uint8\000"
- 1783      3800
- 1784              	.LASF34:
- 1785 0287 736E7343 		.ascii	"snsClk\000"
- 1785      6C6B00
- 1786              	.LASF19:
- 1787 028e 666C6F61 		.ascii	"float\000"
- 1787      7400
- 1788              	.LASF47:
- 1789 0294 43617053 		.ascii	"CapSense_RAM_WD_LIST_STRUCT\000"
- 1789      656E7365 
- 1789      5F52414D 
- 1789      5F57445F 
- 1789      4C495354 
- 1790              	.LASF10:
- 1791 02b0 6C6F6E67 		.ascii	"long long int\000"
- 1791      206C6F6E 
- 1791      6720696E 
- 1791      7400
- 1792              	.LASF89:
- 1793 02be 43617053 		.ascii	"CapSense_TU_CMD_PING_E\000"
- 1793      656E7365 
- 1793      5F54555F 
- 1793      434D445F 
- 1793      50494E47 
- 1794              	.LASF18:
- 1795 02d5 63686172 		.ascii	"char\000"
- 1795      00
- 1796              	.LASF7:
- 1797 02da 6C6F6E67 		.ascii	"long int\000"
- 1797      20696E74 
- 1797      00
- 1798              	.LASF79:
- 1799 02e3 77646774 		.ascii	"wdgtType\000"
- 1799      54797065 
- 1799      00
- 1800              	.LASF24:
- 1801 02ec 43617053 		.ascii	"CapSense_THRESHOLD_TYPE\000"
- 1801      656E7365 
- 1801      5F544852 
- 1801      4553484F 
- 1801      4C445F54 
- 1802              	.LASF51:
- 1803 0304 6E656742 		.ascii	"negBslnRstCnt\000"
- 1803      736C6E52 
- 1803      7374436E 
- 1803      7400
- 1804              	.LASF3:
- 1805 0312 5F5F7569 		.ascii	"__uint8_t\000"
- 1805      6E74385F 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 39
+ 1777              	.LASF22:
+ 1778 0290 75696E74 		.ascii	"uint16\000"
+ 1778      313600
+ 1779              	.LASF112:
+ 1780 0297 43617053 		.ascii	"CapSense_RunTuner\000"
+ 1780      656E7365 
+ 1780      5F52756E 
+ 1780      54756E65 
+ 1780      7200
+ 1781              	.LASF76:
+ 1782 02a9 70747232 		.ascii	"ptr2DebounceArr\000"
+ 1782      4465626F 
+ 1782      756E6365 
+ 1782      41727200 
+ 1783              	.LASF13:
+ 1784 02b9 75696E74 		.ascii	"uint8_t\000"
+ 1784      385F7400 
+ 1785              	.LASF21:
+ 1786 02c1 75696E74 		.ascii	"uint8\000"
+ 1786      3800
+ 1787              	.LASF34:
+ 1788 02c7 736E7343 		.ascii	"snsClk\000"
+ 1788      6C6B00
+ 1789              	.LASF19:
+ 1790 02ce 666C6F61 		.ascii	"float\000"
+ 1790      7400
+ 1791              	.LASF47:
+ 1792 02d4 43617053 		.ascii	"CapSense_RAM_WD_LIST_STRUCT\000"
+ 1792      656E7365 
+ 1792      5F52414D 
+ 1792      5F57445F 
+ 1792      4C495354 
+ 1793              	.LASF10:
+ 1794 02f0 6C6F6E67 		.ascii	"long long int\000"
+ 1794      206C6F6E 
+ 1794      6720696E 
+ 1794      7400
+ 1795              	.LASF89:
+ 1796 02fe 43617053 		.ascii	"CapSense_TU_CMD_PING_E\000"
+ 1796      656E7365 
+ 1796      5F54555F 
+ 1796      434D445F 
+ 1796      50494E47 
+ 1797              	.LASF18:
+ 1798 0315 63686172 		.ascii	"char\000"
+ 1798      00
+ 1799              	.LASF7:
+ 1800 031a 6C6F6E67 		.ascii	"long int\000"
+ 1800      20696E74 
+ 1800      00
+ 1801              	.LASF79:
+ 1802 0323 77646774 		.ascii	"wdgtType\000"
+ 1802      54797065 
+ 1802      00
+ 1803              	.LASF24:
+ 1804 032c 43617053 		.ascii	"CapSense_THRESHOLD_TYPE\000"
+ 1804      656E7365 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 39
 
 
- 1805      7400
- 1806              	.LASF103:
- 1807 031c 43617053 		.ascii	"CapSense_dsRam\000"
- 1807      656E7365 
- 1807      5F647352 
- 1807      616D00
- 1808              	.LASF27:
- 1809 032b 66696E67 		.ascii	"fingerTh\000"
- 1809      65725468 
- 1809      00
- 1810              	.LASF80:
- 1811 0334 6E756D43 		.ascii	"numCols\000"
- 1811      6F6C7300 
- 1812              	.LASF30:
- 1813 033c 68797374 		.ascii	"hysteresis\000"
- 1813      65726573 
- 1813      697300
- 1814              	.LASF106:
- 1815 0347 43795F53 		.ascii	"Cy_SysLib_ExitCriticalSection\000"
- 1815      79734C69 
- 1815      625F4578 
- 1815      69744372 
- 1815      69746963 
- 1816              	.LASF57:
- 1817 0365 74756E65 		.ascii	"tunerCmd\000"
- 1817      72436D64 
- 1817      00
- 1818              	.LASF92:
- 1819 036e 6C6F6E67 		.ascii	"long double\000"
- 1819      20646F75 
- 1819      626C6500 
- 1820              	.LASF61:
- 1821 037a 77646774 		.ascii	"wdgtStatus\000"
- 1821      53746174 
- 1821      757300
- 1822              	.LASF100:
- 1823 0385 70747253 		.ascii	"ptrSnsTmp\000"
- 1823      6E73546D 
- 1823      7000
- 1824              	.LASF1:
- 1825 038f 756E7369 		.ascii	"unsigned char\000"
- 1825      676E6564 
- 1825      20636861 
- 1825      7200
- 1826              	.LASF104:
- 1827 039d 43617053 		.ascii	"CapSense_dsFlash\000"
- 1827      656E7365 
- 1827      5F647346 
- 1827      6C617368 
- 1827      00
- 1828              	.LASF0:
- 1829 03ae 7369676E 		.ascii	"signed char\000"
- 1829      65642063 
- 1829      68617200 
- 1830              	.LASF53:
- 1831 03ba 43617053 		.ascii	"CapSense_RAM_SNS_LIST_STRUCT\000"
- 1831      656E7365 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 40
+ 1804      5F544852 
+ 1804      4553484F 
+ 1804      4C445F54 
+ 1805              	.LASF51:
+ 1806 0344 6E656742 		.ascii	"negBslnRstCnt\000"
+ 1806      736C6E52 
+ 1806      7374436E 
+ 1806      7400
+ 1807              	.LASF3:
+ 1808 0352 5F5F7569 		.ascii	"__uint8_t\000"
+ 1808      6E74385F 
+ 1808      7400
+ 1809              	.LASF103:
+ 1810 035c 43617053 		.ascii	"CapSense_dsRam\000"
+ 1810      656E7365 
+ 1810      5F647352 
+ 1810      616D00
+ 1811              	.LASF27:
+ 1812 036b 66696E67 		.ascii	"fingerTh\000"
+ 1812      65725468 
+ 1812      00
+ 1813              	.LASF80:
+ 1814 0374 6E756D43 		.ascii	"numCols\000"
+ 1814      6F6C7300 
+ 1815              	.LASF30:
+ 1816 037c 68797374 		.ascii	"hysteresis\000"
+ 1816      65726573 
+ 1816      697300
+ 1817              	.LASF106:
+ 1818 0387 43795F53 		.ascii	"Cy_SysLib_ExitCriticalSection\000"
+ 1818      79734C69 
+ 1818      625F4578 
+ 1818      69744372 
+ 1818      69746963 
+ 1819              	.LASF57:
+ 1820 03a5 74756E65 		.ascii	"tunerCmd\000"
+ 1820      72436D64 
+ 1820      00
+ 1821              	.LASF92:
+ 1822 03ae 6C6F6E67 		.ascii	"long double\000"
+ 1822      20646F75 
+ 1822      626C6500 
+ 1823              	.LASF61:
+ 1824 03ba 77646774 		.ascii	"wdgtStatus\000"
+ 1824      53746174 
+ 1824      757300
+ 1825              	.LASF100:
+ 1826 03c5 70747253 		.ascii	"ptrSnsTmp\000"
+ 1826      6E73546D 
+ 1826      7000
+ 1827              	.LASF1:
+ 1828 03cf 756E7369 		.ascii	"unsigned char\000"
+ 1828      676E6564 
+ 1828      20636861 
+ 1828      7200
+ 1829              	.LASF104:
+ 1830 03dd 43617053 		.ascii	"CapSense_dsFlash\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 40
 
 
- 1831      5F52414D 
- 1831      5F534E53 
- 1831      5F4C4953 
- 1832              	.LASF11:
- 1833 03d7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1833      206C6F6E 
- 1833      6720756E 
- 1833      7369676E 
- 1833      65642069 
- 1834              	.LASF52:
- 1835 03ee 43617053 		.ascii	"CapSense_RAM_SNS_STRUCT\000"
- 1835      656E7365 
- 1835      5F52414D 
- 1835      5F534E53 
- 1835      5F535452 
- 1836              	.LASF16:
- 1837 0406 75696E74 		.ascii	"uint32_t\000"
- 1837      33325F74 
- 1837      00
- 1838              	.LASF77:
- 1839 040f 73746174 		.ascii	"staticConfig\000"
- 1839      6963436F 
- 1839      6E666967 
- 1839      00
- 1840              	.LASF107:
- 1841 041c 43617053 		.ascii	"CapSense_Start\000"
- 1841      656E7365 
- 1841      5F537461 
- 1841      727400
- 1842              	.LASF12:
- 1843 042b 756E7369 		.ascii	"unsigned int\000"
- 1843      676E6564 
- 1843      20696E74 
- 1843      00
- 1844              	.LASF14:
- 1845 0438 75696E74 		.ascii	"uint16_t\000"
- 1845      31365F74 
- 1845      00
- 1846              	.LASF96:
- 1847 0441 75706461 		.ascii	"updateFlag\000"
- 1847      7465466C 
- 1847      616700
- 1848              	.LASF60:
- 1849 044c 77646774 		.ascii	"wdgtEnable\000"
- 1849      456E6162 
- 1849      6C6500
- 1850              	.LASF59:
- 1851 0457 73746174 		.ascii	"status\000"
- 1851      757300
- 1852              	.LASF5:
- 1853 045e 73686F72 		.ascii	"short unsigned int\000"
- 1853      7420756E 
- 1853      7369676E 
- 1853      65642069 
- 1853      6E7400
- 1854              	.LASF54:
- 1855 0471 636F6E66 		.ascii	"configId\000"
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 41
+ 1830      656E7365 
+ 1830      5F647346 
+ 1830      6C617368 
+ 1830      00
+ 1831              	.LASF0:
+ 1832 03ee 7369676E 		.ascii	"signed char\000"
+ 1832      65642063 
+ 1832      68617200 
+ 1833              	.LASF53:
+ 1834 03fa 43617053 		.ascii	"CapSense_RAM_SNS_LIST_STRUCT\000"
+ 1834      656E7365 
+ 1834      5F52414D 
+ 1834      5F534E53 
+ 1834      5F4C4953 
+ 1835              	.LASF11:
+ 1836 0417 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1836      206C6F6E 
+ 1836      6720756E 
+ 1836      7369676E 
+ 1836      65642069 
+ 1837              	.LASF52:
+ 1838 042e 43617053 		.ascii	"CapSense_RAM_SNS_STRUCT\000"
+ 1838      656E7365 
+ 1838      5F52414D 
+ 1838      5F534E53 
+ 1838      5F535452 
+ 1839              	.LASF16:
+ 1840 0446 75696E74 		.ascii	"uint32_t\000"
+ 1840      33325F74 
+ 1840      00
+ 1841              	.LASF77:
+ 1842 044f 73746174 		.ascii	"staticConfig\000"
+ 1842      6963436F 
+ 1842      6E666967 
+ 1842      00
+ 1843              	.LASF107:
+ 1844 045c 43617053 		.ascii	"CapSense_Start\000"
+ 1844      656E7365 
+ 1844      5F537461 
+ 1844      727400
+ 1845              	.LASF12:
+ 1846 046b 756E7369 		.ascii	"unsigned int\000"
+ 1846      676E6564 
+ 1846      20696E74 
+ 1846      00
+ 1847              	.LASF14:
+ 1848 0478 75696E74 		.ascii	"uint16_t\000"
+ 1848      31365F74 
+ 1848      00
+ 1849              	.LASF96:
+ 1850 0481 75706461 		.ascii	"updateFlag\000"
+ 1850      7465466C 
+ 1850      616700
+ 1851              	.LASF60:
+ 1852 048c 77646774 		.ascii	"wdgtEnable\000"
+ 1852      456E6162 
+ 1852      6C6500
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 41
 
 
- 1855      69674964 
- 1855      00
- 1856              	.LASF94:
- 1857 047a 77696467 		.ascii	"widgetId\000"
- 1857      65744964 
- 1857      00
- 1858              	.LASF68:
- 1859 0483 736E7254 		.ascii	"snrTestSensorId\000"
- 1859      65737453 
- 1859      656E736F 
- 1859      72496400 
- 1860              	.LASF69:
- 1861 0493 736E7254 		.ascii	"snrTestScanCounter\000"
- 1861      65737453 
- 1861      63616E43 
- 1861      6F756E74 
- 1861      657200
- 1862              	.LASF15:
- 1863 04a6 696E7433 		.ascii	"int32_t\000"
- 1863      325F7400 
- 1864              	.LASF26:
- 1865 04ae 7265736F 		.ascii	"resolution\000"
- 1865      6C757469 
- 1865      6F6E00
- 1866              	.LASF75:
- 1867 04b9 70747232 		.ascii	"ptr2FltrHistory\000"
- 1867      466C7472 
- 1867      48697374 
- 1867      6F727900 
- 1868              	.LASF66:
- 1869 04c9 736E734C 		.ascii	"snsList\000"
- 1869      69737400 
- 1870              	.LASF64:
- 1871 04d1 6D6F6443 		.ascii	"modCsdClk\000"
- 1871      7364436C 
- 1871      6B00
- 1872              	.LASF58:
- 1873 04db 7363616E 		.ascii	"scanCounter\000"
- 1873      436F756E 
- 1873      74657200 
- 1874              	.LASF73:
- 1875 04e7 70747232 		.ascii	"ptr2WdgtRam\000"
- 1875      57646774 
- 1875      52616D00 
- 1876              	.LASF93:
- 1877 04f3 696E7465 		.ascii	"interruptState\000"
- 1877      72727570 
- 1877      74537461 
- 1877      746500
- 1878              	.LASF71:
- 1879 0502 43617053 		.ascii	"CapSense_RAM_STRUCT\000"
- 1879      656E7365 
- 1879      5F52414D 
- 1879      5F535452 
- 1879      55435400 
- 1880              	.LASF23:
- 1881 0516 75696E74 		.ascii	"uint32\000"
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 42
+ 1853              	.LASF59:
+ 1854 0497 73746174 		.ascii	"status\000"
+ 1854      757300
+ 1855              	.LASF5:
+ 1856 049e 73686F72 		.ascii	"short unsigned int\000"
+ 1856      7420756E 
+ 1856      7369676E 
+ 1856      65642069 
+ 1856      6E7400
+ 1857              	.LASF54:
+ 1858 04b1 636F6E66 		.ascii	"configId\000"
+ 1858      69674964 
+ 1858      00
+ 1859              	.LASF94:
+ 1860 04ba 77696467 		.ascii	"widgetId\000"
+ 1860      65744964 
+ 1860      00
+ 1861              	.LASF68:
+ 1862 04c3 736E7254 		.ascii	"snrTestSensorId\000"
+ 1862      65737453 
+ 1862      656E736F 
+ 1862      72496400 
+ 1863              	.LASF69:
+ 1864 04d3 736E7254 		.ascii	"snrTestScanCounter\000"
+ 1864      65737453 
+ 1864      63616E43 
+ 1864      6F756E74 
+ 1864      657200
+ 1865              	.LASF15:
+ 1866 04e6 696E7433 		.ascii	"int32_t\000"
+ 1866      325F7400 
+ 1867              	.LASF26:
+ 1868 04ee 7265736F 		.ascii	"resolution\000"
+ 1868      6C757469 
+ 1868      6F6E00
+ 1869              	.LASF75:
+ 1870 04f9 70747232 		.ascii	"ptr2FltrHistory\000"
+ 1870      466C7472 
+ 1870      48697374 
+ 1870      6F727900 
+ 1871              	.LASF66:
+ 1872 0509 736E734C 		.ascii	"snsList\000"
+ 1872      69737400 
+ 1873              	.LASF64:
+ 1874 0511 6D6F6443 		.ascii	"modCsdClk\000"
+ 1874      7364436C 
+ 1874      6B00
+ 1875              	.LASF58:
+ 1876 051b 7363616E 		.ascii	"scanCounter\000"
+ 1876      436F756E 
+ 1876      74657200 
+ 1877              	.LASF73:
+ 1878 0527 70747232 		.ascii	"ptr2WdgtRam\000"
+ 1878      57646774 
+ 1878      52616D00 
+ 1879              	.LASF93:
+ 1880 0533 696E7465 		.ascii	"interruptState\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 42
 
 
- 1881      333200
- 1882              	.LASF9:
- 1883 051d 6C6F6E67 		.ascii	"long unsigned int\000"
- 1883      20756E73 
- 1883      69676E65 
- 1883      6420696E 
- 1883      7400
- 1884              	.LASF20:
- 1885 052f 646F7562 		.ascii	"double\000"
- 1885      6C6500
- 1886              	.LASF74:
- 1887 0536 70747232 		.ascii	"ptr2SnsRam\000"
- 1887      536E7352 
- 1887      616D00
- 1888              	.LASF49:
- 1889 0541 62736C6E 		.ascii	"bslnExt\000"
- 1889      45787400 
- 1890              	.LASF109:
- 1891 0549 47656E65 		.ascii	"Generated_Source\\PSoC6\\CapSense_Tuner.c\000"
- 1891      72617465 
- 1891      645F536F 
- 1891      75726365 
- 1891      5C50536F 
- 1892              	.LASF88:
- 1893 0571 43617053 		.ascii	"CapSense_TU_CMD_RUN_SNR_TEST_E\000"
- 1893      656E7365 
- 1893      5F54555F 
- 1893      434D445F 
- 1893      52554E5F 
- 1894              	.LASF99:
- 1895 0590 70747244 		.ascii	"ptrDsRam\000"
- 1895      7352616D 
- 1895      00
- 1896              	.LASF25:
- 1897 0599 43617053 		.ascii	"CapSense_LOW_BSLN_RST_TYPE\000"
- 1897      656E7365 
- 1897      5F4C4F57 
- 1897      5F42534C 
- 1897      4E5F5253 
- 1898              	.LASF56:
- 1899 05b4 6877436C 		.ascii	"hwClock\000"
- 1899      6F636B00 
- 1900              	.LASF6:
- 1901 05bc 5F5F696E 		.ascii	"__int32_t\000"
- 1901      7433325F 
- 1901      7400
- 1902              	.LASF86:
- 1903 05c6 43617053 		.ascii	"CapSense_TU_CMD_RESUME_E\000"
- 1903      656E7365 
- 1903      5F54555F 
- 1903      434D445F 
- 1903      52455355 
- 1904              	.LASF37:
- 1905 05df 62757474 		.ascii	"button0\000"
- 1905      6F6E3000 
- 1906              	.LASF38:
- 1907 05e7 62757474 		.ascii	"button1\000"
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 43
+ 1880      72727570 
+ 1880      74537461 
+ 1880      746500
+ 1881              	.LASF71:
+ 1882 0542 43617053 		.ascii	"CapSense_RAM_STRUCT\000"
+ 1882      656E7365 
+ 1882      5F52414D 
+ 1882      5F535452 
+ 1882      55435400 
+ 1883              	.LASF23:
+ 1884 0556 75696E74 		.ascii	"uint32\000"
+ 1884      333200
+ 1885              	.LASF9:
+ 1886 055d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1886      20756E73 
+ 1886      69676E65 
+ 1886      6420696E 
+ 1886      7400
+ 1887              	.LASF20:
+ 1888 056f 646F7562 		.ascii	"double\000"
+ 1888      6C6500
+ 1889              	.LASF74:
+ 1890 0576 70747232 		.ascii	"ptr2SnsRam\000"
+ 1890      536E7352 
+ 1890      616D00
+ 1891              	.LASF49:
+ 1892 0581 62736C6E 		.ascii	"bslnExt\000"
+ 1892      45787400 
+ 1893              	.LASF109:
+ 1894 0589 47656E65 		.ascii	"Generated_Source\\PSoC6\\CapSense_Tuner.c\000"
+ 1894      72617465 
+ 1894      645F536F 
+ 1894      75726365 
+ 1894      5C50536F 
+ 1895              	.LASF88:
+ 1896 05b1 43617053 		.ascii	"CapSense_TU_CMD_RUN_SNR_TEST_E\000"
+ 1896      656E7365 
+ 1896      5F54555F 
+ 1896      434D445F 
+ 1896      52554E5F 
+ 1897              	.LASF99:
+ 1898 05d0 70747244 		.ascii	"ptrDsRam\000"
+ 1898      7352616D 
+ 1898      00
+ 1899              	.LASF25:
+ 1900 05d9 43617053 		.ascii	"CapSense_LOW_BSLN_RST_TYPE\000"
+ 1900      656E7365 
+ 1900      5F4C4F57 
+ 1900      5F42534C 
+ 1900      4E5F5253 
+ 1901              	.LASF56:
+ 1902 05f4 6877436C 		.ascii	"hwClock\000"
+ 1902      6F636B00 
+ 1903              	.LASF6:
+ 1904 05fc 5F5F696E 		.ascii	"__int32_t\000"
+ 1904      7433325F 
+ 1904      7400
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 43
 
 
- 1907      6F6E3100 
- 1908              	.LASF39:
- 1909 05ef 62757474 		.ascii	"button2\000"
- 1909      6F6E3200 
- 1910              	.LASF40:
- 1911 05f7 62757474 		.ascii	"button3\000"
- 1911      6F6E3300 
- 1912              	.LASF41:
- 1913 05ff 62757474 		.ascii	"button4\000"
- 1913      6F6E3400 
- 1914              	.LASF42:
- 1915 0607 62757474 		.ascii	"button5\000"
- 1915      6F6E3500 
- 1916              	.LASF43:
- 1917 060f 62757474 		.ascii	"button6\000"
- 1917      6F6E3600 
- 1918              	.LASF44:
- 1919 0617 62757474 		.ascii	"button7\000"
- 1919      6F6E3700 
- 1920              	.LASF45:
- 1921 061f 62757474 		.ascii	"button8\000"
- 1921      6F6E3800 
- 1922              	.LASF46:
- 1923 0627 62757474 		.ascii	"button9\000"
- 1923      6F6E3900 
- 1924              	.LASF85:
- 1925 062f 43617053 		.ascii	"CapSense_TU_CMD_SUSPEND_E\000"
- 1925      656E7365 
- 1925      5F54555F 
- 1925      434D445F 
- 1925      53555350 
- 1926              	.LASF110:
- 1927 0649 433A5C55 		.ascii	"C:\\Users\\Coal\\Documents\\PSoC Creator\\Capasitor"
- 1927      73657273 
- 1927      5C436F61 
- 1927      6C5C446F 
- 1927      63756D65 
- 1928 0677 5C436170 		.ascii	"\\Capasitor.cydsn\000"
- 1928      61736974 
- 1928      6F722E63 
- 1928      7964736E 
- 1928      00
+ 1905              	.LASF86:
+ 1906 0606 43617053 		.ascii	"CapSense_TU_CMD_RESUME_E\000"
+ 1906      656E7365 
+ 1906      5F54555F 
+ 1906      434D445F 
+ 1906      52455355 
+ 1907              	.LASF37:
+ 1908 061f 62757474 		.ascii	"button0\000"
+ 1908      6F6E3000 
+ 1909              	.LASF38:
+ 1910 0627 62757474 		.ascii	"button1\000"
+ 1910      6F6E3100 
+ 1911              	.LASF39:
+ 1912 062f 62757474 		.ascii	"button2\000"
+ 1912      6F6E3200 
+ 1913              	.LASF40:
+ 1914 0637 62757474 		.ascii	"button3\000"
+ 1914      6F6E3300 
+ 1915              	.LASF41:
+ 1916 063f 62757474 		.ascii	"button4\000"
+ 1916      6F6E3400 
+ 1917              	.LASF42:
+ 1918 0647 62757474 		.ascii	"button5\000"
+ 1918      6F6E3500 
+ 1919              	.LASF43:
+ 1920 064f 62757474 		.ascii	"button6\000"
+ 1920      6F6E3600 
+ 1921              	.LASF44:
+ 1922 0657 62757474 		.ascii	"button7\000"
+ 1922      6F6E3700 
+ 1923              	.LASF45:
+ 1924 065f 62757474 		.ascii	"button8\000"
+ 1924      6F6E3800 
+ 1925              	.LASF46:
+ 1926 0667 62757474 		.ascii	"button9\000"
+ 1926      6F6E3900 
+ 1927              	.LASF85:
+ 1928 066f 43617053 		.ascii	"CapSense_TU_CMD_SUSPEND_E\000"
+ 1928      656E7365 
+ 1928      5F54555F 
+ 1928      434D445F 
+ 1928      53555350 
  1929              	.LASF67:
- 1930 0688 736E7254 		.ascii	"snrTestWidgetId\000"
+ 1930 0689 736E7254 		.ascii	"snrTestWidgetId\000"
  1930      65737457 
  1930      69646765 
  1930      74496400 
  1931              	.LASF102:
- 1932 0698 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1932 0699 49544D5F 		.ascii	"ITM_RxBuffer\000"
  1932      52784275 
  1932      66666572 
  1932      00
  1933              	.LASF82:
- 1934 06a5 77646774 		.ascii	"wdgtArray\000"
+ 1934 06a6 77646774 		.ascii	"wdgtArray\000"
  1934      41727261 
  1934      7900
  1935              	.LASF98:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdIq3wv.s 			page 44
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\cc87cxrK.s 			page 44
 
 
- 1936 06af 74756E65 		.ascii	"tunerStatus\000"
+ 1936 06b0 74756E65 		.ascii	"tunerStatus\000"
  1936      72537461 
  1936      74757300 
  1937              	.LASF72:
- 1938 06bb 70747232 		.ascii	"ptr2SnsFlash\000"
+ 1938 06bc 70747232 		.ascii	"ptr2SnsFlash\000"
  1938      536E7346 
  1938      6C617368 
  1938      00
  1939              	.LASF62:
- 1940 06c8 736E7353 		.ascii	"snsStatus\000"
+ 1940 06c9 736E7353 		.ascii	"snsStatus\000"
  1940      74617475 
  1940      7300
  1941              	.LASF97:
- 1942 06d2 636F6D6D 		.ascii	"command\000"
+ 1942 06d3 636F6D6D 		.ascii	"command\000"
  1942      616E6400 
  1943              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
   28:Generated_Source\PSoC6/CapSense_Filter.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
   29:Generated_Source\PSoC6/CapSense_Filter.c **** * Cypress reserves the right to make changes without further notice to the
   30:Generated_Source\PSoC6/CapSense_Filter.c **** * materials described herein. Cypress does not assume any liability arising out
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 2
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 2
 
 
   31:Generated_Source\PSoC6/CapSense_Filter.c **** * of the application or use of any product or circuit described herein. Cypress
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
   42              		.code	16
   43              		.thumb_func
   44              		.type	CapSense_FtInitializeBaselineChannel, %function
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 3
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 3
 
 
   45              	CapSense_FtInitializeBaselineChannel:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  123:Generated_Source\PSoC6/CapSense_Filter.c **** *  This function ignores the value of the wdgtEnable register. Multiple calling
  124:Generated_Source\PSoC6/CapSense_Filter.c **** *  of this function (or any other function with a baseline updating task)
  125:Generated_Source\PSoC6/CapSense_Filter.c **** *  without scanning leads to unexpected behavior.
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 4
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 4
 
 
  126:Generated_Source\PSoC6/CapSense_Filter.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  180:Generated_Source\PSoC6/CapSense_Filter.c **** *  test. Refer to CapSense_CheckBaselineDuplication() for details.
  181:Generated_Source\PSoC6/CapSense_Filter.c **** *
  182:Generated_Source\PSoC6/CapSense_Filter.c **** * \param   widgetId
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 5
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 5
 
 
  183:Generated_Source\PSoC6/CapSense_Filter.c **** *  Specifies the ID number of the widget to update the baseline of the sensor
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  237:Generated_Source\PSoC6/CapSense_Filter.c **** * \param    ptrWidgetRam
  238:Generated_Source\PSoC6/CapSense_Filter.c **** *  The pointer to the widget RAM structure where all the widget parameters
  239:Generated_Source\PSoC6/CapSense_Filter.c **** *  are stored.
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 6
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 6
 
 
  240:Generated_Source\PSoC6/CapSense_Filter.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  294:Generated_Source\PSoC6/CapSense_Filter.c **** 
  295:Generated_Source\PSoC6/CapSense_Filter.c ****         /* Reset baseline if condition is met */
  296:Generated_Source\PSoC6/CapSense_Filter.c ****         if((sign == 0u) && (difference > (uint32) ptrWidgetRam->nNoiseTh))
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 7
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 7
 
 
  297:Generated_Source\PSoC6/CapSense_Filter.c ****         {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  351:Generated_Source\PSoC6/CapSense_Filter.c ****                             history = (uint32) ptrSensor->bsln[freqChannel] << 8u;
  352:Generated_Source\PSoC6/CapSense_Filter.c ****                             history |= ptrSensor->bslnExt[freqChannel];
  353:Generated_Source\PSoC6/CapSense_Filter.c ****                         #else
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 8
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 8
 
 
  354:Generated_Source\PSoC6/CapSense_Filter.c ****                             history = (uint32) ptrSensor->bsln[freqChannel];
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  408:Generated_Source\PSoC6/CapSense_Filter.c **** * \details
  409:Generated_Source\PSoC6/CapSense_Filter.c **** *  Initializes the baseline for all the sensors of all the widgets. Also, this function
  410:Generated_Source\PSoC6/CapSense_Filter.c **** *  can be used to re-initialize baselines. CapSense_Start() calls this
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 9
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 9
 
 
  411:Generated_Source\PSoC6/CapSense_Filter.c **** *  API as part of CapSense operation initialization.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  465:Generated_Source\PSoC6/CapSense_Filter.c ****     for(sensorId = sensorsNumber; sensorId-- > 0u;)
  466:Generated_Source\PSoC6/CapSense_Filter.c ****     {
  467:Generated_Source\PSoC6/CapSense_Filter.c ****         CapSense_InitializeSensorBaseline(widgetId, sensorId);
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 10
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 10
 
 
  468:Generated_Source\PSoC6/CapSense_Filter.c ****     }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  522:Generated_Source\PSoC6/CapSense_Filter.c **** *
  523:Generated_Source\PSoC6/CapSense_Filter.c **** * \param    *ptrSensor The pointer to the sensor RAM object.
  524:Generated_Source\PSoC6/CapSense_Filter.c **** * \param    wdType     Specifies the type of a widget.
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 11
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 11
 
 
  525:Generated_Source\PSoC6/CapSense_Filter.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  562:Generated_Source\PSoC6/CapSense_Filter.c ****                 #endif /* (CapSense_REGULAR_IIR_BL_TYPE == CapSense_IIR_FILTER_PERFORMANCE) */
  563:Generated_Source\PSoC6/CapSense_Filter.c ****             #endif /* (CapSense_REGULAR_SENSOR_EN) */
  564:Generated_Source\PSoC6/CapSense_Filter.c ****         }
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 12
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 12
 
 
  565:Generated_Source\PSoC6/CapSense_Filter.c ****         else
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
   95              		.cfi_offset 4, -16
   96              		.cfi_offset 5, -12
   97              		.cfi_offset 6, -8
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 13
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 13
 
 
   98              		.cfi_offset 14, -4
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  146              		.cfi_offset 4, -16
  147              		.cfi_offset 5, -12
  148              		.cfi_offset 6, -8
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 14
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 14
 
 
  149              		.cfi_offset 14, -4
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  198              	.LVL20:
  199 0000 70B5     		push	{r4, r5, r6, lr}
  200              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 15
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 15
 
 
  201              		.cfi_offset 4, -16
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  249              		.thumb_func
  250              		.type	CapSense_InitializeAllBaselines, %function
  251              	CapSense_InitializeAllBaselines:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 16
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 16
 
 
  252              	.LFB41:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  592:Generated_Source\PSoC6/CapSense_Filter.c **** ****************************************************************************//**
  593:Generated_Source\PSoC6/CapSense_Filter.c **** *
  594:Generated_Source\PSoC6/CapSense_Filter.c **** * \brief
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 17
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 17
 
 
  595:Generated_Source\PSoC6/CapSense_Filter.c **** *  Initializes (or re-initializes) the raw count filter history of all the 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  649:Generated_Source\PSoC6/CapSense_Filter.c ****     #endif /* (0u != (CapSense_CSD_AUTOTUNE & CapSense_CSD_SS_TH_EN)) */
  650:Generated_Source\PSoC6/CapSense_Filter.c **** 
  651:Generated_Source\PSoC6/CapSense_Filter.c ****     ptrWidget = &CapSense_dsFlash.wdgtArray[widgetId];
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 18
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 18
 
 
  652:Generated_Source\PSoC6/CapSense_Filter.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  706:Generated_Source\PSoC6/CapSense_Filter.c ****         #if (CapSense_ALP_FILTER_EN)
  707:Generated_Source\PSoC6/CapSense_Filter.c ****             CapSense_InitializeALPInternal(ptrFilterHistObj, ptrSensor, (uint32)ptrWidget->wdgtType
  708:Generated_Source\PSoC6/CapSense_Filter.c ****         #endif
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 19
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 19
 
 
  709:Generated_Source\PSoC6/CapSense_Filter.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  763:Generated_Source\PSoC6/CapSense_Filter.c **** 
  764:Generated_Source\PSoC6/CapSense_Filter.c **** 
  765:Generated_Source\PSoC6/CapSense_Filter.c **** /*******************************************************************************
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 20
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 20
 
 
  766:Generated_Source\PSoC6/CapSense_Filter.c **** * Function Name: CapSense_RunIIR
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  820:Generated_Source\PSoC6/CapSense_Filter.c **** *******************************************************************************/
  821:Generated_Source\PSoC6/CapSense_Filter.c **** void CapSense_InitializeIIRInternal(CapSense_PTR_FILTER_VARIANT ptrFilterHistObj,
  822:Generated_Source\PSoC6/CapSense_Filter.c ****                                             CapSense_RAM_SNS_STRUCT *ptrSensorObj, uint32 wdType)
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 21
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 21
 
 
  823:Generated_Source\PSoC6/CapSense_Filter.c **** {
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  877:Generated_Source\PSoC6/CapSense_Filter.c ****             #if (CapSense_REGULAR_SENSOR_EN && CapSense_REGULAR_RC_IIR_FILTER_EN)
  878:Generated_Source\PSoC6/CapSense_Filter.c ****                 #if (CapSense_REGULAR_IIR_RC_TYPE == CapSense_IIR_FILTER_PERFORMANCE)
  879:Generated_Source\PSoC6/CapSense_Filter.c ****                     temp = ((uint32)ptrFilterHistObj.ptrRegular->regularChannel[freqChannel].iirHis
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 22
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 22
 
 
  880:Generated_Source\PSoC6/CapSense_Filter.c ****                     temp |= ptrFilterHistObj.ptrRegular->regularChannel[freqChannel].iirHistoryLow;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  934:Generated_Source\PSoC6/CapSense_Filter.c **** * \details  Initializes the Median filter history.
  935:Generated_Source\PSoC6/CapSense_Filter.c **** *
  936:Generated_Source\PSoC6/CapSense_Filter.c **** * \param    widgetId Specifies the ID number of the widget.
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 23
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 23
 
 
  937:Generated_Source\PSoC6/CapSense_Filter.c **** * \param    sensorId Specifies the ID number of the sensor in the widget.
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  991:Generated_Source\PSoC6/CapSense_Filter.c ****     ptrSensor = ptrWidget->ptr2SnsRam;
  992:Generated_Source\PSoC6/CapSense_Filter.c ****     ptrSensor = &ptrSensor[sensorId];
  993:Generated_Source\PSoC6/CapSense_Filter.c **** 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 24
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 24
 
 
  994:Generated_Source\PSoC6/CapSense_Filter.c ****     /* Find pointer to specified filter sensor object */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1048:Generated_Source\PSoC6/CapSense_Filter.c ****     }
 1049:Generated_Source\PSoC6/CapSense_Filter.c **** }
 1050:Generated_Source\PSoC6/CapSense_Filter.c **** 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 25
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 25
 
 
 1051:Generated_Source\PSoC6/CapSense_Filter.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1105:Generated_Source\PSoC6/CapSense_Filter.c **** 
 1106:Generated_Source\PSoC6/CapSense_Filter.c **** #if (CapSense_REGULAR_RC_AVERAGE_FILTER_EN || CapSense_PROX_RC_AVERAGE_FILTER_EN)
 1107:Generated_Source\PSoC6/CapSense_Filter.c **** 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 26
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 26
 
 
 1108:Generated_Source\PSoC6/CapSense_Filter.c **** /*******************************************************************************
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1162:Generated_Source\PSoC6/CapSense_Filter.c **** *
 1163:Generated_Source\PSoC6/CapSense_Filter.c **** *******************************************************************************/
 1164:Generated_Source\PSoC6/CapSense_Filter.c **** void CapSense_RunAverage(uint32 widgetId, uint32 sensorId)
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 27
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 27
 
 
 1165:Generated_Source\PSoC6/CapSense_Filter.c **** {
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1219:Generated_Source\PSoC6/CapSense_Filter.c ****                     ptrFilterHistObj.ptrRegular->regularChannel[freqChannel].avgHistory[1u] = ptrSe
 1220:Generated_Source\PSoC6/CapSense_Filter.c ****                     ptrFilterHistObj.ptrRegular->regularChannel[freqChannel].avgHistory[2u] = ptrSe
 1221:Generated_Source\PSoC6/CapSense_Filter.c ****                 #endif /* CapSense_REGULAR_AVERAGE_LEN == CapSense_AVERAGE_FILTER_LEN_4 */
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 28
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 28
 
 
 1222:Generated_Source\PSoC6/CapSense_Filter.c ****             #endif /* (CapSense_REGULAR_SENSOR_EN) */
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1276:Generated_Source\PSoC6/CapSense_Filter.c ****                     ptrFilterHistObj.ptrRegular->regularChannel[freqChannel].avgHistory[0];
 1277:Generated_Source\PSoC6/CapSense_Filter.c ****                     ptrFilterHistObj.ptrRegular->regularChannel[freqChannel].avgHistory[0] = ptrSen
 1278:Generated_Source\PSoC6/CapSense_Filter.c ****                     ptrSensorObj->raw[freqChannel] = CY_LO16(temp);
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 29
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 29
 
 
 1279:Generated_Source\PSoC6/CapSense_Filter.c ****                 #endif /* CapSense_REGULAR_AVERAGE_LEN == CapSense_AVERAGE_FILTER_LEN_4 */
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1333:Generated_Source\PSoC6/CapSense_Filter.c ****     ptrFilterHistObj.ptr = ptrWidget->ptr2FltrHistory;
 1334:Generated_Source\PSoC6/CapSense_Filter.c ****     ptrFilterHistObj.ptrAlp = &ptrFilterHistObj.ptrAlp[sensorId];
 1335:Generated_Source\PSoC6/CapSense_Filter.c ****     CapSense_InitializeALPInternal(ptrFilterHistObj, ptrSensor, (uint32)ptrWidget->wdgtType);
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 30
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 30
 
 
 1336:Generated_Source\PSoC6/CapSense_Filter.c **** }
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1390:Generated_Source\PSoC6/CapSense_Filter.c **** 
 1391:Generated_Source\PSoC6/CapSense_Filter.c **** 
 1392:Generated_Source\PSoC6/CapSense_Filter.c **** /*******************************************************************************
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 31
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 31
 
 
 1393:Generated_Source\PSoC6/CapSense_Filter.c **** * Function Name: CapSense_InitializeALPInternal
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1447:Generated_Source\PSoC6/CapSense_Filter.c ****     ALP_FLTR_CONFIG_STRUCT alpFilterConfig;
 1448:Generated_Source\PSoC6/CapSense_Filter.c **** 
 1449:Generated_Source\PSoC6/CapSense_Filter.c ****     alpFilterConfig.configParam0 = ptrRamWdgt->alpOnTh;
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 32
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 32
 
 
 1450:Generated_Source\PSoC6/CapSense_Filter.c ****     alpFilterConfig.configParam1 = ptrRamWdgt->alpOffTh;
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1504:Generated_Source\PSoC6/CapSense_Filter.c **** * \brief    Runs all enabled filters.
 1505:Generated_Source\PSoC6/CapSense_Filter.c **** *
 1506:Generated_Source\PSoC6/CapSense_Filter.c **** * \details  Runs all enabled filters.
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 33
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 33
 
 
 1507:Generated_Source\PSoC6/CapSense_Filter.c **** *
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1561:Generated_Source\PSoC6/CapSense_Filter.c **** *
 1562:Generated_Source\PSoC6/CapSense_Filter.c **** *******************************************************************************/
 1563:Generated_Source\PSoC6/CapSense_Filter.c **** void CapSense_FtRunEnabledFiltersInternal(CapSense_PTR_FILTER_VARIANT ptrFilterHistObj,
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 34
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 34
 
 
 1564:Generated_Source\PSoC6/CapSense_Filter.c ****                                                   CapSense_RAM_SNS_STRUCT *ptrSensorObj, uint32 wdT
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1618:Generated_Source\PSoC6/CapSense_Filter.c **** *
 1619:Generated_Source\PSoC6/CapSense_Filter.c **** * \brief    Initializes the noise-envelope filter
 1620:Generated_Source\PSoC6/CapSense_Filter.c **** *
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 35
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 35
 
 
 1621:Generated_Source\PSoC6/CapSense_Filter.c **** * \details  Initializes the noise-envelope filter
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1675:Generated_Source\PSoC6/CapSense_Filter.c ****     {
 1676:Generated_Source\PSoC6/CapSense_Filter.c ****         x2 = x3;
 1677:Generated_Source\PSoC6/CapSense_Filter.c ****     }
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 36
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 36
 
 
 1678:Generated_Source\PSoC6/CapSense_Filter.c **** 
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
 1712:Generated_Source\PSoC6/CapSense_Filter.c ****     /* Shift operation of output will be done in upper level API if needed */
 1713:Generated_Source\PSoC6/CapSense_Filter.c ****     return filteredOutput;
 1714:Generated_Source\PSoC6/CapSense_Filter.c **** }
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 37
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 37
 
 
  315              		.loc 1 1714 0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  365              	.LVL44:
  287:Generated_Source\PSoC6/CapSense_Filter.c ****         }
  366              		.loc 1 287 0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 38
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 38
 
 
  367 0020 3219     		adds	r2, r6, r4
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  412              		.loc 1 311 0
  413 0056 3D79     		ldrb	r5, [r7, #4]
  414 0058 AB42     		cmp	r3, r5
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 39
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 39
 
 
  415 005a 04D9     		bls	.L26
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  271:Generated_Source\PSoC6/CapSense_Filter.c ****     {
  460              		.loc 1 271 0 discriminator 1
  461 0090 5C1E     		subs	r4, r3, #1
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 40
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 40
 
 
  462              	.LVL59:
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  511 0012 5218     		adds	r2, r2, r1
  512 0014 5100     		lsls	r1, r2, #1
  513              	.LVL67:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 41
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 41
 
 
  514 0016 7118     		adds	r1, r6, r1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  564 000c D318     		adds	r3, r2, r3
  565 000e 1B8B     		ldrh	r3, [r3, #24]
  566              	.LVL76:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 42
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 42
 
 
  149:Generated_Source\PSoC6/CapSense_Filter.c **** 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  614              		@ frame_needed = 0, uses_anonymous_args = 0
  615 0000 70B5     		push	{r4, r5, r6, lr}
  616              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 43
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 43
 
 
  617              		.cfi_offset 4, -16
@@ -2578,12 +2578,12 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  665 000a 04       		.byte	0x4
  666 000b 01       		.uleb128 0x1
  667 000c E0000000 		.4byte	.LASF90
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 44
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 44
 
 
  668 0010 0C       		.byte	0xc
- 669 0011 B5020000 		.4byte	.LASF91
- 670 0015 DA050000 		.4byte	.LASF92
+ 669 0011 F5020000 		.4byte	.LASF91
+ 670 0015 BC010000 		.4byte	.LASF92
  671 0019 00000000 		.4byte	.Ldebug_ranges0+0
  672 001d 00000000 		.4byte	0
  673 0021 00000000 		.4byte	.Ldebug_line0
@@ -2594,28 +2594,28 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  678 002c 03       		.uleb128 0x3
  679 002d 04       		.byte	0x4
  680 002e 07       		.byte	0x7
- 681 002f C7030000 		.4byte	.LASF0
+ 681 002f 07040000 		.4byte	.LASF0
  682 0033 03       		.uleb128 0x3
  683 0034 08       		.byte	0x8
  684 0035 05       		.byte	0x5
- 685 0036 8A020000 		.4byte	.LASF1
+ 685 0036 CA020000 		.4byte	.LASF1
  686 003a 03       		.uleb128 0x3
  687 003b 08       		.byte	0x8
  688 003c 04       		.byte	0x4
- 689 003d 60030000 		.4byte	.LASF2
+ 689 003d A0030000 		.4byte	.LASF2
  690 0041 03       		.uleb128 0x3
  691 0042 01       		.byte	0x1
  692 0043 06       		.byte	0x6
- 693 0044 8E030000 		.4byte	.LASF3
+ 693 0044 CE030000 		.4byte	.LASF3
  694 0048 04       		.uleb128 0x4
- 695 0049 0D030000 		.4byte	.LASF6
+ 695 0049 4D030000 		.4byte	.LASF6
  696 004d 02       		.byte	0x2
  697 004e 1D       		.byte	0x1d
  698 004f 53000000 		.4byte	0x53
  699 0053 03       		.uleb128 0x3
  700 0054 01       		.byte	0x1
  701 0055 08       		.byte	0x8
- 702 0056 6C030000 		.4byte	.LASF4
+ 702 0056 AC030000 		.4byte	.LASF4
  703 005a 03       		.uleb128 0x3
  704 005b 02       		.byte	0x2
  705 005c 05       		.byte	0x5
@@ -2628,83 +2628,83 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  712 006c 03       		.uleb128 0x3
  713 006d 02       		.byte	0x2
  714 006e 07       		.byte	0x7
- 715 006f 3B040000 		.4byte	.LASF8
+ 715 006f 7B040000 		.4byte	.LASF8
  716 0073 03       		.uleb128 0x3
  717 0074 04       		.byte	0x4
  718 0075 05       		.byte	0x5
- 719 0076 9D020000 		.4byte	.LASF9
+ 719 0076 DD020000 		.4byte	.LASF9
  720 007a 04       		.uleb128 0x4
  721 007b 91010000 		.4byte	.LASF10
  722 007f 02       		.byte	0x2
  723 0080 41       		.byte	0x41
  724 0081 85000000 		.4byte	0x85
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 45
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 45
 
 
  725 0085 03       		.uleb128 0x3
  726 0086 04       		.byte	0x4
  727 0087 07       		.byte	0x7
- 728 0088 1F050000 		.4byte	.LASF11
+ 728 0088 5F050000 		.4byte	.LASF11
  729 008c 03       		.uleb128 0x3
  730 008d 08       		.byte	0x8
  731 008e 07       		.byte	0x7
- 732 008f 9A030000 		.4byte	.LASF12
+ 732 008f DA030000 		.4byte	.LASF12
  733 0093 04       		.uleb128 0x4
- 734 0094 0E020000 		.4byte	.LASF13
+ 734 0094 4E020000 		.4byte	.LASF13
  735 0098 03       		.byte	0x3
  736 0099 18       		.byte	0x18
  737 009a 48000000 		.4byte	0x48
  738 009e 04       		.uleb128 0x4
- 739 009f D4030000 		.4byte	.LASF14
+ 739 009f 14040000 		.4byte	.LASF14
  740 00a3 03       		.byte	0x3
  741 00a4 24       		.byte	0x24
  742 00a5 61000000 		.4byte	0x61
  743 00a9 04       		.uleb128 0x4
- 744 00aa B1030000 		.4byte	.LASF15
+ 744 00aa F1030000 		.4byte	.LASF15
  745 00ae 03       		.byte	0x3
  746 00af 30       		.byte	0x30
  747 00b0 7A000000 		.4byte	0x7a
  748 00b4 03       		.uleb128 0x3
  749 00b5 04       		.byte	0x4
  750 00b6 07       		.byte	0x7
- 751 00b7 DE020000 		.4byte	.LASF16
+ 751 00b7 1E030000 		.4byte	.LASF16
  752 00bb 03       		.uleb128 0x3
  753 00bc 01       		.byte	0x1
  754 00bd 08       		.byte	0x8
- 755 00be 98020000 		.4byte	.LASF17
+ 755 00be D8020000 		.4byte	.LASF17
  756 00c2 03       		.uleb128 0x3
  757 00c3 04       		.byte	0x4
  758 00c4 04       		.byte	0x4
- 759 00c5 84020000 		.4byte	.LASF18
+ 759 00c5 C4020000 		.4byte	.LASF18
  760 00c9 03       		.uleb128 0x3
  761 00ca 08       		.byte	0x8
  762 00cb 04       		.byte	0x4
- 763 00cc 36050000 		.4byte	.LASF19
+ 763 00cc 76050000 		.4byte	.LASF19
  764 00d0 05       		.uleb128 0x5
- 765 00d1 84030000 		.4byte	.LASF20
+ 765 00d1 C4030000 		.4byte	.LASF20
  766 00d5 04       		.byte	0x4
  767 00d6 8203     		.2byte	0x382
  768 00d8 A9000000 		.4byte	0xa9
  769 00dc 05       		.uleb128 0x5
- 770 00dd 16020000 		.4byte	.LASF21
+ 770 00dd 56020000 		.4byte	.LASF21
  771 00e1 04       		.byte	0x4
  772 00e2 8503     		.2byte	0x385
  773 00e4 93000000 		.4byte	0x93
  774 00e8 05       		.uleb128 0x5
- 775 00e9 D9010000 		.4byte	.LASF22
+ 775 00e9 19020000 		.4byte	.LASF22
  776 00ed 04       		.byte	0x4
  777 00ee 8603     		.2byte	0x386
  778 00f0 9E000000 		.4byte	0x9e
  779 00f4 05       		.uleb128 0x5
- 780 00f5 18050000 		.4byte	.LASF23
+ 780 00f5 58050000 		.4byte	.LASF23
  781 00f9 04       		.byte	0x4
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 46
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 46
 
 
  782 00fa 8703     		.2byte	0x387
  783 00fc A9000000 		.4byte	0xa9
  784 0100 04       		.uleb128 0x4
- 785 0101 E7020000 		.4byte	.LASF24
+ 785 0101 27030000 		.4byte	.LASF24
  786 0105 05       		.byte	0x5
  787 0106 FC       		.byte	0xfc
  788 0107 E8000000 		.4byte	0xe8
@@ -2720,26 +2720,26 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  798 011e 61       		.byte	0x61
  799 011f 48010000 		.4byte	0x148
  800 0123 07       		.uleb128 0x7
- 801 0124 BC010000 		.4byte	.LASF26
+ 801 0124 FC010000 		.4byte	.LASF26
  802 0128 01       		.byte	0x1
  803 0129 07       		.uleb128 0x7
- 804 012a 1F040000 		.4byte	.LASF27
+ 804 012a 5F040000 		.4byte	.LASF27
  805 012e 02       		.byte	0x2
  806 012f 07       		.uleb128 0x7
- 807 0130 F3040000 		.4byte	.LASF28
+ 807 0130 33050000 		.4byte	.LASF28
  808 0134 03       		.byte	0x3
  809 0135 07       		.uleb128 0x7
- 810 0136 66050000 		.4byte	.LASF29
+ 810 0136 A6050000 		.4byte	.LASF29
  811 013a 04       		.byte	0x4
  812 013b 07       		.uleb128 0x7
  813 013c A5000000 		.4byte	.LASF30
  814 0140 05       		.byte	0x5
  815 0141 07       		.uleb128 0x7
- 816 0142 6C020000 		.4byte	.LASF31
+ 816 0142 AC020000 		.4byte	.LASF31
  817 0146 06       		.byte	0x6
  818 0147 00       		.byte	0
  819 0148 04       		.uleb128 0x4
- 820 0149 45050000 		.4byte	.LASF32
+ 820 0149 85050000 		.4byte	.LASF32
  821 014d 06       		.byte	0x6
  822 014e 68       		.byte	0x68
  823 014f 17010000 		.4byte	0x117
@@ -2749,22 +2749,22 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  827 0156 8C       		.byte	0x8c
  828 0157 D4010000 		.4byte	0x1d4
  829 015b 09       		.uleb128 0x9
- 830 015c 9E040000 		.4byte	.LASF33
+ 830 015c DE040000 		.4byte	.LASF33
  831 0160 06       		.byte	0x6
  832 0161 92       		.byte	0x92
  833 0162 E8000000 		.4byte	0xe8
  834 0166 00       		.byte	0
  835 0167 09       		.uleb128 0x9
- 836 0168 22030000 		.4byte	.LASF34
+ 836 0168 62030000 		.4byte	.LASF34
  837 016c 06       		.byte	0x6
  838 016d 97       		.byte	0x97
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 47
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 47
 
 
  839 016e 00010000 		.4byte	0x100
  840 0172 02       		.byte	0x2
  841 0173 09       		.uleb128 0x9
- 842 0174 D1010000 		.4byte	.LASF35
+ 842 0174 11020000 		.4byte	.LASF35
  843 0178 06       		.byte	0x6
  844 0179 9C       		.byte	0x9c
  845 017a DC000000 		.4byte	0xdc
@@ -2776,13 +2776,13 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  851 0186 DC000000 		.4byte	0xdc
  852 018a 05       		.byte	0x5
  853 018b 09       		.uleb128 0x9
- 854 018c 55030000 		.4byte	.LASF37
+ 854 018c 95030000 		.4byte	.LASF37
  855 0190 06       		.byte	0x6
  856 0191 A6       		.byte	0xa6
  857 0192 DC000000 		.4byte	0xdc
  858 0196 06       		.byte	0x6
  859 0197 09       		.uleb128 0x9
- 860 0198 17030000 		.4byte	.LASF38
+ 860 0198 57030000 		.4byte	.LASF38
  861 019c 06       		.byte	0x6
  862 019d AB       		.byte	0xab
  863 019e DC000000 		.4byte	0xdc
@@ -2800,7 +2800,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  875 01b6 D4010000 		.4byte	0x1d4
  876 01ba 09       		.byte	0x9
  877 01bb 09       		.uleb128 0x9
- 878 01bc 29020000 		.4byte	.LASF41
+ 878 01bc 69020000 		.4byte	.LASF41
  879 01c0 06       		.byte	0x6
  880 01c1 C3       		.byte	0xc3
  881 01c2 E8000000 		.4byte	0xe8
@@ -2818,12 +2818,12 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  893 01dd 0B       		.uleb128 0xb
  894 01de B4000000 		.4byte	0xb4
  895 01e2 00       		.byte	0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 48
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 48
 
 
  896 01e3 00       		.byte	0
  897 01e4 04       		.uleb128 0x4
- 898 01e5 19060000 		.4byte	.LASF43
+ 898 01e5 1A060000 		.4byte	.LASF43
  899 01e9 06       		.byte	0x6
  900 01ea C9       		.byte	0xc9
  901 01eb 53010000 		.4byte	0x153
@@ -2845,7 +2845,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  917 020d 3A020000 		.4byte	0x23a
  918 0211 02       		.byte	0x2
  919 0212 0E       		.uleb128 0xe
- 920 0213 3D050000 		.4byte	.LASF45
+ 920 0213 7D050000 		.4byte	.LASF45
  921 0217 06       		.byte	0x6
  922 0218 5A01     		.2byte	0x15a
  923 021a D4010000 		.4byte	0x1d4
@@ -2857,7 +2857,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  929 0227 00010000 		.4byte	0x100
  930 022b 06       		.byte	0x6
  931 022c 0E       		.uleb128 0xe
- 932 022d FF020000 		.4byte	.LASF47
+ 932 022d 3F030000 		.4byte	.LASF47
  933 0231 06       		.byte	0x6
  934 0232 6401     		.2byte	0x164
  935 0234 4A020000 		.4byte	0x24a
@@ -2878,10 +2878,10 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  950 0258 00       		.byte	0
  951 0259 00       		.byte	0
  952 025a 05       		.uleb128 0x5
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 49
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 49
 
 
- 953 025b E9030000 		.4byte	.LASF48
+ 953 025b 29040000 		.4byte	.LASF48
  954 025f 06       		.byte	0x6
  955 0260 6501     		.2byte	0x165
  956 0262 EF010000 		.4byte	0x1ef
@@ -2891,37 +2891,37 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  960 0269 4B02     		.2byte	0x24b
  961 026b E5020000 		.4byte	0x2e5
  962 026f 0E       		.uleb128 0xe
- 963 0270 35060000 		.4byte	.LASF49
+ 963 0270 36060000 		.4byte	.LASF49
  964 0274 06       		.byte	0x6
  965 0275 5402     		.2byte	0x254
  966 0277 E5020000 		.4byte	0x2e5
  967 027b 00       		.byte	0
  968 027c 0E       		.uleb128 0xe
- 969 027d D9040000 		.4byte	.LASF50
+ 969 027d 19050000 		.4byte	.LASF50
  970 0281 06       		.byte	0x6
  971 0282 5B02     		.2byte	0x25b
  972 0284 EC020000 		.4byte	0x2ec
  973 0288 04       		.byte	0x4
  974 0289 0E       		.uleb128 0xe
- 975 028a 82050000 		.4byte	.LASF51
+ 975 028a C2050000 		.4byte	.LASF51
  976 028e 06       		.byte	0x6
  977 028f 6102     		.2byte	0x261
  978 0291 EE020000 		.4byte	0x2ee
  979 0295 08       		.byte	0x8
  980 0296 0E       		.uleb128 0xe
- 981 0297 AF050000 		.4byte	.LASF52
+ 981 0297 EF050000 		.4byte	.LASF52
  982 029b 06       		.byte	0x6
  983 029c 6602     		.2byte	0x266
  984 029e EC020000 		.4byte	0x2ec
  985 02a2 0C       		.byte	0xc
  986 02a3 0E       		.uleb128 0xe
- 987 02a4 FE010000 		.4byte	.LASF53
+ 987 02a4 3E020000 		.4byte	.LASF53
  988 02a8 06       		.byte	0x6
  989 02a9 6D02     		.2byte	0x26d
  990 02ab F4020000 		.4byte	0x2f4
  991 02af 10       		.byte	0x10
  992 02b0 0E       		.uleb128 0xe
- 993 02b1 BA030000 		.4byte	.LASF54
+ 993 02b1 FA030000 		.4byte	.LASF54
  994 02b5 06       		.byte	0x6
  995 02b6 7202     		.2byte	0x272
  996 02b8 F4000000 		.4byte	0xf4
@@ -2933,16 +2933,16 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1002 02c5 E8000000 		.4byte	0xe8
  1003 02c9 18       		.byte	0x18
  1004 02ca 0E       		.uleb128 0xe
- 1005 02cb AC020000 		.4byte	.LASF56
+ 1005 02cb EC020000 		.4byte	.LASF56
  1006 02cf 06       		.byte	0x6
  1007 02d0 8402     		.2byte	0x284
  1008 02d2 DC000000 		.4byte	0xdc
  1009 02d6 1A       		.byte	0x1a
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 50
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 50
 
 
  1010 02d7 0E       		.uleb128 0xe
- 1011 02d8 2B030000 		.4byte	.LASF57
+ 1011 02d8 6B030000 		.4byte	.LASF57
  1012 02dc 06       		.byte	0x6
  1013 02dd 8C02     		.2byte	0x28c
  1014 02df DC000000 		.4byte	0xdc
@@ -2971,7 +2971,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1037 030a 9302     		.2byte	0x293
  1038 030c 1E030000 		.4byte	0x31e
  1039 0310 0E       		.uleb128 0xe
- 1040 0311 BF050000 		.4byte	.LASF59
+ 1040 0311 FF050000 		.4byte	.LASF59
  1041 0315 06       		.byte	0x6
  1042 0316 9802     		.2byte	0x298
  1043 0318 1E030000 		.4byte	0x31e
@@ -2990,7 +2990,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1056 0334 9902     		.2byte	0x299
  1057 0336 06030000 		.4byte	0x306
  1058 033a 13       		.uleb128 0x13
- 1059 033b 6A040000 		.4byte	.LASF93
+ 1059 033b AA040000 		.4byte	.LASF93
  1060 033f 01       		.byte	0x1
  1061 0340 3F       		.byte	0x3f
  1062 0341 00000000 		.4byte	.LFB36
@@ -2998,10 +2998,10 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1064 0349 01       		.uleb128 0x1
  1065 034a 9C       		.byte	0x9c
  1066 034b 14       		.uleb128 0x14
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 51
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 51
 
 
- 1067 034c 30020000 		.4byte	.LASF64
+ 1067 034c 70020000 		.4byte	.LASF64
  1068 0350 01       		.byte	0x1
  1069 0351 2A02     		.2byte	0x22a
  1070 0353 00000000 		.4byte	.LFB45
@@ -3010,7 +3010,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1073 035c 9C       		.byte	0x9c
  1074 035d 90030000 		.4byte	0x390
  1075 0361 15       		.uleb128 0x15
- 1076 0362 42060000 		.4byte	.LASF61
+ 1076 0362 43060000 		.4byte	.LASF61
  1077 0366 01       		.byte	0x1
  1078 0367 2A02     		.2byte	0x22a
  1079 0369 EE020000 		.4byte	0x2ee
@@ -3023,14 +3023,14 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1086 0377 F4000000 		.4byte	0xf4
  1087 037b 00000000 		.4byte	.LLST0
  1088 037f 16       		.uleb128 0x16
- 1089 0380 A9040000 		.4byte	.LASF63
+ 1089 0380 E9040000 		.4byte	.LASF63
  1090 0384 01       		.byte	0x1
  1091 0385 2A02     		.2byte	0x22a
  1092 0387 F4000000 		.4byte	0xf4
  1093 038b 21000000 		.4byte	.LLST1
  1094 038f 00       		.byte	0
  1095 0390 14       		.uleb128 0x14
- 1096 0391 80040000 		.4byte	.LASF65
+ 1096 0391 C0040000 		.4byte	.LASF65
  1097 0395 01       		.byte	0x1
  1098 0396 0F02     		.2byte	0x20f
  1099 0398 00000000 		.4byte	.LFB44
@@ -3039,7 +3039,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1102 03a1 9C       		.byte	0x9c
  1103 03a2 F3030000 		.4byte	0x3f3
  1104 03a6 16       		.uleb128 0x16
- 1105 03a7 42060000 		.4byte	.LASF61
+ 1105 03a7 43060000 		.4byte	.LASF61
  1106 03ab 01       		.byte	0x1
  1107 03ac 0F02     		.2byte	0x20f
  1108 03ae EE020000 		.4byte	0x2ee
@@ -3051,14 +3051,14 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1114 03be F4000000 		.4byte	0xf4
  1115 03c2 6E000000 		.4byte	.LLST3
  1116 03c6 17       		.uleb128 0x17
- 1117 03c7 DD030000 		.4byte	.LASF69
+ 1117 03c7 1D040000 		.4byte	.LASF69
  1118 03cb 01       		.byte	0x1
  1119 03cc 1102     		.2byte	0x211
  1120 03ce F4000000 		.4byte	0xf4
  1121 03d2 9A000000 		.4byte	.LLST4
  1122 03d6 18       		.uleb128 0x18
  1123 03d7 14000000 		.4byte	.LVL6
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 52
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 52
 
 
  1124 03db 4B030000 		.4byte	0x34b
@@ -3083,7 +3083,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1143 03f1 00       		.byte	0
  1144 03f2 00       		.byte	0
  1145 03f3 14       		.uleb128 0x14
- 1146 03f4 33030000 		.4byte	.LASF66
+ 1146 03f4 73030000 		.4byte	.LASF66
  1147 03f8 01       		.byte	0x1
  1148 03f9 F301     		.2byte	0x1f3
  1149 03fb 00000000 		.4byte	.LFB43
@@ -3092,7 +3092,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1152 0404 9C       		.byte	0x9c
  1153 0405 7B040000 		.4byte	0x47b
  1154 0409 16       		.uleb128 0x16
- 1155 040a 0F050000 		.4byte	.LASF67
+ 1155 040a 4F050000 		.4byte	.LASF67
  1156 040e 01       		.byte	0x1
  1157 040f F301     		.2byte	0x1f3
  1158 0411 F4000000 		.4byte	0xf4
@@ -3104,13 +3104,13 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1164 0421 F4000000 		.4byte	0xf4
  1165 0425 FD000000 		.4byte	.LLST6
  1166 0429 17       		.uleb128 0x17
- 1167 042a 42060000 		.4byte	.LASF61
+ 1167 042a 43060000 		.4byte	.LASF61
  1168 042e 01       		.byte	0x1
  1169 042f F501     		.2byte	0x1f5
  1170 0431 EE020000 		.4byte	0x2ee
  1171 0435 1E010000 		.4byte	.LLST7
  1172 0439 1A       		.uleb128 0x1a
- 1173 043a 7A030000 		.4byte	.LASF72
+ 1173 043a BA030000 		.4byte	.LASF72
  1174 043e 01       		.byte	0x1
  1175 043f F601     		.2byte	0x1f6
  1176 0441 7B040000 		.4byte	0x47b
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1178 0446 24000000 		.4byte	.LVL18
  1179 044a 90030000 		.4byte	0x390
  1180 044e 19       		.uleb128 0x19
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 53
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 53
 
 
  1181 044f 01       		.uleb128 0x1
@@ -3171,19 +3171,19 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1228 0481 1B       		.uleb128 0x1b
  1229 0482 FA020000 		.4byte	0x2fa
  1230 0486 14       		.uleb128 0x14
- 1231 0487 8D050000 		.4byte	.LASF70
+ 1231 0487 CD050000 		.4byte	.LASF70
  1232 048b 01       		.byte	0x1
  1233 048c C701     		.2byte	0x1c7
  1234 048e 00000000 		.4byte	.LFB42
  1235 0492 28000000 		.4byte	.LFE42-.LFB42
  1236 0496 01       		.uleb128 0x1
  1237 0497 9C       		.byte	0x9c
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 54
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 54
 
 
  1238 0498 EF040000 		.4byte	0x4ef
  1239 049c 16       		.uleb128 0x16
- 1240 049d 0F050000 		.4byte	.LASF67
+ 1240 049d 4F050000 		.4byte	.LASF67
  1241 04a1 01       		.byte	0x1
  1242 04a2 C701     		.2byte	0x1c7
  1243 04a4 F4000000 		.4byte	0xf4
@@ -3195,13 +3195,13 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1249 04b4 F4000000 		.4byte	0xf4
  1250 04b8 8D010000 		.4byte	.LLST9
  1251 04bc 17       		.uleb128 0x17
- 1252 04bd CB040000 		.4byte	.LASF71
+ 1252 04bd 0B050000 		.4byte	.LASF71
  1253 04c1 01       		.byte	0x1
  1254 04c2 CA01     		.2byte	0x1ca
  1255 04c4 F4000000 		.4byte	0xf4
  1256 04c8 CE010000 		.4byte	.LLST10
  1257 04cc 1A       		.uleb128 0x1a
- 1258 04cd 7A030000 		.4byte	.LASF72
+ 1258 04cd BA030000 		.4byte	.LASF72
  1259 04d1 01       		.byte	0x1
  1260 04d2 CC01     		.2byte	0x1cc
  1261 04d4 7B040000 		.4byte	0x47b
@@ -3232,13 +3232,13 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1286 0500 9C       		.byte	0x9c
  1287 0501 26050000 		.4byte	0x526
  1288 0505 17       		.uleb128 0x17
- 1289 0506 0F050000 		.4byte	.LASF67
+ 1289 0506 4F050000 		.4byte	.LASF67
  1290 050a 01       		.byte	0x1
  1291 050b A501     		.2byte	0x1a5
  1292 050d F4000000 		.4byte	0xf4
  1293 0511 E1010000 		.4byte	.LLST11
  1294 0515 18       		.uleb128 0x18
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 55
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 55
 
 
  1295 0516 0C000000 		.4byte	.LVL31
@@ -3252,7 +3252,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1303 0524 00       		.byte	0
  1304 0525 00       		.byte	0
  1305 0526 1C       		.uleb128 0x1c
- 1306 0527 55020000 		.4byte	.LASF78
+ 1306 0527 95020000 		.4byte	.LASF78
  1307 052b 01       		.byte	0x1
  1308 052c A506     		.2byte	0x6a5
  1309 052e F4000000 		.4byte	0xf4
@@ -3268,7 +3268,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1319 0548 F4000000 		.4byte	0xf4
  1320 054c 23020000 		.4byte	.LLST12
  1321 0550 16       		.uleb128 0x16
- 1322 0551 5B050000 		.4byte	.LASF75
+ 1322 0551 9B050000 		.4byte	.LASF75
  1323 0555 01       		.byte	0x1
  1324 0556 A506     		.2byte	0x6a5
  1325 0558 F4000000 		.4byte	0xf4
@@ -3280,7 +3280,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1331 0566 F4000000 		.4byte	0xf4
  1332 056a 65020000 		.4byte	.LLST14
  1333 056e 16       		.uleb128 0x16
- 1334 056f A6020000 		.4byte	.LASF76
+ 1334 056f E6020000 		.4byte	.LASF76
  1335 0573 01       		.byte	0x1
  1336 0574 A506     		.2byte	0x6a5
  1337 0576 F4000000 		.4byte	0xf4
@@ -3294,11 +3294,11 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1345 058b 50       		.byte	0x50
  1346 058c 00       		.byte	0
  1347 058d 1F       		.uleb128 0x1f
- 1348 058e B1040000 		.4byte	.LASF79
+ 1348 058e F1040000 		.4byte	.LASF79
  1349 0592 01       		.byte	0x1
  1350 0593 FF       		.byte	0xff
  1351 0594 F4000000 		.4byte	0xf4
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 56
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 56
 
 
  1352 0598 00000000 		.4byte	.LFB40
@@ -3307,13 +3307,13 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1355 05a1 9C       		.byte	0x9c
  1356 05a2 69060000 		.4byte	0x669
  1357 05a6 16       		.uleb128 0x16
- 1358 05a7 1C020000 		.4byte	.LASF80
+ 1358 05a7 5C020000 		.4byte	.LASF80
  1359 05ab 01       		.byte	0x1
  1360 05ac 0001     		.2byte	0x100
  1361 05ae 69060000 		.4byte	0x669
  1362 05b2 A7020000 		.4byte	.LLST16
  1363 05b6 16       		.uleb128 0x16
- 1364 05b7 42060000 		.4byte	.LASF61
+ 1364 05b7 43060000 		.4byte	.LASF61
  1365 05bb 01       		.byte	0x1
  1366 05bc 0101     		.2byte	0x101
  1367 05be EE020000 		.4byte	0x2ee
@@ -3325,7 +3325,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1373 05ce F4000000 		.4byte	0xf4
  1374 05d2 FF020000 		.4byte	.LLST18
  1375 05d6 17       		.uleb128 0x17
- 1376 05d7 31050000 		.4byte	.LASF81
+ 1376 05d7 71050000 		.4byte	.LASF81
  1377 05db 01       		.byte	0x1
  1378 05dc 0401     		.2byte	0x104
  1379 05de F4000000 		.4byte	0xf4
@@ -3337,13 +3337,13 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1385 05ee F4000000 		.4byte	0xf4
  1386 05f2 54030000 		.4byte	.LLST20
  1387 05f6 17       		.uleb128 0x17
- 1388 05f7 DD030000 		.4byte	.LASF69
+ 1388 05f7 1D040000 		.4byte	.LASF69
  1389 05fb 01       		.byte	0x1
  1390 05fc 0601     		.2byte	0x106
  1391 05fe F4000000 		.4byte	0xf4
  1392 0602 7D030000 		.4byte	.LLST21
  1393 0606 17       		.uleb128 0x17
- 1394 0607 E5040000 		.4byte	.LASF83
+ 1394 0607 25050000 		.4byte	.LASF83
  1395 060b 01       		.byte	0x1
  1396 060c 0701     		.2byte	0x107
  1397 060e F4000000 		.4byte	0xf4
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1406 0624 9C010000 		.4byte	.LASF85
  1407 0628 01       		.byte	0x1
  1408 0629 0B01     		.2byte	0x10b
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 57
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 57
 
 
  1409 062b F4000000 		.4byte	0xf4
@@ -3406,7 +3406,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1451 066a 04       		.byte	0x4
  1452 066b E4010000 		.4byte	0x1e4
  1453 066f 1F       		.uleb128 0x1f
- 1454 0670 E0010000 		.4byte	.LASF86
+ 1454 0670 20020000 		.4byte	.LASF86
  1455 0674 01       		.byte	0x1
  1456 0675 C8       		.byte	0xc8
  1457 0676 D0000000 		.4byte	0xd0
@@ -3416,9 +3416,9 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1461 0683 9C       		.byte	0x9c
  1462 0684 1A070000 		.4byte	0x71a
  1463 0688 22       		.uleb128 0x22
- 1464 0689 0F050000 		.4byte	.LASF67
+ 1464 0689 4F050000 		.4byte	.LASF67
  1465 068d 01       		.byte	0x1
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 58
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 58
 
 
  1466 068e C8       		.byte	0xc8
@@ -3437,18 +3437,18 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1479 06ad F4000000 		.4byte	0xf4
  1480 06b1 33040000 		.4byte	.LLST26
  1481 06b5 23       		.uleb128 0x23
- 1482 06b6 42060000 		.4byte	.LASF61
+ 1482 06b6 43060000 		.4byte	.LASF61
  1483 06ba 01       		.byte	0x1
  1484 06bb CC       		.byte	0xcc
  1485 06bc EE020000 		.4byte	0x2ee
  1486 06c0 52040000 		.4byte	.LLST27
  1487 06c4 24       		.uleb128 0x24
- 1488 06c5 7A030000 		.4byte	.LASF72
+ 1488 06c5 BA030000 		.4byte	.LASF72
  1489 06c9 01       		.byte	0x1
  1490 06ca CD       		.byte	0xcd
  1491 06cb 7B040000 		.4byte	0x47b
  1492 06cf 23       		.uleb128 0x23
- 1493 06d0 1C020000 		.4byte	.LASF80
+ 1493 06d0 5C020000 		.4byte	.LASF80
  1494 06d4 01       		.byte	0x1
  1495 06d5 CE       		.byte	0xce
  1496 06d6 69060000 		.4byte	0x669
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1520 06fa 31       		.byte	0x31
  1521 06fb 24       		.byte	0x24
  1522 06fc 76       		.byte	0x76
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 59
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 59
 
 
  1523 06fd 00       		.sleb128 0
@@ -3511,7 +3511,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1550 0718 00       		.byte	0
  1551 0719 00       		.byte	0
  1552 071a 1F       		.uleb128 0x1f
- 1553 071b 01040000 		.4byte	.LASF87
+ 1553 071b 41040000 		.4byte	.LASF87
  1554 071f 01       		.byte	0x1
  1555 0720 8F       		.byte	0x8f
  1556 0721 D0000000 		.4byte	0xd0
@@ -3521,7 +3521,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1560 072e 9C       		.byte	0x9c
  1561 072f 91070000 		.4byte	0x791
  1562 0733 22       		.uleb128 0x22
- 1563 0734 0F050000 		.4byte	.LASF67
+ 1563 0734 4F050000 		.4byte	.LASF67
  1564 0738 01       		.byte	0x1
  1565 0739 8F       		.byte	0x8f
  1566 073a F4000000 		.4byte	0xf4
@@ -3533,16 +3533,16 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1572 0749 F4000000 		.4byte	0xf4
  1573 074d EE040000 		.4byte	.LLST30
  1574 0751 23       		.uleb128 0x23
- 1575 0752 CB040000 		.4byte	.LASF71
+ 1575 0752 0B050000 		.4byte	.LASF71
  1576 0756 01       		.byte	0x1
  1577 0757 92       		.byte	0x92
  1578 0758 F4000000 		.4byte	0xf4
  1579 075c 2F050000 		.4byte	.LLST31
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 60
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 60
 
 
  1580 0760 24       		.uleb128 0x24
- 1581 0761 7A030000 		.4byte	.LASF72
+ 1581 0761 BA030000 		.4byte	.LASF72
  1582 0765 01       		.byte	0x1
  1583 0766 94       		.byte	0x94
  1584 0767 7B040000 		.4byte	0x47b
@@ -3570,7 +3570,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1606 078f 00       		.byte	0
  1607 0790 00       		.byte	0
  1608 0791 1F       		.uleb128 0x1f
- 1609 0792 4E040000 		.4byte	.LASF89
+ 1609 0792 8E040000 		.4byte	.LASF89
  1610 0796 01       		.byte	0x1
  1611 0797 62       		.byte	0x62
  1612 0798 D0000000 		.4byte	0xd0
@@ -3580,7 +3580,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1616 07a5 9C       		.byte	0x9c
  1617 07a6 D9070000 		.4byte	0x7d9
  1618 07aa 23       		.uleb128 0x23
- 1619 07ab 0F050000 		.4byte	.LASF67
+ 1619 07ab 4F050000 		.4byte	.LASF67
  1620 07af 01       		.byte	0x1
  1621 07b0 64       		.byte	0x64
  1622 07b1 F4000000 		.4byte	0xf4
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1634 07d2 01       		.uleb128 0x1
  1635 07d3 50       		.byte	0x50
  1636 07d4 02       		.uleb128 0x2
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 61
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 61
 
 
  1637 07d5 74       		.byte	0x74
@@ -3606,7 +3606,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1639 07d7 00       		.byte	0
  1640 07d8 00       		.byte	0
  1641 07d9 25       		.uleb128 0x25
- 1642 07da C9050000 		.4byte	.LASF94
+ 1642 07da 09060000 		.4byte	.LASF94
  1643 07de 06       		.byte	0x6
  1644 07df 2704     		.2byte	0x427
  1645 07e1 E5070000 		.4byte	0x7e5
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1691 0028 00       		.byte	0
  1692 0029 04       		.uleb128 0x4
  1693 002a 16       		.uleb128 0x16
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 62
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 62
 
 
  1694 002b 00       		.byte	0
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1748 0061 0B       		.uleb128 0xb
  1749 0062 3B       		.uleb128 0x3b
  1750 0063 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 63
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 63
 
 
  1751 0064 01       		.uleb128 0x1
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1805 009a 08       		.uleb128 0x8
  1806 009b 3A       		.uleb128 0x3a
  1807 009c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 64
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 64
 
 
  1808 009d 3B       		.uleb128 0x3b
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1862 00d3 13       		.uleb128 0x13
  1863 00d4 00       		.byte	0
  1864 00d5 00       		.byte	0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 65
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 65
 
 
  1865 00d6 13       		.uleb128 0x13
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1919 010e 0B       		.uleb128 0xb
  1920 010f 3B       		.uleb128 0x3b
  1921 0110 05       		.uleb128 0x5
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 66
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 66
 
 
  1922 0111 49       		.uleb128 0x49
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  1976 014c 1A       		.uleb128 0x1a
  1977 014d 34       		.uleb128 0x34
  1978 014e 00       		.byte	0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 67
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 67
 
 
  1979 014f 03       		.uleb128 0x3
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2033 0186 13       		.uleb128 0x13
  2034 0187 02       		.uleb128 0x2
  2035 0188 17       		.uleb128 0x17
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 68
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 68
 
 
  2036 0189 00       		.byte	0
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2090 01c0 13       		.uleb128 0x13
  2091 01c1 1C       		.uleb128 0x1c
  2092 01c2 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 69
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 69
 
 
  2093 01c3 00       		.byte	0
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2147 01fb 00       		.byte	0
  2148 01fc 00       		.byte	0
  2149 01fd 25       		.uleb128 0x25
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 70
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 70
 
 
  2150 01fe 34       		.uleb128 0x34
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2204 0055 0100     		.2byte	0x1
  2205 0057 56       		.byte	0x56
  2206 0058 1C000000 		.4byte	.LVL11
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 71
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 71
 
 
  2207 005c 1E000000 		.4byte	.LFE44
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2261 00e0 20000000 		.4byte	.LVL17
  2262 00e4 0100     		.2byte	0x1
  2263 00e6 50       		.byte	0x50
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 72
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 72
 
 
  2264 00e7 20000000 		.4byte	.LVL17
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2318 0158 9F       		.byte	0x9f
  2319 0159 00000000 		.4byte	0
  2320 015d 00000000 		.4byte	0
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 73
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 73
 
 
  2321              	.LLST8:
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2375 01eb 3A       		.byte	0x3a
  2376 01ec 9F       		.byte	0x9f
  2377 01ed 06000000 		.4byte	.LVL30
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 74
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 74
 
 
  2378 01f1 0E000000 		.4byte	.LVL32
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2432 0278 0400     		.2byte	0x4
  2433 027a F3       		.byte	0xf3
  2434 027b 01       		.uleb128 0x1
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 75
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 75
 
 
  2435 027c 52       		.byte	0x52
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2489              	.LLST18:
  2490 02ff 00000000 		.4byte	.LVL41
  2491 0303 12000000 		.4byte	.LVL43
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 76
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 76
 
 
  2492 0307 0100     		.2byte	0x1
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2546 0393 54       		.byte	0x54
  2547 0394 90000000 		.4byte	.LVL58
  2548 0398 92000000 		.4byte	.LVL59
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 77
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 77
 
 
  2549 039c 0100     		.2byte	0x1
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2603 0425 0400     		.2byte	0x4
  2604 0427 F3       		.byte	0xf3
  2605 0428 01       		.uleb128 0x1
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 78
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 78
 
 
  2606 0429 51       		.byte	0x51
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2660 049f 54       		.byte	0x54
  2661 04a0 26000000 		.4byte	.LVL71
  2662 04a4 26000000 		.4byte	.LVL72
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 79
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 79
 
 
  2663 04a8 1000     		.2byte	0x10
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2717 051a 28000000 		.4byte	.LVL82
  2718 051e 30000000 		.4byte	.LFE38
  2719 0522 0300     		.2byte	0x3
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 80
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 80
 
 
  2720 0524 73       		.byte	0x73
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2774              	.LLST34:
  2775 05ae 02000000 		.4byte	.LVL85
  2776 05b2 08000000 		.4byte	.LVL86
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 81
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 81
 
 
  2777 05b6 0200     		.2byte	0x2
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2831 001c 2C000000 		.4byte	.LFE43
  2832 0020 00000000 		.4byte	.LFB42
  2833 0024 28000000 		.4byte	.LFE42
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 82
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 82
 
 
  2834 0028 00000000 		.4byte	.LFB41
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2867              	.LASF55:
  2868 0061 746F7461 		.ascii	"totalNumSns\000"
  2868      6C4E756D 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 83
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 83
 
 
  2868      536E7300 
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2890 017b 77645479 		.ascii	"wdType\000"
  2890      706500
  2891              	.LASF77:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 84
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 84
 
 
  2892 0182 66696C74 		.ascii	"filteredOutput\000"
@@ -5001,358 +5001,358 @@ ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 1
  2900 01b1 5F5F7569 		.ascii	"__uint16_t\000"
  2900      6E743136 
  2900      5F7400
- 2901              	.LASF26:
- 2902 01bc 43617053 		.ascii	"CapSense_WD_BUTTON_E\000"
- 2902      656E7365 
- 2902      5F57445F 
- 2902      42555454 
- 2902      4F4E5F45 
- 2903              	.LASF35:
- 2904 01d1 6E6F6973 		.ascii	"noiseTh\000"
- 2904      65546800 
- 2905              	.LASF22:
- 2906 01d9 75696E74 		.ascii	"uint16\000"
- 2906      313600
- 2907              	.LASF86:
- 2908 01e0 43617053 		.ascii	"CapSense_UpdateSensorBaseline\000"
- 2908      656E7365 
- 2908      5F557064 
- 2908      61746553 
- 2908      656E736F 
- 2909              	.LASF53:
- 2910 01fe 70747232 		.ascii	"ptr2DebounceArr\000"
- 2910      4465626F 
- 2910      756E6365 
- 2910      41727200 
- 2911              	.LASF13:
- 2912 020e 75696E74 		.ascii	"uint8_t\000"
- 2912      385F7400 
- 2913              	.LASF21:
- 2914 0216 75696E74 		.ascii	"uint8\000"
- 2914      3800
- 2915              	.LASF80:
- 2916 021c 70747257 		.ascii	"ptrWidgetRam\000"
- 2916      69646765 
- 2916      7452616D 
- 2916      00
- 2917              	.LASF41:
- 2918 0229 736E7343 		.ascii	"snsClk\000"
- 2918      6C6B00
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 85
+ 2901              	.LASF92:
+ 2902 01bc 433A5C55 		.ascii	"C:\\Users\\Coal\\Documents\\Github\\Capasitor PSoC "
+ 2902      73657273 
+ 2902      5C436F61 
+ 2902      6C5C446F 
+ 2902      63756D65 
+ 2903 01ea 365C4361 		.ascii	"6\\Capasitor.cydsn\000"
+ 2903      70617369 
+ 2903      746F722E 
+ 2903      63796473 
+ 2903      6E00
+ 2904              	.LASF26:
+ 2905 01fc 43617053 		.ascii	"CapSense_WD_BUTTON_E\000"
+ 2905      656E7365 
+ 2905      5F57445F 
+ 2905      42555454 
+ 2905      4F4E5F45 
+ 2906              	.LASF35:
+ 2907 0211 6E6F6973 		.ascii	"noiseTh\000"
+ 2907      65546800 
+ 2908              	.LASF22:
+ 2909 0219 75696E74 		.ascii	"uint16\000"
+ 2909      313600
+ 2910              	.LASF86:
+ 2911 0220 43617053 		.ascii	"CapSense_UpdateSensorBaseline\000"
+ 2911      656E7365 
+ 2911      5F557064 
+ 2911      61746553 
+ 2911      656E736F 
+ 2912              	.LASF53:
+ 2913 023e 70747232 		.ascii	"ptr2DebounceArr\000"
+ 2913      4465626F 
+ 2913      756E6365 
+ 2913      41727200 
+ 2914              	.LASF13:
+ 2915 024e 75696E74 		.ascii	"uint8_t\000"
+ 2915      385F7400 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 85
 
 
- 2919              	.LASF64:
- 2920 0230 43617053 		.ascii	"CapSense_FtInitializeBaselineChannel\000"
- 2920      656E7365 
- 2920      5F467449 
- 2920      6E697469 
- 2920      616C697A 
- 2921              	.LASF78:
- 2922 0255 43617053 		.ascii	"CapSense_FtIIR1stOrder\000"
- 2922      656E7365 
- 2922      5F467449 
- 2922      49523173 
- 2922      744F7264 
- 2923              	.LASF31:
- 2924 026c 43617053 		.ascii	"CapSense_WD_PROXIMITY_E\000"
- 2924      656E7365 
- 2924      5F57445F 
- 2924      50524F58 
- 2924      494D4954 
- 2925              	.LASF18:
- 2926 0284 666C6F61 		.ascii	"float\000"
- 2926      7400
- 2927              	.LASF1:
- 2928 028a 6C6F6E67 		.ascii	"long long int\000"
- 2928      206C6F6E 
- 2928      6720696E 
- 2928      7400
- 2929              	.LASF17:
- 2930 0298 63686172 		.ascii	"char\000"
- 2930      00
- 2931              	.LASF9:
- 2932 029d 6C6F6E67 		.ascii	"long int\000"
- 2932      20696E74 
- 2932      00
- 2933              	.LASF76:
- 2934 02a6 73686966 		.ascii	"shift\000"
- 2934      7400
- 2935              	.LASF56:
- 2936 02ac 77646774 		.ascii	"wdgtType\000"
- 2936      54797065 
- 2936      00
- 2937              	.LASF91:
- 2938 02b5 47656E65 		.ascii	"Generated_Source\\PSoC6\\CapSense_Filter.c\000"
- 2938      72617465 
- 2938      645F536F 
- 2938      75726365 
- 2938      5C50536F 
- 2939              	.LASF16:
- 2940 02de 73697A65 		.ascii	"sizetype\000"
- 2940      74797065 
- 2940      00
- 2941              	.LASF24:
- 2942 02e7 43617053 		.ascii	"CapSense_THRESHOLD_TYPE\000"
- 2942      656E7365 
- 2942      5F544852 
- 2942      4553484F 
- 2942      4C445F54 
- 2943              	.LASF47:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 86
+ 2916              	.LASF21:
+ 2917 0256 75696E74 		.ascii	"uint8\000"
+ 2917      3800
+ 2918              	.LASF80:
+ 2919 025c 70747257 		.ascii	"ptrWidgetRam\000"
+ 2919      69646765 
+ 2919      7452616D 
+ 2919      00
+ 2920              	.LASF41:
+ 2921 0269 736E7343 		.ascii	"snsClk\000"
+ 2921      6C6B00
+ 2922              	.LASF64:
+ 2923 0270 43617053 		.ascii	"CapSense_FtInitializeBaselineChannel\000"
+ 2923      656E7365 
+ 2923      5F467449 
+ 2923      6E697469 
+ 2923      616C697A 
+ 2924              	.LASF78:
+ 2925 0295 43617053 		.ascii	"CapSense_FtIIR1stOrder\000"
+ 2925      656E7365 
+ 2925      5F467449 
+ 2925      49523173 
+ 2925      744F7264 
+ 2926              	.LASF31:
+ 2927 02ac 43617053 		.ascii	"CapSense_WD_PROXIMITY_E\000"
+ 2927      656E7365 
+ 2927      5F57445F 
+ 2927      50524F58 
+ 2927      494D4954 
+ 2928              	.LASF18:
+ 2929 02c4 666C6F61 		.ascii	"float\000"
+ 2929      7400
+ 2930              	.LASF1:
+ 2931 02ca 6C6F6E67 		.ascii	"long long int\000"
+ 2931      206C6F6E 
+ 2931      6720696E 
+ 2931      7400
+ 2932              	.LASF17:
+ 2933 02d8 63686172 		.ascii	"char\000"
+ 2933      00
+ 2934              	.LASF9:
+ 2935 02dd 6C6F6E67 		.ascii	"long int\000"
+ 2935      20696E74 
+ 2935      00
+ 2936              	.LASF76:
+ 2937 02e6 73686966 		.ascii	"shift\000"
+ 2937      7400
+ 2938              	.LASF56:
+ 2939 02ec 77646774 		.ascii	"wdgtType\000"
+ 2939      54797065 
+ 2939      00
+ 2940              	.LASF91:
+ 2941 02f5 47656E65 		.ascii	"Generated_Source\\PSoC6\\CapSense_Filter.c\000"
+ 2941      72617465 
+ 2941      645F536F 
+ 2941      75726365 
+ 2941      5C50536F 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 86
 
 
- 2944 02ff 6E656742 		.ascii	"negBslnRstCnt\000"
- 2944      736C6E52 
- 2944      7374436E 
- 2944      7400
- 2945              	.LASF6:
- 2946 030d 5F5F7569 		.ascii	"__uint8_t\000"
- 2946      6E74385F 
- 2946      7400
- 2947              	.LASF38:
- 2948 0317 6F6E4465 		.ascii	"onDebounce\000"
- 2948      626F756E 
- 2948      636500
- 2949              	.LASF34:
- 2950 0322 66696E67 		.ascii	"fingerTh\000"
- 2950      65725468 
- 2950      00
- 2951              	.LASF57:
- 2952 032b 6E756D43 		.ascii	"numCols\000"
- 2952      6F6C7300 
- 2953              	.LASF66:
- 2954 0333 43617053 		.ascii	"CapSense_InitializeSensorBaseline\000"
- 2954      656E7365 
- 2954      5F496E69 
- 2954      7469616C 
- 2954      697A6553 
- 2955              	.LASF37:
- 2956 0355 68797374 		.ascii	"hysteresis\000"
- 2956      65726573 
- 2956      697300
- 2957              	.LASF2:
- 2958 0360 6C6F6E67 		.ascii	"long double\000"
- 2958      20646F75 
- 2958      626C6500 
- 2959              	.LASF4:
- 2960 036c 756E7369 		.ascii	"unsigned char\000"
- 2960      676E6564 
- 2960      20636861 
- 2960      7200
- 2961              	.LASF72:
- 2962 037a 70747257 		.ascii	"ptrWidget\000"
- 2962      69646765 
- 2962      7400
- 2963              	.LASF20:
- 2964 0384 63795F73 		.ascii	"cy_status\000"
- 2964      74617475 
- 2964      7300
- 2965              	.LASF3:
- 2966 038e 7369676E 		.ascii	"signed char\000"
- 2966      65642063 
- 2966      68617200 
- 2967              	.LASF12:
- 2968 039a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2968      206C6F6E 
- 2968      6720756E 
- 2968      7369676E 
- 2968      65642069 
- 2969              	.LASF15:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 87
+ 2942              	.LASF16:
+ 2943 031e 73697A65 		.ascii	"sizetype\000"
+ 2943      74797065 
+ 2943      00
+ 2944              	.LASF24:
+ 2945 0327 43617053 		.ascii	"CapSense_THRESHOLD_TYPE\000"
+ 2945      656E7365 
+ 2945      5F544852 
+ 2945      4553484F 
+ 2945      4C445F54 
+ 2946              	.LASF47:
+ 2947 033f 6E656742 		.ascii	"negBslnRstCnt\000"
+ 2947      736C6E52 
+ 2947      7374436E 
+ 2947      7400
+ 2948              	.LASF6:
+ 2949 034d 5F5F7569 		.ascii	"__uint8_t\000"
+ 2949      6E74385F 
+ 2949      7400
+ 2950              	.LASF38:
+ 2951 0357 6F6E4465 		.ascii	"onDebounce\000"
+ 2951      626F756E 
+ 2951      636500
+ 2952              	.LASF34:
+ 2953 0362 66696E67 		.ascii	"fingerTh\000"
+ 2953      65725468 
+ 2953      00
+ 2954              	.LASF57:
+ 2955 036b 6E756D43 		.ascii	"numCols\000"
+ 2955      6F6C7300 
+ 2956              	.LASF66:
+ 2957 0373 43617053 		.ascii	"CapSense_InitializeSensorBaseline\000"
+ 2957      656E7365 
+ 2957      5F496E69 
+ 2957      7469616C 
+ 2957      697A6553 
+ 2958              	.LASF37:
+ 2959 0395 68797374 		.ascii	"hysteresis\000"
+ 2959      65726573 
+ 2959      697300
+ 2960              	.LASF2:
+ 2961 03a0 6C6F6E67 		.ascii	"long double\000"
+ 2961      20646F75 
+ 2961      626C6500 
+ 2962              	.LASF4:
+ 2963 03ac 756E7369 		.ascii	"unsigned char\000"
+ 2963      676E6564 
+ 2963      20636861 
+ 2963      7200
+ 2964              	.LASF72:
+ 2965 03ba 70747257 		.ascii	"ptrWidget\000"
+ 2965      69646765 
+ 2965      7400
+ 2966              	.LASF20:
+ 2967 03c4 63795F73 		.ascii	"cy_status\000"
+ 2967      74617475 
+ 2967      7300
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 87
 
 
- 2970 03b1 75696E74 		.ascii	"uint32_t\000"
- 2970      33325F74 
- 2970      00
- 2971              	.LASF54:
- 2972 03ba 73746174 		.ascii	"staticConfig\000"
- 2972      6963436F 
- 2972      6E666967 
- 2972      00
- 2973              	.LASF0:
- 2974 03c7 756E7369 		.ascii	"unsigned int\000"
- 2974      676E6564 
- 2974      20696E74 
- 2974      00
- 2975              	.LASF14:
- 2976 03d4 75696E74 		.ascii	"uint16_t\000"
- 2976      31365F74 
- 2976      00
- 2977              	.LASF69:
- 2978 03dd 66726571 		.ascii	"freqChannel\000"
- 2978      4368616E 
- 2978      6E656C00 
- 2979              	.LASF48:
- 2980 03e9 43617053 		.ascii	"CapSense_RAM_SNS_STRUCT\000"
- 2980      656E7365 
- 2980      5F52414D 
- 2980      5F534E53 
- 2980      5F535452 
- 2981              	.LASF87:
- 2982 0401 43617053 		.ascii	"CapSense_UpdateWidgetBaseline\000"
- 2982      656E7365 
- 2982      5F557064 
- 2982      61746557 
- 2982      69646765 
- 2983              	.LASF27:
- 2984 041f 43617053 		.ascii	"CapSense_WD_LINEAR_SLIDER_E\000"
- 2984      656E7365 
- 2984      5F57445F 
- 2984      4C494E45 
- 2984      41525F53 
- 2985              	.LASF8:
- 2986 043b 73686F72 		.ascii	"short unsigned int\000"
- 2986      7420756E 
- 2986      7369676E 
- 2986      65642069 
- 2986      6E7400
- 2987              	.LASF89:
- 2988 044e 43617053 		.ascii	"CapSense_UpdateAllBaselines\000"
- 2988      656E7365 
- 2988      5F557064 
- 2988      61746541 
- 2988      6C6C4261 
- 2989              	.LASF93:
- 2990 046a 43617053 		.ascii	"CapSense_FtInitialize\000"
- 2990      656E7365 
- 2990      5F467449 
- 2990      6E697469 
- 2990      616C697A 
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 88
+ 2968              	.LASF3:
+ 2969 03ce 7369676E 		.ascii	"signed char\000"
+ 2969      65642063 
+ 2969      68617200 
+ 2970              	.LASF12:
+ 2971 03da 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2971      206C6F6E 
+ 2971      6720756E 
+ 2971      7369676E 
+ 2971      65642069 
+ 2972              	.LASF15:
+ 2973 03f1 75696E74 		.ascii	"uint32_t\000"
+ 2973      33325F74 
+ 2973      00
+ 2974              	.LASF54:
+ 2975 03fa 73746174 		.ascii	"staticConfig\000"
+ 2975      6963436F 
+ 2975      6E666967 
+ 2975      00
+ 2976              	.LASF0:
+ 2977 0407 756E7369 		.ascii	"unsigned int\000"
+ 2977      676E6564 
+ 2977      20696E74 
+ 2977      00
+ 2978              	.LASF14:
+ 2979 0414 75696E74 		.ascii	"uint16_t\000"
+ 2979      31365F74 
+ 2979      00
+ 2980              	.LASF69:
+ 2981 041d 66726571 		.ascii	"freqChannel\000"
+ 2981      4368616E 
+ 2981      6E656C00 
+ 2982              	.LASF48:
+ 2983 0429 43617053 		.ascii	"CapSense_RAM_SNS_STRUCT\000"
+ 2983      656E7365 
+ 2983      5F52414D 
+ 2983      5F534E53 
+ 2983      5F535452 
+ 2984              	.LASF87:
+ 2985 0441 43617053 		.ascii	"CapSense_UpdateWidgetBaseline\000"
+ 2985      656E7365 
+ 2985      5F557064 
+ 2985      61746557 
+ 2985      69646765 
+ 2986              	.LASF27:
+ 2987 045f 43617053 		.ascii	"CapSense_WD_LINEAR_SLIDER_E\000"
+ 2987      656E7365 
+ 2987      5F57445F 
+ 2987      4C494E45 
+ 2987      41525F53 
+ 2988              	.LASF8:
+ 2989 047b 73686F72 		.ascii	"short unsigned int\000"
+ 2989      7420756E 
+ 2989      7369676E 
+ 2989      65642069 
+ 2989      6E7400
+ 2990              	.LASF89:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 88
 
 
- 2991              	.LASF65:
- 2992 0480 43617053 		.ascii	"CapSense_FtInitializeBaseline\000"
- 2992      656E7365 
- 2992      5F467449 
- 2992      6E697469 
- 2992      616C697A 
- 2993              	.LASF33:
- 2994 049e 7265736F 		.ascii	"resolution\000"
- 2994      6C757469 
- 2994      6F6E00
- 2995              	.LASF63:
- 2996 04a9 6368616E 		.ascii	"channel\000"
- 2996      6E656C00 
- 2997              	.LASF79:
- 2998 04b1 43617053 		.ascii	"CapSense_FtUpdateBaseline\000"
- 2998      656E7365 
- 2998      5F467455 
- 2998      70646174 
- 2998      65426173 
- 2999              	.LASF71:
- 3000 04cb 73656E73 		.ascii	"sensorsNumber\000"
- 3000      6F72734E 
- 3000      756D6265 
- 3000      7200
- 3001              	.LASF50:
- 3002 04d9 70747232 		.ascii	"ptr2WdgtRam\000"
- 3002      57646774 
- 3002      52616D00 
- 3003              	.LASF83:
- 3004 04e5 62617365 		.ascii	"baselineCoeff\000"
- 3004      6C696E65 
- 3004      436F6566 
- 3004      6600
- 3005              	.LASF28:
- 3006 04f3 43617053 		.ascii	"CapSense_WD_RADIAL_SLIDER_E\000"
- 3006      656E7365 
- 3006      5F57445F 
- 3006      52414449 
- 3006      414C5F53 
- 3007              	.LASF67:
- 3008 050f 77696467 		.ascii	"widgetId\000"
- 3008      65744964 
- 3008      00
- 3009              	.LASF23:
- 3010 0518 75696E74 		.ascii	"uint32\000"
- 3010      333200
- 3011              	.LASF11:
- 3012 051f 6C6F6E67 		.ascii	"long unsigned int\000"
- 3012      20756E73 
- 3012      69676E65 
- 3012      6420696E 
- 3012      7400
- 3013              	.LASF81:
- 3014 0531 7369676E 		.ascii	"sign\000"
- 3014      00
- 3015              	.LASF19:
- 3016 0536 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 89
+ 2991 048e 43617053 		.ascii	"CapSense_UpdateAllBaselines\000"
+ 2991      656E7365 
+ 2991      5F557064 
+ 2991      61746541 
+ 2991      6C6C4261 
+ 2992              	.LASF93:
+ 2993 04aa 43617053 		.ascii	"CapSense_FtInitialize\000"
+ 2993      656E7365 
+ 2993      5F467449 
+ 2993      6E697469 
+ 2993      616C697A 
+ 2994              	.LASF65:
+ 2995 04c0 43617053 		.ascii	"CapSense_FtInitializeBaseline\000"
+ 2995      656E7365 
+ 2995      5F467449 
+ 2995      6E697469 
+ 2995      616C697A 
+ 2996              	.LASF33:
+ 2997 04de 7265736F 		.ascii	"resolution\000"
+ 2997      6C757469 
+ 2997      6F6E00
+ 2998              	.LASF63:
+ 2999 04e9 6368616E 		.ascii	"channel\000"
+ 2999      6E656C00 
+ 3000              	.LASF79:
+ 3001 04f1 43617053 		.ascii	"CapSense_FtUpdateBaseline\000"
+ 3001      656E7365 
+ 3001      5F467455 
+ 3001      70646174 
+ 3001      65426173 
+ 3002              	.LASF71:
+ 3003 050b 73656E73 		.ascii	"sensorsNumber\000"
+ 3003      6F72734E 
+ 3003      756D6265 
+ 3003      7200
+ 3004              	.LASF50:
+ 3005 0519 70747232 		.ascii	"ptr2WdgtRam\000"
+ 3005      57646774 
+ 3005      52616D00 
+ 3006              	.LASF83:
+ 3007 0525 62617365 		.ascii	"baselineCoeff\000"
+ 3007      6C696E65 
+ 3007      436F6566 
+ 3007      6600
+ 3008              	.LASF28:
+ 3009 0533 43617053 		.ascii	"CapSense_WD_RADIAL_SLIDER_E\000"
+ 3009      656E7365 
+ 3009      5F57445F 
+ 3009      52414449 
+ 3009      414C5F53 
+ 3010              	.LASF67:
+ 3011 054f 77696467 		.ascii	"widgetId\000"
+ 3011      65744964 
+ 3011      00
+ 3012              	.LASF23:
+ 3013 0558 75696E74 		.ascii	"uint32\000"
+ 3013      333200
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 89
 
 
- 3016      6C6500
- 3017              	.LASF45:
- 3018 053d 62736C6E 		.ascii	"bslnExt\000"
- 3018      45787400 
- 3019              	.LASF32:
- 3020 0545 43617053 		.ascii	"CapSense_WD_TYPE_ENUM\000"
- 3020      656E7365 
- 3020      5F57445F 
- 3020      54595045 
- 3020      5F454E55 
- 3021              	.LASF75:
- 3022 055b 70726576 		.ascii	"prevOutput\000"
- 3022      4F757470 
- 3022      757400
- 3023              	.LASF29:
- 3024 0566 43617053 		.ascii	"CapSense_WD_MATRIX_BUTTON_E\000"
- 3024      656E7365 
- 3024      5F57445F 
- 3024      4D415452 
- 3024      49585F42 
- 3025              	.LASF51:
- 3026 0582 70747232 		.ascii	"ptr2SnsRam\000"
- 3026      536E7352 
- 3026      616D00
- 3027              	.LASF70:
- 3028 058d 43617053 		.ascii	"CapSense_InitializeWidgetBaseline\000"
- 3028      656E7365 
- 3028      5F496E69 
- 3028      7469616C 
- 3028      697A6557 
- 3029              	.LASF52:
- 3030 05af 70747232 		.ascii	"ptr2FltrHistory\000"
- 3030      466C7472 
- 3030      48697374 
- 3030      6F727900 
- 3031              	.LASF59:
- 3032 05bf 77646774 		.ascii	"wdgtArray\000"
- 3032      41727261 
- 3032      7900
- 3033              	.LASF94:
- 3034 05c9 43617053 		.ascii	"CapSense_dsFlash\000"
- 3034      656E7365 
- 3034      5F647346 
- 3034      6C617368 
- 3034      00
- 3035              	.LASF92:
- 3036 05da 433A5C55 		.ascii	"C:\\Users\\Coal\\Documents\\PSoC Creator\\Capasitor"
- 3036      73657273 
- 3036      5C436F61 
- 3036      6C5C446F 
- 3036      63756D65 
- 3037 0608 5C436170 		.ascii	"\\Capasitor.cydsn\000"
- 3037      61736974 
- 3037      6F722E63 
- 3037      7964736E 
+ 3014              	.LASF11:
+ 3015 055f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3015      20756E73 
+ 3015      69676E65 
+ 3015      6420696E 
+ 3015      7400
+ 3016              	.LASF81:
+ 3017 0571 7369676E 		.ascii	"sign\000"
+ 3017      00
+ 3018              	.LASF19:
+ 3019 0576 646F7562 		.ascii	"double\000"
+ 3019      6C6500
+ 3020              	.LASF45:
+ 3021 057d 62736C6E 		.ascii	"bslnExt\000"
+ 3021      45787400 
+ 3022              	.LASF32:
+ 3023 0585 43617053 		.ascii	"CapSense_WD_TYPE_ENUM\000"
+ 3023      656E7365 
+ 3023      5F57445F 
+ 3023      54595045 
+ 3023      5F454E55 
+ 3024              	.LASF75:
+ 3025 059b 70726576 		.ascii	"prevOutput\000"
+ 3025      4F757470 
+ 3025      757400
+ 3026              	.LASF29:
+ 3027 05a6 43617053 		.ascii	"CapSense_WD_MATRIX_BUTTON_E\000"
+ 3027      656E7365 
+ 3027      5F57445F 
+ 3027      4D415452 
+ 3027      49585F42 
+ 3028              	.LASF51:
+ 3029 05c2 70747232 		.ascii	"ptr2SnsRam\000"
+ 3029      536E7352 
+ 3029      616D00
+ 3030              	.LASF70:
+ 3031 05cd 43617053 		.ascii	"CapSense_InitializeWidgetBaseline\000"
+ 3031      656E7365 
+ 3031      5F496E69 
+ 3031      7469616C 
+ 3031      697A6557 
+ 3032              	.LASF52:
+ 3033 05ef 70747232 		.ascii	"ptr2FltrHistory\000"
+ 3033      466C7472 
+ 3033      48697374 
+ 3033      6F727900 
+ 3034              	.LASF59:
+ 3035 05ff 77646774 		.ascii	"wdgtArray\000"
+ 3035      41727261 
+ 3035      7900
+ 3036              	.LASF94:
+ 3037 0609 43617053 		.ascii	"CapSense_dsFlash\000"
+ 3037      656E7365 
+ 3037      5F647346 
+ 3037      6C617368 
  3037      00
  3038              	.LASF43:
-ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccFtkgG4.s 			page 90
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccQAqnRP.s 			page 90
 
 
- 3039 0619 43617053 		.ascii	"CapSense_RAM_WD_BASE_STRUCT\000"
+ 3039 061a 43617053 		.ascii	"CapSense_RAM_WD_BASE_STRUCT\000"
  3039      656E7365 
  3039      5F52414D 
  3039      5F57445F 
  3039      42415345 
  3040              	.LASF49:
- 3041 0635 70747232 		.ascii	"ptr2SnsFlash\000"
+ 3041 0636 70747232 		.ascii	"ptr2SnsFlash\000"
  3041      536E7346 
  3041      6C617368 
  3041      00
  3042              	.LASF61:
- 3043 0642 70747253 		.ascii	"ptrSensor\000"
+ 3043 0643 70747253 		.ascii	"ptrSensor\000"
  3043      656E736F 
  3043      7200
  3044              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
