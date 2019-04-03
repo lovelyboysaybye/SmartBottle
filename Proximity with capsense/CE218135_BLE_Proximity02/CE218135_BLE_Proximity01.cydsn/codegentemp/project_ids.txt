@@ -1,6 +1,0 @@
-C:\Users\Coal\Documents\Github\Proximity with capsense\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj|d844506f-1edf-4795-8f4e-66ead6ac47ed
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0a8ba12a-8739-4860-9e0c-4f6a03bfa278
-C:\Users\Coal\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|a9376267-e00f-415d-9b86-e8673f2641ac
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d002f564-42f2-456d-9969-2b7286f9296c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e033505e-f1a4-418b-82e6-10aa22275a72
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|cacf34c7-ef6e-410a-bede-ff8ccff0dcab
