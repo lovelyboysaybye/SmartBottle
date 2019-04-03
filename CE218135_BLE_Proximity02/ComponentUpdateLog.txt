@@ -1,0 +1,15 @@
+Last Modified Date & Time: 03/15/2019 16:47:26
+
+CE218135_BLE_Proximity01: TopDesign.cysch
+	BLE [v2.0] to [v2.10]
+	CapSense [v2.0] to [v3.0]
+	MCWDT [v1.0] to [v1.10]
+
+
+Last Modified Date & Time: 03/15/2019 17:02:51
+
+CE218135_BLE_Proximity01: TopDesign.cysch
+	BLE [v2.10] to [v2.0]
+	CapSense [v3.0] to [v2.0]
+
+
