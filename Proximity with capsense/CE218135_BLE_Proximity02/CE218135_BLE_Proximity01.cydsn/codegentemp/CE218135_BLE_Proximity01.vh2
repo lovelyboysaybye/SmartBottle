@@ -2,7 +2,7 @@
 --	Conversion of CE218135_BLE_Proximity01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Tue Mar 19 22:20:02 2019
+--	Tue Mar 26 14:12:51 2019
 --
 
 USE cypress.cypress.all;

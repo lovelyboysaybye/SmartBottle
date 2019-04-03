@@ -1,4 +1,4 @@
-C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\TopDesign\TopDesign.cysch
+C:\Users\Coal\Documents\Github\Proximity with capsense\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\TopDesign\TopDesign.cysch
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\MCWDT_PDL_v1_10\MCWDT_PDL_v1_10.cysym
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\MCWDT_PDL_v1_10\MCWDT_PDL_v1_10.cystate
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\MCWDT_PDL_v1_10\MCWDT_PDL_v1_10.pdf
@@ -255,4 +255,4 @@ C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComp
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\SCB_EZI2C_PDL_v2_0\Custom\Controls\cydynamicdatacontrol.Designer.cs
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\SCB_EZI2C_PDL_v2_0\Custom\Resources.resx
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\SCB_EZI2C_PDL_v2_0\Custom\Controls\cydynamicdatacontrol.resx
-C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cydwr
+C:\Users\Coal\Documents\Github\Proximity with capsense\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cydwr

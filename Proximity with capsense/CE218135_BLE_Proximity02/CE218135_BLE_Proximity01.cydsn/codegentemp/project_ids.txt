@@ -1,6 +1,6 @@
-C:\Users\Coal\Downloads\Telegram Desktop\CAP\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj|cf814504-8a80-4966-a020-39d1968bfc1a
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2eeabb20-ddee-48f1-a581-938d625c52b7
-C:\Users\Coal\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|e7431a8f-fa30-4bb1-bf1f-8f685134ac75
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7bc63ab8-6abd-4324-9ace-1e9a69e50c1e
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b2a92882-15ff-4b35-b8f0-0c9f295b8c4b
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ccd7db05-090a-4d35-871f-2054f3f69306
+C:\Users\Coal\Documents\Github\Proximity with capsense\CE218135_BLE_Proximity02\CE218135_BLE_Proximity01.cydsn\CE218135_BLE_Proximity01.cyprj|d844506f-1edf-4795-8f4e-66ead6ac47ed
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0a8ba12a-8739-4860-9e0c-4f6a03bfa278
+C:\Users\Coal\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|a9376267-e00f-415d-9b86-e8673f2641ac
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d002f564-42f2-456d-9969-2b7286f9296c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e033505e-f1a4-418b-82e6-10aa22275a72
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|cacf34c7-ef6e-410a-bede-ff8ccff0dcab
