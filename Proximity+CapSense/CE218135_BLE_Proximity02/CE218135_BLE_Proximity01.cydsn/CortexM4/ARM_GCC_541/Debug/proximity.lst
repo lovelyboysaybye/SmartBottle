@@ -1,0 +1,4686 @@
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 1
+   4              		.fpu fpv4-sp-d16
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 1
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.thumb
+  15              		.syntax unified
+  16              		.file	"proximity.c"
+  17              		.text
+  18              	.Ltext0:
+  19              		.cfi_sections	.debug_frame
+  20              		.section	.text.get_array,"ax",%progbits
+  21              		.align	2
+  22              		.global	get_array
+  23              		.thumb
+  24              		.thumb_func
+  25              		.type	get_array, %function
+  26              	get_array:
+  27              	.LFB620:
+  28              		.file 1 "proximity.c"
+   1:proximity.c   **** /******************************************************************************
+   2:proximity.c   **** * File Name: proximity.c
+   3:proximity.c   **** *
+   4:proximity.c   **** * Version: 1.00
+   5:proximity.c   **** *
+   6:proximity.c   **** * Description: This file contains functions that handle the initialization and
+   7:proximity.c   **** *              the scanning of the CapSense Proximity and the Buttons
+   8:proximity.c   **** *
+   9:proximity.c   **** * Related Document: CE218135_BLE_Proximity.pdf
+  10:proximity.c   **** *
+  11:proximity.c   **** * Hardware Dependency: CY8CKIT-062-BLE PSoC 6 BLE Pioneer Kit
+  12:proximity.c   **** *                      CY8CKIT-028-EPD E-INK Display Shield
+  13:proximity.c   **** *
+  14:proximity.c   **** ******************************************************************************
+  15:proximity.c   **** * Copyright (2017), Cypress Semiconductor Corporation.
+  16:proximity.c   **** ******************************************************************************
+  17:proximity.c   **** * This software, including source code, documentation and related materials
+  18:proximity.c   **** * ("Software") is owned by Cypress Semiconductor Corporation (Cypress) and is
+  19:proximity.c   **** * protected by and subject to worldwide patent protection (United States and 
+  20:proximity.c   **** * foreign), United States copyright laws and international treaty provisions. 
+  21:proximity.c   **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  22:proximity.c   **** * license to copy, use, modify, create derivative works of, and compile the 
+  23:proximity.c   **** * Cypress source code and derivative works for the sole purpose of creating 
+  24:proximity.c   **** * custom software in support of licensee product, such licensee product to be
+  25:proximity.c   **** * used only in conjunction with Cypress's integrated circuit as specified in the
+  26:proximity.c   **** * applicable agreement. Any reproduction, modification, translation, compilation,
+  27:proximity.c   **** * or representation of this Software except as specified above is prohibited 
+  28:proximity.c   **** * without the express written permission of Cypress.
+  29:proximity.c   **** * 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 2
+
+
+  30:proximity.c   **** * Disclaimer: THIS SOFTWARE IS PROVIDED AS-IS, WITH NO WARRANTY OF ANY KIND, 
+  31:proximity.c   **** * EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT, IMPLIED 
+  32:proximity.c   **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  33:proximity.c   **** * Cypress reserves the right to make changes to the Software without notice. 
+  34:proximity.c   **** * Cypress does not assume any liability arising out of the application or use
+  35:proximity.c   **** * of Software or any product or circuit described in the Software. Cypress does
+  36:proximity.c   **** * not authorize its products for use as critical components in any products 
+  37:proximity.c   **** * where a malfunction or failure may reasonably be expected to result in 
+  38:proximity.c   **** * significant injury or death ("ACTIVE Risk Product"). By including Cypress's 
+  39:proximity.c   **** * product in a ACTIVE Risk Product, the manufacturer of such system or application
+  40:proximity.c   **** * assumes all risk of such use and in doing so indemnifies Cypress against all
+  41:proximity.c   **** * liability. Use of this Software may be limited by and subject to the applicable
+  42:proximity.c   **** * Cypress software license agreement.
+  43:proximity.c   **** *****************************************************************************/
+  44:proximity.c   **** /*******************************************************************************
+  45:proximity.c   **** * This file contains functions that handle the initialization and the scanning of 
+  46:proximity.c   **** * the CapSense Proximity and the Buttons
+  47:proximity.c   **** *******************************************************************************/
+  48:proximity.c   **** 
+  49:proximity.c   **** /* Header file includes */
+  50:proximity.c   **** #include <project.h>
+  51:proximity.c   **** #include "proximity.h"
+  52:proximity.c   **** #include "math.h"
+  53:proximity.c   **** #include <stdio.h>
+  54:proximity.c   **** /* Maximum value of CapSense proximity sensor data accepted by the CySmart app */
+  55:proximity.c   **** #define PROX_MAX_VALUE  (uint16_t)(0x00FFu)
+  56:proximity.c   **** 
+  57:proximity.c   **** /*******************************************************************************
+  58:proximity.c   **** * Function Name: proximity_data_t* proximity_data_t* GetProximityData(void)
+  59:proximity.c   **** ********************************************************************************
+  60:proximity.c   **** * Summary:
+  61:proximity.c   **** *  Function that scans CapSense proximity sensor, processes information and then
+  62:proximity.c   **** *  returns the data
+  63:proximity.c   **** *
+  64:proximity.c   **** * Parameters:
+  65:proximity.c   **** *  None
+  66:proximity.c   **** *
+  67:proximity.c   **** * Return:
+  68:proximity.c   **** *  proximity_data_t*  : address of the data-structure that stores proximity 
+  69:proximity.c   **** *                       information
+  70:proximity.c   **** *
+  71:proximity.c   **** *******************************************************************************/
+  72:proximity.c   **** void get_array(double *mass)
+  73:proximity.c   **** {
+  29              		.loc 1 73 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              	.LVL0:
+  35 0000 30B4     		push	{r4, r5}
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 4, -8
+  38              		.cfi_offset 5, -4
+  39              	.LVL1:
+  40              	.LBB2:
+  74:proximity.c   ****     for (int i=0; i < 10; i++)
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 3
+
+
+  41              		.loc 1 74 0
+  42 0002 0022     		movs	r2, #0
+  43 0004 08E0     		b	.L2
+  44              	.LVL2:
+  45              	.L3:
+  75:proximity.c   ****     masszero[i] = mass[i];
+  46              		.loc 1 75 0 discriminator 3
+  47 0006 D300     		lsls	r3, r2, #3
+  48 0008 C118     		adds	r1, r0, r3
+  49 000a D1E90045 		ldrd	r4, [r1]
+  50 000e 0449     		ldr	r1, .L5
+  51 0010 0B44     		add	r3, r3, r1
+  52 0012 C3E90045 		strd	r4, [r3]
+  74:proximity.c   ****     for (int i=0; i < 10; i++)
+  53              		.loc 1 74 0 discriminator 3
+  54 0016 0132     		adds	r2, r2, #1
+  55              	.LVL3:
+  56              	.L2:
+  74:proximity.c   ****     for (int i=0; i < 10; i++)
+  57              		.loc 1 74 0 is_stmt 0 discriminator 1
+  58 0018 092A     		cmp	r2, #9
+  59 001a F4DD     		ble	.L3
+  60              	.LBE2:
+  76:proximity.c   **** }
+  61              		.loc 1 76 0 is_stmt 1
+  62 001c 30BC     		pop	{r4, r5}
+  63              		.cfi_restore 5
+  64              		.cfi_restore 4
+  65              		.cfi_def_cfa_offset 0
+  66 001e 7047     		bx	lr
+  67              	.L6:
+  68              		.align	2
+  69              	.L5:
+  70 0020 00000000 		.word	masszero
+  71              		.cfi_endproc
+  72              	.LFE620:
+  73              		.size	get_array, .-get_array
+  74              		.section	.text.GetProximityData,"ax",%progbits
+  75              		.align	2
+  76              		.global	GetProximityData
+  77              		.thumb
+  78              		.thumb_func
+  79              		.type	GetProximityData, %function
+  80              	GetProximityData:
+  81              	.LFB621:
+  77:proximity.c   **** proximity_data_t* GetProximityData(void)
+  78:proximity.c   **** {
+  82              		.loc 1 78 0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 40
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86 0000 00B5     		push	{lr}
+  87              		.cfi_def_cfa_offset 4
+  88              		.cfi_offset 14, -4
+  89 0002 8BB0     		sub	sp, sp, #44
+  90              		.cfi_def_cfa_offset 48
+  79:proximity.c   ****     /* Structure that stores the current CapSense proximity information */
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 4
+
+
+  80:proximity.c   ****     proximity_data_t  static currentProximityData = 
+  81:proximity.c   ****     {    
+  82:proximity.c   ****         /* Initialize the flag that track updates to proximity information */
+  83:proximity.c   ****         .proximityDataUpdated = false,
+  84:proximity.c   ****         /* Initialize the proximity information */
+  85:proximity.c   ****         .proximityData = 0u,
+  86:proximity.c   ****     };
+  87:proximity.c   ****         
+  88:proximity.c   ****     /* Variables used to store the instantaneous proximity information */
+  89:proximity.c   ****     uint8_t  static proximity  = 0u;
+  90:proximity.c   **** 
+  91:proximity.c   ****     /* Do this only when the CapSense isn't busy with a previous operation */
+  92:proximity.c   ****     if (CapSense_IsBusy() == CapSense_NOT_BUSY)
+  91              		.loc 1 92 0
+  92 0004 FFF7FEFF 		bl	CapSense_IsBusy
+  93              	.LVL4:
+  94 0008 0028     		cmp	r0, #0
+  95 000a 65D1     		bne	.L8
+  96              	.LBB3:
+  93:proximity.c   ****     {
+  94:proximity.c   ****         /* Process data from the proximity widget */
+  95:proximity.c   **** 		CapSense_ProcessAllWidgets();
+  97              		.loc 1 95 0
+  98 000c FFF7FEFF 		bl	CapSense_ProcessAllWidgets
+  99              	.LVL5:
+  96:proximity.c   ****         
+  97:proximity.c   **** //        /* Check if the signal is greater than the finger threshold */
+  98:proximity.c   **** //        if(CapSense_PROXIMITY0_SNS0_DIFF_VALUE > 
+  99:proximity.c   **** //           CapSense_PROXIMITY0_FINGER_TH_VALUE)
+ 100:proximity.c   **** //        {
+ 101:proximity.c   **** //            /*If proximity value is not within the range, cap the value */
+ 102:proximity.c   **** //    		if((CapSense_PROXIMITY0_SNS0_DIFF_VALUE -
+ 103:proximity.c   **** //                CapSense_PROXIMITY0_FINGER_TH_VALUE) 
+ 104:proximity.c   **** //                <= PROX_MAX_VALUE)
+ 105:proximity.c   **** //    		{
+ 106:proximity.c   **** //                /* Store the proximity data */
+ 107:proximity.c   **** //    	         proximity =  (uint8_t)(CapSense_PROXIMITY0_SNS0_DIFF_VALUE - 
+ 108:proximity.c   **** //                                        CapSense_PROXIMITY0_FINGER_TH_VALUE);
+ 109:proximity.c   **** //    		}
+ 110:proximity.c   **** //            /* Store the maximum value otherwise */
+ 111:proximity.c   **** //            else
+ 112:proximity.c   **** //            {
+ 113:proximity.c   **** //                proximity = (uint8_t)PROX_MAX_VALUE;
+ 114:proximity.c   **** //            }
+ 115:proximity.c   **** //        }
+ 116:proximity.c   **** //        /* Clear the value if the signal is less than the finger threshold */
+ 117:proximity.c   **** //        else
+ 118:proximity.c   **** //        {
+ 119:proximity.c   **** //           proximity = 0u; 
+ 120:proximity.c   **** //        }
+ 121:proximity.c   **** //    
+ 122:proximity.c   **** 
+ 123:proximity.c   ****         double diff = CapSense_BUTTON0_FINGER_TH_VALUE;
+ 124:proximity.c   **** 
+ 125:proximity.c   ****   /*      
+ 126:proximity.c   ****         double mass[10] = {fabs(CapSense_BUTTON0_SNS0_RAW0_VALUE-masszero[0]), fabs(CapSense_BUTTON
+ 127:proximity.c   ****                            fabs(CapSense_BUTTON3_SNS0_RAW0_VALUE-masszero[3]), fabs(CapSense_BUTTON
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 5
+
+
+ 128:proximity.c   ****                            fabs(CapSense_BUTTON6_SNS0_RAW0_VALUE-masszero[6]), fabs(CapSense_BUTTON
+ 129:proximity.c   ****                            fabs(CapSense_BUTTON9_SNS0_RAW0_VALUE-masszero[9])};
+ 130:proximity.c   ****        */
+ 131:proximity.c   ****         int mass[10] = {CapSense_SNS_STATUS0_VALUE, CapSense_SNS_STATUS1_VALUE, CapSense_SNS_STATUS
+ 100              		.loc 1 131 0
+ 101 0010 3A4B     		ldr	r3, .L26
+ 102 0012 1A7E     		ldrb	r2, [r3, #24]	@ zero_extendqisi2
+ 103 0014 0092     		str	r2, [sp]
+ 104 0016 5A7E     		ldrb	r2, [r3, #25]	@ zero_extendqisi2
+ 105 0018 0192     		str	r2, [sp, #4]
+ 106 001a 9A7E     		ldrb	r2, [r3, #26]	@ zero_extendqisi2
+ 107 001c 0292     		str	r2, [sp, #8]
+ 132:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 108              		.loc 1 132 0
+ 109 001e DA7E     		ldrb	r2, [r3, #27]	@ zero_extendqisi2
+ 131:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 110              		.loc 1 131 0
+ 111 0020 0392     		str	r2, [sp, #12]
+ 112              		.loc 1 132 0
+ 113 0022 1A7F     		ldrb	r2, [r3, #28]	@ zero_extendqisi2
+ 131:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 114              		.loc 1 131 0
+ 115 0024 0492     		str	r2, [sp, #16]
+ 116              		.loc 1 132 0
+ 117 0026 5A7F     		ldrb	r2, [r3, #29]	@ zero_extendqisi2
+ 131:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 118              		.loc 1 131 0
+ 119 0028 0592     		str	r2, [sp, #20]
+ 133:proximity.c   ****                            CapSense_SNS_STATUS6_VALUE, CapSense_SNS_STATUS7_VALUE, CapSense_SNS_STA
+ 120              		.loc 1 133 0
+ 121 002a 9A7F     		ldrb	r2, [r3, #30]	@ zero_extendqisi2
+ 131:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 122              		.loc 1 131 0
+ 123 002c 0692     		str	r2, [sp, #24]
+ 124              		.loc 1 133 0
+ 125 002e DA7F     		ldrb	r2, [r3, #31]	@ zero_extendqisi2
+ 131:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 126              		.loc 1 131 0
+ 127 0030 0792     		str	r2, [sp, #28]
+ 128              		.loc 1 133 0
+ 129 0032 93F82020 		ldrb	r2, [r3, #32]	@ zero_extendqisi2
+ 131:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 130              		.loc 1 131 0
+ 131 0036 0892     		str	r2, [sp, #32]
+ 134:proximity.c   ****                            CapSense_SNS_STATUS9_VALUE};
+ 132              		.loc 1 134 0
+ 133 0038 93F82130 		ldrb	r3, [r3, #33]	@ zero_extendqisi2
+ 131:proximity.c   ****                            CapSense_SNS_STATUS3_VALUE, CapSense_SNS_STATUS4_VALUE, CapSense_SNS_STA
+ 134              		.loc 1 131 0
+ 135 003c 0993     		str	r3, [sp, #36]
+ 136              	.LVL6:
+ 137              	.LBB4:
+ 135:proximity.c   **** 
+ 136:proximity.c   ****         /*
+ 137:proximity.c   ****         if ((fabs(mass[9] - mass[5]) <= diff) && (mass[9] - mass[8] <= diff))
+ 138:proximity.c   ****         { // рівень води нижче середини
+ 139:proximity.c   ****         for (i = 5; i >= 0; i--)
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 6
+
+
+ 140:proximity.c   ****         {
+ 141:proximity.c   ****         h2 = mass[i];
+ 142:proximity.c   ****         h1 = mass[i-1];
+ 143:proximity.c   ****         if (fabs(h2 - h1) <= diff)
+ 144:proximity.c   ****         continue; else {proximity = i * 25u; break;}
+ 145:proximity.c   ****         } 
+ 146:proximity.c   ****         if (i == 0) proximity = 0u; 
+ 147:proximity.c   ****         }
+ 148:proximity.c   ****         else
+ 149:proximity.c   ****         {// рівень води вище середини
+ 150:proximity.c   ****         for (i = 9; i >5; i--)
+ 151:proximity.c   ****         {
+ 152:proximity.c   ****         h2 = mass[i];
+ 153:proximity.c   ****         h1 = mass[i-1];
+ 154:proximity.c   ****         if (fabs(h2 - h1) <= diff)
+ 155:proximity.c   ****         continue; else {proximity = i * 25u; break;}
+ 156:proximity.c   ****         }
+ 157:proximity.c   ****         if (fabs(mass[5] - mass[4]) > diff) proximity = 5 * 25u; else  i = 11;
+ 158:proximity.c   ****         if (i == 11) proximity = (uint8_t)PROX_MAX_VALUE;
+ 159:proximity.c   ****         }  
+ 160:proximity.c   ****         
+ 161:proximity.c   ****         */
+ 162:proximity.c   ****         
+ 163:proximity.c   ****        
+ 164:proximity.c   ****         for (int i = 0; i <=9; i++)
+ 138              		.loc 1 164 0
+ 139 003e 0023     		movs	r3, #0
+ 140 0040 46E0     		b	.L9
+ 141              	.LVL7:
+ 142              	.L22:
+ 165:proximity.c   ****         {
+ 166:proximity.c   ****          if (i == 9 && mass[i] == 1)
+ 143              		.loc 1 166 0
+ 144 0042 092B     		cmp	r3, #9
+ 145 0044 09D1     		bne	.L10
+ 146              		.loc 1 166 0 is_stmt 0 discriminator 1
+ 147 0046 0AAA     		add	r2, sp, #40
+ 148 0048 02EB8302 		add	r2, r2, r3, lsl #2
+ 149 004c 52F8282C 		ldr	r2, [r2, #-40]
+ 150 0050 012A     		cmp	r2, #1
+ 151 0052 02D1     		bne	.L10
+ 167:proximity.c   ****           proximity = (uint8_t)PROX_MAX_VALUE; 
+ 152              		.loc 1 167 0 is_stmt 1
+ 153 0054 FF21     		movs	r1, #255
+ 154 0056 2A4A     		ldr	r2, .L26+4
+ 155 0058 1170     		strb	r1, [r2]
+ 156              	.L10:
+ 168:proximity.c   ****          if (mass[i] == 1)
+ 157              		.loc 1 168 0
+ 158 005a 0AAA     		add	r2, sp, #40
+ 159 005c 02EB8302 		add	r2, r2, r3, lsl #2
+ 160 0060 52F8282C 		ldr	r2, [r2, #-40]
+ 161 0064 012A     		cmp	r2, #1
+ 162 0066 01D1     		bne	.L11
+ 164:proximity.c   ****         {
+ 163              		.loc 1 164 0
+ 164 0068 0133     		adds	r3, r3, #1
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 7
+
+
+ 165              	.LVL8:
+ 166 006a 31E0     		b	.L9
+ 167              	.L11:
+ 169:proximity.c   ****         continue;
+ 170:proximity.c   ****         else
+ 171:proximity.c   ****         {
+ 172:proximity.c   ****            if (i == 0)
+ 168              		.loc 1 172 0
+ 169 006c 13B9     		cbnz	r3, .L12
+ 173:proximity.c   ****            proximity = 0u; 
+ 170              		.loc 1 173 0
+ 171 006e 0021     		movs	r1, #0
+ 172 0070 234A     		ldr	r2, .L26+4
+ 173 0072 1170     		strb	r1, [r2]
+ 174              	.L12:
+ 174:proximity.c   ****            if ( i == 1)
+ 175              		.loc 1 174 0
+ 176 0074 012B     		cmp	r3, #1
+ 177 0076 02D1     		bne	.L13
+ 175:proximity.c   ****            proximity = 26u; 
+ 178              		.loc 1 175 0
+ 179 0078 1A21     		movs	r1, #26
+ 180 007a 214A     		ldr	r2, .L26+4
+ 181 007c 1170     		strb	r1, [r2]
+ 182              	.L13:
+ 176:proximity.c   ****            if (i== 2)
+ 183              		.loc 1 176 0
+ 184 007e 022B     		cmp	r3, #2
+ 185 0080 02D1     		bne	.L14
+ 177:proximity.c   ****            proximity = 51u; 
+ 186              		.loc 1 177 0
+ 187 0082 3321     		movs	r1, #51
+ 188 0084 1E4A     		ldr	r2, .L26+4
+ 189 0086 1170     		strb	r1, [r2]
+ 190              	.L14:
+ 178:proximity.c   ****            if (i == 3)
+ 191              		.loc 1 178 0
+ 192 0088 032B     		cmp	r3, #3
+ 193 008a 02D1     		bne	.L15
+ 179:proximity.c   ****            proximity = 77u; 
+ 194              		.loc 1 179 0
+ 195 008c 4D21     		movs	r1, #77
+ 196 008e 1C4A     		ldr	r2, .L26+4
+ 197 0090 1170     		strb	r1, [r2]
+ 198              	.L15:
+ 180:proximity.c   ****            if ( i == 4)
+ 199              		.loc 1 180 0
+ 200 0092 042B     		cmp	r3, #4
+ 201 0094 02D1     		bne	.L16
+ 181:proximity.c   ****            proximity = 102u; 
+ 202              		.loc 1 181 0
+ 203 0096 6621     		movs	r1, #102
+ 204 0098 194A     		ldr	r2, .L26+4
+ 205 009a 1170     		strb	r1, [r2]
+ 206              	.L16:
+ 182:proximity.c   ****            if (i == 5)
+ 207              		.loc 1 182 0
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 8
+
+
+ 208 009c 052B     		cmp	r3, #5
+ 209 009e 02D1     		bne	.L17
+ 183:proximity.c   ****            proximity = 128u; 
+ 210              		.loc 1 183 0
+ 211 00a0 8021     		movs	r1, #128
+ 212 00a2 174A     		ldr	r2, .L26+4
+ 213 00a4 1170     		strb	r1, [r2]
+ 214              	.L17:
+ 184:proximity.c   ****            if ( i == 6)
+ 215              		.loc 1 184 0
+ 216 00a6 062B     		cmp	r3, #6
+ 217 00a8 02D1     		bne	.L18
+ 185:proximity.c   ****            proximity = 153u; 
+ 218              		.loc 1 185 0
+ 219 00aa 9921     		movs	r1, #153
+ 220 00ac 144A     		ldr	r2, .L26+4
+ 221 00ae 1170     		strb	r1, [r2]
+ 222              	.L18:
+ 186:proximity.c   ****            if (i == 7)
+ 223              		.loc 1 186 0
+ 224 00b0 072B     		cmp	r3, #7
+ 225 00b2 02D1     		bne	.L19
+ 187:proximity.c   ****            proximity = 179u;
+ 226              		.loc 1 187 0
+ 227 00b4 B321     		movs	r1, #179
+ 228 00b6 124A     		ldr	r2, .L26+4
+ 229 00b8 1170     		strb	r1, [r2]
+ 230              	.L19:
+ 188:proximity.c   ****            if ( i == 8)
+ 231              		.loc 1 188 0
+ 232 00ba 082B     		cmp	r3, #8
+ 233 00bc 02D1     		bne	.L20
+ 189:proximity.c   ****            proximity = 204u; 
+ 234              		.loc 1 189 0
+ 235 00be CC21     		movs	r1, #204
+ 236 00c0 0F4A     		ldr	r2, .L26+4
+ 237 00c2 1170     		strb	r1, [r2]
+ 238              	.L20:
+ 190:proximity.c   ****            if ( i == 9)
+ 239              		.loc 1 190 0
+ 240 00c4 092B     		cmp	r3, #9
+ 241 00c6 05D1     		bne	.L21
+ 191:proximity.c   ****            proximity = 230u; 
+ 242              		.loc 1 191 0
+ 243 00c8 E622     		movs	r2, #230
+ 244 00ca 0D4B     		ldr	r3, .L26+4
+ 245              	.LVL9:
+ 246 00cc 1A70     		strb	r2, [r3]
+ 247 00ce 01E0     		b	.L21
+ 248              	.L9:
+ 249              	.LVL10:
+ 164:proximity.c   ****         {
+ 250              		.loc 1 164 0 discriminator 1
+ 251 00d0 092B     		cmp	r3, #9
+ 252 00d2 B6DD     		ble	.L22
+ 253              	.LVL11:
+ 254              	.L21:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 9
+
+
+ 255              	.LBE4:
+ 192:proximity.c   ****         break;
+ 193:proximity.c   ****             //proximity = i*25u; break;
+ 194:proximity.c   ****         }
+ 195:proximity.c   ****         }
+ 196:proximity.c   ****         
+ 197:proximity.c   ****         //proximity = 25u ;
+ 198:proximity.c   ****         
+ 199:proximity.c   ****         //proximity = (uint8_t)PROX_MAX_VALUE;
+ 200:proximity.c   ****         //if (CapSense_BUTTON0_SNS0_DIFF_VALUE <= PROX_MAX_VALUE)
+ 201:proximity.c   ****         //    proximity = CapSense_BUTTON0_SNS0_DIFF_VALUE * 
+ 202:proximity.c   ****         /* Start the next CapSense scan */
+ 203:proximity.c   ****         //proximity = 64u;
+ 204:proximity.c   ****         CapSense_ScanAllWidgets();
+ 256              		.loc 1 204 0 discriminator 1
+ 257 00d4 FFF7FEFF 		bl	CapSense_ScanAllWidgets
+ 258              	.LVL12:
+ 259              	.L8:
+ 260              	.LBE3:
+ 205:proximity.c   ****         
+ 206:proximity.c   ****     }
+ 207:proximity.c   ****                       
+ 208:proximity.c   ****     /* Check if the proximity data has changed */
+ 209:proximity.c   ****     if (proximity != currentProximityData.proximityData)
+ 261              		.loc 1 209 0
+ 262 00d8 094B     		ldr	r3, .L26+4
+ 263 00da 5A79     		ldrb	r2, [r3, #5]	@ zero_extendqisi2
+ 264 00dc 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 265 00de 9A42     		cmp	r2, r3
+ 266 00e0 04D0     		beq	.L23
+ 210:proximity.c   ****     {
+ 211:proximity.c   ****         /* Proximity proximity position */
+ 212:proximity.c   ****         currentProximityData.proximityData = proximity;
+ 267              		.loc 1 212 0
+ 268 00e2 074A     		ldr	r2, .L26+4
+ 269 00e4 5371     		strb	r3, [r2, #5]
+ 213:proximity.c   ****         /* Proximity data updated */
+ 214:proximity.c   ****         currentProximityData.proximityDataUpdated = true;
+ 270              		.loc 1 214 0
+ 271 00e6 0123     		movs	r3, #1
+ 272 00e8 1371     		strb	r3, [r2, #4]
+ 273 00ea 02E0     		b	.L24
+ 274              	.L23:
+ 215:proximity.c   ****     }
+ 216:proximity.c   ****     else
+ 217:proximity.c   ****     {  
+ 218:proximity.c   ****        /* Proximity data not updated */
+ 219:proximity.c   ****        currentProximityData.proximityDataUpdated = false; 
+ 275              		.loc 1 219 0
+ 276 00ec 0022     		movs	r2, #0
+ 277 00ee 044B     		ldr	r3, .L26+4
+ 278 00f0 1A71     		strb	r2, [r3, #4]
+ 279              	.L24:
+ 220:proximity.c   ****     }
+ 221:proximity.c   ****         
+ 222:proximity.c   ****     /* return the proximity information */
+ 223:proximity.c   ****     return &currentProximityData;
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 10
+
+
+ 224:proximity.c   **** }
+ 280              		.loc 1 224 0
+ 281 00f2 0448     		ldr	r0, .L26+8
+ 282 00f4 0BB0     		add	sp, sp, #44
+ 283              		.cfi_def_cfa_offset 4
+ 284              		@ sp needed
+ 285 00f6 5DF804FB 		ldr	pc, [sp], #4
+ 286              	.L27:
+ 287 00fa 00BF     		.align	2
+ 288              	.L26:
+ 289 00fc 00000000 		.word	CapSense_dsRam
+ 290 0100 00000000 		.word	.LANCHOR0
+ 291 0104 04000000 		.word	.LANCHOR0+4
+ 292              		.cfi_endproc
+ 293              	.LFE621:
+ 294              		.size	GetProximityData, .-GetProximityData
+ 295              		.section	.text.IsCapSenseReadyForLowPowerMode,"ax",%progbits
+ 296              		.align	2
+ 297              		.global	IsCapSenseReadyForLowPowerMode
+ 298              		.thumb
+ 299              		.thumb_func
+ 300              		.type	IsCapSenseReadyForLowPowerMode, %function
+ 301              	IsCapSenseReadyForLowPowerMode:
+ 302              	.LFB622:
+ 225:proximity.c   **** 
+ 226:proximity.c   **** 
+ 227:proximity.c   **** 
+ 228:proximity.c   **** /*******************************************************************************
+ 229:proximity.c   **** * Function Name: bool IsCapSenseReadyForLowPowerMode(void)
+ 230:proximity.c   **** ********************************************************************************
+ 231:proximity.c   **** *
+ 232:proximity.c   **** * Summary:
+ 233:proximity.c   **** *  Function to check if CapSense is ready to enter low power mode
+ 234:proximity.c   **** *
+ 235:proximity.c   **** * Parameters:
+ 236:proximity.c   **** *  None
+ 237:proximity.c   **** *
+ 238:proximity.c   **** * Return:
+ 239:proximity.c   **** *  bool     : true if ready to enter low power mode, false otherwise
+ 240:proximity.c   **** *
+ 241:proximity.c   **** * Side Effects:
+ 242:proximity.c   **** *  None
+ 243:proximity.c   **** *
+ 244:proximity.c   **** *******************************************************************************/
+ 245:proximity.c   **** bool  IsCapSenseReadyForLowPowerMode(void)
+ 246:proximity.c   **** {
+ 303              		.loc 1 246 0
+ 304              		.cfi_startproc
+ 305              		@ args = 0, pretend = 0, frame = 0
+ 306              		@ frame_needed = 0, uses_anonymous_args = 0
+ 307 0000 08B5     		push	{r3, lr}
+ 308              		.cfi_def_cfa_offset 8
+ 309              		.cfi_offset 3, -8
+ 310              		.cfi_offset 14, -4
+ 247:proximity.c   ****     /* Variable that stores the return flag */
+ 248:proximity.c   ****     bool lowPowerModeReady;
+ 249:proximity.c   ****     
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 11
+
+
+ 250:proximity.c   ****     /* Don't enter low power mode if CapSense is busy with a scan */
+ 251:proximity.c   ****     if(CapSense_IsBusy() != CapSense_NOT_BUSY)
+ 311              		.loc 1 251 0
+ 312 0002 FFF7FEFF 		bl	CapSense_IsBusy
+ 313              	.LVL13:
+ 314 0006 08B1     		cbz	r0, .L30
+ 252:proximity.c   ****     {
+ 253:proximity.c   ****         lowPowerModeReady=false;
+ 315              		.loc 1 253 0
+ 316 0008 0020     		movs	r0, #0
+ 317 000a 08BD     		pop	{r3, pc}
+ 318              	.L30:
+ 254:proximity.c   ****     }
+ 255:proximity.c   ****     else
+ 256:proximity.c   ****     {
+ 257:proximity.c   ****         lowPowerModeReady=true;
+ 319              		.loc 1 257 0
+ 320 000c 0120     		movs	r0, #1
+ 321              	.LVL14:
+ 258:proximity.c   ****     }
+ 259:proximity.c   ****     
+ 260:proximity.c   ****     /* Return  the low power mode entry readiness */
+ 261:proximity.c   ****     return lowPowerModeReady;
+ 262:proximity.c   **** }
+ 322              		.loc 1 262 0
+ 323 000e 08BD     		pop	{r3, pc}
+ 324              		.cfi_endproc
+ 325              	.LFE622:
+ 326              		.size	IsCapSenseReadyForLowPowerMode, .-IsCapSenseReadyForLowPowerMode
+ 327              		.section	.text.InitCapSense,"ax",%progbits
+ 328              		.align	2
+ 329              		.global	InitCapSense
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.type	InitCapSense, %function
+ 333              	InitCapSense:
+ 334              	.LFB623:
+ 263:proximity.c   **** 
+ 264:proximity.c   **** /*******************************************************************************
+ 265:proximity.c   **** * Function Name: void InitCapSense(void)
+ 266:proximity.c   **** ********************************************************************************
+ 267:proximity.c   **** * Summary:
+ 268:proximity.c   **** *  Initializes CapSense proximity sensing
+ 269:proximity.c   **** *
+ 270:proximity.c   **** * Parameters:
+ 271:proximity.c   **** *  void
+ 272:proximity.c   **** *
+ 273:proximity.c   **** * Return:
+ 274:proximity.c   **** *  void
+ 275:proximity.c   **** *
+ 276:proximity.c   **** *******************************************************************************/
+ 277:proximity.c   **** void InitCapSense(void)
+ 278:proximity.c   **** {
+ 335              		.loc 1 278 0
+ 336              		.cfi_startproc
+ 337              		@ args = 0, pretend = 0, frame = 0
+ 338              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 12
+
+
+ 339 0000 08B5     		push	{r3, lr}
+ 340              		.cfi_def_cfa_offset 8
+ 341              		.cfi_offset 3, -8
+ 342              		.cfi_offset 14, -4
+ 279:proximity.c   ****     /* Start the CapSense component and initialize the baselines */
+ 280:proximity.c   ****     CapSense_Start();
+ 343              		.loc 1 280 0
+ 344 0002 FFF7FEFF 		bl	CapSense_Start
+ 345              	.LVL15:
+ 346 0006 08BD     		pop	{r3, pc}
+ 347              		.cfi_endproc
+ 348              	.LFE623:
+ 349              		.size	InitCapSense, .-InitCapSense
+ 350              		.comm	masszero,80,8
+ 351              		.bss
+ 352              		.align	2
+ 353              		.set	.LANCHOR0,. + 0
+ 354              		.type	proximity.19053, %object
+ 355              		.size	proximity.19053, 1
+ 356              	proximity.19053:
+ 357 0000 00       		.space	1
+ 358 0001 000000   		.space	3
+ 359              		.type	currentProximityData.19052, %object
+ 360              		.size	currentProximityData.19052, 2
+ 361              	currentProximityData.19052:
+ 362 0004 0000     		.space	2
+ 363              		.text
+ 364              	.Letext0:
+ 365              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 366              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 367              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syslib/cy_syslib.h"
+ 368              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/tcpwm/cy_tcpwm_counter.h"
+ 369              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_ezi2c.h"
+ 370              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_spi.h"
+ 371              		.file 8 "Generated_Source\\PSoC6\\pdl\\middleware/ble/cy_ble_stack.h"
+ 372              		.file 9 "Generated_Source\\PSoC6\\pdl\\middleware/ble/cy_ble_stack_host_main.h"
+ 373              		.file 10 "Generated_Source\\PSoC6\\pdl\\middleware/ble/cy_ble_gap.h"
+ 374              		.file 11 "Generated_Source\\PSoC6/CapSense_Configuration.h"
+ 375              		.file 12 "Generated_Source\\PSoC6/CapSense_Structure.h"
+ 376              		.file 13 "proximity.h"
+ 377              		.file 14 "Generated_Source\\PSoC6\\pdl\\cmsis/include/core_cm4.h"
+ 378              		.file 15 "Generated_Source\\PSoC6/CY_EINK_SPIM.h"
+ 379              		.file 16 "Generated_Source\\PSoC6/CY_EINK_Timer.h"
+ 380              		.file 17 "Generated_Source\\PSoC6/EZI2C.h"
+ 381              		.file 18 "Generated_Source\\PSoC6/CapSense_Control.h"
+ 382              		.file 19 "Generated_Source\\PSoC6/CapSense_Sensing.h"
+ 383              		.section	.debug_info,"",%progbits
+ 384              	.Ldebug_info0:
+ 385 0000 D30D0000 		.4byte	0xdd3
+ 386 0004 0400     		.2byte	0x4
+ 387 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 388 000a 04       		.byte	0x4
+ 389 000b 01       		.uleb128 0x1
+ 390 000c 5F040000 		.4byte	.LASF291
+ 391 0010 0C       		.byte	0xc
+ 392 0011 2F100000 		.4byte	.LASF292
+ 393 0015 97020000 		.4byte	.LASF293
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 13
+
+
+ 394 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 395 001d 00000000 		.4byte	0
+ 396 0021 00000000 		.4byte	.Ldebug_line0
+ 397 0025 02       		.uleb128 0x2
+ 398 0026 02       		.byte	0x2
+ 399 0027 05       		.byte	0x5
+ 400 0028 AB130000 		.4byte	.LASF0
+ 401 002c 02       		.uleb128 0x2
+ 402 002d 01       		.byte	0x1
+ 403 002e 06       		.byte	0x6
+ 404 002f 0A190000 		.4byte	.LASF1
+ 405 0033 03       		.uleb128 0x3
+ 406 0034 40150000 		.4byte	.LASF3
+ 407 0038 02       		.byte	0x2
+ 408 0039 1D       		.byte	0x1d
+ 409 003a 3E000000 		.4byte	0x3e
+ 410 003e 02       		.uleb128 0x2
+ 411 003f 01       		.byte	0x1
+ 412 0040 08       		.byte	0x8
+ 413 0041 F2160000 		.4byte	.LASF2
+ 414 0045 03       		.uleb128 0x3
+ 415 0046 51080000 		.4byte	.LASF4
+ 416 004a 02       		.byte	0x2
+ 417 004b 2B       		.byte	0x2b
+ 418 004c 50000000 		.4byte	0x50
+ 419 0050 02       		.uleb128 0x2
+ 420 0051 02       		.byte	0x2
+ 421 0052 07       		.byte	0x7
+ 422 0053 22190000 		.4byte	.LASF5
+ 423 0057 03       		.uleb128 0x3
+ 424 0058 8D020000 		.4byte	.LASF6
+ 425 005c 02       		.byte	0x2
+ 426 005d 3F       		.byte	0x3f
+ 427 005e 62000000 		.4byte	0x62
+ 428 0062 02       		.uleb128 0x2
+ 429 0063 04       		.byte	0x4
+ 430 0064 05       		.byte	0x5
+ 431 0065 E8130000 		.4byte	.LASF7
+ 432 0069 03       		.uleb128 0x3
+ 433 006a 25170000 		.4byte	.LASF8
+ 434 006e 02       		.byte	0x2
+ 435 006f 41       		.byte	0x41
+ 436 0070 74000000 		.4byte	0x74
+ 437 0074 02       		.uleb128 0x2
+ 438 0075 04       		.byte	0x4
+ 439 0076 07       		.byte	0x7
+ 440 0077 32160000 		.4byte	.LASF9
+ 441 007b 02       		.uleb128 0x2
+ 442 007c 08       		.byte	0x8
+ 443 007d 05       		.byte	0x5
+ 444 007e 910E0000 		.4byte	.LASF10
+ 445 0082 02       		.uleb128 0x2
+ 446 0083 08       		.byte	0x8
+ 447 0084 07       		.byte	0x7
+ 448 0085 B4070000 		.4byte	.LASF11
+ 449 0089 04       		.uleb128 0x4
+ 450 008a 04       		.byte	0x4
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 14
+
+
+ 451 008b 05       		.byte	0x5
+ 452 008c 696E7400 		.ascii	"int\000"
+ 453 0090 02       		.uleb128 0x2
+ 454 0091 04       		.byte	0x4
+ 455 0092 07       		.byte	0x7
+ 456 0093 EE010000 		.4byte	.LASF12
+ 457 0097 03       		.uleb128 0x3
+ 458 0098 520D0000 		.4byte	.LASF13
+ 459 009c 03       		.byte	0x3
+ 460 009d 18       		.byte	0x18
+ 461 009e 33000000 		.4byte	0x33
+ 462 00a2 03       		.uleb128 0x3
+ 463 00a3 E3110000 		.4byte	.LASF14
+ 464 00a7 03       		.byte	0x3
+ 465 00a8 24       		.byte	0x24
+ 466 00a9 45000000 		.4byte	0x45
+ 467 00ad 03       		.uleb128 0x3
+ 468 00ae 77160000 		.4byte	.LASF15
+ 469 00b2 03       		.byte	0x3
+ 470 00b3 2C       		.byte	0x2c
+ 471 00b4 57000000 		.4byte	0x57
+ 472 00b8 03       		.uleb128 0x3
+ 473 00b9 36060000 		.4byte	.LASF16
+ 474 00bd 03       		.byte	0x3
+ 475 00be 30       		.byte	0x30
+ 476 00bf 69000000 		.4byte	0x69
+ 477 00c3 02       		.uleb128 0x2
+ 478 00c4 04       		.byte	0x4
+ 479 00c5 07       		.byte	0x7
+ 480 00c6 29160000 		.4byte	.LASF17
+ 481 00ca 05       		.uleb128 0x5
+ 482 00cb B8000000 		.4byte	0xb8
+ 483 00cf 02       		.uleb128 0x2
+ 484 00d0 08       		.byte	0x8
+ 485 00d1 04       		.byte	0x4
+ 486 00d2 C2110000 		.4byte	.LASF18
+ 487 00d6 02       		.uleb128 0x2
+ 488 00d7 01       		.byte	0x1
+ 489 00d8 08       		.byte	0x8
+ 490 00d9 1C0C0000 		.4byte	.LASF19
+ 491 00dd 02       		.uleb128 0x2
+ 492 00de 04       		.byte	0x4
+ 493 00df 04       		.byte	0x4
+ 494 00e0 68160000 		.4byte	.LASF20
+ 495 00e4 02       		.uleb128 0x2
+ 496 00e5 08       		.byte	0x8
+ 497 00e6 04       		.byte	0x4
+ 498 00e7 F3190000 		.4byte	.LASF21
+ 499 00eb 06       		.uleb128 0x6
+ 500 00ec E6050000 		.4byte	.LASF22
+ 501 00f0 04       		.byte	0x4
+ 502 00f1 8503     		.2byte	0x385
+ 503 00f3 97000000 		.4byte	0x97
+ 504 00f7 06       		.uleb128 0x6
+ 505 00f8 D50C0000 		.4byte	.LASF23
+ 506 00fc 04       		.byte	0x4
+ 507 00fd 8603     		.2byte	0x386
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 15
+
+
+ 508 00ff A2000000 		.4byte	0xa2
+ 509 0103 06       		.uleb128 0x6
+ 510 0104 45100000 		.4byte	.LASF24
+ 511 0108 04       		.byte	0x4
+ 512 0109 8703     		.2byte	0x387
+ 513 010b B8000000 		.4byte	0xb8
+ 514 010f 07       		.uleb128 0x7
+ 515 0110 04       		.byte	0x4
+ 516 0111 02       		.uleb128 0x2
+ 517 0112 01       		.byte	0x1
+ 518 0113 02       		.byte	0x2
+ 519 0114 A8090000 		.4byte	.LASF25
+ 520 0118 08       		.uleb128 0x8
+ 521 0119 35190000 		.4byte	.LASF57
+ 522 011d 4C       		.byte	0x4c
+ 523 011e 05       		.byte	0x5
+ 524 011f 2B       		.byte	0x2b
+ 525 0120 09020000 		.4byte	0x209
+ 526 0124 09       		.uleb128 0x9
+ 527 0125 16190000 		.4byte	.LASF26
+ 528 0129 05       		.byte	0x5
+ 529 012a 2D       		.byte	0x2d
+ 530 012b B8000000 		.4byte	0xb8
+ 531 012f 00       		.byte	0
+ 532 0130 09       		.uleb128 0x9
+ 533 0131 C60C0000 		.4byte	.LASF27
+ 534 0135 05       		.byte	0x5
+ 535 0136 2F       		.byte	0x2f
+ 536 0137 B8000000 		.4byte	0xb8
+ 537 013b 04       		.byte	0x4
+ 538 013c 09       		.uleb128 0x9
+ 539 013d B0010000 		.4byte	.LASF28
+ 540 0141 05       		.byte	0x5
+ 541 0142 30       		.byte	0x30
+ 542 0143 B8000000 		.4byte	0xb8
+ 543 0147 08       		.byte	0x8
+ 544 0148 09       		.uleb128 0x9
+ 545 0149 47140000 		.4byte	.LASF29
+ 546 014d 05       		.byte	0x5
+ 547 014e 31       		.byte	0x31
+ 548 014f B8000000 		.4byte	0xb8
+ 549 0153 0C       		.byte	0xc
+ 550 0154 09       		.uleb128 0x9
+ 551 0155 6C130000 		.4byte	.LASF30
+ 552 0159 05       		.byte	0x5
+ 553 015a 33       		.byte	0x33
+ 554 015b B8000000 		.4byte	0xb8
+ 555 015f 10       		.byte	0x10
+ 556 0160 09       		.uleb128 0x9
+ 557 0161 4D040000 		.4byte	.LASF31
+ 558 0165 05       		.byte	0x5
+ 559 0166 34       		.byte	0x34
+ 560 0167 B8000000 		.4byte	0xb8
+ 561 016b 14       		.byte	0x14
+ 562 016c 09       		.uleb128 0x9
+ 563 016d 56040000 		.4byte	.LASF32
+ 564 0171 05       		.byte	0x5
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 16
+
+
+ 565 0172 35       		.byte	0x35
+ 566 0173 B8000000 		.4byte	0xb8
+ 567 0177 18       		.byte	0x18
+ 568 0178 09       		.uleb128 0x9
+ 569 0179 D6130000 		.4byte	.LASF33
+ 570 017d 05       		.byte	0x5
+ 571 017e 36       		.byte	0x36
+ 572 017f 11010000 		.4byte	0x111
+ 573 0183 1C       		.byte	0x1c
+ 574 0184 09       		.uleb128 0x9
+ 575 0185 06060000 		.4byte	.LASF34
+ 576 0189 05       		.byte	0x5
+ 577 018a 38       		.byte	0x38
+ 578 018b B8000000 		.4byte	0xb8
+ 579 018f 20       		.byte	0x20
+ 580 0190 09       		.uleb128 0x9
+ 581 0191 B3080000 		.4byte	.LASF35
+ 582 0195 05       		.byte	0x5
+ 583 0196 39       		.byte	0x39
+ 584 0197 B8000000 		.4byte	0xb8
+ 585 019b 24       		.byte	0x24
+ 586 019c 09       		.uleb128 0x9
+ 587 019d 070C0000 		.4byte	.LASF36
+ 588 01a1 05       		.byte	0x5
+ 589 01a2 3B       		.byte	0x3b
+ 590 01a3 B8000000 		.4byte	0xb8
+ 591 01a7 28       		.byte	0x28
+ 592 01a8 09       		.uleb128 0x9
+ 593 01a9 AF0F0000 		.4byte	.LASF37
+ 594 01ad 05       		.byte	0x5
+ 595 01ae 3C       		.byte	0x3c
+ 596 01af B8000000 		.4byte	0xb8
+ 597 01b3 2C       		.byte	0x2c
+ 598 01b4 09       		.uleb128 0x9
+ 599 01b5 5A070000 		.4byte	.LASF38
+ 600 01b9 05       		.byte	0x5
+ 601 01ba 3E       		.byte	0x3e
+ 602 01bb B8000000 		.4byte	0xb8
+ 603 01bf 30       		.byte	0x30
+ 604 01c0 09       		.uleb128 0x9
+ 605 01c1 A4080000 		.4byte	.LASF39
+ 606 01c5 05       		.byte	0x5
+ 607 01c6 3F       		.byte	0x3f
+ 608 01c7 B8000000 		.4byte	0xb8
+ 609 01cb 34       		.byte	0x34
+ 610 01cc 09       		.uleb128 0x9
+ 611 01cd 82020000 		.4byte	.LASF40
+ 612 01d1 05       		.byte	0x5
+ 613 01d2 41       		.byte	0x41
+ 614 01d3 B8000000 		.4byte	0xb8
+ 615 01d7 38       		.byte	0x38
+ 616 01d8 09       		.uleb128 0x9
+ 617 01d9 78000000 		.4byte	.LASF41
+ 618 01dd 05       		.byte	0x5
+ 619 01de 42       		.byte	0x42
+ 620 01df B8000000 		.4byte	0xb8
+ 621 01e3 3C       		.byte	0x3c
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 17
+
+
+ 622 01e4 09       		.uleb128 0x9
+ 623 01e5 8A030000 		.4byte	.LASF42
+ 624 01e9 05       		.byte	0x5
+ 625 01ea 44       		.byte	0x44
+ 626 01eb B8000000 		.4byte	0xb8
+ 627 01ef 40       		.byte	0x40
+ 628 01f0 09       		.uleb128 0x9
+ 629 01f1 FE130000 		.4byte	.LASF43
+ 630 01f5 05       		.byte	0x5
+ 631 01f6 45       		.byte	0x45
+ 632 01f7 B8000000 		.4byte	0xb8
+ 633 01fb 44       		.byte	0x44
+ 634 01fc 09       		.uleb128 0x9
+ 635 01fd 30170000 		.4byte	.LASF44
+ 636 0201 05       		.byte	0x5
+ 637 0202 47       		.byte	0x47
+ 638 0203 B8000000 		.4byte	0xb8
+ 639 0207 48       		.byte	0x48
+ 640 0208 00       		.byte	0
+ 641 0209 03       		.uleb128 0x3
+ 642 020a 67120000 		.4byte	.LASF45
+ 643 020e 05       		.byte	0x5
+ 644 020f 48       		.byte	0x48
+ 645 0210 18010000 		.4byte	0x118
+ 646 0214 0A       		.uleb128 0xa
+ 647 0215 04       		.byte	0x4
+ 648 0216 1A020000 		.4byte	0x21a
+ 649 021a 0B       		.uleb128 0xb
+ 650 021b 25020000 		.4byte	0x225
+ 651 021f 0C       		.uleb128 0xc
+ 652 0220 B8000000 		.4byte	0xb8
+ 653 0224 00       		.byte	0
+ 654 0225 0A       		.uleb128 0xa
+ 655 0226 04       		.byte	0x4
+ 656 0227 97000000 		.4byte	0x97
+ 657 022b 0D       		.uleb128 0xd
+ 658 022c 01       		.byte	0x1
+ 659 022d 3E000000 		.4byte	0x3e
+ 660 0231 06       		.byte	0x6
+ 661 0232 2A01     		.2byte	0x12a
+ 662 0234 45020000 		.4byte	0x245
+ 663 0238 0E       		.uleb128 0xe
+ 664 0239 D90A0000 		.4byte	.LASF46
+ 665 023d 00       		.byte	0
+ 666 023e 0E       		.uleb128 0xe
+ 667 023f 081A0000 		.4byte	.LASF47
+ 668 0243 01       		.byte	0x1
+ 669 0244 00       		.byte	0
+ 670 0245 06       		.uleb128 0x6
+ 671 0246 09030000 		.4byte	.LASF48
+ 672 024a 06       		.byte	0x6
+ 673 024b 2D01     		.2byte	0x12d
+ 674 024d 2B020000 		.4byte	0x22b
+ 675 0251 0D       		.uleb128 0xd
+ 676 0252 01       		.byte	0x1
+ 677 0253 3E000000 		.4byte	0x3e
+ 678 0257 06       		.byte	0x6
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 18
+
+
+ 679 0258 3201     		.2byte	0x132
+ 680 025a 89020000 		.4byte	0x289
+ 681 025e 0E       		.uleb128 0xe
+ 682 025f 98010000 		.4byte	.LASF49
+ 683 0263 00       		.byte	0
+ 684 0264 0E       		.uleb128 0xe
+ 685 0265 AB190000 		.4byte	.LASF50
+ 686 0269 01       		.byte	0x1
+ 687 026a 0E       		.uleb128 0xe
+ 688 026b 11120000 		.4byte	.LASF51
+ 689 026f 02       		.byte	0x2
+ 690 0270 0E       		.uleb128 0xe
+ 691 0271 93070000 		.4byte	.LASF52
+ 692 0275 03       		.byte	0x3
+ 693 0276 0E       		.uleb128 0xe
+ 694 0277 490B0000 		.4byte	.LASF53
+ 695 027b 04       		.byte	0x4
+ 696 027c 0E       		.uleb128 0xe
+ 697 027d 44160000 		.4byte	.LASF54
+ 698 0281 05       		.byte	0x5
+ 699 0282 0E       		.uleb128 0xe
+ 700 0283 BE0A0000 		.4byte	.LASF55
+ 701 0287 06       		.byte	0x6
+ 702 0288 00       		.byte	0
+ 703 0289 06       		.uleb128 0x6
+ 704 028a C50B0000 		.4byte	.LASF56
+ 705 028e 06       		.byte	0x6
+ 706 028f 3A01     		.2byte	0x13a
+ 707 0291 51020000 		.4byte	0x251
+ 708 0295 0F       		.uleb128 0xf
+ 709 0296 10160000 		.4byte	.LASF58
+ 710 029a 3C       		.byte	0x3c
+ 711 029b 06       		.byte	0x6
+ 712 029c 6601     		.2byte	0x166
+ 713 029e 80030000 		.4byte	0x380
+ 714 02a2 10       		.uleb128 0x10
+ 715 02a3 11180000 		.4byte	.LASF59
+ 716 02a7 06       		.byte	0x6
+ 717 02a8 6901     		.2byte	0x169
+ 718 02aa 80030000 		.4byte	0x380
+ 719 02ae 00       		.byte	0
+ 720 02af 10       		.uleb128 0x10
+ 721 02b0 5A0D0000 		.4byte	.LASF60
+ 722 02b4 06       		.byte	0x6
+ 723 02b5 6A01     		.2byte	0x16a
+ 724 02b7 CA000000 		.4byte	0xca
+ 725 02bb 04       		.byte	0x4
+ 726 02bc 10       		.uleb128 0x10
+ 727 02bd 2E140000 		.4byte	.LASF61
+ 728 02c1 06       		.byte	0x6
+ 729 02c2 6C01     		.2byte	0x16c
+ 730 02c4 97000000 		.4byte	0x97
+ 731 02c8 08       		.byte	0x8
+ 732 02c9 10       		.uleb128 0x10
+ 733 02ca EC110000 		.4byte	.LASF62
+ 734 02ce 06       		.byte	0x6
+ 735 02cf 6D01     		.2byte	0x16d
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 19
+
+
+ 736 02d1 97000000 		.4byte	0x97
+ 737 02d5 09       		.byte	0x9
+ 738 02d6 10       		.uleb128 0x10
+ 739 02d7 1A110000 		.4byte	.LASF63
+ 740 02db 06       		.byte	0x6
+ 741 02dc 6E01     		.2byte	0x16e
+ 742 02de 45020000 		.4byte	0x245
+ 743 02e2 0A       		.byte	0xa
+ 744 02e3 11       		.uleb128 0x11
+ 745 02e4 69647800 		.ascii	"idx\000"
+ 746 02e8 06       		.byte	0x6
+ 747 02e9 7001     		.2byte	0x170
+ 748 02eb B8000000 		.4byte	0xb8
+ 749 02ef 0C       		.byte	0xc
+ 750 02f0 10       		.uleb128 0x10
+ 751 02f1 17180000 		.4byte	.LASF64
+ 752 02f5 06       		.byte	0x6
+ 753 02f6 7101     		.2byte	0x171
+ 754 02f8 B8000000 		.4byte	0xb8
+ 755 02fc 10       		.byte	0x10
+ 756 02fd 10       		.uleb128 0x10
+ 757 02fe 21180000 		.4byte	.LASF65
+ 758 0302 06       		.byte	0x6
+ 759 0303 7201     		.2byte	0x172
+ 760 0305 B8000000 		.4byte	0xb8
+ 761 0309 14       		.byte	0x14
+ 762 030a 10       		.uleb128 0x10
+ 763 030b F50A0000 		.4byte	.LASF66
+ 764 030f 06       		.byte	0x6
+ 765 0310 7401     		.2byte	0x174
+ 766 0312 11010000 		.4byte	0x111
+ 767 0316 18       		.byte	0x18
+ 768 0317 10       		.uleb128 0x10
+ 769 0318 010B0000 		.4byte	.LASF67
+ 770 031c 06       		.byte	0x6
+ 771 031d 7501     		.2byte	0x175
+ 772 031f 25020000 		.4byte	0x225
+ 773 0323 1C       		.byte	0x1c
+ 774 0324 10       		.uleb128 0x10
+ 775 0325 D3000000 		.4byte	.LASF68
+ 776 0329 06       		.byte	0x6
+ 777 032a 7601     		.2byte	0x176
+ 778 032c B8000000 		.4byte	0xb8
+ 779 0330 20       		.byte	0x20
+ 780 0331 10       		.uleb128 0x10
+ 781 0332 0F080000 		.4byte	.LASF69
+ 782 0336 06       		.byte	0x6
+ 783 0337 7801     		.2byte	0x178
+ 784 0339 25020000 		.4byte	0x225
+ 785 033d 24       		.byte	0x24
+ 786 033e 10       		.uleb128 0x10
+ 787 033f EA190000 		.4byte	.LASF70
+ 788 0343 06       		.byte	0x6
+ 789 0344 7901     		.2byte	0x179
+ 790 0346 B8000000 		.4byte	0xb8
+ 791 034a 28       		.byte	0x28
+ 792 034b 10       		.uleb128 0x10
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 20
+
+
+ 793 034c D0030000 		.4byte	.LASF71
+ 794 0350 06       		.byte	0x6
+ 795 0351 7A01     		.2byte	0x17a
+ 796 0353 B8000000 		.4byte	0xb8
+ 797 0357 2C       		.byte	0x2c
+ 798 0358 10       		.uleb128 0x10
+ 799 0359 14080000 		.4byte	.LASF72
+ 800 035d 06       		.byte	0x6
+ 801 035e 7C01     		.2byte	0x17c
+ 802 0360 25020000 		.4byte	0x225
+ 803 0364 30       		.byte	0x30
+ 804 0365 10       		.uleb128 0x10
+ 805 0366 05090000 		.4byte	.LASF73
+ 806 036a 06       		.byte	0x6
+ 807 036b 7D01     		.2byte	0x17d
+ 808 036d B8000000 		.4byte	0xb8
+ 809 0371 34       		.byte	0x34
+ 810 0372 10       		.uleb128 0x10
+ 811 0373 A70D0000 		.4byte	.LASF74
+ 812 0377 06       		.byte	0x6
+ 813 0378 7E01     		.2byte	0x17e
+ 814 037a B8000000 		.4byte	0xb8
+ 815 037e 38       		.byte	0x38
+ 816 037f 00       		.byte	0
+ 817 0380 05       		.uleb128 0x5
+ 818 0381 89020000 		.4byte	0x289
+ 819 0385 06       		.uleb128 0x6
+ 820 0386 32120000 		.4byte	.LASF75
+ 821 038a 06       		.byte	0x6
+ 822 038b 8001     		.2byte	0x180
+ 823 038d 95020000 		.4byte	0x295
+ 824 0391 06       		.uleb128 0x6
+ 825 0392 5A000000 		.4byte	.LASF76
+ 826 0396 07       		.byte	0x7
+ 827 0397 BF01     		.2byte	0x1bf
+ 828 0399 14020000 		.4byte	0x214
+ 829 039d 0F       		.uleb128 0xf
+ 830 039e E6150000 		.4byte	.LASF77
+ 831 03a2 24       		.byte	0x24
+ 832 03a3 07       		.byte	0x7
+ 833 03a4 4102     		.2byte	0x241
+ 834 03a6 20040000 		.4byte	0x420
+ 835 03aa 10       		.uleb128 0x10
+ 836 03ab 5A0D0000 		.4byte	.LASF60
+ 837 03af 07       		.byte	0x7
+ 838 03b0 4402     		.2byte	0x244
+ 839 03b2 CA000000 		.4byte	0xca
+ 840 03b6 00       		.byte	0
+ 841 03b7 10       		.uleb128 0x10
+ 842 03b8 E0080000 		.4byte	.LASF78
+ 843 03bc 07       		.byte	0x7
+ 844 03bd 4602     		.2byte	0x246
+ 845 03bf 0F010000 		.4byte	0x10f
+ 846 03c3 04       		.byte	0x4
+ 847 03c4 10       		.uleb128 0x10
+ 848 03c5 041B0000 		.4byte	.LASF79
+ 849 03c9 07       		.byte	0x7
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 21
+
+
+ 850 03ca 4702     		.2byte	0x247
+ 851 03cc B8000000 		.4byte	0xb8
+ 852 03d0 08       		.byte	0x8
+ 853 03d1 10       		.uleb128 0x10
+ 854 03d2 020D0000 		.4byte	.LASF80
+ 855 03d6 07       		.byte	0x7
+ 856 03d7 4802     		.2byte	0x248
+ 857 03d9 CA000000 		.4byte	0xca
+ 858 03dd 0C       		.byte	0xc
+ 859 03de 10       		.uleb128 0x10
+ 860 03df 92110000 		.4byte	.LASF81
+ 861 03e3 07       		.byte	0x7
+ 862 03e4 4A02     		.2byte	0x24a
+ 863 03e6 0F010000 		.4byte	0x10f
+ 864 03ea 10       		.byte	0x10
+ 865 03eb 10       		.uleb128 0x10
+ 866 03ec 3B100000 		.4byte	.LASF82
+ 867 03f0 07       		.byte	0x7
+ 868 03f1 4B02     		.2byte	0x24b
+ 869 03f3 B8000000 		.4byte	0xb8
+ 870 03f7 14       		.byte	0x14
+ 871 03f8 10       		.uleb128 0x10
+ 872 03f9 79020000 		.4byte	.LASF83
+ 873 03fd 07       		.byte	0x7
+ 874 03fe 4C02     		.2byte	0x24c
+ 875 0400 CA000000 		.4byte	0xca
+ 876 0404 18       		.byte	0x18
+ 877 0405 10       		.uleb128 0x10
+ 878 0406 9F090000 		.4byte	.LASF84
+ 879 040a 07       		.byte	0x7
+ 880 040b 5202     		.2byte	0x252
+ 881 040d 91030000 		.4byte	0x391
+ 882 0411 1C       		.byte	0x1c
+ 883 0412 10       		.uleb128 0x10
+ 884 0413 3F0D0000 		.4byte	.LASF85
+ 885 0417 07       		.byte	0x7
+ 886 0418 5502     		.2byte	0x255
+ 887 041a B8000000 		.4byte	0xb8
+ 888 041e 20       		.byte	0x20
+ 889 041f 00       		.byte	0
+ 890 0420 06       		.uleb128 0x6
+ 891 0421 8B0F0000 		.4byte	.LASF86
+ 892 0425 07       		.byte	0x7
+ 893 0426 5802     		.2byte	0x258
+ 894 0428 9D030000 		.4byte	0x39d
+ 895 042c 0D       		.uleb128 0xd
+ 896 042d 02       		.byte	0x2
+ 897 042e 50000000 		.4byte	0x50
+ 898 0432 08       		.byte	0x8
+ 899 0433 4201     		.2byte	0x142
+ 900 0435 65070000 		.4byte	0x765
+ 901 0439 0E       		.uleb128 0xe
+ 902 043a 08070000 		.4byte	.LASF87
+ 903 043e 00       		.byte	0
+ 904 043f 12       		.uleb128 0x12
+ 905 0440 62060000 		.4byte	.LASF88
+ 906 0444 0010     		.2byte	0x1000
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 22
+
+
+ 907 0446 12       		.uleb128 0x12
+ 908 0447 FD150000 		.4byte	.LASF89
+ 909 044b 0110     		.2byte	0x1001
+ 910 044d 12       		.uleb128 0x12
+ 911 044e 1B070000 		.4byte	.LASF90
+ 912 0452 0210     		.2byte	0x1002
+ 913 0454 12       		.uleb128 0x12
+ 914 0455 650B0000 		.4byte	.LASF91
+ 915 0459 0310     		.2byte	0x1003
+ 916 045b 12       		.uleb128 0x12
+ 917 045c DB000000 		.4byte	.LASF92
+ 918 0460 0410     		.2byte	0x1004
+ 919 0462 12       		.uleb128 0x12
+ 920 0463 3A1A0000 		.4byte	.LASF93
+ 921 0467 0510     		.2byte	0x1005
+ 922 0469 12       		.uleb128 0x12
+ 923 046a 4D120000 		.4byte	.LASF94
+ 924 046e 0020     		.2byte	0x2000
+ 925 0470 12       		.uleb128 0x12
+ 926 0471 F7140000 		.4byte	.LASF95
+ 927 0475 0120     		.2byte	0x2001
+ 928 0477 12       		.uleb128 0x12
+ 929 0478 11000000 		.4byte	.LASF96
+ 930 047c 0220     		.2byte	0x2002
+ 931 047e 12       		.uleb128 0x12
+ 932 047f 250B0000 		.4byte	.LASF97
+ 933 0483 0320     		.2byte	0x2003
+ 934 0485 12       		.uleb128 0x12
+ 935 0486 DC0C0000 		.4byte	.LASF98
+ 936 048a 0420     		.2byte	0x2004
+ 937 048c 12       		.uleb128 0x12
+ 938 048d F30E0000 		.4byte	.LASF99
+ 939 0491 0520     		.2byte	0x2005
+ 940 0493 12       		.uleb128 0x12
+ 941 0494 520A0000 		.4byte	.LASF100
+ 942 0498 0620     		.2byte	0x2006
+ 943 049a 12       		.uleb128 0x12
+ 944 049b 55150000 		.4byte	.LASF101
+ 945 049f 0720     		.2byte	0x2007
+ 946 04a1 12       		.uleb128 0x12
+ 947 04a2 6D170000 		.4byte	.LASF102
+ 948 04a6 0820     		.2byte	0x2008
+ 949 04a8 12       		.uleb128 0x12
+ 950 04a9 BF0F0000 		.4byte	.LASF103
+ 951 04ad 0920     		.2byte	0x2009
+ 952 04af 12       		.uleb128 0x12
+ 953 04b0 E7060000 		.4byte	.LASF104
+ 954 04b4 0A20     		.2byte	0x200a
+ 955 04b6 12       		.uleb128 0x12
+ 956 04b7 38070000 		.4byte	.LASF105
+ 957 04bb 0B20     		.2byte	0x200b
+ 958 04bd 12       		.uleb128 0x12
+ 959 04be F2170000 		.4byte	.LASF106
+ 960 04c2 0C20     		.2byte	0x200c
+ 961 04c4 12       		.uleb128 0x12
+ 962 04c5 3F060000 		.4byte	.LASF107
+ 963 04c9 0D20     		.2byte	0x200d
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 23
+
+
+ 964 04cb 12       		.uleb128 0x12
+ 965 04cc BF0D0000 		.4byte	.LASF108
+ 966 04d0 0E20     		.2byte	0x200e
+ 967 04d2 12       		.uleb128 0x12
+ 968 04d3 EA120000 		.4byte	.LASF109
+ 969 04d7 0F20     		.2byte	0x200f
+ 970 04d9 12       		.uleb128 0x12
+ 971 04da C30E0000 		.4byte	.LASF110
+ 972 04de 1020     		.2byte	0x2010
+ 973 04e0 12       		.uleb128 0x12
+ 974 04e1 02100000 		.4byte	.LASF111
+ 975 04e5 1120     		.2byte	0x2011
+ 976 04e7 12       		.uleb128 0x12
+ 977 04e8 3B170000 		.4byte	.LASF112
+ 978 04ec 1220     		.2byte	0x2012
+ 979 04ee 12       		.uleb128 0x12
+ 980 04ef C4080000 		.4byte	.LASF113
+ 981 04f3 1320     		.2byte	0x2013
+ 982 04f5 12       		.uleb128 0x12
+ 983 04f6 010E0000 		.4byte	.LASF114
+ 984 04fa 1420     		.2byte	0x2014
+ 985 04fc 12       		.uleb128 0x12
+ 986 04fd 07040000 		.4byte	.LASF115
+ 987 0501 1520     		.2byte	0x2015
+ 988 0503 12       		.uleb128 0x12
+ 989 0504 C7050000 		.4byte	.LASF116
+ 990 0508 1620     		.2byte	0x2016
+ 991 050a 12       		.uleb128 0x12
+ 992 050b 57030000 		.4byte	.LASF117
+ 993 050f 1720     		.2byte	0x2017
+ 994 0511 12       		.uleb128 0x12
+ 995 0512 76060000 		.4byte	.LASF118
+ 996 0516 0030     		.2byte	0x3000
+ 997 0518 12       		.uleb128 0x12
+ 998 0519 38090000 		.4byte	.LASF119
+ 999 051d 0130     		.2byte	0x3001
+ 1000 051f 12       		.uleb128 0x12
+ 1001 0520 7A080000 		.4byte	.LASF120
+ 1002 0524 0230     		.2byte	0x3002
+ 1003 0526 12       		.uleb128 0x12
+ 1004 0527 83150000 		.4byte	.LASF121
+ 1005 052b 0330     		.2byte	0x3003
+ 1006 052d 12       		.uleb128 0x12
+ 1007 052e E1070000 		.4byte	.LASF122
+ 1008 0532 0430     		.2byte	0x3004
+ 1009 0534 12       		.uleb128 0x12
+ 1010 0535 C7150000 		.4byte	.LASF123
+ 1011 0539 0530     		.2byte	0x3005
+ 1012 053b 12       		.uleb128 0x12
+ 1013 053c 79010000 		.4byte	.LASF124
+ 1014 0540 0630     		.2byte	0x3006
+ 1015 0542 12       		.uleb128 0x12
+ 1016 0543 88190000 		.4byte	.LASF125
+ 1017 0547 0730     		.2byte	0x3007
+ 1018 0549 12       		.uleb128 0x12
+ 1019 054a 3B0F0000 		.4byte	.LASF126
+ 1020 054e 0830     		.2byte	0x3008
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 24
+
+
+ 1021 0550 12       		.uleb128 0x12
+ 1022 0551 EA090000 		.4byte	.LASF127
+ 1023 0555 0930     		.2byte	0x3009
+ 1024 0557 12       		.uleb128 0x12
+ 1025 0558 A7150000 		.4byte	.LASF128
+ 1026 055c 0A30     		.2byte	0x300a
+ 1027 055e 12       		.uleb128 0x12
+ 1028 055f 210C0000 		.4byte	.LASF129
+ 1029 0563 0B30     		.2byte	0x300b
+ 1030 0565 12       		.uleb128 0x12
+ 1031 0566 FA000000 		.4byte	.LASF130
+ 1032 056a 0C30     		.2byte	0x300c
+ 1033 056c 12       		.uleb128 0x12
+ 1034 056d 7C0D0000 		.4byte	.LASF131
+ 1035 0571 1130     		.2byte	0x3011
+ 1036 0573 12       		.uleb128 0x12
+ 1037 0574 30130000 		.4byte	.LASF132
+ 1038 0578 1230     		.2byte	0x3012
+ 1039 057a 12       		.uleb128 0x12
+ 1040 057b 7F160000 		.4byte	.LASF133
+ 1041 057f 1330     		.2byte	0x3013
+ 1042 0581 12       		.uleb128 0x12
+ 1043 0582 21150000 		.4byte	.LASF134
+ 1044 0586 1430     		.2byte	0x3014
+ 1045 0588 12       		.uleb128 0x12
+ 1046 0589 0D140000 		.4byte	.LASF135
+ 1047 058d 1530     		.2byte	0x3015
+ 1048 058f 12       		.uleb128 0x12
+ 1049 0590 6E0E0000 		.4byte	.LASF136
+ 1050 0594 1630     		.2byte	0x3016
+ 1051 0596 12       		.uleb128 0x12
+ 1052 0597 4C0E0000 		.4byte	.LASF137
+ 1053 059b 1730     		.2byte	0x3017
+ 1054 059d 12       		.uleb128 0x12
+ 1055 059e 7F0B0000 		.4byte	.LASF138
+ 1056 05a2 1830     		.2byte	0x3018
+ 1057 05a4 12       		.uleb128 0x12
+ 1058 05a5 B5100000 		.4byte	.LASF139
+ 1059 05a9 0040     		.2byte	0x4000
+ 1060 05ab 12       		.uleb128 0x12
+ 1061 05ac 51190000 		.4byte	.LASF140
+ 1062 05b0 0140     		.2byte	0x4001
+ 1063 05b2 12       		.uleb128 0x12
+ 1064 05b3 BD180000 		.4byte	.LASF141
+ 1065 05b7 0240     		.2byte	0x4002
+ 1066 05b9 12       		.uleb128 0x12
+ 1067 05ba 9C160000 		.4byte	.LASF142
+ 1068 05be 0340     		.2byte	0x4003
+ 1069 05c0 12       		.uleb128 0x12
+ 1070 05c1 E40D0000 		.4byte	.LASF143
+ 1071 05c5 0440     		.2byte	0x4004
+ 1072 05c7 12       		.uleb128 0x12
+ 1073 05c8 831A0000 		.4byte	.LASF144
+ 1074 05cc 0540     		.2byte	0x4005
+ 1075 05ce 12       		.uleb128 0x12
+ 1076 05cf 86000000 		.4byte	.LASF145
+ 1077 05d3 0640     		.2byte	0x4006
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 25
+
+
+ 1078 05d5 12       		.uleb128 0x12
+ 1079 05d6 0E090000 		.4byte	.LASF146
+ 1080 05da 0740     		.2byte	0x4007
+ 1081 05dc 12       		.uleb128 0x12
+ 1082 05dd 56020000 		.4byte	.LASF147
+ 1083 05e1 0840     		.2byte	0x4008
+ 1084 05e3 12       		.uleb128 0x12
+ 1085 05e4 5C080000 		.4byte	.LASF148
+ 1086 05e8 0940     		.2byte	0x4009
+ 1087 05ea 12       		.uleb128 0x12
+ 1088 05eb 0E1B0000 		.4byte	.LASF149
+ 1089 05ef 0A40     		.2byte	0x400a
+ 1090 05f1 12       		.uleb128 0x12
+ 1091 05f2 450C0000 		.4byte	.LASF150
+ 1092 05f6 0B40     		.2byte	0x400b
+ 1093 05f8 12       		.uleb128 0x12
+ 1094 05f9 DD0F0000 		.4byte	.LASF151
+ 1095 05fd 0C40     		.2byte	0x400c
+ 1096 05ff 12       		.uleb128 0x12
+ 1097 0600 0B0D0000 		.4byte	.LASF152
+ 1098 0604 0D40     		.2byte	0x400d
+ 1099 0606 12       		.uleb128 0x12
+ 1100 0607 26110000 		.4byte	.LASF153
+ 1101 060b 0E40     		.2byte	0x400e
+ 1102 060d 12       		.uleb128 0x12
+ 1103 060e 650C0000 		.4byte	.LASF154
+ 1104 0612 0F40     		.2byte	0x400f
+ 1105 0614 12       		.uleb128 0x12
+ 1106 0615 6E070000 		.4byte	.LASF155
+ 1107 0619 1040     		.2byte	0x4010
+ 1108 061b 12       		.uleb128 0x12
+ 1109 061c 91170000 		.4byte	.LASF156
+ 1110 0620 1140     		.2byte	0x4011
+ 1111 0622 12       		.uleb128 0x12
+ 1112 0623 2A0A0000 		.4byte	.LASF157
+ 1113 0627 1240     		.2byte	0x4012
+ 1114 0629 12       		.uleb128 0x12
+ 1115 062a 5F140000 		.4byte	.LASF158
+ 1116 062e 1340     		.2byte	0x4013
+ 1117 0630 12       		.uleb128 0x12
+ 1118 0631 F9100000 		.4byte	.LASF159
+ 1119 0635 1440     		.2byte	0x4014
+ 1120 0637 12       		.uleb128 0x12
+ 1121 0638 12050000 		.4byte	.LASF160
+ 1122 063c 1540     		.2byte	0x4015
+ 1123 063e 12       		.uleb128 0x12
+ 1124 063f 531A0000 		.4byte	.LASF161
+ 1125 0643 1640     		.2byte	0x4016
+ 1126 0645 12       		.uleb128 0x12
+ 1127 0646 17020000 		.4byte	.LASF162
+ 1128 064a 1740     		.2byte	0x4017
+ 1129 064c 12       		.uleb128 0x12
+ 1130 064d AA0E0000 		.4byte	.LASF163
+ 1131 0651 1840     		.2byte	0x4018
+ 1132 0653 12       		.uleb128 0x12
+ 1133 0654 7D130000 		.4byte	.LASF164
+ 1134 0658 1940     		.2byte	0x4019
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 26
+
+
+ 1135 065a 12       		.uleb128 0x12
+ 1136 065b 4C100000 		.4byte	.LASF165
+ 1137 065f 1A40     		.2byte	0x401a
+ 1138 0661 12       		.uleb128 0x12
+ 1139 0662 A7120000 		.4byte	.LASF166
+ 1140 0666 0050     		.2byte	0x5000
+ 1141 0668 12       		.uleb128 0x12
+ 1142 0669 B4030000 		.4byte	.LASF167
+ 1143 066d 0150     		.2byte	0x5001
+ 1144 066f 12       		.uleb128 0x12
+ 1145 0670 E6080000 		.4byte	.LASF168
+ 1146 0674 0250     		.2byte	0x5002
+ 1147 0676 12       		.uleb128 0x12
+ 1148 0677 63180000 		.4byte	.LASF169
+ 1149 067b 0350     		.2byte	0x5003
+ 1150 067d 12       		.uleb128 0x12
+ 1151 067e 86050000 		.4byte	.LASF170
+ 1152 0682 0450     		.2byte	0x5004
+ 1153 0684 12       		.uleb128 0x12
+ 1154 0685 C2120000 		.4byte	.LASF171
+ 1155 0689 0550     		.2byte	0x5005
+ 1156 068b 12       		.uleb128 0x12
+ 1157 068c A40C0000 		.4byte	.LASF172
+ 1158 0690 0650     		.2byte	0x5006
+ 1159 0692 12       		.uleb128 0x12
+ 1160 0693 29030000 		.4byte	.LASF173
+ 1161 0697 0750     		.2byte	0x5007
+ 1162 0699 12       		.uleb128 0x12
+ 1163 069a A0060000 		.4byte	.LASF174
+ 1164 069e 0850     		.2byte	0x5008
+ 1165 06a0 12       		.uleb128 0x12
+ 1166 06a1 EC050000 		.4byte	.LASF175
+ 1167 06a5 0950     		.2byte	0x5009
+ 1168 06a7 12       		.uleb128 0x12
+ 1169 06a8 17060000 		.4byte	.LASF176
+ 1170 06ac 0A50     		.2byte	0x500a
+ 1171 06ae 12       		.uleb128 0x12
+ 1172 06af 94030000 		.4byte	.LASF177
+ 1173 06b3 0B50     		.2byte	0x500b
+ 1174 06b5 12       		.uleb128 0x12
+ 1175 06b6 15130000 		.4byte	.LASF178
+ 1176 06ba 0C50     		.2byte	0x500c
+ 1177 06bc 12       		.uleb128 0x12
+ 1178 06bd 760A0000 		.4byte	.LASF179
+ 1179 06c1 0D50     		.2byte	0x500d
+ 1180 06c3 12       		.uleb128 0x12
+ 1181 06c4 69190000 		.4byte	.LASF180
+ 1182 06c8 0E50     		.2byte	0x500e
+ 1183 06ca 12       		.uleb128 0x12
+ 1184 06cb 6F090000 		.4byte	.LASF181
+ 1185 06cf 0F50     		.2byte	0x500f
+ 1186 06d1 12       		.uleb128 0x12
+ 1187 06d2 D7140000 		.4byte	.LASF182
+ 1188 06d6 1050     		.2byte	0x5010
+ 1189 06d8 12       		.uleb128 0x12
+ 1190 06d9 2B180000 		.4byte	.LASF183
+ 1191 06dd 1150     		.2byte	0x5011
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 27
+
+
+ 1192 06df 12       		.uleb128 0x12
+ 1193 06e0 1E010000 		.4byte	.LASF184
+ 1194 06e4 1250     		.2byte	0x5012
+ 1195 06e6 12       		.uleb128 0x12
+ 1196 06e7 85120000 		.4byte	.LASF185
+ 1197 06eb 1350     		.2byte	0x5013
+ 1198 06ed 12       		.uleb128 0x12
+ 1199 06ee A5050000 		.4byte	.LASF186
+ 1200 06f2 1450     		.2byte	0x5014
+ 1201 06f4 12       		.uleb128 0x12
+ 1202 06f5 00170000 		.4byte	.LASF187
+ 1203 06f9 1550     		.2byte	0x5015
+ 1204 06fb 12       		.uleb128 0x12
+ 1205 06fc 93180000 		.4byte	.LASF188
+ 1206 0700 1650     		.2byte	0x5016
+ 1207 0702 12       		.uleb128 0x12
+ 1208 0703 23040000 		.4byte	.LASF189
+ 1209 0707 1750     		.2byte	0x5017
+ 1210 0709 12       		.uleb128 0x12
+ 1211 070a 5E0F0000 		.4byte	.LASF190
+ 1212 070e 1850     		.2byte	0x5018
+ 1213 0710 12       		.uleb128 0x12
+ 1214 0711 C3190000 		.4byte	.LASF191
+ 1215 0715 0060     		.2byte	0x6000
+ 1216 0717 12       		.uleb128 0x12
+ 1217 0718 CB170000 		.4byte	.LASF192
+ 1218 071c 0160     		.2byte	0x6001
+ 1219 071e 12       		.uleb128 0x12
+ 1220 071f 080B0000 		.4byte	.LASF193
+ 1221 0723 0260     		.2byte	0x6002
+ 1222 0725 12       		.uleb128 0x12
+ 1223 0726 DA100000 		.4byte	.LASF194
+ 1224 072a 0360     		.2byte	0x6003
+ 1225 072c 12       		.uleb128 0x12
+ 1226 072d C8060000 		.4byte	.LASF195
+ 1227 0731 0460     		.2byte	0x6004
+ 1228 0733 12       		.uleb128 0x12
+ 1229 0734 9C0A0000 		.4byte	.LASF196
+ 1230 0738 0560     		.2byte	0x6005
+ 1231 073a 12       		.uleb128 0x12
+ 1232 073b C8090000 		.4byte	.LASF197
+ 1233 073f 0660     		.2byte	0x6006
+ 1234 0741 12       		.uleb128 0x12
+ 1235 0742 3A000000 		.4byte	.LASF198
+ 1236 0746 0760     		.2byte	0x6007
+ 1237 0748 12       		.uleb128 0x12
+ 1238 0749 B8010000 		.4byte	.LASF199
+ 1239 074d 0860     		.2byte	0x6008
+ 1240 074f 12       		.uleb128 0x12
+ 1241 0750 AF000000 		.4byte	.LASF200
+ 1242 0754 0960     		.2byte	0x6009
+ 1243 0756 12       		.uleb128 0x12
+ 1244 0757 62100000 		.4byte	.LASF201
+ 1245 075b 0A60     		.2byte	0x600a
+ 1246 075d 12       		.uleb128 0x12
+ 1247 075e AE090000 		.4byte	.LASF202
+ 1248 0762 FFFF     		.2byte	0xffff
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 28
+
+
+ 1249 0764 00       		.byte	0
+ 1250 0765 13       		.uleb128 0x13
+ 1251 0766 02       		.byte	0x2
+ 1252 0767 09       		.byte	0x9
+ 1253 0768 5B01     		.2byte	0x15b
+ 1254 076a 89070000 		.4byte	0x789
+ 1255 076e 10       		.uleb128 0x10
+ 1256 076f E2180000 		.4byte	.LASF203
+ 1257 0773 09       		.byte	0x9
+ 1258 0774 6501     		.2byte	0x165
+ 1259 0776 97000000 		.4byte	0x97
+ 1260 077a 00       		.byte	0
+ 1261 077b 10       		.uleb128 0x10
+ 1262 077c 9E080000 		.4byte	.LASF204
+ 1263 0780 09       		.byte	0x9
+ 1264 0781 6901     		.2byte	0x169
+ 1265 0783 97000000 		.4byte	0x97
+ 1266 0787 01       		.byte	0x1
+ 1267 0788 00       		.byte	0
+ 1268 0789 06       		.uleb128 0x6
+ 1269 078a 53130000 		.4byte	.LASF205
+ 1270 078e 09       		.byte	0x9
+ 1271 078f 6B01     		.2byte	0x16b
+ 1272 0791 65070000 		.4byte	0x765
+ 1273 0795 14       		.uleb128 0x14
+ 1274 0796 01       		.byte	0x1
+ 1275 0797 3E000000 		.4byte	0x3e
+ 1276 079b 0A       		.byte	0xa
+ 1277 079c 7E       		.byte	0x7e
+ 1278 079d BA070000 		.4byte	0x7ba
+ 1279 07a1 0E       		.uleb128 0xe
+ 1280 07a2 DE030000 		.4byte	.LASF206
+ 1281 07a6 00       		.byte	0
+ 1282 07a7 0E       		.uleb128 0xe
+ 1283 07a8 32080000 		.4byte	.LASF207
+ 1284 07ac 01       		.byte	0x1
+ 1285 07ad 0E       		.uleb128 0xe
+ 1286 07ae 0D0A0000 		.4byte	.LASF208
+ 1287 07b2 02       		.byte	0x2
+ 1288 07b3 0E       		.uleb128 0xe
+ 1289 07b4 A50B0000 		.4byte	.LASF209
+ 1290 07b8 03       		.byte	0x3
+ 1291 07b9 00       		.byte	0
+ 1292 07ba 03       		.uleb128 0x3
+ 1293 07bb CB070000 		.4byte	.LASF210
+ 1294 07bf 0A       		.byte	0xa
+ 1295 07c0 83       		.byte	0x83
+ 1296 07c1 95070000 		.4byte	0x795
+ 1297 07c5 14       		.uleb128 0x14
+ 1298 07c6 01       		.byte	0x1
+ 1299 07c7 3E000000 		.4byte	0x3e
+ 1300 07cb 0A       		.byte	0xa
+ 1301 07cc 87       		.byte	0x87
+ 1302 07cd 02080000 		.4byte	0x802
+ 1303 07d1 0E       		.uleb128 0xe
+ 1304 07d2 9E1A0000 		.4byte	.LASF211
+ 1305 07d6 00       		.byte	0
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 29
+
+
+ 1306 07d7 0E       		.uleb128 0xe
+ 1307 07d8 39050000 		.4byte	.LASF212
+ 1308 07dc 01       		.byte	0x1
+ 1309 07dd 0E       		.uleb128 0xe
+ 1310 07de 76110000 		.4byte	.LASF213
+ 1311 07e2 02       		.byte	0x2
+ 1312 07e3 0E       		.uleb128 0xe
+ 1313 07e4 BD1A0000 		.4byte	.LASF214
+ 1314 07e8 03       		.byte	0x3
+ 1315 07e9 0E       		.uleb128 0xe
+ 1316 07ea 98110000 		.4byte	.LASF215
+ 1317 07ee 04       		.byte	0x4
+ 1318 07ef 0E       		.uleb128 0xe
+ 1319 07f0 DD0B0000 		.4byte	.LASF216
+ 1320 07f4 05       		.byte	0x5
+ 1321 07f5 0E       		.uleb128 0xe
+ 1322 07f6 4B110000 		.4byte	.LASF217
+ 1323 07fa 06       		.byte	0x6
+ 1324 07fb 0E       		.uleb128 0xe
+ 1325 07fc 55010000 		.4byte	.LASF218
+ 1326 0800 07       		.byte	0x7
+ 1327 0801 00       		.byte	0
+ 1328 0802 03       		.uleb128 0x3
+ 1329 0803 350E0000 		.4byte	.LASF219
+ 1330 0807 0A       		.byte	0xa
+ 1331 0808 90       		.byte	0x90
+ 1332 0809 C5070000 		.4byte	0x7c5
+ 1333 080d 03       		.uleb128 0x3
+ 1334 080e B3170000 		.4byte	.LASF220
+ 1335 0812 0B       		.byte	0xb
+ 1336 0813 FC       		.byte	0xfc
+ 1337 0814 F7000000 		.4byte	0xf7
+ 1338 0818 06       		.uleb128 0x6
+ 1339 0819 610D0000 		.4byte	.LASF221
+ 1340 081d 0B       		.byte	0xb
+ 1341 081e 0001     		.2byte	0x100
+ 1342 0820 EB000000 		.4byte	0xeb
+ 1343 0824 15       		.uleb128 0x15
+ 1344 0825 EB000000 		.4byte	0xeb
+ 1345 0829 34080000 		.4byte	0x834
+ 1346 082d 16       		.uleb128 0x16
+ 1347 082e C3000000 		.4byte	0xc3
+ 1348 0832 00       		.byte	0
+ 1349 0833 00       		.byte	0
+ 1350 0834 17       		.uleb128 0x17
+ 1351 0835 0E       		.byte	0xe
+ 1352 0836 0C       		.byte	0xc
+ 1353 0837 CE       		.byte	0xce
+ 1354 0838 B7080000 		.4byte	0x8b7
+ 1355 083c 09       		.uleb128 0x9
+ 1356 083d 470D0000 		.4byte	.LASF222
+ 1357 0841 0C       		.byte	0xc
+ 1358 0842 D4       		.byte	0xd4
+ 1359 0843 F7000000 		.4byte	0xf7
+ 1360 0847 00       		.byte	0
+ 1361 0848 09       		.uleb128 0x9
+ 1362 0849 C3160000 		.4byte	.LASF223
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 30
+
+
+ 1363 084d 0C       		.byte	0xc
+ 1364 084e D9       		.byte	0xd9
+ 1365 084f 0D080000 		.4byte	0x80d
+ 1366 0853 02       		.byte	0x2
+ 1367 0854 09       		.uleb128 0x9
+ 1368 0855 140C0000 		.4byte	.LASF224
+ 1369 0859 0C       		.byte	0xc
+ 1370 085a DE       		.byte	0xde
+ 1371 085b EB000000 		.4byte	0xeb
+ 1372 085f 04       		.byte	0x4
+ 1373 0860 09       		.uleb128 0x9
+ 1374 0861 820F0000 		.4byte	.LASF225
+ 1375 0865 0C       		.byte	0xc
+ 1376 0866 E3       		.byte	0xe3
+ 1377 0867 EB000000 		.4byte	0xeb
+ 1378 086b 05       		.byte	0x5
+ 1379 086c 09       		.uleb128 0x9
+ 1380 086d BD090000 		.4byte	.LASF226
+ 1381 0871 0C       		.byte	0xc
+ 1382 0872 E8       		.byte	0xe8
+ 1383 0873 EB000000 		.4byte	0xeb
+ 1384 0877 06       		.byte	0x6
+ 1385 0878 09       		.uleb128 0x9
+ 1386 0879 9F0E0000 		.4byte	.LASF227
+ 1387 087d 0C       		.byte	0xc
+ 1388 087e ED       		.byte	0xed
+ 1389 087f EB000000 		.4byte	0xeb
+ 1390 0883 07       		.byte	0x7
+ 1391 0884 09       		.uleb128 0x9
+ 1392 0885 910A0000 		.4byte	.LASF228
+ 1393 0889 0C       		.byte	0xc
+ 1394 088a F4       		.byte	0xf4
+ 1395 088b 18080000 		.4byte	0x818
+ 1396 088f 08       		.byte	0x8
+ 1397 0890 09       		.uleb128 0x9
+ 1398 0891 60160000 		.4byte	.LASF229
+ 1399 0895 0C       		.byte	0xc
+ 1400 0896 FC       		.byte	0xfc
+ 1401 0897 24080000 		.4byte	0x824
+ 1402 089b 09       		.byte	0x9
+ 1403 089c 10       		.uleb128 0x10
+ 1404 089d B6180000 		.4byte	.LASF230
+ 1405 08a1 0C       		.byte	0xc
+ 1406 08a2 0501     		.2byte	0x105
+ 1407 08a4 F7000000 		.4byte	0xf7
+ 1408 08a8 0A       		.byte	0xa
+ 1409 08a9 10       		.uleb128 0x10
+ 1410 08aa C9130000 		.4byte	.LASF231
+ 1411 08ae 0C       		.byte	0xc
+ 1412 08af 0A01     		.2byte	0x10a
+ 1413 08b1 EB000000 		.4byte	0xeb
+ 1414 08b5 0C       		.byte	0xc
+ 1415 08b6 00       		.byte	0
+ 1416 08b7 06       		.uleb128 0x6
+ 1417 08b8 D4160000 		.4byte	.LASF232
+ 1418 08bc 0C       		.byte	0xc
+ 1419 08bd 0B01     		.2byte	0x10b
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 31
+
+
+ 1420 08bf 34080000 		.4byte	0x834
+ 1421 08c3 13       		.uleb128 0x13
+ 1422 08c4 8C       		.byte	0x8c
+ 1423 08c5 0C       		.byte	0xc
+ 1424 08c6 1101     		.2byte	0x111
+ 1425 08c8 4F090000 		.4byte	0x94f
+ 1426 08cc 10       		.uleb128 0x10
+ 1427 08cd 87140000 		.4byte	.LASF233
+ 1428 08d1 0C       		.byte	0xc
+ 1429 08d2 1601     		.2byte	0x116
+ 1430 08d4 B7080000 		.4byte	0x8b7
+ 1431 08d8 00       		.byte	0
+ 1432 08d9 10       		.uleb128 0x10
+ 1433 08da 8F140000 		.4byte	.LASF234
+ 1434 08de 0C       		.byte	0xc
+ 1435 08df 1B01     		.2byte	0x11b
+ 1436 08e1 B7080000 		.4byte	0x8b7
+ 1437 08e5 0E       		.byte	0xe
+ 1438 08e6 10       		.uleb128 0x10
+ 1439 08e7 97140000 		.4byte	.LASF235
+ 1440 08eb 0C       		.byte	0xc
+ 1441 08ec 2001     		.2byte	0x120
+ 1442 08ee B7080000 		.4byte	0x8b7
+ 1443 08f2 1C       		.byte	0x1c
+ 1444 08f3 10       		.uleb128 0x10
+ 1445 08f4 9F140000 		.4byte	.LASF236
+ 1446 08f8 0C       		.byte	0xc
+ 1447 08f9 2501     		.2byte	0x125
+ 1448 08fb B7080000 		.4byte	0x8b7
+ 1449 08ff 2A       		.byte	0x2a
+ 1450 0900 10       		.uleb128 0x10
+ 1451 0901 A7140000 		.4byte	.LASF237
+ 1452 0905 0C       		.byte	0xc
+ 1453 0906 2A01     		.2byte	0x12a
+ 1454 0908 B7080000 		.4byte	0x8b7
+ 1455 090c 38       		.byte	0x38
+ 1456 090d 10       		.uleb128 0x10
+ 1457 090e AF140000 		.4byte	.LASF238
+ 1458 0912 0C       		.byte	0xc
+ 1459 0913 2F01     		.2byte	0x12f
+ 1460 0915 B7080000 		.4byte	0x8b7
+ 1461 0919 46       		.byte	0x46
+ 1462 091a 10       		.uleb128 0x10
+ 1463 091b B7140000 		.4byte	.LASF239
+ 1464 091f 0C       		.byte	0xc
+ 1465 0920 3401     		.2byte	0x134
+ 1466 0922 B7080000 		.4byte	0x8b7
+ 1467 0926 54       		.byte	0x54
+ 1468 0927 10       		.uleb128 0x10
+ 1469 0928 BF140000 		.4byte	.LASF240
+ 1470 092c 0C       		.byte	0xc
+ 1471 092d 3901     		.2byte	0x139
+ 1472 092f B7080000 		.4byte	0x8b7
+ 1473 0933 62       		.byte	0x62
+ 1474 0934 10       		.uleb128 0x10
+ 1475 0935 C7140000 		.4byte	.LASF241
+ 1476 0939 0C       		.byte	0xc
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 32
+
+
+ 1477 093a 3E01     		.2byte	0x13e
+ 1478 093c B7080000 		.4byte	0x8b7
+ 1479 0940 70       		.byte	0x70
+ 1480 0941 10       		.uleb128 0x10
+ 1481 0942 CF140000 		.4byte	.LASF242
+ 1482 0946 0C       		.byte	0xc
+ 1483 0947 4301     		.2byte	0x143
+ 1484 0949 B7080000 		.4byte	0x8b7
+ 1485 094d 7E       		.byte	0x7e
+ 1486 094e 00       		.byte	0
+ 1487 094f 06       		.uleb128 0x6
+ 1488 0950 6A050000 		.4byte	.LASF243
+ 1489 0954 0C       		.byte	0xc
+ 1490 0955 4401     		.2byte	0x144
+ 1491 0957 C3080000 		.4byte	0x8c3
+ 1492 095b 13       		.uleb128 0x13
+ 1493 095c 0A       		.byte	0xa
+ 1494 095d 0C       		.byte	0xc
+ 1495 095e 4A01     		.2byte	0x14a
+ 1496 0960 A6090000 		.4byte	0x9a6
+ 1497 0964 11       		.uleb128 0x11
+ 1498 0965 72617700 		.ascii	"raw\000"
+ 1499 0969 0C       		.byte	0xc
+ 1500 096a 4F01     		.2byte	0x14f
+ 1501 096c A6090000 		.4byte	0x9a6
+ 1502 0970 00       		.byte	0
+ 1503 0971 10       		.uleb128 0x10
+ 1504 0972 1D190000 		.4byte	.LASF244
+ 1505 0976 0C       		.byte	0xc
+ 1506 0977 5401     		.2byte	0x154
+ 1507 0979 A6090000 		.4byte	0x9a6
+ 1508 097d 02       		.byte	0x2
+ 1509 097e 10       		.uleb128 0x10
+ 1510 097f CC160000 		.4byte	.LASF245
+ 1511 0983 0C       		.byte	0xc
+ 1512 0984 5A01     		.2byte	0x15a
+ 1513 0986 24080000 		.4byte	0x824
+ 1514 098a 04       		.byte	0x4
+ 1515 098b 10       		.uleb128 0x10
+ 1516 098c 42140000 		.4byte	.LASF246
+ 1517 0990 0C       		.byte	0xc
+ 1518 0991 5F01     		.2byte	0x15f
+ 1519 0993 0D080000 		.4byte	0x80d
+ 1520 0997 06       		.byte	0x6
+ 1521 0998 10       		.uleb128 0x10
+ 1522 0999 FA190000 		.4byte	.LASF247
+ 1523 099d 0C       		.byte	0xc
+ 1524 099e 6401     		.2byte	0x164
+ 1525 09a0 B6090000 		.4byte	0x9b6
+ 1526 09a4 08       		.byte	0x8
+ 1527 09a5 00       		.byte	0
+ 1528 09a6 15       		.uleb128 0x15
+ 1529 09a7 F7000000 		.4byte	0xf7
+ 1530 09ab B6090000 		.4byte	0x9b6
+ 1531 09af 16       		.uleb128 0x16
+ 1532 09b0 C3000000 		.4byte	0xc3
+ 1533 09b4 00       		.byte	0
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 33
+
+
+ 1534 09b5 00       		.byte	0
+ 1535 09b6 15       		.uleb128 0x15
+ 1536 09b7 18080000 		.4byte	0x818
+ 1537 09bb C6090000 		.4byte	0x9c6
+ 1538 09bf 16       		.uleb128 0x16
+ 1539 09c0 C3000000 		.4byte	0xc3
+ 1540 09c4 00       		.byte	0
+ 1541 09c5 00       		.byte	0
+ 1542 09c6 06       		.uleb128 0x6
+ 1543 09c7 57090000 		.4byte	.LASF248
+ 1544 09cb 0C       		.byte	0xc
+ 1545 09cc 6501     		.2byte	0x165
+ 1546 09ce 5B090000 		.4byte	0x95b
+ 1547 09d2 13       		.uleb128 0x13
+ 1548 09d3 64       		.byte	0x64
+ 1549 09d4 0C       		.byte	0xc
+ 1550 09d5 6B01     		.2byte	0x16b
+ 1551 09d7 5E0A0000 		.4byte	0xa5e
+ 1552 09db 10       		.uleb128 0x10
+ 1553 09dc 87140000 		.4byte	.LASF233
+ 1554 09e0 0C       		.byte	0xc
+ 1555 09e1 7001     		.2byte	0x170
+ 1556 09e3 5E0A0000 		.4byte	0xa5e
+ 1557 09e7 00       		.byte	0
+ 1558 09e8 10       		.uleb128 0x10
+ 1559 09e9 8F140000 		.4byte	.LASF234
+ 1560 09ed 0C       		.byte	0xc
+ 1561 09ee 7501     		.2byte	0x175
+ 1562 09f0 5E0A0000 		.4byte	0xa5e
+ 1563 09f4 0A       		.byte	0xa
+ 1564 09f5 10       		.uleb128 0x10
+ 1565 09f6 97140000 		.4byte	.LASF235
+ 1566 09fa 0C       		.byte	0xc
+ 1567 09fb 7A01     		.2byte	0x17a
+ 1568 09fd 5E0A0000 		.4byte	0xa5e
+ 1569 0a01 14       		.byte	0x14
+ 1570 0a02 10       		.uleb128 0x10
+ 1571 0a03 9F140000 		.4byte	.LASF236
+ 1572 0a07 0C       		.byte	0xc
+ 1573 0a08 7F01     		.2byte	0x17f
+ 1574 0a0a 5E0A0000 		.4byte	0xa5e
+ 1575 0a0e 1E       		.byte	0x1e
+ 1576 0a0f 10       		.uleb128 0x10
+ 1577 0a10 A7140000 		.4byte	.LASF237
+ 1578 0a14 0C       		.byte	0xc
+ 1579 0a15 8401     		.2byte	0x184
+ 1580 0a17 5E0A0000 		.4byte	0xa5e
+ 1581 0a1b 28       		.byte	0x28
+ 1582 0a1c 10       		.uleb128 0x10
+ 1583 0a1d AF140000 		.4byte	.LASF238
+ 1584 0a21 0C       		.byte	0xc
+ 1585 0a22 8901     		.2byte	0x189
+ 1586 0a24 5E0A0000 		.4byte	0xa5e
+ 1587 0a28 32       		.byte	0x32
+ 1588 0a29 10       		.uleb128 0x10
+ 1589 0a2a B7140000 		.4byte	.LASF239
+ 1590 0a2e 0C       		.byte	0xc
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 34
+
+
+ 1591 0a2f 8E01     		.2byte	0x18e
+ 1592 0a31 5E0A0000 		.4byte	0xa5e
+ 1593 0a35 3C       		.byte	0x3c
+ 1594 0a36 10       		.uleb128 0x10
+ 1595 0a37 BF140000 		.4byte	.LASF240
+ 1596 0a3b 0C       		.byte	0xc
+ 1597 0a3c 9301     		.2byte	0x193
+ 1598 0a3e 5E0A0000 		.4byte	0xa5e
+ 1599 0a42 46       		.byte	0x46
+ 1600 0a43 10       		.uleb128 0x10
+ 1601 0a44 C7140000 		.4byte	.LASF241
+ 1602 0a48 0C       		.byte	0xc
+ 1603 0a49 9801     		.2byte	0x198
+ 1604 0a4b 5E0A0000 		.4byte	0xa5e
+ 1605 0a4f 50       		.byte	0x50
+ 1606 0a50 10       		.uleb128 0x10
+ 1607 0a51 CF140000 		.4byte	.LASF242
+ 1608 0a55 0C       		.byte	0xc
+ 1609 0a56 9D01     		.2byte	0x19d
+ 1610 0a58 5E0A0000 		.4byte	0xa5e
+ 1611 0a5c 5A       		.byte	0x5a
+ 1612 0a5d 00       		.byte	0
+ 1613 0a5e 15       		.uleb128 0x15
+ 1614 0a5f C6090000 		.4byte	0x9c6
+ 1615 0a63 6E0A0000 		.4byte	0xa6e
+ 1616 0a67 16       		.uleb128 0x16
+ 1617 0a68 C3000000 		.4byte	0xc3
+ 1618 0a6c 00       		.byte	0
+ 1619 0a6d 00       		.byte	0
+ 1620 0a6e 06       		.uleb128 0x6
+ 1621 0a6f E71A0000 		.4byte	.LASF249
+ 1622 0a73 0C       		.byte	0xc
+ 1623 0a74 9E01     		.2byte	0x19e
+ 1624 0a76 D2090000 		.4byte	0x9d2
+ 1625 0a7a 18       		.uleb128 0x18
+ 1626 0a7b 1C01     		.2byte	0x11c
+ 1627 0a7d 0C       		.byte	0xc
+ 1628 0a7e A401     		.2byte	0x1a4
+ 1629 0a80 660B0000 		.4byte	0xb66
+ 1630 0a84 10       		.uleb128 0x10
+ 1631 0a85 08120000 		.4byte	.LASF250
+ 1632 0a89 0C       		.byte	0xc
+ 1633 0a8a AC01     		.2byte	0x1ac
+ 1634 0a8c F7000000 		.4byte	0xf7
+ 1635 0a90 00       		.byte	0
+ 1636 0a91 10       		.uleb128 0x10
+ 1637 0a92 6E160000 		.4byte	.LASF251
+ 1638 0a96 0C       		.byte	0xc
+ 1639 0a97 B101     		.2byte	0x1b1
+ 1640 0a99 F7000000 		.4byte	0xf7
+ 1641 0a9d 02       		.byte	0x2
+ 1642 0a9e 10       		.uleb128 0x10
+ 1643 0a9f 4E020000 		.4byte	.LASF252
+ 1644 0aa3 0C       		.byte	0xc
+ 1645 0aa4 B601     		.2byte	0x1b6
+ 1646 0aa6 F7000000 		.4byte	0xf7
+ 1647 0aaa 04       		.byte	0x4
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 35
+
+
+ 1648 0aab 10       		.uleb128 0x10
+ 1649 0aac 56140000 		.4byte	.LASF253
+ 1650 0ab0 0C       		.byte	0xc
+ 1651 0ab1 BC01     		.2byte	0x1bc
+ 1652 0ab3 F7000000 		.4byte	0xf7
+ 1653 0ab7 06       		.byte	0x6
+ 1654 0ab8 10       		.uleb128 0x10
+ 1655 0ab9 42020000 		.4byte	.LASF254
+ 1656 0abd 0C       		.byte	0xc
+ 1657 0abe C101     		.2byte	0x1c1
+ 1658 0ac0 F7000000 		.4byte	0xf7
+ 1659 0ac4 08       		.byte	0x8
+ 1660 0ac5 10       		.uleb128 0x10
+ 1661 0ac6 5A0D0000 		.4byte	.LASF60
+ 1662 0aca 0C       		.byte	0xc
+ 1663 0acb C601     		.2byte	0x1c6
+ 1664 0acd 660B0000 		.4byte	0xb66
+ 1665 0ad1 0C       		.byte	0xc
+ 1666 0ad2 10       		.uleb128 0x10
+ 1667 0ad3 37140000 		.4byte	.LASF255
+ 1668 0ad7 0C       		.byte	0xc
+ 1669 0ad8 CC01     		.2byte	0x1cc
+ 1670 0ada 6B0B0000 		.4byte	0xb6b
+ 1671 0ade 10       		.byte	0x10
+ 1672 0adf 10       		.uleb128 0x10
+ 1673 0ae0 4A150000 		.4byte	.LASF256
+ 1674 0ae4 0C       		.byte	0xc
+ 1675 0ae5 D201     		.2byte	0x1d2
+ 1676 0ae7 6B0B0000 		.4byte	0xb6b
+ 1677 0aeb 14       		.byte	0x14
+ 1678 0aec 10       		.uleb128 0x10
+ 1679 0aed B50D0000 		.4byte	.LASF257
+ 1680 0af1 0C       		.byte	0xc
+ 1681 0af2 E401     		.2byte	0x1e4
+ 1682 0af4 7B0B0000 		.4byte	0xb7b
+ 1683 0af8 18       		.byte	0x18
+ 1684 0af9 10       		.uleb128 0x10
+ 1685 0afa A40F0000 		.4byte	.LASF258
+ 1686 0afe 0C       		.byte	0xc
+ 1687 0aff E901     		.2byte	0x1e9
+ 1688 0b01 F7000000 		.4byte	0xf7
+ 1689 0b05 22       		.byte	0x22
+ 1690 0b06 10       		.uleb128 0x10
+ 1691 0b07 2E090000 		.4byte	.LASF259
+ 1692 0b0b 0C       		.byte	0xc
+ 1693 0b0c EE01     		.2byte	0x1ee
+ 1694 0b0e EB000000 		.4byte	0xeb
+ 1695 0b12 24       		.byte	0x24
+ 1696 0b13 10       		.uleb128 0x10
+ 1697 0b14 130F0000 		.4byte	.LASF260
+ 1698 0b18 0C       		.byte	0xc
+ 1699 0b19 F301     		.2byte	0x1f3
+ 1700 0b1b 4F090000 		.4byte	0x94f
+ 1701 0b1f 26       		.byte	0x26
+ 1702 0b20 10       		.uleb128 0x10
+ 1703 0b21 66070000 		.4byte	.LASF261
+ 1704 0b25 0C       		.byte	0xc
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 36
+
+
+ 1705 0b26 F801     		.2byte	0x1f8
+ 1706 0b28 6E0A0000 		.4byte	0xa6e
+ 1707 0b2c B2       		.byte	0xb2
+ 1708 0b2d 19       		.uleb128 0x19
+ 1709 0b2e 8F090000 		.4byte	.LASF262
+ 1710 0b32 0C       		.byte	0xc
+ 1711 0b33 FD01     		.2byte	0x1fd
+ 1712 0b35 EB000000 		.4byte	0xeb
+ 1713 0b39 1601     		.2byte	0x116
+ 1714 0b3b 19       		.uleb128 0x19
+ 1715 0b3c 22080000 		.4byte	.LASF263
+ 1716 0b40 0C       		.byte	0xc
+ 1717 0b41 0202     		.2byte	0x202
+ 1718 0b43 EB000000 		.4byte	0xeb
+ 1719 0b47 1701     		.2byte	0x117
+ 1720 0b49 19       		.uleb128 0x19
+ 1721 0b4a F5110000 		.4byte	.LASF264
+ 1722 0b4e 0C       		.byte	0xc
+ 1723 0b4f 0702     		.2byte	0x207
+ 1724 0b51 F7000000 		.4byte	0xf7
+ 1725 0b55 1801     		.2byte	0x118
+ 1726 0b57 19       		.uleb128 0x19
+ 1727 0b58 2B0F0000 		.4byte	.LASF265
+ 1728 0b5c 0C       		.byte	0xc
+ 1729 0b5d 0C02     		.2byte	0x20c
+ 1730 0b5f A6090000 		.4byte	0x9a6
+ 1731 0b63 1A01     		.2byte	0x11a
+ 1732 0b65 00       		.byte	0
+ 1733 0b66 05       		.uleb128 0x5
+ 1734 0b67 03010000 		.4byte	0x103
+ 1735 0b6b 15       		.uleb128 0x15
+ 1736 0b6c 03010000 		.4byte	0x103
+ 1737 0b70 7B0B0000 		.4byte	0xb7b
+ 1738 0b74 16       		.uleb128 0x16
+ 1739 0b75 C3000000 		.4byte	0xc3
+ 1740 0b79 00       		.byte	0
+ 1741 0b7a 00       		.byte	0
+ 1742 0b7b 15       		.uleb128 0x15
+ 1743 0b7c EB000000 		.4byte	0xeb
+ 1744 0b80 8B0B0000 		.4byte	0xb8b
+ 1745 0b84 16       		.uleb128 0x16
+ 1746 0b85 C3000000 		.4byte	0xc3
+ 1747 0b89 09       		.byte	0x9
+ 1748 0b8a 00       		.byte	0
+ 1749 0b8b 06       		.uleb128 0x6
+ 1750 0b8c B5130000 		.4byte	.LASF266
+ 1751 0b90 0C       		.byte	0xc
+ 1752 0b91 0D02     		.2byte	0x20d
+ 1753 0b93 7A0A0000 		.4byte	0xa7a
+ 1754 0b97 17       		.uleb128 0x17
+ 1755 0b98 02       		.byte	0x2
+ 1756 0b99 0D       		.byte	0xd
+ 1757 0b9a 3E       		.byte	0x3e
+ 1758 0b9b B80B0000 		.4byte	0xbb8
+ 1759 0b9f 09       		.uleb128 0x9
+ 1760 0ba0 251A0000 		.4byte	.LASF267
+ 1761 0ba4 0D       		.byte	0xd
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 37
+
+
+ 1762 0ba5 41       		.byte	0x41
+ 1763 0ba6 11010000 		.4byte	0x111
+ 1764 0baa 00       		.byte	0
+ 1765 0bab 09       		.uleb128 0x9
+ 1766 0bac 87100000 		.4byte	.LASF268
+ 1767 0bb0 0D       		.byte	0xd
+ 1768 0bb1 43       		.byte	0x43
+ 1769 0bb2 97000000 		.4byte	0x97
+ 1770 0bb6 01       		.byte	0x1
+ 1771 0bb7 00       		.byte	0
+ 1772 0bb8 03       		.uleb128 0x3
+ 1773 0bb9 82180000 		.4byte	.LASF269
+ 1774 0bbd 0D       		.byte	0xd
+ 1775 0bbe 44       		.byte	0x44
+ 1776 0bbf 970B0000 		.4byte	0xb97
+ 1777 0bc3 1A       		.uleb128 0x1a
+ 1778 0bc4 FB010000 		.4byte	.LASF276
+ 1779 0bc8 01       		.byte	0x1
+ 1780 0bc9 48       		.byte	0x48
+ 1781 0bca 00000000 		.4byte	.LFB620
+ 1782 0bce 24000000 		.4byte	.LFE620-.LFB620
+ 1783 0bd2 01       		.uleb128 0x1
+ 1784 0bd3 9C       		.byte	0x9c
+ 1785 0bd4 FD0B0000 		.4byte	0xbfd
+ 1786 0bd8 1B       		.uleb128 0x1b
+ 1787 0bd9 B0100000 		.4byte	.LASF272
+ 1788 0bdd 01       		.byte	0x1
+ 1789 0bde 48       		.byte	0x48
+ 1790 0bdf FD0B0000 		.4byte	0xbfd
+ 1791 0be3 01       		.uleb128 0x1
+ 1792 0be4 50       		.byte	0x50
+ 1793 0be5 1C       		.uleb128 0x1c
+ 1794 0be6 02000000 		.4byte	.LBB2
+ 1795 0bea 1A000000 		.4byte	.LBE2-.LBB2
+ 1796 0bee 1D       		.uleb128 0x1d
+ 1797 0bef 6900     		.ascii	"i\000"
+ 1798 0bf1 01       		.byte	0x1
+ 1799 0bf2 4A       		.byte	0x4a
+ 1800 0bf3 89000000 		.4byte	0x89
+ 1801 0bf7 00000000 		.4byte	.LLST0
+ 1802 0bfb 00       		.byte	0
+ 1803 0bfc 00       		.byte	0
+ 1804 0bfd 0A       		.uleb128 0xa
+ 1805 0bfe 04       		.byte	0x4
+ 1806 0bff E4000000 		.4byte	0xe4
+ 1807 0c03 1E       		.uleb128 0x1e
+ 1808 0c04 FE070000 		.4byte	.LASF273
+ 1809 0c08 01       		.byte	0x1
+ 1810 0c09 4D       		.byte	0x4d
+ 1811 0c0a 9C0C0000 		.4byte	0xc9c
+ 1812 0c0e 00000000 		.4byte	.LFB621
+ 1813 0c12 08010000 		.4byte	.LFE621-.LFB621
+ 1814 0c16 01       		.uleb128 0x1
+ 1815 0c17 9C       		.byte	0x9c
+ 1816 0c18 9C0C0000 		.4byte	0xc9c
+ 1817 0c1c 1F       		.uleb128 0x1f
+ 1818 0c1d CE110000 		.4byte	.LASF270
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 38
+
+
+ 1819 0c21 01       		.byte	0x1
+ 1820 0c22 50       		.byte	0x50
+ 1821 0c23 B80B0000 		.4byte	0xbb8
+ 1822 0c27 05       		.uleb128 0x5
+ 1823 0c28 03       		.byte	0x3
+ 1824 0c29 04000000 		.4byte	currentProximityData.19052
+ 1825 0c2d 1F       		.uleb128 0x1f
+ 1826 0c2e 350D0000 		.4byte	.LASF271
+ 1827 0c32 01       		.byte	0x1
+ 1828 0c33 59       		.byte	0x59
+ 1829 0c34 97000000 		.4byte	0x97
+ 1830 0c38 05       		.uleb128 0x5
+ 1831 0c39 03       		.byte	0x3
+ 1832 0c3a 00000000 		.4byte	proximity.19053
+ 1833 0c3e 20       		.uleb128 0x20
+ 1834 0c3f 0C000000 		.4byte	.LBB3
+ 1835 0c43 CC000000 		.4byte	.LBE3-.LBB3
+ 1836 0c47 920C0000 		.4byte	0xc92
+ 1837 0c4b 21       		.uleb128 0x21
+ 1838 0c4c 42140000 		.4byte	.LASF246
+ 1839 0c50 01       		.byte	0x1
+ 1840 0c51 7B       		.byte	0x7b
+ 1841 0c52 E4000000 		.4byte	0xe4
+ 1842 0c56 1F       		.uleb128 0x1f
+ 1843 0c57 B0100000 		.4byte	.LASF272
+ 1844 0c5b 01       		.byte	0x1
+ 1845 0c5c 83       		.byte	0x83
+ 1846 0c5d A20C0000 		.4byte	0xca2
+ 1847 0c61 02       		.uleb128 0x2
+ 1848 0c62 91       		.byte	0x91
+ 1849 0c63 50       		.sleb128 -48
+ 1850 0c64 20       		.uleb128 0x20
+ 1851 0c65 3E000000 		.4byte	.LBB4
+ 1852 0c69 96000000 		.4byte	.LBE4-.LBB4
+ 1853 0c6d 7F0C0000 		.4byte	0xc7f
+ 1854 0c71 1D       		.uleb128 0x1d
+ 1855 0c72 6900     		.ascii	"i\000"
+ 1856 0c74 01       		.byte	0x1
+ 1857 0c75 A4       		.byte	0xa4
+ 1858 0c76 89000000 		.4byte	0x89
+ 1859 0c7a 1F000000 		.4byte	.LLST1
+ 1860 0c7e 00       		.byte	0
+ 1861 0c7f 22       		.uleb128 0x22
+ 1862 0c80 10000000 		.4byte	.LVL5
+ 1863 0c84 AA0D0000 		.4byte	0xdaa
+ 1864 0c88 22       		.uleb128 0x22
+ 1865 0c89 D8000000 		.4byte	.LVL12
+ 1866 0c8d B50D0000 		.4byte	0xdb5
+ 1867 0c91 00       		.byte	0
+ 1868 0c92 22       		.uleb128 0x22
+ 1869 0c93 08000000 		.4byte	.LVL4
+ 1870 0c97 C00D0000 		.4byte	0xdc0
+ 1871 0c9b 00       		.byte	0
+ 1872 0c9c 0A       		.uleb128 0xa
+ 1873 0c9d 04       		.byte	0x4
+ 1874 0c9e B80B0000 		.4byte	0xbb8
+ 1875 0ca2 15       		.uleb128 0x15
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 39
+
+
+ 1876 0ca3 89000000 		.4byte	0x89
+ 1877 0ca7 B20C0000 		.4byte	0xcb2
+ 1878 0cab 16       		.uleb128 0x16
+ 1879 0cac C3000000 		.4byte	0xc3
+ 1880 0cb0 09       		.byte	0x9
+ 1881 0cb1 00       		.byte	0
+ 1882 0cb2 1E       		.uleb128 0x1e
+ 1883 0cb3 EB180000 		.4byte	.LASF274
+ 1884 0cb7 01       		.byte	0x1
+ 1885 0cb8 F5       		.byte	0xf5
+ 1886 0cb9 11010000 		.4byte	0x111
+ 1887 0cbd 00000000 		.4byte	.LFB622
+ 1888 0cc1 10000000 		.4byte	.LFE622-.LFB622
+ 1889 0cc5 01       		.uleb128 0x1
+ 1890 0cc6 9C       		.byte	0x9c
+ 1891 0cc7 E20C0000 		.4byte	0xce2
+ 1892 0ccb 1F       		.uleb128 0x1f
+ 1893 0ccc DC010000 		.4byte	.LASF275
+ 1894 0cd0 01       		.byte	0x1
+ 1895 0cd1 F8       		.byte	0xf8
+ 1896 0cd2 11010000 		.4byte	0x111
+ 1897 0cd6 01       		.uleb128 0x1
+ 1898 0cd7 50       		.byte	0x50
+ 1899 0cd8 22       		.uleb128 0x22
+ 1900 0cd9 06000000 		.4byte	.LVL13
+ 1901 0cdd C00D0000 		.4byte	0xdc0
+ 1902 0ce1 00       		.byte	0
+ 1903 0ce2 23       		.uleb128 0x23
+ 1904 0ce3 FC020000 		.4byte	.LASF277
+ 1905 0ce7 01       		.byte	0x1
+ 1906 0ce8 1501     		.2byte	0x115
+ 1907 0cea 00000000 		.4byte	.LFB623
+ 1908 0cee 08000000 		.4byte	.LFE623-.LFB623
+ 1909 0cf2 01       		.uleb128 0x1
+ 1910 0cf3 9C       		.byte	0x9c
+ 1911 0cf4 020D0000 		.4byte	0xd02
+ 1912 0cf8 22       		.uleb128 0x22
+ 1913 0cf9 06000000 		.4byte	.LVL15
+ 1914 0cfd CB0D0000 		.4byte	0xdcb
+ 1915 0d01 00       		.byte	0
+ 1916 0d02 24       		.uleb128 0x24
+ 1917 0d03 F1130000 		.4byte	.LASF278
+ 1918 0d07 0E       		.byte	0xe
+ 1919 0d08 EA07     		.2byte	0x7ea
+ 1920 0d0a 0E0D0000 		.4byte	0xd0e
+ 1921 0d0e 05       		.uleb128 0x5
+ 1922 0d0f AD000000 		.4byte	0xad
+ 1923 0d13 24       		.uleb128 0x24
+ 1924 0d14 250E0000 		.4byte	.LASF279
+ 1925 0d18 0A       		.byte	0xa
+ 1926 0d19 2202     		.2byte	0x222
+ 1927 0d1b BA070000 		.4byte	0x7ba
+ 1928 0d1f 15       		.uleb128 0x15
+ 1929 0d20 89070000 		.4byte	0x789
+ 1930 0d24 2F0D0000 		.4byte	0xd2f
+ 1931 0d28 16       		.uleb128 0x16
+ 1932 0d29 C3000000 		.4byte	0xc3
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 40
+
+
+ 1933 0d2d 00       		.byte	0
+ 1934 0d2e 00       		.byte	0
+ 1935 0d2f 24       		.uleb128 0x24
+ 1936 0d30 05020000 		.4byte	.LASF280
+ 1937 0d34 0A       		.byte	0xa
+ 1938 0d35 2C02     		.2byte	0x22c
+ 1939 0d37 1F0D0000 		.4byte	0xd1f
+ 1940 0d3b 15       		.uleb128 0x15
+ 1941 0d3c 02080000 		.4byte	0x802
+ 1942 0d40 4B0D0000 		.4byte	0xd4b
+ 1943 0d44 16       		.uleb128 0x16
+ 1944 0d45 C3000000 		.4byte	0xc3
+ 1945 0d49 00       		.byte	0
+ 1946 0d4a 00       		.byte	0
+ 1947 0d4b 24       		.uleb128 0x24
+ 1948 0d4c 00000000 		.4byte	.LASF281
+ 1949 0d50 0A       		.byte	0xa
+ 1950 0d51 2D02     		.2byte	0x22d
+ 1951 0d53 3B0D0000 		.4byte	0xd3b
+ 1952 0d57 25       		.uleb128 0x25
+ 1953 0d58 40010000 		.4byte	.LASF282
+ 1954 0d5c 0F       		.byte	0xf
+ 1955 0d5d 5E       		.byte	0x5e
+ 1956 0d5e 20040000 		.4byte	0x420
+ 1957 0d62 25       		.uleb128 0x25
+ 1958 0d63 8F0C0000 		.4byte	.LASF283
+ 1959 0d67 10       		.byte	0x10
+ 1960 0d68 1F       		.byte	0x1f
+ 1961 0d69 6D0D0000 		.4byte	0xd6d
+ 1962 0d6d 26       		.uleb128 0x26
+ 1963 0d6e 09020000 		.4byte	0x209
+ 1964 0d72 24       		.uleb128 0x24
+ 1965 0d73 1C0F0000 		.4byte	.LASF284
+ 1966 0d77 0C       		.byte	0xc
+ 1967 0d78 2604     		.2byte	0x426
+ 1968 0d7a 8B0B0000 		.4byte	0xb8b
+ 1969 0d7e 25       		.uleb128 0x25
+ 1970 0d7f 7C030000 		.4byte	.LASF285
+ 1971 0d83 11       		.byte	0x11
+ 1972 0d84 4B       		.byte	0x4b
+ 1973 0d85 85030000 		.4byte	0x385
+ 1974 0d89 15       		.uleb128 0x15
+ 1975 0d8a E4000000 		.4byte	0xe4
+ 1976 0d8e 990D0000 		.4byte	0xd99
+ 1977 0d92 16       		.uleb128 0x16
+ 1978 0d93 C3000000 		.4byte	0xc3
+ 1979 0d97 09       		.byte	0x9
+ 1980 0d98 00       		.byte	0
+ 1981 0d99 27       		.uleb128 0x27
+ 1982 0d9a 19080000 		.4byte	.LASF286
+ 1983 0d9e 0D       		.byte	0xd
+ 1984 0d9f 4D       		.byte	0x4d
+ 1985 0da0 890D0000 		.4byte	0xd89
+ 1986 0da4 05       		.uleb128 0x5
+ 1987 0da5 03       		.byte	0x3
+ 1988 0da6 00000000 		.4byte	masszero
+ 1989 0daa 28       		.uleb128 0x28
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 41
+
+
+ 1990 0dab 95100000 		.4byte	.LASF287
+ 1991 0daf 95100000 		.4byte	.LASF287
+ 1992 0db3 12       		.byte	0x12
+ 1993 0db4 3E       		.byte	0x3e
+ 1994 0db5 28       		.uleb128 0x28
+ 1995 0db6 4B180000 		.4byte	.LASF288
+ 1996 0dba 4B180000 		.4byte	.LASF288
+ 1997 0dbe 13       		.byte	0x13
+ 1998 0dbf 55       		.byte	0x55
+ 1999 0dc0 28       		.uleb128 0x28
+ 2000 0dc1 F7030000 		.4byte	.LASF289
+ 2001 0dc5 F7030000 		.4byte	.LASF289
+ 2002 0dc9 13       		.byte	0x13
+ 2003 0dca 56       		.byte	0x56
+ 2004 0dcb 28       		.uleb128 0x28
+ 2005 0dcc 48030000 		.4byte	.LASF290
+ 2006 0dd0 48030000 		.4byte	.LASF290
+ 2007 0dd4 12       		.byte	0x12
+ 2008 0dd5 3A       		.byte	0x3a
+ 2009 0dd6 00       		.byte	0
+ 2010              		.section	.debug_abbrev,"",%progbits
+ 2011              	.Ldebug_abbrev0:
+ 2012 0000 01       		.uleb128 0x1
+ 2013 0001 11       		.uleb128 0x11
+ 2014 0002 01       		.byte	0x1
+ 2015 0003 25       		.uleb128 0x25
+ 2016 0004 0E       		.uleb128 0xe
+ 2017 0005 13       		.uleb128 0x13
+ 2018 0006 0B       		.uleb128 0xb
+ 2019 0007 03       		.uleb128 0x3
+ 2020 0008 0E       		.uleb128 0xe
+ 2021 0009 1B       		.uleb128 0x1b
+ 2022 000a 0E       		.uleb128 0xe
+ 2023 000b 55       		.uleb128 0x55
+ 2024 000c 17       		.uleb128 0x17
+ 2025 000d 11       		.uleb128 0x11
+ 2026 000e 01       		.uleb128 0x1
+ 2027 000f 10       		.uleb128 0x10
+ 2028 0010 17       		.uleb128 0x17
+ 2029 0011 00       		.byte	0
+ 2030 0012 00       		.byte	0
+ 2031 0013 02       		.uleb128 0x2
+ 2032 0014 24       		.uleb128 0x24
+ 2033 0015 00       		.byte	0
+ 2034 0016 0B       		.uleb128 0xb
+ 2035 0017 0B       		.uleb128 0xb
+ 2036 0018 3E       		.uleb128 0x3e
+ 2037 0019 0B       		.uleb128 0xb
+ 2038 001a 03       		.uleb128 0x3
+ 2039 001b 0E       		.uleb128 0xe
+ 2040 001c 00       		.byte	0
+ 2041 001d 00       		.byte	0
+ 2042 001e 03       		.uleb128 0x3
+ 2043 001f 16       		.uleb128 0x16
+ 2044 0020 00       		.byte	0
+ 2045 0021 03       		.uleb128 0x3
+ 2046 0022 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 42
+
+
+ 2047 0023 3A       		.uleb128 0x3a
+ 2048 0024 0B       		.uleb128 0xb
+ 2049 0025 3B       		.uleb128 0x3b
+ 2050 0026 0B       		.uleb128 0xb
+ 2051 0027 49       		.uleb128 0x49
+ 2052 0028 13       		.uleb128 0x13
+ 2053 0029 00       		.byte	0
+ 2054 002a 00       		.byte	0
+ 2055 002b 04       		.uleb128 0x4
+ 2056 002c 24       		.uleb128 0x24
+ 2057 002d 00       		.byte	0
+ 2058 002e 0B       		.uleb128 0xb
+ 2059 002f 0B       		.uleb128 0xb
+ 2060 0030 3E       		.uleb128 0x3e
+ 2061 0031 0B       		.uleb128 0xb
+ 2062 0032 03       		.uleb128 0x3
+ 2063 0033 08       		.uleb128 0x8
+ 2064 0034 00       		.byte	0
+ 2065 0035 00       		.byte	0
+ 2066 0036 05       		.uleb128 0x5
+ 2067 0037 35       		.uleb128 0x35
+ 2068 0038 00       		.byte	0
+ 2069 0039 49       		.uleb128 0x49
+ 2070 003a 13       		.uleb128 0x13
+ 2071 003b 00       		.byte	0
+ 2072 003c 00       		.byte	0
+ 2073 003d 06       		.uleb128 0x6
+ 2074 003e 16       		.uleb128 0x16
+ 2075 003f 00       		.byte	0
+ 2076 0040 03       		.uleb128 0x3
+ 2077 0041 0E       		.uleb128 0xe
+ 2078 0042 3A       		.uleb128 0x3a
+ 2079 0043 0B       		.uleb128 0xb
+ 2080 0044 3B       		.uleb128 0x3b
+ 2081 0045 05       		.uleb128 0x5
+ 2082 0046 49       		.uleb128 0x49
+ 2083 0047 13       		.uleb128 0x13
+ 2084 0048 00       		.byte	0
+ 2085 0049 00       		.byte	0
+ 2086 004a 07       		.uleb128 0x7
+ 2087 004b 0F       		.uleb128 0xf
+ 2088 004c 00       		.byte	0
+ 2089 004d 0B       		.uleb128 0xb
+ 2090 004e 0B       		.uleb128 0xb
+ 2091 004f 00       		.byte	0
+ 2092 0050 00       		.byte	0
+ 2093 0051 08       		.uleb128 0x8
+ 2094 0052 13       		.uleb128 0x13
+ 2095 0053 01       		.byte	0x1
+ 2096 0054 03       		.uleb128 0x3
+ 2097 0055 0E       		.uleb128 0xe
+ 2098 0056 0B       		.uleb128 0xb
+ 2099 0057 0B       		.uleb128 0xb
+ 2100 0058 3A       		.uleb128 0x3a
+ 2101 0059 0B       		.uleb128 0xb
+ 2102 005a 3B       		.uleb128 0x3b
+ 2103 005b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 43
+
+
+ 2104 005c 01       		.uleb128 0x1
+ 2105 005d 13       		.uleb128 0x13
+ 2106 005e 00       		.byte	0
+ 2107 005f 00       		.byte	0
+ 2108 0060 09       		.uleb128 0x9
+ 2109 0061 0D       		.uleb128 0xd
+ 2110 0062 00       		.byte	0
+ 2111 0063 03       		.uleb128 0x3
+ 2112 0064 0E       		.uleb128 0xe
+ 2113 0065 3A       		.uleb128 0x3a
+ 2114 0066 0B       		.uleb128 0xb
+ 2115 0067 3B       		.uleb128 0x3b
+ 2116 0068 0B       		.uleb128 0xb
+ 2117 0069 49       		.uleb128 0x49
+ 2118 006a 13       		.uleb128 0x13
+ 2119 006b 38       		.uleb128 0x38
+ 2120 006c 0B       		.uleb128 0xb
+ 2121 006d 00       		.byte	0
+ 2122 006e 00       		.byte	0
+ 2123 006f 0A       		.uleb128 0xa
+ 2124 0070 0F       		.uleb128 0xf
+ 2125 0071 00       		.byte	0
+ 2126 0072 0B       		.uleb128 0xb
+ 2127 0073 0B       		.uleb128 0xb
+ 2128 0074 49       		.uleb128 0x49
+ 2129 0075 13       		.uleb128 0x13
+ 2130 0076 00       		.byte	0
+ 2131 0077 00       		.byte	0
+ 2132 0078 0B       		.uleb128 0xb
+ 2133 0079 15       		.uleb128 0x15
+ 2134 007a 01       		.byte	0x1
+ 2135 007b 27       		.uleb128 0x27
+ 2136 007c 19       		.uleb128 0x19
+ 2137 007d 01       		.uleb128 0x1
+ 2138 007e 13       		.uleb128 0x13
+ 2139 007f 00       		.byte	0
+ 2140 0080 00       		.byte	0
+ 2141 0081 0C       		.uleb128 0xc
+ 2142 0082 05       		.uleb128 0x5
+ 2143 0083 00       		.byte	0
+ 2144 0084 49       		.uleb128 0x49
+ 2145 0085 13       		.uleb128 0x13
+ 2146 0086 00       		.byte	0
+ 2147 0087 00       		.byte	0
+ 2148 0088 0D       		.uleb128 0xd
+ 2149 0089 04       		.uleb128 0x4
+ 2150 008a 01       		.byte	0x1
+ 2151 008b 0B       		.uleb128 0xb
+ 2152 008c 0B       		.uleb128 0xb
+ 2153 008d 49       		.uleb128 0x49
+ 2154 008e 13       		.uleb128 0x13
+ 2155 008f 3A       		.uleb128 0x3a
+ 2156 0090 0B       		.uleb128 0xb
+ 2157 0091 3B       		.uleb128 0x3b
+ 2158 0092 05       		.uleb128 0x5
+ 2159 0093 01       		.uleb128 0x1
+ 2160 0094 13       		.uleb128 0x13
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 44
+
+
+ 2161 0095 00       		.byte	0
+ 2162 0096 00       		.byte	0
+ 2163 0097 0E       		.uleb128 0xe
+ 2164 0098 28       		.uleb128 0x28
+ 2165 0099 00       		.byte	0
+ 2166 009a 03       		.uleb128 0x3
+ 2167 009b 0E       		.uleb128 0xe
+ 2168 009c 1C       		.uleb128 0x1c
+ 2169 009d 0B       		.uleb128 0xb
+ 2170 009e 00       		.byte	0
+ 2171 009f 00       		.byte	0
+ 2172 00a0 0F       		.uleb128 0xf
+ 2173 00a1 13       		.uleb128 0x13
+ 2174 00a2 01       		.byte	0x1
+ 2175 00a3 03       		.uleb128 0x3
+ 2176 00a4 0E       		.uleb128 0xe
+ 2177 00a5 0B       		.uleb128 0xb
+ 2178 00a6 0B       		.uleb128 0xb
+ 2179 00a7 3A       		.uleb128 0x3a
+ 2180 00a8 0B       		.uleb128 0xb
+ 2181 00a9 3B       		.uleb128 0x3b
+ 2182 00aa 05       		.uleb128 0x5
+ 2183 00ab 01       		.uleb128 0x1
+ 2184 00ac 13       		.uleb128 0x13
+ 2185 00ad 00       		.byte	0
+ 2186 00ae 00       		.byte	0
+ 2187 00af 10       		.uleb128 0x10
+ 2188 00b0 0D       		.uleb128 0xd
+ 2189 00b1 00       		.byte	0
+ 2190 00b2 03       		.uleb128 0x3
+ 2191 00b3 0E       		.uleb128 0xe
+ 2192 00b4 3A       		.uleb128 0x3a
+ 2193 00b5 0B       		.uleb128 0xb
+ 2194 00b6 3B       		.uleb128 0x3b
+ 2195 00b7 05       		.uleb128 0x5
+ 2196 00b8 49       		.uleb128 0x49
+ 2197 00b9 13       		.uleb128 0x13
+ 2198 00ba 38       		.uleb128 0x38
+ 2199 00bb 0B       		.uleb128 0xb
+ 2200 00bc 00       		.byte	0
+ 2201 00bd 00       		.byte	0
+ 2202 00be 11       		.uleb128 0x11
+ 2203 00bf 0D       		.uleb128 0xd
+ 2204 00c0 00       		.byte	0
+ 2205 00c1 03       		.uleb128 0x3
+ 2206 00c2 08       		.uleb128 0x8
+ 2207 00c3 3A       		.uleb128 0x3a
+ 2208 00c4 0B       		.uleb128 0xb
+ 2209 00c5 3B       		.uleb128 0x3b
+ 2210 00c6 05       		.uleb128 0x5
+ 2211 00c7 49       		.uleb128 0x49
+ 2212 00c8 13       		.uleb128 0x13
+ 2213 00c9 38       		.uleb128 0x38
+ 2214 00ca 0B       		.uleb128 0xb
+ 2215 00cb 00       		.byte	0
+ 2216 00cc 00       		.byte	0
+ 2217 00cd 12       		.uleb128 0x12
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 45
+
+
+ 2218 00ce 28       		.uleb128 0x28
+ 2219 00cf 00       		.byte	0
+ 2220 00d0 03       		.uleb128 0x3
+ 2221 00d1 0E       		.uleb128 0xe
+ 2222 00d2 1C       		.uleb128 0x1c
+ 2223 00d3 05       		.uleb128 0x5
+ 2224 00d4 00       		.byte	0
+ 2225 00d5 00       		.byte	0
+ 2226 00d6 13       		.uleb128 0x13
+ 2227 00d7 13       		.uleb128 0x13
+ 2228 00d8 01       		.byte	0x1
+ 2229 00d9 0B       		.uleb128 0xb
+ 2230 00da 0B       		.uleb128 0xb
+ 2231 00db 3A       		.uleb128 0x3a
+ 2232 00dc 0B       		.uleb128 0xb
+ 2233 00dd 3B       		.uleb128 0x3b
+ 2234 00de 05       		.uleb128 0x5
+ 2235 00df 01       		.uleb128 0x1
+ 2236 00e0 13       		.uleb128 0x13
+ 2237 00e1 00       		.byte	0
+ 2238 00e2 00       		.byte	0
+ 2239 00e3 14       		.uleb128 0x14
+ 2240 00e4 04       		.uleb128 0x4
+ 2241 00e5 01       		.byte	0x1
+ 2242 00e6 0B       		.uleb128 0xb
+ 2243 00e7 0B       		.uleb128 0xb
+ 2244 00e8 49       		.uleb128 0x49
+ 2245 00e9 13       		.uleb128 0x13
+ 2246 00ea 3A       		.uleb128 0x3a
+ 2247 00eb 0B       		.uleb128 0xb
+ 2248 00ec 3B       		.uleb128 0x3b
+ 2249 00ed 0B       		.uleb128 0xb
+ 2250 00ee 01       		.uleb128 0x1
+ 2251 00ef 13       		.uleb128 0x13
+ 2252 00f0 00       		.byte	0
+ 2253 00f1 00       		.byte	0
+ 2254 00f2 15       		.uleb128 0x15
+ 2255 00f3 01       		.uleb128 0x1
+ 2256 00f4 01       		.byte	0x1
+ 2257 00f5 49       		.uleb128 0x49
+ 2258 00f6 13       		.uleb128 0x13
+ 2259 00f7 01       		.uleb128 0x1
+ 2260 00f8 13       		.uleb128 0x13
+ 2261 00f9 00       		.byte	0
+ 2262 00fa 00       		.byte	0
+ 2263 00fb 16       		.uleb128 0x16
+ 2264 00fc 21       		.uleb128 0x21
+ 2265 00fd 00       		.byte	0
+ 2266 00fe 49       		.uleb128 0x49
+ 2267 00ff 13       		.uleb128 0x13
+ 2268 0100 2F       		.uleb128 0x2f
+ 2269 0101 0B       		.uleb128 0xb
+ 2270 0102 00       		.byte	0
+ 2271 0103 00       		.byte	0
+ 2272 0104 17       		.uleb128 0x17
+ 2273 0105 13       		.uleb128 0x13
+ 2274 0106 01       		.byte	0x1
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 46
+
+
+ 2275 0107 0B       		.uleb128 0xb
+ 2276 0108 0B       		.uleb128 0xb
+ 2277 0109 3A       		.uleb128 0x3a
+ 2278 010a 0B       		.uleb128 0xb
+ 2279 010b 3B       		.uleb128 0x3b
+ 2280 010c 0B       		.uleb128 0xb
+ 2281 010d 01       		.uleb128 0x1
+ 2282 010e 13       		.uleb128 0x13
+ 2283 010f 00       		.byte	0
+ 2284 0110 00       		.byte	0
+ 2285 0111 18       		.uleb128 0x18
+ 2286 0112 13       		.uleb128 0x13
+ 2287 0113 01       		.byte	0x1
+ 2288 0114 0B       		.uleb128 0xb
+ 2289 0115 05       		.uleb128 0x5
+ 2290 0116 3A       		.uleb128 0x3a
+ 2291 0117 0B       		.uleb128 0xb
+ 2292 0118 3B       		.uleb128 0x3b
+ 2293 0119 05       		.uleb128 0x5
+ 2294 011a 01       		.uleb128 0x1
+ 2295 011b 13       		.uleb128 0x13
+ 2296 011c 00       		.byte	0
+ 2297 011d 00       		.byte	0
+ 2298 011e 19       		.uleb128 0x19
+ 2299 011f 0D       		.uleb128 0xd
+ 2300 0120 00       		.byte	0
+ 2301 0121 03       		.uleb128 0x3
+ 2302 0122 0E       		.uleb128 0xe
+ 2303 0123 3A       		.uleb128 0x3a
+ 2304 0124 0B       		.uleb128 0xb
+ 2305 0125 3B       		.uleb128 0x3b
+ 2306 0126 05       		.uleb128 0x5
+ 2307 0127 49       		.uleb128 0x49
+ 2308 0128 13       		.uleb128 0x13
+ 2309 0129 38       		.uleb128 0x38
+ 2310 012a 05       		.uleb128 0x5
+ 2311 012b 00       		.byte	0
+ 2312 012c 00       		.byte	0
+ 2313 012d 1A       		.uleb128 0x1a
+ 2314 012e 2E       		.uleb128 0x2e
+ 2315 012f 01       		.byte	0x1
+ 2316 0130 3F       		.uleb128 0x3f
+ 2317 0131 19       		.uleb128 0x19
+ 2318 0132 03       		.uleb128 0x3
+ 2319 0133 0E       		.uleb128 0xe
+ 2320 0134 3A       		.uleb128 0x3a
+ 2321 0135 0B       		.uleb128 0xb
+ 2322 0136 3B       		.uleb128 0x3b
+ 2323 0137 0B       		.uleb128 0xb
+ 2324 0138 27       		.uleb128 0x27
+ 2325 0139 19       		.uleb128 0x19
+ 2326 013a 11       		.uleb128 0x11
+ 2327 013b 01       		.uleb128 0x1
+ 2328 013c 12       		.uleb128 0x12
+ 2329 013d 06       		.uleb128 0x6
+ 2330 013e 40       		.uleb128 0x40
+ 2331 013f 18       		.uleb128 0x18
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 47
+
+
+ 2332 0140 9742     		.uleb128 0x2117
+ 2333 0142 19       		.uleb128 0x19
+ 2334 0143 01       		.uleb128 0x1
+ 2335 0144 13       		.uleb128 0x13
+ 2336 0145 00       		.byte	0
+ 2337 0146 00       		.byte	0
+ 2338 0147 1B       		.uleb128 0x1b
+ 2339 0148 05       		.uleb128 0x5
+ 2340 0149 00       		.byte	0
+ 2341 014a 03       		.uleb128 0x3
+ 2342 014b 0E       		.uleb128 0xe
+ 2343 014c 3A       		.uleb128 0x3a
+ 2344 014d 0B       		.uleb128 0xb
+ 2345 014e 3B       		.uleb128 0x3b
+ 2346 014f 0B       		.uleb128 0xb
+ 2347 0150 49       		.uleb128 0x49
+ 2348 0151 13       		.uleb128 0x13
+ 2349 0152 02       		.uleb128 0x2
+ 2350 0153 18       		.uleb128 0x18
+ 2351 0154 00       		.byte	0
+ 2352 0155 00       		.byte	0
+ 2353 0156 1C       		.uleb128 0x1c
+ 2354 0157 0B       		.uleb128 0xb
+ 2355 0158 01       		.byte	0x1
+ 2356 0159 11       		.uleb128 0x11
+ 2357 015a 01       		.uleb128 0x1
+ 2358 015b 12       		.uleb128 0x12
+ 2359 015c 06       		.uleb128 0x6
+ 2360 015d 00       		.byte	0
+ 2361 015e 00       		.byte	0
+ 2362 015f 1D       		.uleb128 0x1d
+ 2363 0160 34       		.uleb128 0x34
+ 2364 0161 00       		.byte	0
+ 2365 0162 03       		.uleb128 0x3
+ 2366 0163 08       		.uleb128 0x8
+ 2367 0164 3A       		.uleb128 0x3a
+ 2368 0165 0B       		.uleb128 0xb
+ 2369 0166 3B       		.uleb128 0x3b
+ 2370 0167 0B       		.uleb128 0xb
+ 2371 0168 49       		.uleb128 0x49
+ 2372 0169 13       		.uleb128 0x13
+ 2373 016a 02       		.uleb128 0x2
+ 2374 016b 17       		.uleb128 0x17
+ 2375 016c 00       		.byte	0
+ 2376 016d 00       		.byte	0
+ 2377 016e 1E       		.uleb128 0x1e
+ 2378 016f 2E       		.uleb128 0x2e
+ 2379 0170 01       		.byte	0x1
+ 2380 0171 3F       		.uleb128 0x3f
+ 2381 0172 19       		.uleb128 0x19
+ 2382 0173 03       		.uleb128 0x3
+ 2383 0174 0E       		.uleb128 0xe
+ 2384 0175 3A       		.uleb128 0x3a
+ 2385 0176 0B       		.uleb128 0xb
+ 2386 0177 3B       		.uleb128 0x3b
+ 2387 0178 0B       		.uleb128 0xb
+ 2388 0179 27       		.uleb128 0x27
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 48
+
+
+ 2389 017a 19       		.uleb128 0x19
+ 2390 017b 49       		.uleb128 0x49
+ 2391 017c 13       		.uleb128 0x13
+ 2392 017d 11       		.uleb128 0x11
+ 2393 017e 01       		.uleb128 0x1
+ 2394 017f 12       		.uleb128 0x12
+ 2395 0180 06       		.uleb128 0x6
+ 2396 0181 40       		.uleb128 0x40
+ 2397 0182 18       		.uleb128 0x18
+ 2398 0183 9742     		.uleb128 0x2117
+ 2399 0185 19       		.uleb128 0x19
+ 2400 0186 01       		.uleb128 0x1
+ 2401 0187 13       		.uleb128 0x13
+ 2402 0188 00       		.byte	0
+ 2403 0189 00       		.byte	0
+ 2404 018a 1F       		.uleb128 0x1f
+ 2405 018b 34       		.uleb128 0x34
+ 2406 018c 00       		.byte	0
+ 2407 018d 03       		.uleb128 0x3
+ 2408 018e 0E       		.uleb128 0xe
+ 2409 018f 3A       		.uleb128 0x3a
+ 2410 0190 0B       		.uleb128 0xb
+ 2411 0191 3B       		.uleb128 0x3b
+ 2412 0192 0B       		.uleb128 0xb
+ 2413 0193 49       		.uleb128 0x49
+ 2414 0194 13       		.uleb128 0x13
+ 2415 0195 02       		.uleb128 0x2
+ 2416 0196 18       		.uleb128 0x18
+ 2417 0197 00       		.byte	0
+ 2418 0198 00       		.byte	0
+ 2419 0199 20       		.uleb128 0x20
+ 2420 019a 0B       		.uleb128 0xb
+ 2421 019b 01       		.byte	0x1
+ 2422 019c 11       		.uleb128 0x11
+ 2423 019d 01       		.uleb128 0x1
+ 2424 019e 12       		.uleb128 0x12
+ 2425 019f 06       		.uleb128 0x6
+ 2426 01a0 01       		.uleb128 0x1
+ 2427 01a1 13       		.uleb128 0x13
+ 2428 01a2 00       		.byte	0
+ 2429 01a3 00       		.byte	0
+ 2430 01a4 21       		.uleb128 0x21
+ 2431 01a5 34       		.uleb128 0x34
+ 2432 01a6 00       		.byte	0
+ 2433 01a7 03       		.uleb128 0x3
+ 2434 01a8 0E       		.uleb128 0xe
+ 2435 01a9 3A       		.uleb128 0x3a
+ 2436 01aa 0B       		.uleb128 0xb
+ 2437 01ab 3B       		.uleb128 0x3b
+ 2438 01ac 0B       		.uleb128 0xb
+ 2439 01ad 49       		.uleb128 0x49
+ 2440 01ae 13       		.uleb128 0x13
+ 2441 01af 00       		.byte	0
+ 2442 01b0 00       		.byte	0
+ 2443 01b1 22       		.uleb128 0x22
+ 2444 01b2 898201   		.uleb128 0x4109
+ 2445 01b5 00       		.byte	0
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 49
+
+
+ 2446 01b6 11       		.uleb128 0x11
+ 2447 01b7 01       		.uleb128 0x1
+ 2448 01b8 31       		.uleb128 0x31
+ 2449 01b9 13       		.uleb128 0x13
+ 2450 01ba 00       		.byte	0
+ 2451 01bb 00       		.byte	0
+ 2452 01bc 23       		.uleb128 0x23
+ 2453 01bd 2E       		.uleb128 0x2e
+ 2454 01be 01       		.byte	0x1
+ 2455 01bf 3F       		.uleb128 0x3f
+ 2456 01c0 19       		.uleb128 0x19
+ 2457 01c1 03       		.uleb128 0x3
+ 2458 01c2 0E       		.uleb128 0xe
+ 2459 01c3 3A       		.uleb128 0x3a
+ 2460 01c4 0B       		.uleb128 0xb
+ 2461 01c5 3B       		.uleb128 0x3b
+ 2462 01c6 05       		.uleb128 0x5
+ 2463 01c7 27       		.uleb128 0x27
+ 2464 01c8 19       		.uleb128 0x19
+ 2465 01c9 11       		.uleb128 0x11
+ 2466 01ca 01       		.uleb128 0x1
+ 2467 01cb 12       		.uleb128 0x12
+ 2468 01cc 06       		.uleb128 0x6
+ 2469 01cd 40       		.uleb128 0x40
+ 2470 01ce 18       		.uleb128 0x18
+ 2471 01cf 9742     		.uleb128 0x2117
+ 2472 01d1 19       		.uleb128 0x19
+ 2473 01d2 01       		.uleb128 0x1
+ 2474 01d3 13       		.uleb128 0x13
+ 2475 01d4 00       		.byte	0
+ 2476 01d5 00       		.byte	0
+ 2477 01d6 24       		.uleb128 0x24
+ 2478 01d7 34       		.uleb128 0x34
+ 2479 01d8 00       		.byte	0
+ 2480 01d9 03       		.uleb128 0x3
+ 2481 01da 0E       		.uleb128 0xe
+ 2482 01db 3A       		.uleb128 0x3a
+ 2483 01dc 0B       		.uleb128 0xb
+ 2484 01dd 3B       		.uleb128 0x3b
+ 2485 01de 05       		.uleb128 0x5
+ 2486 01df 49       		.uleb128 0x49
+ 2487 01e0 13       		.uleb128 0x13
+ 2488 01e1 3F       		.uleb128 0x3f
+ 2489 01e2 19       		.uleb128 0x19
+ 2490 01e3 3C       		.uleb128 0x3c
+ 2491 01e4 19       		.uleb128 0x19
+ 2492 01e5 00       		.byte	0
+ 2493 01e6 00       		.byte	0
+ 2494 01e7 25       		.uleb128 0x25
+ 2495 01e8 34       		.uleb128 0x34
+ 2496 01e9 00       		.byte	0
+ 2497 01ea 03       		.uleb128 0x3
+ 2498 01eb 0E       		.uleb128 0xe
+ 2499 01ec 3A       		.uleb128 0x3a
+ 2500 01ed 0B       		.uleb128 0xb
+ 2501 01ee 3B       		.uleb128 0x3b
+ 2502 01ef 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 50
+
+
+ 2503 01f0 49       		.uleb128 0x49
+ 2504 01f1 13       		.uleb128 0x13
+ 2505 01f2 3F       		.uleb128 0x3f
+ 2506 01f3 19       		.uleb128 0x19
+ 2507 01f4 3C       		.uleb128 0x3c
+ 2508 01f5 19       		.uleb128 0x19
+ 2509 01f6 00       		.byte	0
+ 2510 01f7 00       		.byte	0
+ 2511 01f8 26       		.uleb128 0x26
+ 2512 01f9 26       		.uleb128 0x26
+ 2513 01fa 00       		.byte	0
+ 2514 01fb 49       		.uleb128 0x49
+ 2515 01fc 13       		.uleb128 0x13
+ 2516 01fd 00       		.byte	0
+ 2517 01fe 00       		.byte	0
+ 2518 01ff 27       		.uleb128 0x27
+ 2519 0200 34       		.uleb128 0x34
+ 2520 0201 00       		.byte	0
+ 2521 0202 03       		.uleb128 0x3
+ 2522 0203 0E       		.uleb128 0xe
+ 2523 0204 3A       		.uleb128 0x3a
+ 2524 0205 0B       		.uleb128 0xb
+ 2525 0206 3B       		.uleb128 0x3b
+ 2526 0207 0B       		.uleb128 0xb
+ 2527 0208 49       		.uleb128 0x49
+ 2528 0209 13       		.uleb128 0x13
+ 2529 020a 3F       		.uleb128 0x3f
+ 2530 020b 19       		.uleb128 0x19
+ 2531 020c 02       		.uleb128 0x2
+ 2532 020d 18       		.uleb128 0x18
+ 2533 020e 00       		.byte	0
+ 2534 020f 00       		.byte	0
+ 2535 0210 28       		.uleb128 0x28
+ 2536 0211 2E       		.uleb128 0x2e
+ 2537 0212 00       		.byte	0
+ 2538 0213 3F       		.uleb128 0x3f
+ 2539 0214 19       		.uleb128 0x19
+ 2540 0215 3C       		.uleb128 0x3c
+ 2541 0216 19       		.uleb128 0x19
+ 2542 0217 6E       		.uleb128 0x6e
+ 2543 0218 0E       		.uleb128 0xe
+ 2544 0219 03       		.uleb128 0x3
+ 2545 021a 0E       		.uleb128 0xe
+ 2546 021b 3A       		.uleb128 0x3a
+ 2547 021c 0B       		.uleb128 0xb
+ 2548 021d 3B       		.uleb128 0x3b
+ 2549 021e 0B       		.uleb128 0xb
+ 2550 021f 00       		.byte	0
+ 2551 0220 00       		.byte	0
+ 2552 0221 00       		.byte	0
+ 2553              		.section	.debug_loc,"",%progbits
+ 2554              	.Ldebug_loc0:
+ 2555              	.LLST0:
+ 2556 0000 02000000 		.4byte	.LVL1
+ 2557 0004 06000000 		.4byte	.LVL2
+ 2558 0008 0200     		.2byte	0x2
+ 2559 000a 30       		.byte	0x30
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 51
+
+
+ 2560 000b 9F       		.byte	0x9f
+ 2561 000c 06000000 		.4byte	.LVL2
+ 2562 0010 24000000 		.4byte	.LFE620
+ 2563 0014 0100     		.2byte	0x1
+ 2564 0016 52       		.byte	0x52
+ 2565 0017 00000000 		.4byte	0
+ 2566 001b 00000000 		.4byte	0
+ 2567              	.LLST1:
+ 2568 001f 3E000000 		.4byte	.LVL6
+ 2569 0023 42000000 		.4byte	.LVL7
+ 2570 0027 0200     		.2byte	0x2
+ 2571 0029 30       		.byte	0x30
+ 2572 002a 9F       		.byte	0x9f
+ 2573 002b 42000000 		.4byte	.LVL7
+ 2574 002f CC000000 		.4byte	.LVL9
+ 2575 0033 0100     		.2byte	0x1
+ 2576 0035 53       		.byte	0x53
+ 2577 0036 D0000000 		.4byte	.LVL10
+ 2578 003a D4000000 		.4byte	.LVL11
+ 2579 003e 0100     		.2byte	0x1
+ 2580 0040 53       		.byte	0x53
+ 2581 0041 00000000 		.4byte	0
+ 2582 0045 00000000 		.4byte	0
+ 2583              		.section	.debug_aranges,"",%progbits
+ 2584 0000 34000000 		.4byte	0x34
+ 2585 0004 0200     		.2byte	0x2
+ 2586 0006 00000000 		.4byte	.Ldebug_info0
+ 2587 000a 04       		.byte	0x4
+ 2588 000b 00       		.byte	0
+ 2589 000c 0000     		.2byte	0
+ 2590 000e 0000     		.2byte	0
+ 2591 0010 00000000 		.4byte	.LFB620
+ 2592 0014 24000000 		.4byte	.LFE620-.LFB620
+ 2593 0018 00000000 		.4byte	.LFB621
+ 2594 001c 08010000 		.4byte	.LFE621-.LFB621
+ 2595 0020 00000000 		.4byte	.LFB622
+ 2596 0024 10000000 		.4byte	.LFE622-.LFB622
+ 2597 0028 00000000 		.4byte	.LFB623
+ 2598 002c 08000000 		.4byte	.LFE623-.LFB623
+ 2599 0030 00000000 		.4byte	0
+ 2600 0034 00000000 		.4byte	0
+ 2601              		.section	.debug_ranges,"",%progbits
+ 2602              	.Ldebug_ranges0:
+ 2603 0000 00000000 		.4byte	.LFB620
+ 2604 0004 24000000 		.4byte	.LFE620
+ 2605 0008 00000000 		.4byte	.LFB621
+ 2606 000c 08010000 		.4byte	.LFE621
+ 2607 0010 00000000 		.4byte	.LFB622
+ 2608 0014 10000000 		.4byte	.LFE622
+ 2609 0018 00000000 		.4byte	.LFB623
+ 2610 001c 08000000 		.4byte	.LFE623
+ 2611 0020 00000000 		.4byte	0
+ 2612 0024 00000000 		.4byte	0
+ 2613              		.section	.debug_line,"",%progbits
+ 2614              	.Ldebug_line0:
+ 2615 0000 FE030000 		.section	.debug_str,"MS",%progbits,1
+ 2615      02005603 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 52
+
+
+ 2615      00000201 
+ 2615      FB0E0D00 
+ 2615      01010101 
+ 2616              	.LASF281:
+ 2617 0000 63795F62 		.ascii	"cy_ble_connState\000"
+ 2617      6C655F63 
+ 2617      6F6E6E53 
+ 2617      74617465 
+ 2617      00
+ 2618              	.LASF96:
+ 2619 0011 43595F42 		.ascii	"CY_BLE_EVT_READ_AUTH_PAYLOAD_TO_COMPLETE\000"
+ 2619      4C455F45 
+ 2619      56545F52 
+ 2619      4541445F 
+ 2619      41555448 
+ 2620              	.LASF198:
+ 2621 003a 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_DATA_READ\000"
+ 2621      4C455F45 
+ 2621      56545F4C 
+ 2621      32434150 
+ 2621      5F434246 
+ 2622              	.LASF76:
+ 2623 005a 63795F63 		.ascii	"cy_cb_scb_spi_handle_events_t\000"
+ 2623      625F7363 
+ 2623      625F7370 
+ 2623      695F6861 
+ 2623      6E646C65 
+ 2624              	.LASF41:
+ 2625 0078 73746F70 		.ascii	"stopInputMode\000"
+ 2625      496E7075 
+ 2625      744D6F64 
+ 2625      6500
+ 2626              	.LASF145:
+ 2627 0086 43595F42 		.ascii	"CY_BLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
+ 2627      4C455F45 
+ 2627      56545F47 
+ 2627      4150505F 
+ 2627      41445645 
+ 2628              	.LASF200:
+ 2629 00af 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
+ 2629      4C455F45 
+ 2629      56545F4C 
+ 2629      32434150 
+ 2629      5F434246 
+ 2630              	.LASF68:
+ 2631 00d3 62756653 		.ascii	"bufSize\000"
+ 2631      697A6500 
+ 2632              	.LASF92:
+ 2633 00db 43595F42 		.ascii	"CY_BLE_EVT_PENDING_FLASH_WRITE\000"
+ 2633      4C455F45 
+ 2633      56545F50 
+ 2633      454E4449 
+ 2633      4E475F46 
+ 2634              	.LASF130:
+ 2635 00fa 43595F42 		.ascii	"CY_BLE_EVT_AES_CCM_DECRYPT_COMPLETE\000"
+ 2635      4C455F45 
+ 2635      56545F41 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 53
+
+
+ 2635      45535F43 
+ 2635      434D5F44 
+ 2636              	.LASF184:
+ 2637 011e 43595F42 		.ascii	"CY_BLE_EVT_GATTC_HANDLE_VALUE_NTF\000"
+ 2637      4C455F45 
+ 2637      56545F47 
+ 2637      41545443 
+ 2637      5F48414E 
+ 2638              	.LASF282:
+ 2639 0140 43595F45 		.ascii	"CY_EINK_SPIM_context\000"
+ 2639      494E4B5F 
+ 2639      5350494D 
+ 2639      5F636F6E 
+ 2639      74657874 
+ 2640              	.LASF218:
+ 2641 0155 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCOVERED\000"
+ 2641      4C455F43 
+ 2641      4F4E4E5F 
+ 2641      53544154 
+ 2641      455F434C 
+ 2642              	.LASF124:
+ 2643 0179 43595F42 		.ascii	"CY_BLE_EVT_SET_TX_PWR_COMPLETE\000"
+ 2643      4C455F45 
+ 2643      56545F53 
+ 2643      45545F54 
+ 2643      585F5057 
+ 2644              	.LASF49:
+ 2645 0198 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_IDLE\000"
+ 2645      43425F45 
+ 2645      5A493243 
+ 2645      5F535441 
+ 2645      54455F49 
+ 2646              	.LASF28:
+ 2647 01b0 72756E4D 		.ascii	"runMode\000"
+ 2647      6F646500 
+ 2648              	.LASF199:
+ 2649 01b8 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_RX_CREDIT_IND\000"
+ 2649      4C455F45 
+ 2649      56545F4C 
+ 2649      32434150 
+ 2649      5F434246 
+ 2650              	.LASF275:
+ 2651 01dc 6C6F7750 		.ascii	"lowPowerModeReady\000"
+ 2651      6F776572 
+ 2651      4D6F6465 
+ 2651      52656164 
+ 2651      7900
+ 2652              	.LASF12:
+ 2653 01ee 756E7369 		.ascii	"unsigned int\000"
+ 2653      676E6564 
+ 2653      20696E74 
+ 2653      00
+ 2654              	.LASF276:
+ 2655 01fb 6765745F 		.ascii	"get_array\000"
+ 2655      61727261 
+ 2655      7900
+ 2656              	.LASF280:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 54
+
+
+ 2657 0205 63795F62 		.ascii	"cy_ble_connHandle\000"
+ 2657      6C655F63 
+ 2657      6F6E6E48 
+ 2657      616E646C 
+ 2657      6500
+ 2658              	.LASF162:
+ 2659 0217 43595F42 		.ascii	"CY_BLE_EVT_GAP_CREATE_CONN_CANCEL_COMPLETE\000"
+ 2659      4C455F45 
+ 2659      56545F47 
+ 2659      41505F43 
+ 2659      52454154 
+ 2660              	.LASF254:
+ 2661 0242 7363616E 		.ascii	"scanCounter\000"
+ 2661      436F756E 
+ 2661      74657200 
+ 2662              	.LASF252:
+ 2663 024e 6877436C 		.ascii	"hwClock\000"
+ 2663      6F636B00 
+ 2664              	.LASF147:
+ 2665 0256 43595F42 		.ascii	"CY_BLE_EVT_GAP_DEVICE_DISCONNECTED\000"
+ 2665      4C455F45 
+ 2665      56545F47 
+ 2665      41505F44 
+ 2665      45564943 
+ 2666              	.LASF83:
+ 2667 0279 74784275 		.ascii	"txBufIdx\000"
+ 2667      66496478 
+ 2667      00
+ 2668              	.LASF40:
+ 2669 0282 73746172 		.ascii	"startInput\000"
+ 2669      74496E70 
+ 2669      757400
+ 2670              	.LASF6:
+ 2671 028d 5F5F696E 		.ascii	"__int32_t\000"
+ 2671      7433325F 
+ 2671      7400
+ 2672              	.LASF293:
+ 2673 0297 433A5C55 		.ascii	"C:\\Users\\Coal\\Downloads\\Telegram Desktop\\CAP\\"
+ 2673      73657273 
+ 2673      5C436F61 
+ 2673      6C5C446F 
+ 2673      776E6C6F 
+ 2674 02c4 43453231 		.ascii	"CE218135_BLE_Proximity02\\CE218135_BLE_Proximity01."
+ 2674      38313335 
+ 2674      5F424C45 
+ 2674      5F50726F 
+ 2674      78696D69 
+ 2675 02f6 63796473 		.ascii	"cydsn\000"
+ 2675      6E00
+ 2676              	.LASF277:
+ 2677 02fc 496E6974 		.ascii	"InitCapSense\000"
+ 2677      43617053 
+ 2677      656E7365 
+ 2677      00
+ 2678              	.LASF48:
+ 2679 0309 63795F65 		.ascii	"cy_en_scb_ezi2c_sub_addr_size_t\000"
+ 2679      6E5F7363 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 55
+
+
+ 2679      625F657A 
+ 2679      6932635F 
+ 2679      7375625F 
+ 2680              	.LASF173:
+ 2681 0329 43595F42 		.ascii	"CY_BLE_EVT_GATTC_FIND_INFO_RSP\000"
+ 2681      4C455F45 
+ 2681      56545F47 
+ 2681      41545443 
+ 2681      5F46494E 
+ 2682              	.LASF290:
+ 2683 0348 43617053 		.ascii	"CapSense_Start\000"
+ 2683      656E7365 
+ 2683      5F537461 
+ 2683      727400
+ 2684              	.LASF117:
+ 2685 0357 43595F42 		.ascii	"CY_BLE_EVT_SET_PRIVACY_MODE_COMPLETE\000"
+ 2685      4C455F45 
+ 2685      56545F53 
+ 2685      45545F50 
+ 2685      52495641 
+ 2686              	.LASF285:
+ 2687 037c 455A4932 		.ascii	"EZI2C_context\000"
+ 2687      435F636F 
+ 2687      6E746578 
+ 2687      7400
+ 2688              	.LASF42:
+ 2689 038a 73746F70 		.ascii	"stopInput\000"
+ 2689      496E7075 
+ 2689      7400
+ 2690              	.LASF177:
+ 2691 0394 43595F42 		.ascii	"CY_BLE_EVT_GATTC_READ_MULTI_RSP\000"
+ 2691      4C455F45 
+ 2691      56545F47 
+ 2691      41545443 
+ 2691      5F524541 
+ 2692              	.LASF167:
+ 2693 03b4 43595F42 		.ascii	"CY_BLE_EVT_GATT_CONNECT_IND\000"
+ 2693      4C455F45 
+ 2693      56545F47 
+ 2693      4154545F 
+ 2693      434F4E4E 
+ 2694              	.LASF71:
+ 2695 03d0 62756631 		.ascii	"buf1rwBondary\000"
+ 2695      7277426F 
+ 2695      6E646172 
+ 2695      7900
+ 2696              	.LASF206:
+ 2697 03de 43595F42 		.ascii	"CY_BLE_ADV_STATE_STOPPED\000"
+ 2697      4C455F41 
+ 2697      44565F53 
+ 2697      54415445 
+ 2697      5F53544F 
+ 2698              	.LASF289:
+ 2699 03f7 43617053 		.ascii	"CapSense_IsBusy\000"
+ 2699      656E7365 
+ 2699      5F497342 
+ 2699      75737900 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 56
+
+
+ 2700              	.LASF115:
+ 2701 0407 43595F42 		.ascii	"CY_BLE_EVT_SET_PHY_COMPLETE\000"
+ 2701      4C455F45 
+ 2701      56545F53 
+ 2701      45545F50 
+ 2701      48595F43 
+ 2702              	.LASF189:
+ 2703 0423 43595F42 		.ascii	"CY_BLE_EVT_GATTS_READ_CHAR_VAL_ACCESS_REQ\000"
+ 2703      4C455F45 
+ 2703      56545F47 
+ 2703      41545453 
+ 2703      5F524541 
+ 2704              	.LASF31:
+ 2705 044d 636F6D70 		.ascii	"compare0\000"
+ 2705      61726530 
+ 2705      00
+ 2706              	.LASF32:
+ 2707 0456 636F6D70 		.ascii	"compare1\000"
+ 2707      61726531 
+ 2707      00
+ 2708              	.LASF291:
+ 2709 045f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2709      43313120 
+ 2709      352E342E 
+ 2709      31203230 
+ 2709      31363036 
+ 2710 0492 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 2710      20726576 
+ 2710      6973696F 
+ 2710      6E203233 
+ 2710      37373135 
+ 2711 04c5 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 2711      70202D6D 
+ 2711      6670753D 
+ 2711      66707634 
+ 2711      2D73702D 
+ 2712 04f8 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 2712      6F6E7320 
+ 2712      2D666661 
+ 2712      742D6C74 
+ 2712      6F2D6F62 
+ 2713              	.LASF160:
+ 2714 0512 43595F42 		.ascii	"CY_BLE_EVT_GAP_RESOLVE_DEVICE_COMPLETE\000"
+ 2714      4C455F45 
+ 2714      56545F47 
+ 2714      41505F52 
+ 2714      45534F4C 
+ 2715              	.LASF212:
+ 2716 0539 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DISCONNECTED_DISCOVERED\000"
+ 2716      4C455F43 
+ 2716      4F4E4E5F 
+ 2716      53544154 
+ 2716      455F434C 
+ 2717              	.LASF243:
+ 2718 056a 43617053 		.ascii	"CapSense_RAM_WD_LIST_STRUCT\000"
+ 2718      656E7365 
+ 2718      5F52414D 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 57
+
+
+ 2718      5F57445F 
+ 2718      4C495354 
+ 2719              	.LASF170:
+ 2720 0586 43595F42 		.ascii	"CY_BLE_EVT_GATTC_XCHNG_MTU_RSP\000"
+ 2720      4C455F45 
+ 2720      56545F47 
+ 2720      41545443 
+ 2720      5F584348 
+ 2721              	.LASF186:
+ 2722 05a5 43595F42 		.ascii	"CY_BLE_EVT_GATTS_HANDLE_VALUE_CNF\000"
+ 2722      4C455F45 
+ 2722      56545F47 
+ 2722      41545453 
+ 2722      5F48414E 
+ 2723              	.LASF116:
+ 2724 05c7 43595F42 		.ascii	"CY_BLE_EVT_PHY_UPDATE_COMPLETE\000"
+ 2724      4C455F45 
+ 2724      56545F50 
+ 2724      48595F55 
+ 2724      50444154 
+ 2725              	.LASF22:
+ 2726 05e6 75696E74 		.ascii	"uint8\000"
+ 2726      3800
+ 2727              	.LASF175:
+ 2728 05ec 43595F42 		.ascii	"CY_BLE_EVT_GATTC_READ_RSP\000"
+ 2728      4C455F45 
+ 2728      56545F47 
+ 2728      41545443 
+ 2728      5F524541 
+ 2729              	.LASF34:
+ 2730 0606 696E7465 		.ascii	"interruptSources\000"
+ 2730      72727570 
+ 2730      74536F75 
+ 2730      72636573 
+ 2730      00
+ 2731              	.LASF176:
+ 2732 0617 43595F42 		.ascii	"CY_BLE_EVT_GATTC_READ_BLOB_RSP\000"
+ 2732      4C455F45 
+ 2732      56545F47 
+ 2732      41545443 
+ 2732      5F524541 
+ 2733              	.LASF16:
+ 2734 0636 75696E74 		.ascii	"uint32_t\000"
+ 2734      33325F74 
+ 2734      00
+ 2735              	.LASF107:
+ 2736 063f 43595F42 		.ascii	"CY_BLE_EVT_SET_RPA_ENABLE_COMPLETE\000"
+ 2736      4C455F45 
+ 2736      56545F53 
+ 2736      45545F52 
+ 2736      50415F45 
+ 2737              	.LASF88:
+ 2738 0662 43595F42 		.ascii	"CY_BLE_EVT_STACK_ON\000"
+ 2738      4C455F45 
+ 2738      56545F53 
+ 2738      5441434B 
+ 2738      5F4F4E00 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 58
+
+
+ 2739              	.LASF118:
+ 2740 0676 43595F42 		.ascii	"CY_BLE_EVT_LL_CNTRL_PROC_PENDING_COMPLETE\000"
+ 2740      4C455F45 
+ 2740      56545F4C 
+ 2740      4C5F434E 
+ 2740      54524C5F 
+ 2741              	.LASF174:
+ 2742 06a0 43595F42 		.ascii	"CY_BLE_EVT_GATTC_FIND_BY_TYPE_VALUE_RSP\000"
+ 2742      4C455F45 
+ 2742      56545F47 
+ 2742      41545443 
+ 2742      5F46494E 
+ 2743              	.LASF195:
+ 2744 06c8 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_CONN_CNF\000"
+ 2744      4C455F45 
+ 2744      56545F4C 
+ 2744      32434150 
+ 2744      5F434246 
+ 2745              	.LASF104:
+ 2746 06e7 43595F42 		.ascii	"CY_BLE_EVT_GET_PEER_RPA_COMPLETE\000"
+ 2746      4C455F45 
+ 2746      56545F47 
+ 2746      45545F50 
+ 2746      4545525F 
+ 2747              	.LASF87:
+ 2748 0708 43595F42 		.ascii	"CY_BLE_EVT_INVALID\000"
+ 2748      4C455F45 
+ 2748      56545F49 
+ 2748      4E56414C 
+ 2748      494400
+ 2749              	.LASF90:
+ 2750 071b 43595F42 		.ascii	"CY_BLE_EVT_STACK_BUSY_STATUS\000"
+ 2750      4C455F45 
+ 2750      56545F53 
+ 2750      5441434B 
+ 2750      5F425553 
+ 2751              	.LASF105:
+ 2752 0738 43595F42 		.ascii	"CY_BLE_EVT_GET_LOCAL_RPA_COMPLETE\000"
+ 2752      4C455F45 
+ 2752      56545F47 
+ 2752      45545F4C 
+ 2752      4F43414C 
+ 2753              	.LASF38:
+ 2754 075a 72656C6F 		.ascii	"reloadInput\000"
+ 2754      6164496E 
+ 2754      70757400 
+ 2755              	.LASF261:
+ 2756 0766 736E734C 		.ascii	"snsList\000"
+ 2756      69737400 
+ 2757              	.LASF155:
+ 2758 076e 43595F42 		.ascii	"CY_BLE_EVT_GAP_ENHANCE_CONN_COMPLETE\000"
+ 2758      4C455F45 
+ 2758      56545F47 
+ 2758      41505F45 
+ 2758      4E48414E 
+ 2759              	.LASF52:
+ 2760 0793 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_OFFSET_LSB\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 59
+
+
+ 2760      43425F45 
+ 2760      5A493243 
+ 2760      5F535441 
+ 2760      54455F52 
+ 2761              	.LASF11:
+ 2762 07b4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2762      206C6F6E 
+ 2762      6720756E 
+ 2762      7369676E 
+ 2762      65642069 
+ 2763              	.LASF210:
+ 2764 07cb 63795F65 		.ascii	"cy_en_ble_adv_state_t\000"
+ 2764      6E5F626C 
+ 2764      655F6164 
+ 2764      765F7374 
+ 2764      6174655F 
+ 2765              	.LASF122:
+ 2766 07e1 43595F42 		.ascii	"CY_BLE_EVT_GET_RSSI_COMPLETE\000"
+ 2766      4C455F45 
+ 2766      56545F47 
+ 2766      45545F52 
+ 2766      5353495F 
+ 2767              	.LASF273:
+ 2768 07fe 47657450 		.ascii	"GetProximityData\000"
+ 2768      726F7869 
+ 2768      6D697479 
+ 2768      44617461 
+ 2768      00
+ 2769              	.LASF69:
+ 2770 080f 62756631 		.ascii	"buf1\000"
+ 2770      00
+ 2771              	.LASF72:
+ 2772 0814 62756632 		.ascii	"buf2\000"
+ 2772      00
+ 2773              	.LASF286:
+ 2774 0819 6D617373 		.ascii	"masszero\000"
+ 2774      7A65726F 
+ 2774      00
+ 2775              	.LASF263:
+ 2776 0822 736E7254 		.ascii	"snrTestSensorId\000"
+ 2776      65737453 
+ 2776      656E736F 
+ 2776      72496400 
+ 2777              	.LASF207:
+ 2778 0832 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADV_INITIATED\000"
+ 2778      4C455F41 
+ 2778      44565F53 
+ 2778      54415445 
+ 2778      5F414456 
+ 2779              	.LASF4:
+ 2780 0851 5F5F7569 		.ascii	"__uint16_t\000"
+ 2780      6E743136 
+ 2780      5F7400
+ 2781              	.LASF148:
+ 2782 085c 43595F42 		.ascii	"CY_BLE_EVT_GAP_ENCRYPT_CHANGE\000"
+ 2782      4C455F45 
+ 2782      56545F47 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 60
+
+
+ 2782      41505F45 
+ 2782      4E435259 
+ 2783              	.LASF120:
+ 2784 087a 43595F42 		.ascii	"CY_BLE_EVT_SET_DEVICE_ADDR_COMPLETE\000"
+ 2784      4C455F45 
+ 2784      56545F53 
+ 2784      45545F44 
+ 2784      45564943 
+ 2785              	.LASF204:
+ 2786 089e 61747449 		.ascii	"attId\000"
+ 2786      6400
+ 2787              	.LASF39:
+ 2788 08a4 73746172 		.ascii	"startInputMode\000"
+ 2788      74496E70 
+ 2788      75744D6F 
+ 2788      646500
+ 2789              	.LASF35:
+ 2790 08b3 63617074 		.ascii	"captureInputMode\000"
+ 2790      75726549 
+ 2790      6E707574 
+ 2790      4D6F6465 
+ 2790      00
+ 2791              	.LASF113:
+ 2792 08c4 43595F42 		.ascii	"CY_BLE_EVT_GET_PHY_COMPLETE\000"
+ 2792      4C455F45 
+ 2792      56545F47 
+ 2792      45545F50 
+ 2792      48595F43 
+ 2793              	.LASF78:
+ 2794 08e0 72784275 		.ascii	"rxBuf\000"
+ 2794      6600
+ 2795              	.LASF168:
+ 2796 08e6 43595F42 		.ascii	"CY_BLE_EVT_GATT_DISCONNECT_IND\000"
+ 2796      4C455F45 
+ 2796      56545F47 
+ 2796      4154545F 
+ 2796      44495343 
+ 2797              	.LASF73:
+ 2798 0905 62756632 		.ascii	"buf2Size\000"
+ 2798      53697A65 
+ 2798      00
+ 2799              	.LASF146:
+ 2800 090e 43595F42 		.ascii	"CY_BLE_EVT_GAP_DEVICE_CONNECTED\000"
+ 2800      4C455F45 
+ 2800      56545F47 
+ 2800      41505F44 
+ 2800      45564943 
+ 2801              	.LASF259:
+ 2802 092e 6D6F6443 		.ascii	"modCsdClk\000"
+ 2802      7364436C 
+ 2802      6B00
+ 2803              	.LASF119:
+ 2804 0938 43595F42 		.ascii	"CY_BLE_EVT_SOFT_RESET_COMPLETE\000"
+ 2804      4C455F45 
+ 2804      56545F53 
+ 2804      4F46545F 
+ 2804      52455345 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 61
+
+
+ 2805              	.LASF248:
+ 2806 0957 43617053 		.ascii	"CapSense_RAM_SNS_STRUCT\000"
+ 2806      656E7365 
+ 2806      5F52414D 
+ 2806      5F534E53 
+ 2806      5F535452 
+ 2807              	.LASF181:
+ 2808 096f 43595F42 		.ascii	"CY_BLE_EVT_GATTS_PREP_WRITE_REQ\000"
+ 2808      4C455F45 
+ 2808      56545F47 
+ 2808      41545453 
+ 2808      5F505245 
+ 2809              	.LASF262:
+ 2810 098f 736E7254 		.ascii	"snrTestWidgetId\000"
+ 2810      65737457 
+ 2810      69646765 
+ 2810      74496400 
+ 2811              	.LASF84:
+ 2812 099f 63624576 		.ascii	"cbEvents\000"
+ 2812      656E7473 
+ 2812      00
+ 2813              	.LASF25:
+ 2814 09a8 5F426F6F 		.ascii	"_Bool\000"
+ 2814      6C00
+ 2815              	.LASF202:
+ 2816 09ae 43595F42 		.ascii	"CY_BLE_EVT_MAX\000"
+ 2816      4C455F45 
+ 2816      56545F4D 
+ 2816      415800
+ 2817              	.LASF226:
+ 2818 09bd 68797374 		.ascii	"hysteresis\000"
+ 2818      65726573 
+ 2818      697300
+ 2819              	.LASF197:
+ 2820 09c8 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_DISCONN_CNF\000"
+ 2820      4C455F45 
+ 2820      56545F4C 
+ 2820      32434150 
+ 2820      5F434246 
+ 2821              	.LASF127:
+ 2822 09ea 43595F42 		.ascii	"CY_BLE_EVT_RANDOM_NUM_GEN_COMPLETE\000"
+ 2822      4C455F45 
+ 2822      56545F52 
+ 2822      414E444F 
+ 2822      4D5F4E55 
+ 2823              	.LASF208:
+ 2824 0a0d 43595F42 		.ascii	"CY_BLE_ADV_STATE_ADVERTISING\000"
+ 2824      4C455F41 
+ 2824      44565F53 
+ 2824      54415445 
+ 2824      5F414456 
+ 2825              	.LASF157:
+ 2826 0a2a 43595F42 		.ascii	"CY_BLE_EVT_GAP_SMP_NEGOTIATED_AUTH_INFO\000"
+ 2826      4C455F45 
+ 2826      56545F47 
+ 2826      41505F53 
+ 2826      4D505F4E 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 62
+
+
+ 2827              	.LASF100:
+ 2828 0a52 43595F42 		.ascii	"CY_BLE_EVT_SET_DATA_LENGTH_COMPLETE\000"
+ 2828      4C455F45 
+ 2828      56545F53 
+ 2828      45545F44 
+ 2828      4154415F 
+ 2829              	.LASF179:
+ 2830 0a76 43595F42 		.ascii	"CY_BLE_EVT_GATTC_WRITE_RSP\000"
+ 2830      4C455F45 
+ 2830      56545F47 
+ 2830      41545443 
+ 2830      5F575249 
+ 2831              	.LASF228:
+ 2832 0a91 6C6F7742 		.ascii	"lowBslnRst\000"
+ 2832      736C6E52 
+ 2832      737400
+ 2833              	.LASF196:
+ 2834 0a9c 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_DISCONN_IND\000"
+ 2834      4C455F45 
+ 2834      56545F4C 
+ 2834      32434150 
+ 2834      5F434246 
+ 2835              	.LASF55:
+ 2836 0abe 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_TX_DATA\000"
+ 2836      43425F45 
+ 2836      5A493243 
+ 2836      5F535441 
+ 2836      54455F54 
+ 2837              	.LASF46:
+ 2838 0ad9 43595F53 		.ascii	"CY_SCB_EZI2C_SUB_ADDR8_BITS\000"
+ 2838      43425F45 
+ 2838      5A493243 
+ 2838      5F535542 
+ 2838      5F414444 
+ 2839              	.LASF66:
+ 2840 0af5 61646472 		.ascii	"addr1Active\000"
+ 2840      31416374 
+ 2840      69766500 
+ 2841              	.LASF67:
+ 2842 0b01 63757242 		.ascii	"curBuf\000"
+ 2842      756600
+ 2843              	.LASF193:
+ 2844 0b08 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_COMMAND_REJ\000"
+ 2844      4C455F45 
+ 2844      56545F4C 
+ 2844      32434150 
+ 2844      5F434F4D 
+ 2845              	.LASF97:
+ 2846 0b25 43595F42 		.ascii	"CY_BLE_EVT_GET_CHANNEL_MAP_COMPLETE\000"
+ 2846      4C455F45 
+ 2846      56545F47 
+ 2846      45545F43 
+ 2846      48414E4E 
+ 2847              	.LASF53:
+ 2848 0b49 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_DATA0\000"
+ 2848      43425F45 
+ 2848      5A493243 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 63
+
+
+ 2848      5F535441 
+ 2848      54455F52 
+ 2849              	.LASF91:
+ 2850 0b65 43595F42 		.ascii	"CY_BLE_EVT_MEMORY_REQUEST\000"
+ 2850      4C455F45 
+ 2850      56545F4D 
+ 2850      454D4F52 
+ 2850      595F5245 
+ 2851              	.LASF138:
+ 2852 0b7f 43595F42 		.ascii	"CY_BLE_EVT_SET_CONN_PRIORITY_COMPLETE\000"
+ 2852      4C455F45 
+ 2852      56545F53 
+ 2852      45545F43 
+ 2852      4F4E4E5F 
+ 2853              	.LASF209:
+ 2854 0ba5 43595F42 		.ascii	"CY_BLE_ADV_STATE_STOP_INITIATED\000"
+ 2854      4C455F41 
+ 2854      44565F53 
+ 2854      54415445 
+ 2854      5F53544F 
+ 2855              	.LASF56:
+ 2856 0bc5 63795F65 		.ascii	"cy_en_scb_ezi2c_state_t\000"
+ 2856      6E5F7363 
+ 2856      625F657A 
+ 2856      6932635F 
+ 2856      73746174 
+ 2857              	.LASF216:
+ 2858 0bdd 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_CHAR_DISCOVERING\000"
+ 2858      4C455F43 
+ 2858      4F4E4E5F 
+ 2858      53544154 
+ 2858      455F434C 
+ 2859              	.LASF36:
+ 2860 0c07 63617074 		.ascii	"captureInput\000"
+ 2860      75726549 
+ 2860      6E707574 
+ 2860      00
+ 2861              	.LASF224:
+ 2862 0c14 6E6F6973 		.ascii	"noiseTh\000"
+ 2862      65546800 
+ 2863              	.LASF19:
+ 2864 0c1c 63686172 		.ascii	"char\000"
+ 2864      00
+ 2865              	.LASF129:
+ 2866 0c21 43595F42 		.ascii	"CY_BLE_EVT_AES_CCM_ENCRYPT_COMPLETE\000"
+ 2866      4C455F45 
+ 2866      56545F41 
+ 2866      45535F43 
+ 2866      434D5F45 
+ 2867              	.LASF150:
+ 2868 0c45 43595F42 		.ascii	"CY_BLE_EVT_GAPC_SCAN_START_STOP\000"
+ 2868      4C455F45 
+ 2868      56545F47 
+ 2868      4150435F 
+ 2868      5343414E 
+ 2869              	.LASF154:
+ 2870 0c65 43595F42 		.ascii	"CY_BLE_EVT_GAP_OOB_GENERATED_NOTIFICATION\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 64
+
+
+ 2870      4C455F45 
+ 2870      56545F47 
+ 2870      41505F4F 
+ 2870      4F425F47 
+ 2871              	.LASF283:
+ 2872 0c8f 43595F45 		.ascii	"CY_EINK_Timer_config\000"
+ 2872      494E4B5F 
+ 2872      54696D65 
+ 2872      725F636F 
+ 2872      6E666967 
+ 2873              	.LASF172:
+ 2874 0ca4 43595F42 		.ascii	"CY_BLE_EVT_GATTC_READ_BY_TYPE_RSP\000"
+ 2874      4C455F45 
+ 2874      56545F47 
+ 2874      41545443 
+ 2874      5F524541 
+ 2875              	.LASF27:
+ 2876 0cc6 636C6F63 		.ascii	"clockPrescaler\000"
+ 2876      6B507265 
+ 2876      7363616C 
+ 2876      657200
+ 2877              	.LASF23:
+ 2878 0cd5 75696E74 		.ascii	"uint16\000"
+ 2878      313600
+ 2879              	.LASF98:
+ 2880 0cdc 43595F42 		.ascii	"CY_BLE_EVT_LE_SET_EVENT_MASK_COMPLETE\000"
+ 2880      4C455F45 
+ 2880      56545F4C 
+ 2880      455F5345 
+ 2880      545F4556 
+ 2881              	.LASF80:
+ 2882 0d02 72784275 		.ascii	"rxBufIdx\000"
+ 2882      66496478 
+ 2882      00
+ 2883              	.LASF152:
+ 2884 0d0b 43595F42 		.ascii	"CY_BLE_EVT_GAP_NUMERIC_COMPARISON_REQUEST\000"
+ 2884      4C455F45 
+ 2884      56545F47 
+ 2884      41505F4E 
+ 2884      554D4552 
+ 2885              	.LASF271:
+ 2886 0d35 70726F78 		.ascii	"proximity\000"
+ 2886      696D6974 
+ 2886      7900
+ 2887              	.LASF85:
+ 2888 0d3f 696E6974 		.ascii	"initKey\000"
+ 2888      4B657900 
+ 2889              	.LASF222:
+ 2890 0d47 7265736F 		.ascii	"resolution\000"
+ 2890      6C757469 
+ 2890      6F6E00
+ 2891              	.LASF13:
+ 2892 0d52 75696E74 		.ascii	"uint8_t\000"
+ 2892      385F7400 
+ 2893              	.LASF60:
+ 2894 0d5a 73746174 		.ascii	"status\000"
+ 2894      757300
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 65
+
+
+ 2895              	.LASF221:
+ 2896 0d61 43617053 		.ascii	"CapSense_LOW_BSLN_RST_TYPE\000"
+ 2896      656E7365 
+ 2896      5F4C4F57 
+ 2896      5F42534C 
+ 2896      4E5F5253 
+ 2897              	.LASF131:
+ 2898 0d7c 43595F42 		.ascii	"CY_BLE_EVT_SET_SLAVE_LATENCY_MODE_COMPLETE\000"
+ 2898      4C455F45 
+ 2898      56545F53 
+ 2898      45545F53 
+ 2898      4C415645 
+ 2899              	.LASF74:
+ 2900 0da7 62756632 		.ascii	"buf2rwBondary\000"
+ 2900      7277426F 
+ 2900      6E646172 
+ 2900      7900
+ 2901              	.LASF257:
+ 2902 0db5 736E7353 		.ascii	"snsStatus\000"
+ 2902      74617475 
+ 2902      7300
+ 2903              	.LASF108:
+ 2904 0dbf 43595F42 		.ascii	"CY_BLE_EVT_SET_HOST_CHANNEL_COMPLETE\000"
+ 2904      4C455F45 
+ 2904      56545F53 
+ 2904      45545F48 
+ 2904      4F53545F 
+ 2905              	.LASF143:
+ 2906 0de4 43595F42 		.ascii	"CY_BLE_EVT_GAP_AUTH_COMPLETE\000"
+ 2906      4C455F45 
+ 2906      56545F47 
+ 2906      41505F41 
+ 2906      5554485F 
+ 2907              	.LASF114:
+ 2908 0e01 43595F42 		.ascii	"CY_BLE_EVT_SET_DEFAULT_PHY_COMPLETE\000"
+ 2908      4C455F45 
+ 2908      56545F53 
+ 2908      45545F44 
+ 2908      45464155 
+ 2909              	.LASF279:
+ 2910 0e25 63795F62 		.ascii	"cy_ble_advState\000"
+ 2910      6C655F61 
+ 2910      64765374 
+ 2910      61746500 
+ 2911              	.LASF219:
+ 2912 0e35 63795F65 		.ascii	"cy_en_ble_conn_state_t\000"
+ 2912      6E5F626C 
+ 2912      655F636F 
+ 2912      6E6E5F73 
+ 2912      74617465 
+ 2913              	.LASF137:
+ 2914 0e4c 43595F42 		.ascii	"CY_BLE_EVT_SET_CE_LENGTH_COMPLETE\000"
+ 2914      4C455F45 
+ 2914      56545F53 
+ 2914      45545F43 
+ 2914      455F4C45 
+ 2915              	.LASF136:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 66
+
+
+ 2916 0e6e 43595F42 		.ascii	"CY_BLE_EVT_SET_EVENT_MASK_COMPLETE\000"
+ 2916      4C455F45 
+ 2916      56545F53 
+ 2916      45545F45 
+ 2916      56454E54 
+ 2917              	.LASF10:
+ 2918 0e91 6C6F6E67 		.ascii	"long long int\000"
+ 2918      206C6F6E 
+ 2918      6720696E 
+ 2918      7400
+ 2919              	.LASF227:
+ 2920 0e9f 6F6E4465 		.ascii	"onDebounce\000"
+ 2920      626F756E 
+ 2920      636500
+ 2921              	.LASF163:
+ 2922 0eaa 43595F42 		.ascii	"CY_BLE_EVT_GAP_CONN_ESTB\000"
+ 2922      4C455F45 
+ 2922      56545F47 
+ 2922      41505F43 
+ 2922      4F4E4E5F 
+ 2923              	.LASF110:
+ 2924 0ec3 43595F42 		.ascii	"CY_BLE_EVT_REMOVE_DEVICE_FROM_RPA_LIST_COMPLETE\000"
+ 2924      4C455F45 
+ 2924      56545F52 
+ 2924      454D4F56 
+ 2924      455F4445 
+ 2925              	.LASF99:
+ 2926 0ef3 43595F42 		.ascii	"CY_BLE_EVT_LE_PING_AUTH_TIMEOUT\000"
+ 2926      4C455F45 
+ 2926      56545F4C 
+ 2926      455F5049 
+ 2926      4E475F41 
+ 2927              	.LASF260:
+ 2928 0f13 77646774 		.ascii	"wdgtList\000"
+ 2928      4C697374 
+ 2928      00
+ 2929              	.LASF284:
+ 2930 0f1c 43617053 		.ascii	"CapSense_dsRam\000"
+ 2930      656E7365 
+ 2930      5F647352 
+ 2930      616D00
+ 2931              	.LASF265:
+ 2932 0f2b 736E7254 		.ascii	"snrTestRawCount\000"
+ 2932      65737452 
+ 2932      6177436F 
+ 2932      756E7400 
+ 2933              	.LASF126:
+ 2934 0f3b 43595F42 		.ascii	"CY_BLE_EVT_SET_CLK_CONFIG_COMPLETE\000"
+ 2934      4C455F45 
+ 2934      56545F53 
+ 2934      45545F43 
+ 2934      4C4B5F43 
+ 2935              	.LASF190:
+ 2936 0f5e 43595F42 		.ascii	"CY_BLE_EVT_GATTC_LONG_PROCEDURE_END\000"
+ 2936      4C455F45 
+ 2936      56545F47 
+ 2936      41545443 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 67
+
+
+ 2936      5F4C4F4E 
+ 2937              	.LASF225:
+ 2938 0f82 6E4E6F69 		.ascii	"nNoiseTh\000"
+ 2938      73655468 
+ 2938      00
+ 2939              	.LASF86:
+ 2940 0f8b 63795F73 		.ascii	"cy_stc_scb_spi_context_t\000"
+ 2940      74635F73 
+ 2940      63625F73 
+ 2940      70695F63 
+ 2940      6F6E7465 
+ 2941              	.LASF258:
+ 2942 0fa4 63736430 		.ascii	"csd0Config\000"
+ 2942      436F6E66 
+ 2942      696700
+ 2943              	.LASF37:
+ 2944 0faf 72656C6F 		.ascii	"reloadInputMode\000"
+ 2944      6164496E 
+ 2944      7075744D 
+ 2944      6F646500 
+ 2945              	.LASF103:
+ 2946 0fbf 43595F42 		.ascii	"CY_BLE_EVT_DATA_LENGTH_CHANGE\000"
+ 2946      4C455F45 
+ 2946      56545F44 
+ 2946      4154415F 
+ 2946      4C454E47 
+ 2947              	.LASF151:
+ 2948 0fdd 43595F42 		.ascii	"CY_BLE_EVT_GAP_KEYINFO_EXCHNGE_CMPLT\000"
+ 2948      4C455F45 
+ 2948      56545F47 
+ 2948      41505F4B 
+ 2948      4559494E 
+ 2949              	.LASF111:
+ 2950 1002 43595F42 		.ascii	"CY_BLE_EVT_ADD_DEVICE_TO_WHITE_LIST_COMPLETE\000"
+ 2950      4C455F45 
+ 2950      56545F41 
+ 2950      44445F44 
+ 2950      45564943 
+ 2951              	.LASF292:
+ 2952 102f 70726F78 		.ascii	"proximity.c\000"
+ 2952      696D6974 
+ 2952      792E6300 
+ 2953              	.LASF82:
+ 2954 103b 74784275 		.ascii	"txBufSize\000"
+ 2954      6653697A 
+ 2954      6500
+ 2955              	.LASF24:
+ 2956 1045 75696E74 		.ascii	"uint32\000"
+ 2956      333200
+ 2957              	.LASF165:
+ 2958 104c 43595F42 		.ascii	"CY_BLE_EVT_GAP_ADV_TX\000"
+ 2958      4C455F45 
+ 2958      56545F47 
+ 2958      41505F41 
+ 2958      44565F54 
+ 2959              	.LASF201:
+ 2960 1062 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_DATA_WRITE_IND\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 68
+
+
+ 2960      4C455F45 
+ 2960      56545F4C 
+ 2960      32434150 
+ 2960      5F434246 
+ 2961              	.LASF268:
+ 2962 1087 70726F78 		.ascii	"proximityData\000"
+ 2962      696D6974 
+ 2962      79446174 
+ 2962      6100
+ 2963              	.LASF287:
+ 2964 1095 43617053 		.ascii	"CapSense_ProcessAllWidgets\000"
+ 2964      656E7365 
+ 2964      5F50726F 
+ 2964      63657373 
+ 2964      416C6C57 
+ 2965              	.LASF272:
+ 2966 10b0 6D617373 		.ascii	"mass\000"
+ 2966      00
+ 2967              	.LASF139:
+ 2968 10b5 43595F42 		.ascii	"CY_BLE_EVT_GAPC_SCAN_PROGRESS_RESULT\000"
+ 2968      4C455F45 
+ 2968      56545F47 
+ 2968      4150435F 
+ 2968      5343414E 
+ 2969              	.LASF194:
+ 2970 10da 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CBFC_CONN_IND\000"
+ 2970      4C455F45 
+ 2970      56545F4C 
+ 2970      32434150 
+ 2970      5F434246 
+ 2971              	.LASF159:
+ 2972 10f9 43595F42 		.ascii	"CY_BLE_EVT_GAP_KEYS_GEN_COMPLETE\000"
+ 2972      4C455F45 
+ 2972      56545F47 
+ 2972      41505F4B 
+ 2972      4559535F 
+ 2973              	.LASF63:
+ 2974 111a 73756241 		.ascii	"subAddrSize\000"
+ 2974      64647253 
+ 2974      697A6500 
+ 2975              	.LASF153:
+ 2976 1126 43595F42 		.ascii	"CY_BLE_EVT_GAP_KEYPRESS_NOTIFICATION\000"
+ 2976      4C455F45 
+ 2976      56545F47 
+ 2976      41505F4B 
+ 2976      45595052 
+ 2977              	.LASF217:
+ 2978 114b 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_DESCR_DISCOVERING\000"
+ 2978      4C455F43 
+ 2978      4F4E4E5F 
+ 2978      53544154 
+ 2978      455F434C 
+ 2979              	.LASF213:
+ 2980 1176 43595F42 		.ascii	"CY_BLE_CONN_STATE_CONNECTED\000"
+ 2980      4C455F43 
+ 2980      4F4E4E5F 
+ 2980      53544154 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 69
+
+
+ 2980      455F434F 
+ 2981              	.LASF81:
+ 2982 1192 74784275 		.ascii	"txBuf\000"
+ 2982      6600
+ 2983              	.LASF215:
+ 2984 1198 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_INCL_DISCOVERING\000"
+ 2984      4C455F43 
+ 2984      4F4E4E5F 
+ 2984      53544154 
+ 2984      455F434C 
+ 2985              	.LASF18:
+ 2986 11c2 6C6F6E67 		.ascii	"long double\000"
+ 2986      20646F75 
+ 2986      626C6500 
+ 2987              	.LASF270:
+ 2988 11ce 63757272 		.ascii	"currentProximityData\000"
+ 2988      656E7450 
+ 2988      726F7869 
+ 2988      6D697479 
+ 2988      44617461 
+ 2989              	.LASF14:
+ 2990 11e3 75696E74 		.ascii	"uint16_t\000"
+ 2990      31365F74 
+ 2990      00
+ 2991              	.LASF62:
+ 2992 11ec 61646472 		.ascii	"address2\000"
+ 2992      65737332 
+ 2992      00
+ 2993              	.LASF264:
+ 2994 11f5 736E7254 		.ascii	"snrTestScanCounter\000"
+ 2994      65737453 
+ 2994      63616E43 
+ 2994      6F756E74 
+ 2994      657200
+ 2995              	.LASF250:
+ 2996 1208 636F6E66 		.ascii	"configId\000"
+ 2996      69674964 
+ 2996      00
+ 2997              	.LASF51:
+ 2998 1211 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_OFFSET_MSB\000"
+ 2998      43425F45 
+ 2998      5A493243 
+ 2998      5F535441 
+ 2998      54455F52 
+ 2999              	.LASF75:
+ 3000 1232 63795F73 		.ascii	"cy_stc_scb_ezi2c_context_t\000"
+ 3000      74635F73 
+ 3000      63625F65 
+ 3000      7A693263 
+ 3000      5F636F6E 
+ 3001              	.LASF94:
+ 3002 124d 43595F42 		.ascii	"CY_BLE_EVT_HARDWARE_ERROR\000"
+ 3002      4C455F45 
+ 3002      56545F48 
+ 3002      41524457 
+ 3002      4152455F 
+ 3003              	.LASF45:
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 70
+
+
+ 3004 1267 63795F73 		.ascii	"cy_stc_tcpwm_counter_config_t\000"
+ 3004      74635F74 
+ 3004      6370776D 
+ 3004      5F636F75 
+ 3004      6E746572 
+ 3005              	.LASF185:
+ 3006 1285 43595F42 		.ascii	"CY_BLE_EVT_GATTC_HANDLE_VALUE_IND\000"
+ 3006      4C455F45 
+ 3006      56545F47 
+ 3006      41545443 
+ 3006      5F48414E 
+ 3007              	.LASF166:
+ 3008 12a7 43595F42 		.ascii	"CY_BLE_EVT_GATTC_ERROR_RSP\000"
+ 3008      4C455F45 
+ 3008      56545F47 
+ 3008      41545443 
+ 3008      5F455252 
+ 3009              	.LASF171:
+ 3010 12c2 43595F42 		.ascii	"CY_BLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
+ 3010      4C455F45 
+ 3010      56545F47 
+ 3010      41545443 
+ 3010      5F524541 
+ 3011              	.LASF109:
+ 3012 12ea 43595F42 		.ascii	"CY_BLE_EVT_ADD_DEVICE_TO_RPA_LIST_COMPLETE\000"
+ 3012      4C455F45 
+ 3012      56545F41 
+ 3012      44445F44 
+ 3012      45564943 
+ 3013              	.LASF178:
+ 3014 1315 43595F42 		.ascii	"CY_BLE_EVT_GATTS_WRITE_REQ\000"
+ 3014      4C455F45 
+ 3014      56545F47 
+ 3014      41545453 
+ 3014      5F575249 
+ 3015              	.LASF132:
+ 3016 1330 43595F42 		.ascii	"CY_BLE_EVT_STACK_SHUTDOWN_COMPLETE\000"
+ 3016      4C455F45 
+ 3016      56545F53 
+ 3016      5441434B 
+ 3016      5F534855 
+ 3017              	.LASF205:
+ 3018 1353 63795F73 		.ascii	"cy_stc_ble_conn_handle_t\000"
+ 3018      74635F62 
+ 3018      6C655F63 
+ 3018      6F6E6E5F 
+ 3018      68616E64 
+ 3019              	.LASF30:
+ 3020 136c 636F6D70 		.ascii	"compareOrCapture\000"
+ 3020      6172654F 
+ 3020      72436170 
+ 3020      74757265 
+ 3020      00
+ 3021              	.LASF164:
+ 3022 137d 43595F42 		.ascii	"CY_BLE_EVT_GAPP_UPDATE_ADV_SCAN_DATA_COMPLETE\000"
+ 3022      4C455F45 
+ 3022      56545F47 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 71
+
+
+ 3022      4150505F 
+ 3022      55504441 
+ 3023              	.LASF0:
+ 3024 13ab 73686F72 		.ascii	"short int\000"
+ 3024      7420696E 
+ 3024      7400
+ 3025              	.LASF266:
+ 3026 13b5 43617053 		.ascii	"CapSense_RAM_STRUCT\000"
+ 3026      656E7365 
+ 3026      5F52414D 
+ 3026      5F535452 
+ 3026      55435400 
+ 3027              	.LASF231:
+ 3028 13c9 736E7343 		.ascii	"snsClkSource\000"
+ 3028      6C6B536F 
+ 3028      75726365 
+ 3028      00
+ 3029              	.LASF33:
+ 3030 13d6 656E6162 		.ascii	"enableCompareSwap\000"
+ 3030      6C65436F 
+ 3030      6D706172 
+ 3030      65537761 
+ 3030      7000
+ 3031              	.LASF7:
+ 3032 13e8 6C6F6E67 		.ascii	"long int\000"
+ 3032      20696E74 
+ 3032      00
+ 3033              	.LASF278:
+ 3034 13f1 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3034      52784275 
+ 3034      66666572 
+ 3034      00
+ 3035              	.LASF43:
+ 3036 13fe 636F756E 		.ascii	"countInputMode\000"
+ 3036      74496E70 
+ 3036      75744D6F 
+ 3036      646500
+ 3037              	.LASF135:
+ 3038 140d 43595F42 		.ascii	"CY_BLE_EVT_AES_CMAC_GEN_COMPLETE\000"
+ 3038      4C455F45 
+ 3038      56545F41 
+ 3038      45535F43 
+ 3038      4D41435F 
+ 3039              	.LASF61:
+ 3040 142e 61646472 		.ascii	"address1\000"
+ 3040      65737331 
+ 3040      00
+ 3041              	.LASF255:
+ 3042 1437 77646774 		.ascii	"wdgtEnable\000"
+ 3042      456E6162 
+ 3042      6C6500
+ 3043              	.LASF246:
+ 3044 1442 64696666 		.ascii	"diff\000"
+ 3044      00
+ 3045              	.LASF29:
+ 3046 1447 636F756E 		.ascii	"countDirection\000"
+ 3046      74446972 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 72
+
+
+ 3046      65637469 
+ 3046      6F6E00
+ 3047              	.LASF253:
+ 3048 1456 74756E65 		.ascii	"tunerCmd\000"
+ 3048      72436D64 
+ 3048      00
+ 3049              	.LASF158:
+ 3050 145f 43595F42 		.ascii	"CY_BLE_EVT_GAP_DEVICE_ADDR_GEN_COMPLETE\000"
+ 3050      4C455F45 
+ 3050      56545F47 
+ 3050      41505F44 
+ 3050      45564943 
+ 3051              	.LASF233:
+ 3052 1487 62757474 		.ascii	"button0\000"
+ 3052      6F6E3000 
+ 3053              	.LASF234:
+ 3054 148f 62757474 		.ascii	"button1\000"
+ 3054      6F6E3100 
+ 3055              	.LASF235:
+ 3056 1497 62757474 		.ascii	"button2\000"
+ 3056      6F6E3200 
+ 3057              	.LASF236:
+ 3058 149f 62757474 		.ascii	"button3\000"
+ 3058      6F6E3300 
+ 3059              	.LASF237:
+ 3060 14a7 62757474 		.ascii	"button4\000"
+ 3060      6F6E3400 
+ 3061              	.LASF238:
+ 3062 14af 62757474 		.ascii	"button5\000"
+ 3062      6F6E3500 
+ 3063              	.LASF239:
+ 3064 14b7 62757474 		.ascii	"button6\000"
+ 3064      6F6E3600 
+ 3065              	.LASF240:
+ 3066 14bf 62757474 		.ascii	"button7\000"
+ 3066      6F6E3700 
+ 3067              	.LASF241:
+ 3068 14c7 62757474 		.ascii	"button8\000"
+ 3068      6F6E3800 
+ 3069              	.LASF242:
+ 3070 14cf 62757474 		.ascii	"button9\000"
+ 3070      6F6E3900 
+ 3071              	.LASF182:
+ 3072 14d7 43595F42 		.ascii	"CY_BLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ 3072      4C455F45 
+ 3072      56545F47 
+ 3072      41545453 
+ 3072      5F455845 
+ 3073              	.LASF95:
+ 3074 14f7 43595F42 		.ascii	"CY_BLE_EVT_WRITE_AUTH_PAYLOAD_TO_COMPLETE\000"
+ 3074      4C455F45 
+ 3074      56545F57 
+ 3074      52495445 
+ 3074      5F415554 
+ 3075              	.LASF134:
+ 3076 1521 43595F42 		.ascii	"CY_BLE_EVT_RADIO_VOLTAGE_LEVEL\000"
+ 3076      4C455F45 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 73
+
+
+ 3076      56545F52 
+ 3076      4144494F 
+ 3076      5F564F4C 
+ 3077              	.LASF3:
+ 3078 1540 5F5F7569 		.ascii	"__uint8_t\000"
+ 3078      6E74385F 
+ 3078      7400
+ 3079              	.LASF256:
+ 3080 154a 77646774 		.ascii	"wdgtStatus\000"
+ 3080      53746174 
+ 3080      757300
+ 3081              	.LASF101:
+ 3082 1555 43595F42 		.ascii	"CY_BLE_EVT_SET_SUGGESTED_DATA_LENGTH_COMPLETE\000"
+ 3082      4C455F45 
+ 3082      56545F53 
+ 3082      45545F53 
+ 3082      55474745 
+ 3083              	.LASF121:
+ 3084 1583 43595F42 		.ascii	"CY_BLE_EVT_GET_DEVICE_ADDR_COMPLETE\000"
+ 3084      4C455F45 
+ 3084      56545F47 
+ 3084      45545F44 
+ 3084      45564943 
+ 3085              	.LASF128:
+ 3086 15a7 43595F42 		.ascii	"CY_BLE_EVT_AES_ENCRYPT_COMPLETE\000"
+ 3086      4C455F45 
+ 3086      56545F41 
+ 3086      45535F45 
+ 3086      4E435259 
+ 3087              	.LASF123:
+ 3088 15c7 43595F42 		.ascii	"CY_BLE_EVT_GET_TX_PWR_COMPLETE\000"
+ 3088      4C455F45 
+ 3088      56545F47 
+ 3088      45545F54 
+ 3088      585F5057 
+ 3089              	.LASF77:
+ 3090 15e6 63795F73 		.ascii	"cy_stc_scb_spi_context\000"
+ 3090      74635F73 
+ 3090      63625F73 
+ 3090      70695F63 
+ 3090      6F6E7465 
+ 3091              	.LASF89:
+ 3092 15fd 43595F42 		.ascii	"CY_BLE_EVT_TIMEOUT\000"
+ 3092      4C455F45 
+ 3092      56545F54 
+ 3092      494D454F 
+ 3092      555400
+ 3093              	.LASF58:
+ 3094 1610 63795F73 		.ascii	"cy_stc_scb_ezi2c_context\000"
+ 3094      74635F73 
+ 3094      63625F65 
+ 3094      7A693263 
+ 3094      5F636F6E 
+ 3095              	.LASF17:
+ 3096 1629 73697A65 		.ascii	"sizetype\000"
+ 3096      74797065 
+ 3096      00
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 74
+
+
+ 3097              	.LASF9:
+ 3098 1632 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3098      20756E73 
+ 3098      69676E65 
+ 3098      6420696E 
+ 3098      7400
+ 3099              	.LASF54:
+ 3100 1644 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_RX_DATA1\000"
+ 3100      43425F45 
+ 3100      5A493243 
+ 3100      5F535441 
+ 3100      54455F52 
+ 3101              	.LASF229:
+ 3102 1660 69646163 		.ascii	"idacMod\000"
+ 3102      4D6F6400 
+ 3103              	.LASF20:
+ 3104 1668 666C6F61 		.ascii	"float\000"
+ 3104      7400
+ 3105              	.LASF251:
+ 3106 166e 64657669 		.ascii	"deviceId\000"
+ 3106      63654964 
+ 3106      00
+ 3107              	.LASF15:
+ 3108 1677 696E7433 		.ascii	"int32_t\000"
+ 3108      325F7400 
+ 3109              	.LASF133:
+ 3110 167f 43595F42 		.ascii	"CY_BLE_EVT_RADIO_TEMPERATURE\000"
+ 3110      4C455F45 
+ 3110      56545F52 
+ 3110      4144494F 
+ 3110      5F54454D 
+ 3111              	.LASF142:
+ 3112 169c 43595F42 		.ascii	"CY_BLE_EVT_GAP_PASSKEY_DISPLAY_REQUEST\000"
+ 3112      4C455F45 
+ 3112      56545F47 
+ 3112      41505F50 
+ 3112      4153534B 
+ 3113              	.LASF223:
+ 3114 16c3 66696E67 		.ascii	"fingerTh\000"
+ 3114      65725468 
+ 3114      00
+ 3115              	.LASF245:
+ 3116 16cc 62736C6E 		.ascii	"bslnExt\000"
+ 3116      45787400 
+ 3117              	.LASF232:
+ 3118 16d4 43617053 		.ascii	"CapSense_RAM_WD_BUTTON_STRUCT\000"
+ 3118      656E7365 
+ 3118      5F52414D 
+ 3118      5F57445F 
+ 3118      42555454 
+ 3119              	.LASF2:
+ 3120 16f2 756E7369 		.ascii	"unsigned char\000"
+ 3120      676E6564 
+ 3120      20636861 
+ 3120      7200
+ 3121              	.LASF187:
+ 3122 1700 43595F42 		.ascii	"CY_BLE_EVT_GATTS_DATA_SIGNED_CMD_REQ\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 75
+
+
+ 3122      4C455F45 
+ 3122      56545F47 
+ 3122      41545453 
+ 3122      5F444154 
+ 3123              	.LASF8:
+ 3124 1725 5F5F7569 		.ascii	"__uint32_t\000"
+ 3124      6E743332 
+ 3124      5F7400
+ 3125              	.LASF44:
+ 3126 1730 636F756E 		.ascii	"countInput\000"
+ 3126      74496E70 
+ 3126      757400
+ 3127              	.LASF112:
+ 3128 173b 43595F42 		.ascii	"CY_BLE_EVT_REMOVE_DEVICE_FROM_WHITE_LIST_COMPLETE\000"
+ 3128      4C455F45 
+ 3128      56545F52 
+ 3128      454D4F56 
+ 3128      455F4445 
+ 3129              	.LASF102:
+ 3130 176d 43595F42 		.ascii	"CY_BLE_EVT_GET_DATA_LENGTH_COMPLETE\000"
+ 3130      4C455F45 
+ 3130      56545F47 
+ 3130      45545F44 
+ 3130      4154415F 
+ 3131              	.LASF156:
+ 3132 1791 43595F42 		.ascii	"CY_BLE_EVT_GAPC_DIRECT_ADV_REPORT\000"
+ 3132      4C455F45 
+ 3132      56545F47 
+ 3132      4150435F 
+ 3132      44495245 
+ 3133              	.LASF220:
+ 3134 17b3 43617053 		.ascii	"CapSense_THRESHOLD_TYPE\000"
+ 3134      656E7365 
+ 3134      5F544852 
+ 3134      4553484F 
+ 3134      4C445F54 
+ 3135              	.LASF192:
+ 3136 17cb 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CONN_PARAM_UPDATE_RSP\000"
+ 3136      4C455F45 
+ 3136      56545F4C 
+ 3136      32434150 
+ 3136      5F434F4E 
+ 3137              	.LASF106:
+ 3138 17f2 43595F42 		.ascii	"CY_BLE_EVT_SET_RPA_TO_COMPLETE\000"
+ 3138      4C455F45 
+ 3138      56545F53 
+ 3138      45545F52 
+ 3138      50415F54 
+ 3139              	.LASF59:
+ 3140 1811 73746174 		.ascii	"state\000"
+ 3140      6500
+ 3141              	.LASF64:
+ 3142 1817 62617365 		.ascii	"baseAddr1\000"
+ 3142      41646472 
+ 3142      3100
+ 3143              	.LASF65:
+ 3144 1821 62617365 		.ascii	"baseAddr2\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 76
+
+
+ 3144      41646472 
+ 3144      3200
+ 3145              	.LASF183:
+ 3146 182b 43595F42 		.ascii	"CY_BLE_EVT_GATTC_EXEC_WRITE_RSP\000"
+ 3146      4C455F45 
+ 3146      56545F47 
+ 3146      41545443 
+ 3146      5F455845 
+ 3147              	.LASF288:
+ 3148 184b 43617053 		.ascii	"CapSense_ScanAllWidgets\000"
+ 3148      656E7365 
+ 3148      5F536361 
+ 3148      6E416C6C 
+ 3148      57696467 
+ 3149              	.LASF169:
+ 3150 1863 43595F42 		.ascii	"CY_BLE_EVT_GATTS_XCNHG_MTU_REQ\000"
+ 3150      4C455F45 
+ 3150      56545F47 
+ 3150      41545453 
+ 3150      5F58434E 
+ 3151              	.LASF269:
+ 3152 1882 70726F78 		.ascii	"proximity_data_t\000"
+ 3152      696D6974 
+ 3152      795F6461 
+ 3152      74615F74 
+ 3152      00
+ 3153              	.LASF188:
+ 3154 1893 43595F42 		.ascii	"CY_BLE_EVT_GATTC_STOP_CMD_COMPLETE\000"
+ 3154      4C455F45 
+ 3154      56545F47 
+ 3154      41545443 
+ 3154      5F53544F 
+ 3155              	.LASF230:
+ 3156 18b6 736E7343 		.ascii	"snsClk\000"
+ 3156      6C6B00
+ 3157              	.LASF141:
+ 3158 18bd 43595F42 		.ascii	"CY_BLE_EVT_GAP_PASSKEY_ENTRY_REQUEST\000"
+ 3158      4C455F45 
+ 3158      56545F47 
+ 3158      41505F50 
+ 3158      4153534B 
+ 3159              	.LASF203:
+ 3160 18e2 62644861 		.ascii	"bdHandle\000"
+ 3160      6E646C65 
+ 3160      00
+ 3161              	.LASF274:
+ 3162 18eb 49734361 		.ascii	"IsCapSenseReadyForLowPowerMode\000"
+ 3162      7053656E 
+ 3162      73655265 
+ 3162      61647946 
+ 3162      6F724C6F 
+ 3163              	.LASF1:
+ 3164 190a 7369676E 		.ascii	"signed char\000"
+ 3164      65642063 
+ 3164      68617200 
+ 3165              	.LASF26:
+ 3166 1916 70657269 		.ascii	"period\000"
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 77
+
+
+ 3166      6F6400
+ 3167              	.LASF244:
+ 3168 191d 62736C6E 		.ascii	"bsln\000"
+ 3168      00
+ 3169              	.LASF5:
+ 3170 1922 73686F72 		.ascii	"short unsigned int\000"
+ 3170      7420756E 
+ 3170      7369676E 
+ 3170      65642069 
+ 3170      6E7400
+ 3171              	.LASF57:
+ 3172 1935 63795F73 		.ascii	"cy_stc_tcpwm_counter_config\000"
+ 3172      74635F74 
+ 3172      6370776D 
+ 3172      5F636F75 
+ 3172      6E746572 
+ 3173              	.LASF140:
+ 3174 1951 43595F42 		.ascii	"CY_BLE_EVT_GAP_AUTH_REQ\000"
+ 3174      4C455F45 
+ 3174      56545F47 
+ 3174      41505F41 
+ 3174      5554485F 
+ 3175              	.LASF180:
+ 3176 1969 43595F42 		.ascii	"CY_BLE_EVT_GATTS_WRITE_CMD_REQ\000"
+ 3176      4C455F45 
+ 3176      56545F47 
+ 3176      41545453 
+ 3176      5F575249 
+ 3177              	.LASF125:
+ 3178 1988 43595F42 		.ascii	"CY_BLE_EVT_GET_CLK_CONFIG_COMPLETE\000"
+ 3178      4C455F45 
+ 3178      56545F47 
+ 3178      45545F43 
+ 3178      4C4B5F43 
+ 3179              	.LASF50:
+ 3180 19ab 43595F53 		.ascii	"CY_SCB_EZI2C_STATE_ADDR\000"
+ 3180      43425F45 
+ 3180      5A493243 
+ 3180      5F535441 
+ 3180      54455F41 
+ 3181              	.LASF191:
+ 3182 19c3 43595F42 		.ascii	"CY_BLE_EVT_L2CAP_CONN_PARAM_UPDATE_REQ\000"
+ 3182      4C455F45 
+ 3182      56545F4C 
+ 3182      32434150 
+ 3182      5F434F4E 
+ 3183              	.LASF70:
+ 3184 19ea 62756631 		.ascii	"buf1Size\000"
+ 3184      53697A65 
+ 3184      00
+ 3185              	.LASF21:
+ 3186 19f3 646F7562 		.ascii	"double\000"
+ 3186      6C6500
+ 3187              	.LASF247:
+ 3188 19fa 6E656742 		.ascii	"negBslnRstCnt\000"
+ 3188      736C6E52 
+ 3188      7374436E 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 78
+
+
+ 3188      7400
+ 3189              	.LASF47:
+ 3190 1a08 43595F53 		.ascii	"CY_SCB_EZI2C_SUB_ADDR16_BITS\000"
+ 3190      43425F45 
+ 3190      5A493243 
+ 3190      5F535542 
+ 3190      5F414444 
+ 3191              	.LASF267:
+ 3192 1a25 70726F78 		.ascii	"proximityDataUpdated\000"
+ 3192      696D6974 
+ 3192      79446174 
+ 3192      61557064 
+ 3192      61746564 
+ 3193              	.LASF93:
+ 3194 1a3a 43595F42 		.ascii	"CY_BLE_EVT_FLASH_CORRUPT\000"
+ 3194      4C455F45 
+ 3194      56545F46 
+ 3194      4C415348 
+ 3194      5F434F52 
+ 3195              	.LASF161:
+ 3196 1a53 43595F42 		.ascii	"CY_BLE_EVT_GAP_GEN_SET_LOCAL_P256_KEYS_COMPLETE\000"
+ 3196      4C455F45 
+ 3196      56545F47 
+ 3196      41505F47 
+ 3196      454E5F53 
+ 3197              	.LASF144:
+ 3198 1a83 43595F42 		.ascii	"CY_BLE_EVT_GAP_AUTH_FAILED\000"
+ 3198      4C455F45 
+ 3198      56545F47 
+ 3198      41505F41 
+ 3198      5554485F 
+ 3199              	.LASF211:
+ 3200 1a9e 43595F42 		.ascii	"CY_BLE_CONN_STATE_DISCONNECTED\000"
+ 3200      4C455F43 
+ 3200      4F4E4E5F 
+ 3200      53544154 
+ 3200      455F4449 
+ 3201              	.LASF214:
+ 3202 1abd 43595F42 		.ascii	"CY_BLE_CONN_STATE_CLIENT_SRVC_DISCOVERING\000"
+ 3202      4C455F43 
+ 3202      4F4E4E5F 
+ 3202      53544154 
+ 3202      455F434C 
+ 3203              	.LASF249:
+ 3204 1ae7 43617053 		.ascii	"CapSense_RAM_SNS_LIST_STRUCT\000"
+ 3204      656E7365 
+ 3204      5F52414D 
+ 3204      5F534E53 
+ 3204      5F4C4953 
+ 3205              	.LASF79:
+ 3206 1b04 72784275 		.ascii	"rxBufSize\000"
+ 3206      6653697A 
+ 3206      6500
+ 3207              	.LASF149:
+ 3208 1b0e 43595F42 		.ascii	"CY_BLE_EVT_GAP_CONNECTION_UPDATE_COMPLETE\000"
+ 3208      4C455F45 
+ 3208      56545F47 
+ARM GAS  C:\Users\Coal\AppData\Local\Temp\ccdGM3NX.s 			page 79
+
+
+ 3208      41505F43 
+ 3208      4F4E4E45 
+ 3209              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
