@@ -22,12 +22,14 @@
 
 
 2--Make sure that bottle is completely empty and capped.
-3--Open project with PSoC Creator 4.2
+3--Run PSoC Creator 4.2
 4--Make sure that active library is PDL 3.0.4
+     Tools/Options/Project management/General/PDL v3 location (last should be 3.0.4)
      If not? download this library using "Cypress Update Manager"
      Choose the path for installing and !!!remember it!!!
      Run PSoC Creator 4.2/Tools/Options/Project management/General
      Change "PDL v3 location" to 3.0.4 you`ve installed
+     Restart PSoC Creator 4.2
 5--Activate project "SmartBottle_v0p1_Calibration" and program the device
 6--Activate project "SmartBottle_v0p1" and program device
 7--Connect with PSoC 6 BLE using your smartphone with Bluetooth and CySmart application
