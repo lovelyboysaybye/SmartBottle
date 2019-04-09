@@ -30,7 +30,8 @@
      Run PSoC Creator 4.2/Tools/Options/Project management/General
      Change "PDL v3 location" to 3.0.4 you`ve installed
      Restart PSoC Creator 4.2
-5--Activate project "SmartBottle_v0p1_Calibration" and program the device
-6--Activate project "SmartBottle_v0p1" and program device
-7--Connect with PSoC 6 BLE using your smartphone with Bluetooth and CySmart application
-8--Device will send you water level in your bottle
+5--Open project "SmartBottle_v0p1"
+6--Activate project "SmartBottle_v0p1_Calibration" and program the device
+7--Activate project "SmartBottle_v0p1" and program device
+8--Connect with PSoC 6 BLE using your smartphone with Bluetooth and CySmart application
+9--Device will send you water level in your bottle
